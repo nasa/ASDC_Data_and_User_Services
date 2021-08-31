@@ -33,7 +33,7 @@ redband = hdfdata[:,:,0,2,1]
 data = np.dstack((blueband,greenband,redband))
 
 
-'''Histogram Equalization is a technique that spreads out the most frequest intensity values 
+'''Histogram Equalization is a technique that spreads out the most frequent intensity values 
 to improve the contrast in images (Sudhakar). The histogram equalization process also relies on the 
 cumulative distributive function (cdf). The cdf describes the probabliity that a variable takes a value less than or equal to x (COSTE). 
 Using this function for the MISR Aerosol Optical Depth script will allow the user to have a better visualization of the data.   
