@@ -15,7 +15,7 @@ ds = hdf.datasets()
 hdfdataobject = hdf.select('Optical depth average')
 
 '''Slicing the data: [Lon, Lat, Optical Depth, Band, Particle Type]
-Before conducting the histogram equalizatoin function, slice the data with 
+Before conducting the histogram equalizatoin, slice the data with 
 a value in each dimension of your choosing
 MISR camera bands: 0 = Blue (443 nm), 1 = Green (555 nm), 2 = Red (670 nm). 
 Select one particle type and optical depth range to graph
