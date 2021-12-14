@@ -37,8 +37,7 @@ with h5py.File(FILE_NAME, mode='r') as f:
     
     '''Plot all graphs in a for loop'''
     for i in pressure_levels:        
-        PLT.figure(figsize=(7.20,3.60))
-        #v = np.linspace(0, 600, 7, endpoint=True)
+        PLT.figure(figsize=(7.20,3.60)
         ax = PLT.axes(projection=ccrs.PlateCarree())
         im = PLT.contourf(lon, lat, CO_mixing_ratio[i,:,:], 300, 
                           cmap=PLT.get_cmap('jet'), vmin=0, vmax=600, 
