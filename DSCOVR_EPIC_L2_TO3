@@ -1,6 +1,9 @@
 """
 By: Cheyenne Land
 Tested using Python 3.8.10
+
+This code graphs 4 different parameters from the DSCOVR EPIC Level 2 Total Ozone, Version 3 product 
+(Ozone, Reflectivity, Radiative Cloud Fraction, Cloud Pressure)
 """
 
 
