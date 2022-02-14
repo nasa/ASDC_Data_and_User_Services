@@ -49,7 +49,7 @@ dataCP = np.ma.masked_where(np.isnan(dataCP), dataCP)
 lat_m = lat[int(lat.shape[0]/2),int(lat.shape[1]/2)]
 lon_m = lon[int(lon.shape[0]/2),int(lon.shape[1]/2)]
 
-fig = plt.figure(figsize=(20,17.5), dpi=300)
+fig = plt.figure(figsize=(12,9.5), dpi=300)
 
 '''Plot the data'''
 orth = ccrs.Orthographic(central_longitude=lon_m,
