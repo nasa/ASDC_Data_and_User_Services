@@ -45,7 +45,7 @@ with h5py.File(FILE_NAME, mode='r') as f:
                           transform=ccrs.PlateCarree())
         ax.coastlines()
         
-        cb = PLT.colorbar(im, location = 'right', shrink = 0.76)
+        cb = PLT.colorbar(im, shrink = 0.76)
         cb.set_label('ppbv', fontsize=8)
         pressure = -i + 9
         PLT.title('MOP03JM-202001-L3V95.9.3_RetrievedCOMixingRatioProfileDay_'+str(pressure)+'00hPa',
