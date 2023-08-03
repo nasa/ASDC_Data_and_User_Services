@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 from urllib.request import urlopen, Request
 from pathlib import Path
 
-# unlike read_Pandora_web code, function take_pandora_sites returns only one site in this code.
-# user needs to select appropriate Pandora location.
 
 def read_tolnet_clim(fname):
 # function read_tolnet_clim takes a name of TOLNET clim file, fname, and returns the following values 
