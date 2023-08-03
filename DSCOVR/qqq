@@ -1,3 +1,0 @@
-# The code compares ozone columns from DSCOVR EPIC L4 ozone product,
-# Pandora total ozone, and integrated TOLNET clim tropospheric columns.
-# the code is driven by the list of TOLNET clim files.

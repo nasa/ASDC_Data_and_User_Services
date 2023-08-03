@@ -1,0 +1,9 @@
+DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py compares ozone columns from DSCOVR_EPIC_L4_TrO3_01 ozone (O3) product,
+Pandora total ozone, and integrated TOLNET CLIM tropospheric columns.
+The code is driven by the user provided list of TOLNET clim files that should be pre-downloaded.
+Necessary DSCOVR_EPIC_L4_TrO3_01 and Pandora files are downloaded on the fly.
+Since JPL Table Mountain facility is the only place where Pandora sun-photometer and TOLNET lidar are co-located, the code makes comparison there.
+However, the general case of arbitrary location hosting both instruments was also developed, but has been commented out.
+Please follow comments inside to change back to the general case.
+The code return plots of time series of DSCOVR EPIC total O3 column and Pandora total O3 column and
+tropospheric O3 DSCOVR EPIC column and tropospheric O3 integrated from TOLNET_CLIM profile.
