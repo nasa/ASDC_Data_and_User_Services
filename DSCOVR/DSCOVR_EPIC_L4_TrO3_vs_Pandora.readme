@@ -1,0 +1,4 @@
+DSCOVR_EPIC_L4_TrO3_vs_Pandora.py compares total ozone (O3) columns derived from DSCOVR_EPIC_L4_TrO3_01 product against Pandora sun-photometer O3 columns over Pandora stations.
+The code takes month(s) of interest, yyyymm, as command line argument. User can provide arbitrary number of months. If no arguments provided, execution stops.
+The code takes Pandora site(s) as user input. User can provide arbitrary number of sites.
+The code plots daily graphs of total ozone columns.
