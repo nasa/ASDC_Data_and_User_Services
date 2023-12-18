@@ -9,7 +9,7 @@ import datetime
 By: Cheyenne Land
 Tested using Python 3.10.5
 
-This code retrieves Monthly Zonal Mean images from SAGE III-ISS' Broswe Imagery Service, Quicklook:
+This code retrieves Monthly Zonal Mean images from SAGE III-ISS' Browse Imagery Service, Quicklook:
 https://sage.nasa.gov/sageiii-iss/browse_images/quicklook/index.php
 
 """
