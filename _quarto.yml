@@ -31,9 +31,9 @@ website:
     search: true
     collapse-level: 1
     contents:
-      - href: index.qmd
+      - href: README.md
         text: Welcome
-      - section: missions/index.qmd
+      - section: missions_index.qmd
         contents: 
           - text: "DSCOVR UVAI Exploration"
             href: DSCOVR/dscovr_uvai_exploration.ipynb
