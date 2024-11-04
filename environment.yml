@@ -1,4 +1,4 @@
-name: quarto-demo
+name: quarto-env
 channels:
   - conda-forge
   - nodefaults
