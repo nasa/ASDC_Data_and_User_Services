@@ -7,6 +7,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
@@ -17,39 +22,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3 
+        uses: actions/checkout@v4 
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
 
-      - name: "Install Conda environment"
+      - name: Install Conda environment
         uses: mamba-org/setup-micromamba@v1
         with:
           environment-file: environment.yml
-          # create-args: >- # beware the >- instead of |, we don't split on newlines but on spaces
-          #   python=3.10
           cache-environment: true
 
-      - name: "Render"
-        run: "quarto render"
-        shell: micromamba-shell {0}
+      - name: Render
+        uses: quarto-dev/quarto-actions/render@v2
 
-      - name: "Upload artifact"
-        uses: "actions/upload-pages-artifact@v1"
-        with:
-          path: "./_site"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
   # Deploy to GH Pages
   deploy:
     environment:
-      name: "github-pages"
-      url: "${{ steps.deployment.outputs.page_url }}"
-    runs-on: "ubuntu-latest"
-    needs: "build"
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: "Deploy to GitHub Pages"
-        id: "deployment"
-        uses: "actions/deploy-pages@v1"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
