@@ -1,7 +1,6 @@
 name: quarto-env
 channels:
   - conda-forge
-  - nodefaults
 dependencies:
   - python >=3.10
   - jupyter >=1.0.0
