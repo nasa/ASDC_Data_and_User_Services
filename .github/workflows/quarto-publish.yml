@@ -35,6 +35,7 @@ jobs:
 
       - name: "Render"
         run: "quarto render"
+        shell: micromamba-shell {0}
 
       - name: "Upload artifact"
         uses: "actions/upload-pages-artifact@v1"
