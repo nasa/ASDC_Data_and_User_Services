@@ -5,6 +5,9 @@ subtitle: "With mission-specific guidance"
 
 ## Welcome! {#welcome}
 
-Welcome to the tutorial repository for the NASA Atmospheric Science Data Center ([ASDC](https://eosweb.larc.nasa.gov/))!
+Welcome to the ASDC Data and User Services repository for the NASA Atmospheric Science Data Center ([ASDC](https://eosweb.larc.nasa.gov/))!
+
+This GitHub page serves as a comprehensive resource for end users seeking tutorials on various missions supported by the ASDC. The page's primary objective is to provide step-by-step guidance and instructions on utilizing the NASA missions archived and distributed by ASDC DAAC. By offering these tutorials, the page aims to enhance the knowledge and proficiency of end users, enabling them to leverage the valuable resources made available by ASDC effectively. This GitHub page facilitates the seamless transfer of expertise from ASDC to end users, fostering a collaborative environment that drives innovation and progress in space-related endeavors.
+
 
 *This site is under active, open development. Stay tuned for more and ever-evolving content!* 
