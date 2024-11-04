@@ -22,10 +22,10 @@ website:
     tools: 
       - icon: globe
         href: https://eosweb.larc.nasa.gov/
-        text: "NASA ASDC"
+        text: "NASA ASDC Website"
       - icon: github
         href: https://github.com/nasa/ASDC_Data_and_User_Services
-        text: "ASDC Data and User Services"        
+        text: "ASDC Data and User Services GitHub Repository"        
 
     style: "docked"
     search: true
@@ -35,18 +35,20 @@ website:
         text: Welcome
       - section: missions_index.qmd
         contents: 
-          - text: "DSCOVR UVAI Exploration"
-            href: DSCOVR/dscovr_uvai_exploration.ipynb
-          # - text: "Earthdata Cloud Clinic"
-          #   href: tutorials/Earthdata-cloud-clinic.ipynb
+          - section: "DSCOVR"
+            - text: "DSCOVR UVAI Exploration"
+              href: DSCOVR/dscovr_uvai_exploration.ipynb
+          - section: "TEMPO"
+            - text: "TEMPO with Harmony-py"
+              href: TEMPO/tempo_with_harmony-py_clean.ipynb
       # - learning-more.qmd
 
 
 format:
   html:
     theme:
-      light: [cosmo, theme.scss] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
-      dark: [cosmo, theme-dark.scss]
+      light: cosmo # from https://quarto.org/docs/output-formats/html-themes.html
+      dark: darkly
     code-copy: true
     code-overflow: wrap
     toc: true
