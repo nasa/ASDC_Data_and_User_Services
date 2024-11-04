@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -33,9 +33,22 @@ jobs:
           #   python=3.10
           cache-environment: true
 
-      - name: Publish to GitHub Pages (and render)
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: "Render"
+        run: "quarto render"
+
+      - name: "Upload artifact"
+        uses: "actions/upload-pages-artifact@v1"
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+          path: "./_site"
+
+  # Deploy to GH Pages
+  deploy:
+    environment:
+      name: "github-pages"
+      url: "${{ steps.deployment.outputs.page_url }}"
+    runs-on: "ubuntu-latest"
+    needs: "build"
+    steps:
+      - name: "Deploy to GitHub Pages"
+        id: "deployment"
+        uses: "actions/deploy-pages@v1"
