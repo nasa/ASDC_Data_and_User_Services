@@ -30,11 +30,14 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install Conda environment
-        uses: mamba-org/setup-micromamba@v1
+      - uses: conda-incubator/setup-miniconda@v3
         with:
+          python-version: "3.10"
+          channels: conda-forge
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: quarto-env
           environment-file: environment.yml
-          cache-environment: true
 
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
