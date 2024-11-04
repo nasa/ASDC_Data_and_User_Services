@@ -1,0 +1,10 @@
+name: quarto-demo
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python >=3.10
+  # - quarto ~=1.2.335
+  # TODO: How to get conda quarto working with tinytex? Can only get it working
+  # when installing Quarto from the .deb.
+  - jupyter >=1.0.0
