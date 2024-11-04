@@ -1,25 +1,34 @@
+name: "Quarto Render and Publish to Pages"
+
 on:
   push:
     branches: [ main, quarto/**]
 
-name: Render and Publish
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2 
+        uses: actions/checkout@v3 
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           # To install LaTeX to build PDF book 
           tinytex: true 
-          # uncomment below and fill to pin a version
-          # version: 0.9.600
-      
-      # add software dependencies here
+
+      - name: "Install Conda environment"
+        uses: "mamba-org/provision-with-micromamba@main"
+        with:
+          cache-env: true
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
