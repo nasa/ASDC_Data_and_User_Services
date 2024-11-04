@@ -35,8 +35,10 @@ website:
         text: Welcome
       - section: missions/index.qmd
         contents: 
-          - quarto-workflows/dscovr.md
-          - quarto-workflows/tempo.qmd
+          - text: "DSCOVR UVAI Exploration"
+            href: DSCOVR/dscovr_uvai_exploration.ipynb
+          # - text: "Earthdata Cloud Clinic"
+          #   href: tutorials/Earthdata-cloud-clinic.ipynb
       # - learning-more.qmd
 
 
