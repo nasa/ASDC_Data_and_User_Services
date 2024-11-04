@@ -53,5 +53,5 @@ format:
 
 
 filters:
-  # - include-files.lua
+  - include-files.lua
   - quarto
