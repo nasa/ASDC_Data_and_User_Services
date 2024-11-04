@@ -1,6 +1,9 @@
 project: 
   type: website
   
+execute:
+  freeze: true  # never re-execute computational content during project render, needed for .qmd and .rmd since quarto does not render .ipynb by default
+
 website: 
   page-navigation: true
   title: "ASDC Data and User Services" 
@@ -28,12 +31,14 @@ website:
     search: true
     collapse-level: 1
     contents:
-      - href: index.qmd
+      - href: README.md
         text: Welcome
-      - section: missions/index.qmd
+      - section: missions_index.qmd
         contents: 
-          - quarto-workflows/dscovr.md
-          - quarto-workflows/tempo.qmd
+          - text: "DSCOVR UVAI Exploration"
+            href: DSCOVR/dscovr_uvai_exploration.ipynb
+          # - text: "Earthdata Cloud Clinic"
+          #   href: tutorials/Earthdata-cloud-clinic.ipynb
       # - learning-more.qmd
 
 
@@ -47,6 +52,6 @@ format:
     toc: true
 
 
-filters:
-  - include-files.lua
-  - quarto
+# filters:
+#   - include-files.lua
+#   - quarto
