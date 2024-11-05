@@ -31,16 +31,65 @@ website:
     search: true
     collapse-level: 1
     contents:
-      - href: README.md
+      - href: index.qmd
         text: Welcome
       - section: missions_index.qmd
+        text: Mission Tutorial Notebooks
         contents: 
-          - section: "DSCOVR"
-            - text: "DSCOVR UVAI Exploration"
+          - section: DSCOVR
+            contents:
+            - text: DSCOVR UVAI Exploration
               href: DSCOVR/dscovr_uvai_exploration.ipynb
-          - section: "TEMPO"
-            - text: "TEMPO with Harmony-py"
+            - text: TEMPO UVAI vs DSCOVR (spatial)
+              href: DSCOVR/tempo_uvai_vs_dscovr_spatial.ipynb
+            - text: TEMPO UVAI vs DSCOVR vs AERONET
+              href: DSCOVR/tempo_uvai_vs_dscovr_vs_aeronet.ipynb
+          - section: MAIA
+            contents:
+            - text: MAIA netCDF Local Plotting
+              href: MAIA/maia_netcdf_pm_python_local_plotting.ipynb
+            - text: NetCDF to CSV Conversion
+              href: MAIA/NetCDF2csv.ipynb
+          - section: PREFIRE
+            contents:
+            - text: PREFIRE HyBIG
+              href: PREFIRE/PREFIRE-HyBIG.ipynb
+          - section: TEMPO
+            contents:
+            - text: Earthaccess Harmony
+              href: TEMPO/earthaccess_harmony_01_2.ipynb
+            - text: TEMPO with Harmony-py
               href: TEMPO/tempo_with_harmony-py_clean.ipynb
+          - section: TOLNet
+            contents:
+            - text: TOLNet API Examples
+              href: TOLNet/TOLNet_API_Examples_v01.ipynb
+      - section: Mission Related Scripts
+        contents: 
+          - section: CALIPSO
+            contents:
+            - text: CALIPSO Ozone Number Density
+              href: CALIPSO/CALIPSO_Ozone_Number_Density.py
+          - section: CERES (Terra)
+            contents:
+            - text: CERES
+              href: CERES_Terra/CERES.m
+          - section: MISR
+            contents:
+            - text: MISR Aerosol Optical Depth (AOD)
+              href: MISR/MISR_AOD.py
+          - section: MOPITT
+            contents:
+            - text: MOPITT Carbon Monoxide Mixing Ratio
+              href: MOPITT/MOP03JM_COMixingRatio.py
+          - section: SAGEIII-ISS
+            contents:
+            - text: SAGE Quick-look
+              href: SAGEIII-ISS/sage_quicklook.py
+          - section: TOLNet
+            contents:
+            - text: DSCOVR EPIC Level-4 vs TOLNet CLIM vs PANDORA
+              href: TOLNet/DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
       # - learning-more.qmd
 
 
