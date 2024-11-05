@@ -1,5 +1,7 @@
 project: 
   type: website
+  render:
+    - "*.{qmd,m,py,ipynb}"
   
 execute:
   freeze: true  # never re-execute computational content during project render, needed for .qmd and .rmd since quarto does not render .ipynb by default
@@ -29,7 +31,7 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - href: index.qmd
         text: Welcome
