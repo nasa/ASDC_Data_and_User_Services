@@ -92,7 +92,7 @@ website:
             contents:
             - text: DSCOVR EPIC Level-4 vs TOLNet CLIM vs PANDORA
               href: TOLNet/DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
-      # - learning-more.qmd
+      - learning-more.qmd
 
 
 format:
