@@ -2,7 +2,7 @@
 title: Missions Index
 ---
 
-The tutorials in the left sidebar are meant to present example workflows with NASA Earthdata in the cloud from a variety of use cases. The tutorials exemplify the advantages of working with NASA Earthdata in the cloud and aim to provide a starting point for exploring what your workflows could look like in the cloud. 
+Tutorials found in the left sidebar present example workflows with NASA Earthdata in the cloud from a variety of use cases. The tutorials exemplify the advantages of working with NASA Earthdata in the cloud and aim to provide a starting point for exploring what your workflows could look like in the cloud. 
 
 ---
 
