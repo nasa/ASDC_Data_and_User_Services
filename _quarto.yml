@@ -66,7 +66,7 @@ website:
             contents:
             - text: TOLNet API Examples
               href: TOLNet/TOLNet_API_Examples_v01.ipynb
-      - section: Mission Related Scripts
+      - section: Mission Related Scripts (for download)
         contents: 
           - section: CALIPSO
             contents:
