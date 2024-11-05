@@ -18,7 +18,7 @@ website:
     left: "Atmospheric Science Data Center"
     
   sidebar:
-    # logo: "images/openscapes_hex.png"
+    logo: "https://archive.ph/Np7yS/b8ad2ce6e0dc2019a56b06908e6a31d0dbb1d544.png"
     pinned: true
     align: center
     tools: 
