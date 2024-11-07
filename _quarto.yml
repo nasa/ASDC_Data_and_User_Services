@@ -35,7 +35,7 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - section: missions_index.qmd
+      - section: mission_notebooks_index.qmd
         text: Mission Tutorial Notebooks
         contents: 
           - section: DSCOVR
@@ -66,32 +66,8 @@ website:
             contents:
             - text: TOLNet API Examples
               href: TOLNet/TOLNet_API_Examples_v01.ipynb
-      - section: Mission Related Scripts (for download)
-        contents: 
-          - section: CALIPSO
-            contents:
-            - text: CALIPSO Ozone Number Density
-              href: CALIPSO/CALIPSO_Ozone_Number_Density.py
-          - section: CERES (Terra)
-            contents:
-            - text: CERES
-              href: CERES_Terra/CERES.m
-          - section: MISR
-            contents:
-            - text: MISR Aerosol Optical Depth (AOD)
-              href: MISR/MISR_AOD.py
-          - section: MOPITT
-            contents:
-            - text: MOPITT Carbon Monoxide Mixing Ratio
-              href: MOPITT/MOP03JM_COMixingRatio.py
-          - section: SAGEIII-ISS
-            contents:
-            - text: SAGE Quick-look
-              href: SAGEIII-ISS/sage_quicklook.py
-          - section: TOLNet
-            contents:
-            - text: DSCOVR EPIC Level-4 vs TOLNet CLIM vs PANDORA
-              href: TOLNet/DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
+      - text: Mission Related Scripts (not notebooks)
+        href: mission_scripts_index.qmd
       - learning-more.qmd
 
 
