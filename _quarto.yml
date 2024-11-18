@@ -33,9 +33,9 @@ website:
     search: true
     collapse-level: 2
     contents:
-      - href: index.qmd
+      - href: _quarto/index.qmd
         text: Welcome
-      - section: mission_notebooks_index.qmd
+      - section: _quarto/mission_notebooks_index.qmd
         text: Mission Tutorial Notebooks
         contents: 
           - section: DSCOVR
@@ -67,8 +67,8 @@ website:
             - text: TOLNet API Examples
               href: TOLNet/TOLNet_API_Examples_v01.ipynb
       - text: Mission Related Scripts (not notebooks)
-        href: mission_scripts_index.qmd
-      - learning-more.qmd
+        href: _quarto/mission_scripts_index.qmd
+      - _quarto/learning-more.qmd
 
 
 format:
