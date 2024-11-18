@@ -33,7 +33,7 @@ website:
     search: true
     collapse-level: 2
     contents:
-      - href: _quarto/index.qmd
+      - href: index.qmd
         text: Welcome
       - section: _quarto/mission_notebooks_index.qmd
         text: Mission Tutorial Notebooks
