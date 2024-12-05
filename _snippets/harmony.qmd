@@ -1,0 +1,15 @@
+### What is Harmony?
+
+Harmony is the **cloud services orchestrator** for [NASA Earth Science Data and Information System (ESDIS)](https://www.earthdata.nasa.gov/esdis). The goal of Harmony is to provide services to increase usage and ease of use of ESDIS' Earth observation data, especially focusing on opportunities made possible by cloud-accessible data. 
+
+Data processed by Harmony are staged in Amazon s3 buckets, and Harmony services run in containers in pods in a Kubernetes cluster.
+
+Note that services provided via Harmony **can transform NASA data as well as provide access to the original data**, through an Application Programmable Interface (API)...
+
+Harmony services **can be invoked through curl commands**, e.g.:
+
+> https://harmony.earthdata.nasa.gov/{collectionId}/ogc-api-coverages/1.0.0/{variable}/coverage/rangeset
+
+(Harmony services REST API conforms to the OGC Coverages API version 1.0.0. It accepts parameters in the URL path as well as query parameters.)
+
+Harmony **can also be invoked via wrapper libraries such as `harmony-py`**.
