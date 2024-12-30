@@ -519,11 +519,11 @@ for EPIC_link in sorted(EPIC_links):
   print(EPIC_link)
   EPIC_fname = EPIC_link.split('/')[-1]
   downloaded_files = earthaccess.download(EPIC_link,
-                                          local_path='.')
+                                          local_path='../../_drafts_for_other_missions/DSCOVR')
 # check if file exists in the local directory,
 # if not, try to download again, if second attampt to download fails, remove from the list
   if not os.path.exists(EPIC_fname):
-    downloaded_files = earthaccess.download(EPIC_link, local_path='.')
+    downloaded_files = earthaccess.download(EPIC_link, local_path='../../_drafts_for_other_missions/DSCOVR')
     if not os.path.exists(EPIC_fname): failed_links.append(EPIC_link)
 
 for link in failed_links: EPIC_links.remove(link)
