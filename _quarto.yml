@@ -34,11 +34,20 @@ website:
     collapse-level: 2
     contents:
       - href: index.qmd
-        text: Welcome
-      - section: mission_notebooks.qmd
-        text: Mission how-tos
-        contents: 
-          - section: "**DSCOVR** (Deep Space Climate Observatory)"
+        text: Mission-specific guidance
+        contents:
+#      - section: mission_notebooks.qmd
+#        text: Mission how-tos
+#        contents:
+        - section: "**CALIPSO ()"
+          contents:
+            - section: "How do I..."
+              contents:
+              - text: Plot ozone number densities
+                href: CALIPSO/how_to_plot_ozone_number_densities.ipynb
+        - section: "**DSCOVR** (Deep Space Climate Observatory)"
+          contents:
+          - section: "How do I..."
             contents:
             - text: Explore aerosol data from EPIC and EPA-AQS
               href: DSCOVR/how_to_explore_aerosol_data_from_EPIC_and_EPA-AQS.ipynb
@@ -50,25 +59,33 @@ website:
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
             - text: Compute daily averages of EPIC Level-4 TrO3 using OPeNDAP
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
-          - section: "**MAIA** (Multi-Angle Imager for Aerosols)"
+        - section: "**MAIA** (Multi-Angle Imager for Aerosols)"
+          contents:
+          - section: "How do I..."
             contents:
             - text: Plot map using a local file
               href: MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb
             - text: Convert data from NetCDF to CSV format
               href: MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
-          - section: "**PREFIRE** (Polar Radiant Energy in the Far-InfraRed Experiment)"
+        - section: "**PREFIRE** (Polar Radiant Energy in the Far-InfraRed Experiment)"
+          contents:
+          - section: "How do I..."
             contents:
             - text: Generate tiled images using HyBIG
               href: PREFIRE/how_to_generate_tiled_images_for_PREFIRE_using_HyBIG.ipynb
-          - section: "**TEMPO** (Tropospheric Emissions: Monitoring of Pollution)"
+        - section: "**TEMPO** (Tropospheric Emissions: Monitoring of Pollution)"
+          contents:
+          - section: "How do I..."
             contents:
             - text: Examine data details using `earthaccess` and `harmony-py`
               href: TEMPO/how_to_examine_TEMPO_data_using_earthaccess_and_harmony-py.ipynb
             - text: Visualize data using `harmony-py`
               href: TEMPO/how_to_visualize_TEMPO_data_using_harmony-py.ipynb
-          - section: "**TOLNet** (Tropospheric Ozone Lidar Network)"
+        - section: "**TOLNet** (Tropospheric Ozone Lidar Network)"
+          contents:
+          - section: "Tutorials"
             contents:
-            - text: Use the TOLNet API with examples of plotting and using GEOS-CF
+            - text: The TOLNet API - with examples of plotting and using GEOS-CF
               href: TOLNet/how_to_use_the_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
       - text: Mission Related Scripts (not notebooks)
         href: mission_scripts.qmd
