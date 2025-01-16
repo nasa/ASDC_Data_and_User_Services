@@ -40,32 +40,36 @@ website:
         contents: 
           - section: DSCOVR
             contents:
-            - text: DSCOVR UVAI Exploration
-              href: DSCOVR/dscovr_uvai_exploration.ipynb
-            - text: TEMPO UVAI vs DSCOVR (spatial)
-              href: DSCOVR/tempo_uvai_vs_dscovr_spatial.ipynb
-            - text: TEMPO UVAI vs DSCOVR vs AERONET
-              href: DSCOVR/tempo_uvai_vs_dscovr_vs_aeronet.ipynb
+            - text: Exploring EPIC aerosol data
+              href: DSCOVR/how_to_explore_aerosol_data_from_EPIC_and_EPA-AQS.ipynb
+            - text: Comparing TEMPO and DSCOVR aerosol data (spatially)
+              href: DSCOVR/how_to_compare_spatially_TEMPO_with_DSCOVR_uvai.ipynb
+            - text: Comparing TEMPO vs DSCOVR vs AERONET aerosol data
+              href: DSCOVR/how_to_compare_TEMPO_with_DSCOVR_and_AERONET_uvai.ipynb
+            - text: Computing daily average of EPIC Level-2 TO3 total ozone using OPeNDAP
+              href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
+            - text: Computing daily average of EPIC Level-4 TrO3 using OPeNDAP
+              href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
           - section: MAIA
             contents:
             - text: MAIA netCDF Local Plotting
-              href: MAIA/maia_netcdf_pm_python_local_plotting.ipynb
+              href: MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb
             - text: NetCDF to CSV Conversion
-              href: MAIA/NetCDF2csv.ipynb
+              href: MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
           - section: PREFIRE
             contents:
             - text: PREFIRE HyBIG
-              href: PREFIRE/PREFIRE-HyBIG.ipynb
+              href: PREFIRE/how_to_generate_tiled_images_for_PREFIRE_using_HyBIG.ipynb
           - section: TEMPO
             contents:
             - text: Earthaccess Harmony
-              href: TEMPO/earthaccess_harmony_01_2.ipynb
+              href: TEMPO/examining_TEMPO_data_using_earthaccess_and_harmony-py.ipynb
             - text: TEMPO with Harmony-py
-              href: TEMPO/tempo_with_harmony-py_clean.ipynb
+              href: TEMPO/how_to_visualize_TEMPO_data_using_harmony-py.ipynb
           - section: TOLNet
             contents:
             - text: TOLNet API Examples
-              href: TOLNet/TOLNet_API_Examples_v01.ipynb
+              href: TOLNet/how_to_use_the_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
       - text: Mission Related Scripts (not notebooks)
         href: mission_scripts.qmd
       - learning-more.qmd
