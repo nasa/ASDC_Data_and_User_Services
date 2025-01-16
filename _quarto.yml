@@ -67,6 +67,12 @@ website:
               href: MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb
             - text: Convert data from NetCDF to CSV format
               href: MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
+        - section: "**MISR** (Multi-Angle Imaging SpectroRadiometer)"
+          contents:
+          - section: "How do I..."
+            contents:
+            - text: Calculate and visualize Aerosol Optical Depths (AOD)
+              href: MISR/how_to_compute_and_visualize_aerosol_optical_depths.ipynb
         - section: "**PREFIRE** (Polar Radiant Energy in the Far-InfraRed Experiment)"
           contents:
           - section: "How do I..."
