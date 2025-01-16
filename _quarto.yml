@@ -63,7 +63,7 @@ website:
           - section: "**TEMPO** (Tropospheric Emissions: Monitoring of Pollution)"
             contents:
             - text: Examine data details using `earthaccess` and `harmony-py`
-              href: TEMPO/examining_TEMPO_data_using_earthaccess_and_harmony-py.ipynb
+              href: TEMPO/how_to_examine_TEMPO_data_using_earthaccess_and_harmony-py.ipynb
             - text: Visualize data using `harmony-py`
               href: TEMPO/how_to_visualize_TEMPO_data_using_harmony-py.ipynb
           - section: "**TOLNet** (Tropospheric Ozone Lidar Network)"
