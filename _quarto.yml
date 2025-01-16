@@ -36,39 +36,39 @@ website:
       - href: index.qmd
         text: Welcome
       - section: mission_notebooks.qmd
-        text: Mission Tutorial Notebooks
+        text: Mission how-tos
         contents: 
-          - section: DSCOVR
+          - section: "**DSCOVR** (Deep Space Climate Observatory)"
             contents:
-            - text: Exploring EPIC aerosol data
+            - text: Explore aerosol data from EPIC and EPA-AQS
               href: DSCOVR/how_to_explore_aerosol_data_from_EPIC_and_EPA-AQS.ipynb
-            - text: Comparing TEMPO and DSCOVR aerosol data (spatially)
+            - text: Compare TEMPO and DSCOVR aerosol data (spatially)
               href: DSCOVR/how_to_compare_spatially_TEMPO_with_DSCOVR_uvai.ipynb
-            - text: Comparing TEMPO vs DSCOVR vs AERONET aerosol data
+            - text: Compare TEMPO, DSCOVR, and AERONET aerosol data
               href: DSCOVR/how_to_compare_TEMPO_with_DSCOVR_and_AERONET_uvai.ipynb
-            - text: Computing daily average of EPIC Level-2 TO3 total ozone using OPeNDAP
+            - text: Compute daily averages of EPIC Level-2 total ozone (TO3) using OPeNDAP
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
-            - text: Computing daily average of EPIC Level-4 TrO3 using OPeNDAP
+            - text: Compute daily averages of EPIC Level-4 TrO3 using OPeNDAP
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
-          - section: MAIA
+          - section: "**MAIA** (Multi-Angle Imager for Aerosols)"
             contents:
-            - text: MAIA netCDF Local Plotting
+            - text: Plot map using a local file
               href: MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb
-            - text: NetCDF to CSV Conversion
+            - text: Convert data from NetCDF to CSV format
               href: MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
-          - section: PREFIRE
+          - section: "**PREFIRE** (Polar Radiant Energy in the Far-InfraRed Experiment)"
             contents:
-            - text: PREFIRE HyBIG
+            - text: Generate tiled images using HyBIG
               href: PREFIRE/how_to_generate_tiled_images_for_PREFIRE_using_HyBIG.ipynb
-          - section: TEMPO
+          - section: "**TEMPO** (Tropospheric Emissions: Monitoring of Pollution)"
             contents:
-            - text: Earthaccess Harmony
+            - text: Examine data details using `earthaccess` and `harmony-py`
               href: TEMPO/examining_TEMPO_data_using_earthaccess_and_harmony-py.ipynb
-            - text: TEMPO with Harmony-py
+            - text: Visualize data using `harmony-py`
               href: TEMPO/how_to_visualize_TEMPO_data_using_harmony-py.ipynb
-          - section: TOLNet
+          - section: "**TOLNet** (Tropospheric Ozone Lidar Network)"
             contents:
-            - text: TOLNet API Examples
+            - text: Use the TOLNet API with examples of plotting and using GEOS-CF
               href: TOLNet/how_to_use_the_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
       - text: Mission Related Scripts (not notebooks)
         href: mission_scripts.qmd
