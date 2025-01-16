@@ -1,4 +1,5 @@
 /.quarto/
+.html
 _site/*
 .idea/*
 
