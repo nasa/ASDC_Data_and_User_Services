@@ -39,7 +39,7 @@ website:
 #      - section: mission_notebooks.qmd
 #        text: Mission how-tos
 #        contents:
-        - section: "**CALIPSO ()"
+        - section: "**CALIPSO** (Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations)"
           contents:
             - section: "How do I..."
               contents:
