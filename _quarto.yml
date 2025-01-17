@@ -56,6 +56,8 @@ website:
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
             - text: Compute daily averages of EPIC Level-4 TrO3 using OPeNDAP
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
+            - text: Plot Level-2 ozone product parameters
+              href: DSCOVR/how_to_plot_ozone_product_parameters.ipynb
         - section: "**MAIA** (Multi-Angle Imager for Aerosols)"
           contents:
           - section: "How do I..."
