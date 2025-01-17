@@ -2,20 +2,22 @@
 title: Mission Processing Scripts
 ---
 
-In addition to the tutorial notebooks, there are several example scripts available in the ASDC Data and User Services repository:
+In addition to the tutorial and how-to notebooks, there are several example scripts available in the ASDC Data and User Services repository:
 
 ---
 
-### **CALIPSO - [Ozone Number Density](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/CALIPSO/CALIPSO_Ozone_Number_Density.py)**
+<font size="4">**CERES** (Clouds and the Earth's Radiant Energy System):</font>
 
-### **CERES - [Terra](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/CERES_Terra/CERES.m)**
+- [Downloading an HDF file](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/_additional_scripts/CERES_Terra/CERES.m) (MATLAB script)
 
-### **MISR - [Aerosol Optical Depth (AOD)](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/MISR/MISR_AOD.py)**
+<br>
+<font size="4">**SAGEIII-ISS** (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station):</font>
 
-### **MOPITT - [Carbon Monoxide Mixing Ratio](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/MOPITT/MOP03JM_COMixingRatio.py)**
+- [Retrieving Monthly Zonal Mean images from SAGE III-ISS' Browse Imagery Service, Quicklook](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/_additional_scripts/SAGEIII-ISS/sage_quicklook.py) (Python script)
 
-### **SAGEIII-ISS - [Quick-look](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/SAGEIII-ISS/sage_quicklook.py)**
+<br>
+<font size="4">**TOLNet** (Tropospheric Ozone Lidar Network):</font>
 
-### **TOLNet - [Quick-DSCOVR EPIC Level-4 vs TOLNet CLIM vs PANDORA](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py)**
+- [Comparing ozone data between DSCOVR EPIC Level-4 and TOLNet CLIM and PANDORA](https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/_additional_scripts/TOLNet/DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py) (Python script)
 
 ---
