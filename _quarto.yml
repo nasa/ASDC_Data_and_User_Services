@@ -96,8 +96,8 @@ website:
             contents:
             - text: The TOLNet API - with examples of plotting and using GEOS-CF
               href: TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
-      - text: Additional reference scripts (not notebooks)
-        href: mission_scripts.qmd
+      - text: Additional reference code (not notebooks)
+        href: additional_code_references.qmd
       - learning-more.qmd
 
 
