@@ -3,7 +3,7 @@
 This GitHub page serves as a comprehensive resource for end users
 seeking guidance and instructions on
 working with data from select missions that are archived and distributed by
-the ASDC Distributed Active Archive Center (DAAC).
+the Atmospheric Science Data Center (ASDC).
 Its aim is to enhance the knowledge and proficiency of data users,
 enabling more effective usage of the valuable resources made available by ASDC.
 Through this transfer of expertise from ASDC to users, we hope to
