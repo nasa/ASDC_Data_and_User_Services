@@ -33,8 +33,8 @@ website:
     search: true
     collapse-level: 2
     contents:
-      - href: index.qmd
-        text: Mission-specific guidance
+      - section: "Mission-specific guidance"
+        href: index.qmd
         contents:
         - section: "**CALIPSO** (Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations)"
           contents:
@@ -70,6 +70,12 @@ website:
             contents:
             - text: Calculate and visualize Aerosol Optical Depths (AOD)
               href: MISR/how_to_compute_and_visualize_aerosol_optical_depths.ipynb
+        - section: "**MOPITT** (Measurements Of Pollution In The Troposphere)"
+          contents:
+          - section: "How do I..."
+            contents:
+            - text: Plot carbon monoxide mixing ratios
+              href: MOPITT/how_to_plot_carbon_monoxide_mixing_ratio.ipynb
         - section: "**PREFIRE** (Polar Radiant Energy in the Far-InfraRed Experiment)"
           contents:
           - section: "How do I..."
