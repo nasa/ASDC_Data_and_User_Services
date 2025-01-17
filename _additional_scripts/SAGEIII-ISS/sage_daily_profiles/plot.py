@@ -36,10 +36,6 @@ def plot_data(dates, file_lists, filename_each_day, dict_ss, dict_sr, collection
 def plot_two(date, file_list, ss_values, sr_values, filename_list, collection, sage_profile_dir):
     blues = pyplot.get_cmap("Blues", len(filename_list))
     reds = pyplot.get_cmap("Reds", len(filename_list))
-
-
-    font_path = f'{current_working_directory}/Roboto/Roboto-Black.ttf' 
-    prop = fm.FontProperties(fname=font_path)
     
     for dset in dsets:
         for f, b, r in zip(file_list, range(blues.N), range(reds.N)):
@@ -93,9 +89,7 @@ def plot_two(date, file_list, ss_values, sr_values, filename_list, collection, s
                 plt.gcf().set_size_inches(14, 12)
                 plt.style.use('dark_background')
                 
-                plt.suptitle('{0} \n{1}'.format(ymd_str, data_title), fontproperties=prop, fontsize=30)
-                
-                
+                plt.suptitle('{0} \n{1}'.format(ymd_str, data_title), fontsize=30)
 
                 if 'SR' in short_name:
                                     
@@ -110,21 +104,18 @@ def plot_two(date, file_list, ss_values, sr_values, filename_list, collection, s
                     plt.gca().xaxis.set_major_formatter(formatter)
                     
                     
-                    plt.xlabel('{0} ({1})'.format(data_title, data_units), fontproperties=prop, fontsize=12)
-                    plt.ylabel('{0} ({1})'.format(pres_title, pres_units), fontproperties=prop, fontsize=12)
+                    plt.xlabel('{0} ({1})'.format(data_title, data_units), fontsize=12)
+                    plt.ylabel('{0} ({1})'.format(pres_title, pres_units), fontsize=12)
                     
                     
-                    plt.title('Sunrise', fontproperties=prop, fontsize=20 )
+                    plt.title('Sunrise', fontsize=20 )
                     plt.gca().set_xlim(0, max_value)
 
                     plt.gca().yaxis.set_major_formatter(FormatStrFormatter('%g'))
 
-                
-
                 if 'SS' in short_name:
                     
-                    plt.subplot(1, 2, 2)           
-                    
+                    plt.subplot(1, 2, 2)
 
                     plt.plot(data, altitude, color = reds(r), linewidth=4)
                     plt.legend(sorted(ss_values), frameon=False, loc='center left', bbox_to_anchor=(1.15, 0.5), fontsize=12)
@@ -133,13 +124,11 @@ def plot_two(date, file_list, ss_values, sr_values, filename_list, collection, s
                     formatter.set_scientific(True)
                     formatter.set_powerlimits((-3, 4))
                     plt.gca().xaxis.set_major_formatter(formatter)
-                    
-                    
 
-                    plt.xlabel('{0} ({1})'.format(data_title, data_units), fontproperties=prop, fontsize=12)
-                    plt.ylabel('{0} ({1})'.format(pres_title, pres_units), fontproperties=prop, fontsize=12)
+                    plt.xlabel('{0} ({1})'.format(data_title, data_units), fontsize=12)
+                    plt.ylabel('{0} ({1})'.format(pres_title, pres_units), fontsize=12)
                     
-                    plt.title('Sunset', fontproperties=prop, fontsize=20)
+                    plt.title('Sunset', fontsize=20)
                     plt.gca().set_xlim(0, max_value)
                     
                     plt.gca().yaxis.set_major_formatter(FormatStrFormatter('%g'))
@@ -156,9 +145,6 @@ def plot_two(date, file_list, ss_values, sr_values, filename_list, collection, s
 
 def plot_one(date, file_list, values, color, title, collection, sage_profile_dir):
     files = []
-
-    font_path = '/Users/celand1/Downloads/Roboto/Roboto-Black.ttf' 
-    prop = fm.FontProperties(fname=font_path)
     
     for dset in dsets:
         for c, f in zip(range(color.N), file_list):
@@ -208,7 +194,7 @@ def plot_one(date, file_list, values, color, title, collection, sage_profile_dir
                 plt.gcf().set_size_inches(8, 12)
                 plt.style.use('dark_background')
                 
-                plt.suptitle('{0} \n{1}'.format(ymd_str, data_title), fontproperties=prop, fontsize=30)
+                plt.suptitle('{0} \n{1}'.format(ymd_str, data_title), fontsize=30)
                 
                 plt.plot(data, altitude, color = color(c), linewidth=4)
 
@@ -221,11 +207,11 @@ def plot_one(date, file_list, values, color, title, collection, sage_profile_dir
                 plt.gca().xaxis.set_major_formatter(formatter)
                 
                 
-                plt.xlabel('{0} ({1})'.format(data_title, data_units), fontproperties=prop, fontsize=12)
-                plt.ylabel('{0} ({1})'.format(pres_title, pres_units), fontproperties=prop, fontsize=12)
+                plt.xlabel('{0} ({1})'.format(data_title, data_units), fontsize=12)
+                plt.ylabel('{0} ({1})'.format(pres_title, pres_units), fontsize=12)
                 
                 
-                plt.title(f'{title}', fontproperties=prop, fontsize=20 )
+                plt.title(f'{title}', fontsize=20 )
                 plt.gca().set_xlim(0, max_value)
             
                 plt.gca().yaxis.set_major_formatter(FormatStrFormatter('%g'))
