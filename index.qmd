@@ -1,13 +1,30 @@
 ---
 title: "ASDC Data and User Services Tutorials and Resources"
 subtitle: "With mission-specific guidance"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
 ---
 
-## Welcome! {#welcome}
+## Welcome {#welcome}
 
-Welcome to the Data and User Services repository for the NASA Atmospheric Science Data Center ([ASDC](https://eosweb.larc.nasa.gov/))!
+**Welcome to the Data and User Services repository for the
+NASA Atmospheric Science Data Center ([ASDC](https://eosweb.larc.nasa.gov/))!**
 
-This GitHub page serves as a comprehensive resource for end users seeking tutorials on various missions supported by the ASDC. The page's primary objective is to provide step-by-step guidance and instructions on utilizing the NASA missions archived and distributed by ASDC DAAC. By offering these tutorials, the page aims to enhance the knowledge and proficiency of end users, enabling them to leverage the valuable resources made available by ASDC effectively. This GitHub page facilitates the seamless transfer of expertise from ASDC to end users, fostering a collaborative environment that drives innovation and progress in space-related endeavors.
+This GitHub page serves as a comprehensive resource for end users
+seeking guidance and instructions on
+working with data from select missions that are archived and distributed by
+the ASDC Distributed Active Archive Center (DAAC).
+Its aim is to enhance the knowledge and proficiency of data users,
+enabling more effective usage of the valuable resources made available by ASDC.
+Through this transfer of expertise from ASDC to users, we hope to
+foster a collaborative environment that drives innovation and progress in space-related endeavors.
+
+**In the left sidebar...**
+
+You will find how-to guides and tutorials that present example workflows with
+NASA Earthdata both on your local machine as well as in the cloud, for a variety of use cases.
+The cloud-based guides exemplify the advantages of working with NASA Earthdata in the cloud and
+aim to provide a starting point for exploring what your workflows could look like in the cloud.
 
 
 *This site is under active, open development. Stay tuned for more and ever-evolving content!* 
