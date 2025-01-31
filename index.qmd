@@ -8,7 +8,7 @@ author: "Atmospheric Science Data Center (ASDC)"
 ## Welcome {#welcome}
 
 **Welcome to the Data and User Services repository for the
-NASA Atmospheric Science Data Center ([ASDC](https://eosweb.larc.nasa.gov/))!**
+NASA Atmospheric Science Data Center ([ASDC](https://asdc.larc.nasa.gov/))!**
 
 This GitHub page serves as a comprehensive resource for end users
 seeking guidance and instructions on
