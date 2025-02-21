@@ -21,10 +21,11 @@ foster a collaborative environment that drives innovation and progress in space-
 
 **In the left sidebar...**
 
-You will find how-to guides and tutorials that present example workflows with
-NASA Earthdata both on your local machine as well as in the cloud, for a variety of use cases.
+You will find how-to guides (for goal-oriented tasks), tutorials (for learning), and scripts 
+for select missions and a variety of use cases. 
+Examples are provided for working with NASA Earthdata both on your local machine as well as in the cloud.
 The cloud-based guides exemplify the advantages of working with NASA Earthdata in the cloud and
-aim to provide a starting point for exploring what your workflows could look like in the cloud.
+aim to provide a starting point for exploring what your own workflows could look like in the cloud.
 
 
 *This site is under active, open development. Stay tuned for more and ever-evolving content!* 
