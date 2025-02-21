@@ -44,7 +44,7 @@ website:
                 href: CALIPSO/how_to_plot_ozone_number_densities.ipynb
         - section: "**CERES** (Clouds and the Earth's Radiant Energy System)"
           contents:
-            - section: "Others"
+            - section: "Scripts"
               contents:
               - text: MATLAB script for downloading an HDF file
                 href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/CERES/script_for_downloading_hdf.m
@@ -92,7 +92,7 @@ website:
               href: PREFIRE/how_to_generate_tiled_images_for_PREFIRE_using_HyBIG.ipynb
         - section: "**SAGEIII-ISS** (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station)"
           contents:
-          - section: "Others"
+          - section: "Scripts"
             contents:
             - text: Python script for retrieving Monthly Zonal Mean images from SAGE III-ISS' Browse Imagery Service
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/SAGEIII-ISS/script_for_quicklook.py
@@ -112,7 +112,7 @@ website:
             contents:
             - text: The TOLNet API - with examples of plotting and using GEOS-CF
               href: TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
-          - section: "Others"
+          - section: "Scripts"
             contents:
             - text: Python script for comparing ozone measurements of TOLNet lidar against Pandora and DSCOVR EPIC
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
