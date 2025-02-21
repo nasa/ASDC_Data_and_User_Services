@@ -42,6 +42,12 @@ website:
               contents:
               - text: Plot ozone number densities
                 href: CALIPSO/how_to_plot_ozone_number_densities.ipynb
+        - section: "**CERES** (Clouds and the Earth's Radiant Energy System)"
+          contents:
+            - section: "Others"
+              contents:
+              - text: MATLAB script for downloading an HDF file
+                href: CERES_Terra/script_for_downloading_hdf.m
         - section: "**DSCOVR** (Deep Space Climate Observatory)"
           contents:
           - section: "How do I..."
@@ -84,6 +90,12 @@ website:
             contents:
             - text: Generate tiled images using HyBIG
               href: PREFIRE/how_to_generate_tiled_images_for_PREFIRE_using_HyBIG.ipynb
+        - section: "**SAGEIII-ISS** (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station)"
+          contents:
+          - section: "Others"
+            contents:
+            - text: Python script for retrieving Monthly Zonal Mean images from SAGE III-ISS' Browse Imagery Service
+              href: SAGEIII-ISS/script_for_quicklook.py
         - section: "**TEMPO** (Tropospheric Emissions: Monitoring of Pollution)"
           contents:
           - section: "How do I..."
@@ -100,8 +112,12 @@ website:
             contents:
             - text: The TOLNet API - with examples of plotting and using GEOS-CF
               href: TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
-      - text: Additional reference code (not notebooks)
-        href: additional_code_references.qmd
+          - section: "Others"
+            contents:
+            - text: Python script for comparing ozone measurements of TOLNet lidar against Pandora and DSCOVR EPIC
+              href: TOLNet/script_for_DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
+            - text: Python script for creating a TOLNet API instance
+              href: TOLNet/script_for_tolnet_v01.py
       - learning-more.qmd
 
 

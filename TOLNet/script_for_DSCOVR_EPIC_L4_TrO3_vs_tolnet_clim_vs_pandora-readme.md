@@ -1,4 +1,4 @@
-Python code `DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py` compares total and tropospheric ozone
+The accompanying Python code `DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py` compares total and tropospheric ozone
 columns integrated from ozone profiles retrieved by TOLNet lidar against total columns retrieved by
 Pandora and DSCOVR EPIC spectrometer and tropospheric column retrieved by EPIC.
 The code works only with clim TOLNet data.
