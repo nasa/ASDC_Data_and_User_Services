@@ -84,12 +84,6 @@ website:
             contents:
             - text: Plot carbon monoxide mixing ratios
               href: MOPITT/how_to_plot_carbon_monoxide_mixing_ratio.ipynb
-        - section: "**PREFIRE** (Polar Radiant Energy in the Far-InfraRed Experiment)"
-          contents:
-          - section: "How do I..."
-            contents:
-            - text: Generate tiled images using HyBIG
-              href: PREFIRE/how_to_generate_tiled_images_for_PREFIRE_using_HyBIG.ipynb
         - section: "**SAGEIII-ISS** (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station)"
           contents:
           - section: "Scripts"
