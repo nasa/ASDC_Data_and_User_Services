@@ -1,0 +1,48 @@
+ci:
+  autoupdate_schedule: "monthly" # Like dependabot
+  autoupdate_commit_msg: "chore: update pre-commit hooks"
+  autoupdate_branch: "develop"
+  autofix_prs: false # Comment "pre-commit.ci autofix" on a PR to trigger
+
+default_language_version:
+  python: python3.9
+
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.25.1
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Validate format
+      - id: check-yaml
+        args: [ '--allow-multiple-documents' ]
+      - id: check-toml
+      - id: check-json
+      # Check for common mistakes
+      - id: check-added-large-files
+      - id: check-case-conflict
+      # - id: check-illegal-windows-names # TODO: Enable in next release
+      - id: check-merge-conflict
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude_types: ["jupyter", "text"]
+      - id: mixed-line-ending
+      #      - id: no-commit-to-branch # protects `main` by default
+      - id: debug-statements
+      - id: trailing-whitespace
+        exclude_types: ["jupyter", "text"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.8
+    hooks:
+      - id: ruff
+        args: ["--fix", "--exit-non-zero-on-fix"]
+      - id: ruff-format
