@@ -1,5 +1,7 @@
 # Exclude a variety of commonly ignored directories.
 exclude = [
+    "additional_drafts",
+    "L2_validation_codes",
     ".bzr",
     ".direnv",
     ".eggs",
