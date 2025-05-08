@@ -38,9 +38,9 @@ website:
         contents:
         - section: "**CALIPSO** (Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations)"
           contents:
-            - section: "How do I..."
+            - section: "An introduction to.."
               contents:
-              - text: Plot ozone number densities
+              - text: Plotting ozone number densities
                 href: CALIPSO/how_to_plot_ozone_number_densities.ipynb
         - section: "**CERES** (Clouds and the Earth's Radiant Energy System)"
           contents:
@@ -50,6 +50,10 @@ website:
                 href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/CERES/script_for_downloading_hdf.m
         - section: "**DSCOVR** (Deep Space Climate Observatory)"
           contents:
+          - section: "An introduction to..."
+            contents:
+            - text: Plotting Level-2 ozone product parameters
+              href: DSCOVR/how_to_plot_ozone_product_parameters.ipynb
           - section: "How do I..."
             contents:
             - text: Explore aerosol data from EPIC and EPA-AQS
@@ -62,8 +66,6 @@ website:
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
             - text: Compute daily averages of EPIC Level-4 TrO3 using OPeNDAP
               href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
-            - text: Plot Level-2 ozone product parameters
-              href: DSCOVR/how_to_plot_ozone_product_parameters.ipynb
         - section: "**MAIA** (Multi-Angle Imager for Aerosols)"
           contents:
           - section: "How do I..."
@@ -74,15 +76,15 @@ website:
               href: MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
         - section: "**MISR** (Multi-Angle Imaging SpectroRadiometer)"
           contents:
-          - section: "How do I..."
+          - section: "An introduction to..."
             contents:
-            - text: Calculate and visualize Aerosol Optical Depths (AOD)
+            - text: Calculating and visualizing Aerosol Optical Depths (AOD)
               href: MISR/how_to_compute_and_visualize_aerosol_optical_depths.ipynb
         - section: "**MOPITT** (Measurements Of Pollution In The Troposphere)"
           contents:
-          - section: "How do I..."
+          - section: "An introduction to..."
             contents:
-            - text: Plot carbon monoxide mixing ratios
+            - text: Plotting carbon monoxide mixing ratios
               href: MOPITT/how_to_plot_carbon_monoxide_mixing_ratio.ipynb
         - section: "**SAGEIII-ISS** (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station)"
           contents:
