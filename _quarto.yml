@@ -115,6 +115,7 @@ website:
             - text: Python script for creating a TOLNet API instance
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_tolnet_v01.py
       - learning-more.qmd
+      - contributing.qmd
 
 
 format:

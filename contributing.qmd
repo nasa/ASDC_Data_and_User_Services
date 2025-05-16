@@ -1,0 +1,10 @@
+
+*This contributing guide is a draft, and still under active, open development.*
+
+## Contribution Style Guide
+
+Based on previous notebook reviews and revisions,
+the following are recommended and/or enforced via the CI/CD workflow:
+- Use `ruff` for linting and formatting.
+- Wherever possible and appropriate, move inline comments into notebook Markdown cells.
+- Wherever possible and appropriate, replace static references to local files with code that will programmatically pull data files when running a notebook.
