@@ -114,8 +114,10 @@ website:
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
             - text: Python script for creating a TOLNet API instance
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_tolnet_v01.py
-      - learning-more.qmd
-      - contributing.qmd
+      - text: "Learning more"
+        href: .additional_docs/learning-more.qmd
+      - text: "Contributing"
+        href: .additional_docs/contributing.qmd
 
 
 format:
