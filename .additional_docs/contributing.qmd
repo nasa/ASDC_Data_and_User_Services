@@ -1,3 +1,11 @@
+---
+title: "Contributing Guide"
+subtitle: "Recommendations based on previous notebook reviews and revisions."
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/learning-more.html
+slug: index
+---
 
 # Contributing Guide
 

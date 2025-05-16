@@ -1,5 +1,9 @@
 ---
 title: "Learning more"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/contributing.html
+slug: index
 ---
 
 For additional information on NASA's Earth Observation data, please checkout these additional resources: 
