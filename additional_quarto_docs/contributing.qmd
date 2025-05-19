@@ -19,7 +19,8 @@ The following are recommended and/or enforced via the CI/CD workflow:
 
 Ensure each notebook contains, at a minimum:
 
-- A header section with:
+- A quarto header with an auto-generated "last published" date included
+- A Markdown header section with:
   - A **Summary** or **Overview** block
   - A **Prerequisites** block
   - A **Notebook Author/Affiliation** block
