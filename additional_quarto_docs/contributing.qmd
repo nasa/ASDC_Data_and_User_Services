@@ -2,20 +2,15 @@
 title: "Contributing Guide"
 subtitle: "Recommendations based on previous notebook reviews and revisions."
 date: last-modified
-author: "Atmospheric Science Data Center (ASDC)"
 citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/learning-more.html
-slug: index
 ---
-
-# Contributing Guide
-
-These recommendations are based on previous notebook reviews and revisions.
 
 *This contributing guide is a draft, and still under active, open development.*
 
 ### Style Guidelines
 
 The following are recommended and/or enforced via the CI/CD workflow:
+
 - Use `ruff` for linting and formatting.
 - Wherever possible and appropriate, move inline comments into notebook Markdown cells.
 - Wherever possible and appropriate, replace static references to local files with code that will programmatically pull data files when running a notebook.
@@ -23,5 +18,9 @@ The following are recommended and/or enforced via the CI/CD workflow:
 ### Content Guidelines
 
 Ensure each notebook contains, at a minimum:
-- An **Overview** section in the header
-- An **Author/Affiliation** section in the header
+
+- A header section with:
+  - A **Summary** or **Overview** block
+  - A **Prerequisites** block
+  - A **Notebook Author/Affiliation** block
+- Numbered sections that use Markdown hash symbols (#) for headings 

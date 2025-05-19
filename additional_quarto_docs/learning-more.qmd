@@ -1,12 +1,10 @@
 ---
 title: "Learning more"
 date: last-modified
-author: "Atmospheric Science Data Center (ASDC)"
 citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/contributing.html
-slug: index
 ---
 
-For additional information on NASA's Earth Observation data, please checkout these additional resources: 
+For additional information on NASA's Earth Observation data, please check out these additional resources: 
 
 - [Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/): General information on accessing Earthdata
 - [`earthaccess`](https://earthaccess.readthedocs.io/en/latest/): One stop shop for programmatic login, search, and access to Earthdata using Python

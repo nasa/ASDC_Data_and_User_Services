@@ -2,6 +2,7 @@ project:
   type: website
   render:
     - "*.{qmd,m,py,ipynb}"
+    - "_additional_docs/*.{qmd,m,py,ipynb}"
   
 execute:
   freeze: true  # never re-execute computational content during project render, needed for .qmd and .rmd since quarto does not render .ipynb by default
@@ -115,9 +116,9 @@ website:
             - text: Python script for creating a TOLNet API instance
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_tolnet_v01.py
       - text: "Learning more"
-        href: .additional_docs/learning-more.qmd
+        href: additional_quarto_docs/learning-more.qmd
       - text: "Contributing"
-        href: .additional_docs/contributing.qmd
+        href: additional_quarto_docs/contributing.qmd
 
 
 format:
