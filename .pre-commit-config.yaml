@@ -23,6 +23,7 @@ repos:
       - id: check-json
       # Check for common mistakes
       - id: check-added-large-files
+        args: ['--maxkb=2000']
       - id: check-case-conflict
       # - id: check-illegal-windows-names # TODO: Enable in next release
       - id: check-merge-conflict
