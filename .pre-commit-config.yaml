@@ -53,3 +53,11 @@ repos:
       - id: ruff
         args: ["--fix", "--exit-non-zero-on-fix"]
       - id: ruff-format
+
+  - repo: local # Use 'local' for custom hooks in the repository
+    hooks:
+      - id: check-custom-notebook-structure # A unique identifier for your hook
+        name: Check for custom notebook structure # A descriptive name
+        entry: custom_notebook_structure_hook.py # Path to your script, relative to the repository root
+        language: script # Specify 'script' for executable files
+        files: '\.ipynb$' # Optional: Regex to specify file types to check
