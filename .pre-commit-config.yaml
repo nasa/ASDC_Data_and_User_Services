@@ -61,3 +61,4 @@ repos:
         entry: custom_notebook_structure_hook.py # Path to your script, relative to the repository root
         language: script # Specify 'script' for executable files
         files: '\.ipynb$' # Optional: Regex to specify file types to check
+        exclude: ".*\/additional_drafts\/.*"
