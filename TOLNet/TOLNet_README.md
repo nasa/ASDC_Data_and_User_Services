@@ -6,4 +6,4 @@ have been deployed previously in air quality campaigns in coordination with fede
 state and local agency’s interests.
 
 Example notebook for starting out can be found at
-https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/TOLNet_API_Examples.ipynb.
+https://nasa.github.io/ASDC_Data_and_User_Services/TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.html

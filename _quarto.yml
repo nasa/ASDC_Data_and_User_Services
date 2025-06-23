@@ -111,12 +111,12 @@ website:
             contents:
             - text: The TOLNet API - with examples of plotting and using GEOS-CF
               href: TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
-          - section: "Scripts"
+          - section: "Scripts and API module"
             contents:
             - text: Python script for comparing ozone measurements of TOLNet lidar against Pandora and DSCOVR EPIC
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
-            - text: Python script for creating a TOLNet API instance
-              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_tolnet_v01.py
+            - text: Python module for creating a TOLNet API instance
+              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/tolnet_v01.py
       - text: "Learning more"
         href: additional_quarto_docs/learning-more.qmd
       - text: "Contributing"
