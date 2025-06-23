@@ -93,6 +93,12 @@ website:
             contents:
             - text: Python script for retrieving Monthly Zonal Mean images from SAGE III-ISS' Browse Imagery Service
               href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/SAGEIII-ISS/script_for_quicklook.py
+        - section: "**STAQS** (Synergistic TEMPO Air Quality Science)"
+          contents:
+          - section: "tutorial"
+            contents:
+            - text: Python workflow for STAQS GCAS netCDF files in ArcGIS Pro
+              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/STAQS/how_to_access_and_display_netcdf_format_data_in_ArcGIS_Pro.ipynb
         - section: "**TEMPO** (Tropospheric Emissions: Monitoring of Pollution)"
           contents:
           - section: "How do I..."
