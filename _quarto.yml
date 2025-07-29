@@ -113,6 +113,10 @@ website:
               href: https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/
         - section: "**TOLNet** (Tropospheric Ozone Lidar Network)"
           contents:
+          - section: "How do I..."
+            contents:
+              - text: Plot ozone mixing ratio from multiple lidars
+                href: TOLNet/how_to_plot_ozone_mixing_ratio_from_multiple_lidars.ipynb
           - section: "Tutorials"
             contents:
             - text: The TOLNet API - with examples of plotting and using GEOS-CF
