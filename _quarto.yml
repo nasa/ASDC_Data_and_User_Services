@@ -108,7 +108,7 @@ website:
               href: TEMPO/how_to_examine_TEMPO_data_using_earthaccess.ipynb
             - text: Subset and visualize data using `harmony-py`
               href: TEMPO/how_to_examine_TEMPO_data_using_harmony-py.ipynb
-            - text: Work with TEMPO Level-3 data as a virtual dataset in the cloud, using `earthaccess`
+            - text: Work with TEMPO Level-3 data as a virtual dataset in the cloud, using `earthaccess` [external]
               href: https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/
           - section: "Tutorials"
             contents:
