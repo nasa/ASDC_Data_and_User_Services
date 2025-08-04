@@ -1,0 +1,32 @@
+---
+title: "TEMPO (Tropospheric Emissions: Monitoring of Pollution) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+The following guides show example workflows 
+with TEMPO data for a variety of use cases. 
+These guides aim to provide a starting point for exploring what your workflows 
+could look like.
+Please contact us via the [Earthdata Forum](http://forum.earthdata.nasa.gov/) or create an 
+[_issue_ in the ASDC Data & User Services GitHub repository](https://github.com/nasa/ASDC_Data_and_User_Services/issues) 
+to let us know any questions or if you encounter any problems. 
+
+---
+
+## How-to...
+
+#### - [Use <strong>earthaccess</strong> - to examine TEMPO data details and download files](../TEMPO/how_to_examine_TEMPO_data_using_earthaccess.ipynb)
+
+#### - [Use <strong>harmony-py</strong> - to subset and visualize TEMPO data](../TEMPO/how_to_examine_TEMPO_data_using_harmony-py.ipynb)
+
+#### - [Use <strong>virtual datasets</strong> in the cloud via `earthaccess` - to work with TEMPO Level-3 data [external]](https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/)
+
+## Tutorials
+
+#### [(ARSET training) Working with TEMPO observations of the Madre wildfire, via `Harmony-py`](../TEMPO/ARSET-TEMPO_August2025.ipynb)
+
+#### [(ARSET training) Working with TEMPO data through ArcGIS Image Services programmatically](../TEMPO/Utilizing_TEMPO_ArcGIS_Image_Services_ARSET_Training.ipynb)
+
+#### [(HAQAST training) Using the <strong>Remote Sensing Information Gateway (RSIG)</strong> to access and analyze TEMPO data](../TEMPO/tempo_geoxo_meeting_haqast.ipynb)
+
