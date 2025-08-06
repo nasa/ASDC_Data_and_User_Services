@@ -1,0 +1,15 @@
+---
+title: "MAIA (Multi-Angle Imager for Aerosols) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## How-to...
+
+#### - [Plot map using a local file](../MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb)
+
+#### - [Convert data from NetCDF to CSV format](../MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb)

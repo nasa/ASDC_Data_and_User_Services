@@ -1,0 +1,25 @@
+---
+title: "DSCOVR (Deep Space Climate Observatory) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## An introduction to...
+
+#### - [Plotting Level-2 ozone product parameters](../DSCOVR/how_to_plot_ozone_product_parameters.ipynb)
+
+## How-to...
+
+#### - [Compute daily averages of EPIC Level-2 total ozone (TO3) using OPeNDAP](../DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb)
+
+#### - [Compute daily averages of EPIC Level-4 TrO3 using OPeNDAP](../DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb)
+
+#### - [Explore aerosol data from EPIC and EPA-AQS](../DSCOVR/how_to_explore_aerosol_data_from_EPIC_and_EPA-AQS.ipynb)
+
+#### - [Compare TEMPO and DSCOVR aerosol data (spatially)](../DSCOVR/how_to_compare_spatially_TEMPO_with_DSCOVR_uvai.ipynb)
+
+#### - [Compare TEMPO, DSCOVR, and AERONET aerosol data](../DSCOVR/how_to_compare_TEMPO_with_DSCOVR_and_AERONET_uvai.ipynb)

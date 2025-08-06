@@ -1,0 +1,13 @@
+---
+title: "STAQS (Synergistic TEMPO Air Quality Science) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## Tutorials
+
+#### - [Python workflow for STAQS GCAS netCDF files in ArcGIS Pro](../STAQS/how_to_access_and_display_netcdf_format_data_in_ArcGIS_Pro.ipynb)
