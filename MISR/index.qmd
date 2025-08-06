@@ -1,0 +1,13 @@
+---
+title: "MISR (Multi-Angle Imaging SpectroRadiometer) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## An introduction to...
+
+#### - [Calculating and visualizing Aerosol Optical Depths (AOD)](../MISR/how_to_compute_and_visualize_aerosol_optical_depths.ipynb)

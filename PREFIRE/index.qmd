@@ -1,0 +1,15 @@
+---
+title: "PREFIRE (Polar Radiant Energy in the Far-InfraRed Experiment) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## How-to...
+
+#### - [Plot spatial maps of Level-2 cloud data for a polar region](../PREFIRE/plot_PREFIRE_L2_CLD_with_earthaccess_and_Harmony.ipynb)
+
+#### - [Plot time series of data for points of interest](../PREFIRE/PREFIRE_timeseries_with_earthaccess_and_Harmony.ipynb)

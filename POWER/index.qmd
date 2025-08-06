@@ -1,0 +1,13 @@
+---
+title: "POWER Prediction Of Worldwide Energy Resources) Project resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## How-to...
+
+#### - [Plot a map of temperature data](../POWER/how_to_plot_temperature_from_POWER.ipynb)

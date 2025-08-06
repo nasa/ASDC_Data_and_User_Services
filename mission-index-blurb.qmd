@@ -1,0 +1,8 @@
+
+The following guides show example workflows
+with this mission's data for a variety of use cases.
+These guides aim to provide a starting point for exploring what your workflows
+could look like.
+Please contact us via the [Earthdata Forum](http://forum.earthdata.nasa.gov/) or create an
+[_issue_ in the ASDC Data & User Services GitHub repository](https://github.com/nasa/ASDC_Data_and_User_Services/issues)
+to let us know any questions or if you encounter any problems.

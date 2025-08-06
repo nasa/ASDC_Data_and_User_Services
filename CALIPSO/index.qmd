@@ -1,0 +1,13 @@
+---
+title: "CALIPSO (Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## An introduction to...
+
+#### - [Plotting ozone number densities](../CALIPSO/how_to_plot_ozone_number_densities.ipynb)

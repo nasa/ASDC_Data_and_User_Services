@@ -1,0 +1,13 @@
+---
+title: "MOPITT (Measurements Of Pollution In The Troposphere) resources"
+date: last-modified
+author: "Atmospheric Science Data Center (ASDC)"
+---
+
+{{< include ../mission-index-blurb.qmd >}}
+
+---
+
+## An introduction to...
+
+#### - [Plotting carbon monoxide mixing ratios](../MOPITT/how_to_plot_carbon_monoxide_mixing_ratio.ipynb)
