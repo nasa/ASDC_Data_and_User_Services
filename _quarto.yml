@@ -136,9 +136,9 @@ website:
               href: https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/
           - section: "Tutorials"
             contents:
-            - text: Working with TEMPO observations of the Madre wildfire, via `Harmony-py` (ARSET training)
-              href: TEMPO/ARSET-TEMPO_August2025.ipynb
-            - text: Working with TEMPO data through ArcGIS Image Services programmatically (ARSET training)
+            - text: Working with TEMPO observations of the Madre wildfire, via `Harmony-py` (from TEMPO trainings)
+              href: TEMPO/TEMPO_training_August2025.ipynb
+            - text: Working with TEMPO data through ArcGIS Image Services programmatically (from TEMPO trainings)
               href: TEMPO/Utilizing_TEMPO_ArcGIS_Image_Services_ARSET_Training.ipynb
             - text: Using the Remote Sensing Information Gateway (RSIG) to access and analyze TEMPO data (HAQAST meeting)
               href: TEMPO/tempo_geoxo_meeting_haqast.ipynb
