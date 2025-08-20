@@ -109,6 +109,8 @@ website:
               href: PREFIRE/plot_PREFIRE_L2_CLD_with_earthaccess_and_Harmony.ipynb
             - text: Plot time series of data for points of interest
               href: PREFIRE/PREFIRE_timeseries_with_earthaccess_and_Harmony.ipynb
+            - text: Generate and read virtual datacube for PREFIRE
+              href: PREFIRE/how_to_generate_and_read_virtual_datacube-for-PREFIRE.ipynb
         - section: "<strong>SAGEIII-ISS</strong> (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station)"
           href: SAGEIII-ISS/index.qmd
           contents:
