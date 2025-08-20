@@ -18,7 +18,7 @@ author: "Atmospheric Science Data Center (ASDC)"
 
 ## Tutorials
 
-#### - [(ARSET training) Working with TEMPO observations of the Madre wildfire, via `Harmony-py`](../TEMPO/ARSET-TEMPO_August2025.ipynb)
+#### - [(ARSET and Science Team trainings) Working with TEMPO observations of the Madre wildfire, via `Harmony-py`](TEMPO_training_August2025.ipynb)
 
 #### - [(ARSET training) Working with TEMPO data through ArcGIS Image Services programmatically](../TEMPO/Utilizing_TEMPO_ArcGIS_Image_Services_ARSET_Training.ipynb)
 
