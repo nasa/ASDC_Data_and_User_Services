@@ -24,7 +24,7 @@ website:
     align: center
     tools: 
       - icon: globe
-        href: https://eosweb.larc.nasa.gov/
+        href: https://asdc.larc.nasa.gov/
         text: "NASA ASDC Website"
       - icon: github
         href: https://github.com/nasa/ASDC_Data_and_User_Services
@@ -32,135 +32,138 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 2
+    collapse-level: 1
     contents:
-      - section: "Mission-specific guidance"
-        href: index.qmd
+      - section: "<strong>Satellite</strong> missions guidance"
+        href: satellite_missions_index.qmd
         contents:
         - section: "<strong>CALIPSO</strong> (Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations)"
-          href: CALIPSO/index.qmd
+          href: satellite/CALIPSO/index.qmd
           contents:
             - section: "An introduction to.."
               contents:
               - text: Plotting ozone number densities
-                href: CALIPSO/how_to_plot_ozone_number_densities.ipynb
+                href: satellite/CALIPSO/how_to_plot_ozone_number_densities.ipynb
         - section: "<strong>CERES</strong> (Clouds and the Earth's Radiant Energy System)"
-          href: CERES/index.qmd
+          href: satellite/CERES/index.qmd
           contents:
             - section: "Scripts"
               contents:
               - text: MATLAB script for downloading an HDF file
-                href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/CERES/script_for_downloading_hdf.m
+                href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/satellite/CERES/script_for_downloading_hdf.m
         - section: "<strong>DSCOVR</strong> (Deep Space Climate Observatory)"
-          href: DSCOVR/index.qmd
+          href: satellite/DSCOVR/index.qmd
           contents:
           - section: "An introduction to..."
             contents:
             - text: Plotting Level-2 ozone product parameters
-              href: DSCOVR/how_to_plot_ozone_product_parameters.ipynb
+              href: satellite/DSCOVR/how_to_plot_ozone_product_parameters.ipynb
           - section: "How do I..."
             contents:
             - text: Compute daily averages of EPIC Level-2 total ozone (TO3) using OPeNDAP
-              href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
+              href: satellite/DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-2_TO3_total_ozone_using_OPeNDAP.ipynb
             - text: Compute daily averages of EPIC Level-4 TrO3 using OPeNDAP
-              href: DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
+              href: satellite/DSCOVR/how_to_compute_daily_averages_of_DSCOVR_EPIC_Level-4_TrO3_Using_OPeNDAP.ipynb
             - text: Explore aerosol data from EPIC and EPA-AQS
-              href: DSCOVR/how_to_explore_aerosol_data_from_EPIC_and_EPA-AQS.ipynb
+              href: satellite/DSCOVR/how_to_explore_aerosol_data_from_EPIC_and_EPA-AQS.ipynb
             - text: Compare TEMPO and DSCOVR aerosol data (spatially)
-              href: DSCOVR/how_to_compare_spatially_TEMPO_with_DSCOVR_uvai.ipynb
+              href: satellite/DSCOVR/how_to_compare_spatially_TEMPO_with_DSCOVR_uvai.ipynb
             - text: Compare TEMPO, DSCOVR, and AERONET aerosol data
-              href: DSCOVR/how_to_compare_TEMPO_with_DSCOVR_and_AERONET_uvai.ipynb
+              href: satellite/DSCOVR/how_to_compare_TEMPO_with_DSCOVR_and_AERONET_uvai.ipynb
         - section: "<strong>MAIA</strong> (Multi-Angle Imager for Aerosols)"
-          href: MAIA/index.qmd
+          href: satellite/MAIA/index.qmd
           contents:
           - section: "How do I..."
             contents:
             - text: Plot map using a local file
-              href: MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb
+              href: satellite/MAIA/how_to_plot_map_of_MAIA_data_using_a_local_file.ipynb
             - text: Convert data from NetCDF to CSV format
-              href: MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
+              href: satellite/MAIA/how_to_convert_data_from_netCDF_to_csv_format.ipynb
         - section: "<strong>MISR</strong> (Multi-Angle Imaging SpectroRadiometer)"
-          href: MISR/index.qmd
+          href: satellite/MISR/index.qmd
           contents:
           - section: "An introduction to..."
             contents:
             - text: Calculating and visualizing Aerosol Optical Depths (AOD)
-              href: MISR/how_to_compute_and_visualize_aerosol_optical_depths.ipynb
+              href: satellite/MISR/how_to_compute_and_visualize_aerosol_optical_depths.ipynb
         - section: "<strong>MOPITT</strong> (Measurements Of Pollution In The Troposphere)"
-          href: MOPITT/index.qmd
+          href: satellite/MOPITT/index.qmd
           contents:
           - section: "An introduction to..."
             contents:
             - text: Plotting carbon monoxide mixing ratios
-              href: MOPITT/how_to_plot_carbon_monoxide_mixing_ratio.ipynb
-        - section: "<strong>POWER</strong> (Prediction Of Worldwide Energy Resources) Project"
-          href: POWER/index.qmd
-          contents:
-          - section: "How do I..."
-            contents:
-            - text: Plotting a map of temperature data
-              href: POWER/how_to_plot_temperature_from_POWER.ipynb
+              href: satellite/MOPITT/how_to_plot_carbon_monoxide_mixing_ratio.ipynb
         - section: "<strong>PREFIRE</strong> (Polar Radiant Energy in the Far-InfraRed Experiment)"
-          href: PREFIRE/index.qmd
+          href: satellite/PREFIRE/index.qmd
           contents:
           - section: "How do I..."
             contents:
             - text: Plot spatial maps of Level-2 cloud data for a polar region
-              href: PREFIRE/plot_PREFIRE_L2_CLD_with_earthaccess_and_Harmony.ipynb
+              href: satellite/PREFIRE/plot_PREFIRE_L2_CLD_with_earthaccess_and_Harmony.ipynb
             - text: Plot time series of data for points of interest
-              href: PREFIRE/PREFIRE_timeseries_with_earthaccess_and_Harmony.ipynb
+              href: satellite/PREFIRE/PREFIRE_timeseries_with_earthaccess_and_Harmony.ipynb
             - text: Generate and read virtual datacube for PREFIRE
-              href: PREFIRE/how_to_generate_and_read_virtual_datacube-for-PREFIRE.ipynb
+              href: satellite/PREFIRE/how_to_generate_and_read_virtual_datacube-for-PREFIRE.ipynb
         - section: "<strong>SAGEIII-ISS</strong> (Stratospheric Aerosol and Gas Experiment III, mounted on the International Space Station)"
-          href: SAGEIII-ISS/index.qmd
+          href: satellite/SAGEIII-ISS/index.qmd
           contents:
           - section: "Scripts"
             contents:
             - text: Python script for retrieving Monthly Zonal Mean images from SAGE III-ISS' Browse Imagery Service
-              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/SAGEIII-ISS/script_for_quicklook.py
-        - section: "<strong>STAQS</strong> (Synergistic TEMPO Air Quality Science)"
-          href: STAQS/index.qmd
-          contents:
-          - section: "tutorial"
-            contents:
-            - text: Python workflow for STAQS GCAS netCDF files in ArcGIS Pro
-              href: STAQS/how_to_access_and_display_netcdf_format_data_in_ArcGIS_Pro.ipynb
+              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/satellite/SAGEIII-ISS/script_for_quicklook.py
         - section: "<strong>TEMPO</strong> (Tropospheric Emissions: Monitoring of Pollution)"
-          href: TEMPO/index.qmd
+          href: satellite/TEMPO/index.qmd
           contents:
           - section: "How do I..."
             contents:
             - text: Examine data details and download TEMPO files using `earthaccess`
-              href: TEMPO/how_to_examine_TEMPO_data_using_earthaccess.ipynb
+              href: satellite/TEMPO/how_to_examine_TEMPO_data_using_earthaccess.ipynb
             - text: Subset and visualize data using `harmony-py`
-              href: TEMPO/how_to_examine_TEMPO_data_using_harmony-py.ipynb
+              href: satellite/TEMPO/how_to_examine_TEMPO_data_using_harmony-py.ipynb
             - text: Work with TEMPO Level-3 data as a virtual dataset in the cloud, using `earthaccess` [external]
               href: https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/
           - section: "Tutorials"
             contents:
             - text: Working with TEMPO observations of the Madre wildfire, via `Harmony-py` (from TEMPO trainings)
-              href: TEMPO/TEMPO_training_August2025.ipynb
+              href: satellite/TEMPO/TEMPO_training_August2025.ipynb
             - text: Working with TEMPO data through ArcGIS Image Services programmatically (from TEMPO trainings)
-              href: TEMPO/Utilizing_TEMPO_ArcGIS_Image_Services_ARSET_Training.ipynb
+              href: satellite/TEMPO/Utilizing_TEMPO_ArcGIS_Image_Services_ARSET_Training.ipynb
             - text: Using the Remote Sensing Information Gateway (RSIG) to access and analyze TEMPO data (HAQAST meeting)
-              href: TEMPO/tempo_geoxo_meeting_haqast.ipynb
+              href: satellite/TEMPO/tempo_geoxo_meeting_haqast.ipynb
+      - section: "<strong>Suborbital</strong> missions guidance"
+        href: suborbital_missions_index.qmd
+        contents:
+        - section: "<strong>STAQS</strong> (Synergistic TEMPO Air Quality Science)"
+          href: suborbital/STAQS/index.qmd
+          contents:
+          - section: "tutorial"
+            contents:
+            - text: Python workflow for STAQS GCAS netCDF files in ArcGIS Pro
+              href: suborbital/STAQS/how_to_access_and_display_netcdf_format_data_in_ArcGIS_Pro.ipynb
         - section: "<strong>TOLNet</strong> (Tropospheric Ozone Lidar Network)"
-          href: TOLNet/index.qmd
+          href: suborbital/TOLNet/index.qmd
           contents:
           - section: "How do I..."
             contents:
               - text: Plot ozone mixing ratio from multiple lidars
-                href: TOLNet/how_to_plot_ozone_mixing_ratio_from_multiple_lidars.ipynb
+                href: suborbital/TOLNet/how_to_plot_ozone_mixing_ratio_from_multiple_lidars.ipynb
           - section: "Tutorials"
             contents:
             - text: The TOLNet API - with examples of plotting and using GEOS-CF
-              href: TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
+              href: suborbital/TOLNet/tutorial_for_TOLNet_API_with_examples_of_plotting_and_GEOS-CF.ipynb
           - section: "Scripts and API module"
             contents:
             - text: Python script for comparing ozone measurements of TOLNet lidar against Pandora and DSCOVR EPIC
-              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/script_for_DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
+              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/suborbital/TOLNet/script_for_DSCOVR_EPIC_L4_TrO3_vs_tolnet_clim_vs_pandora.py
             - text: Python module for creating a TOLNet API instance
-              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/TOLNet/tolnet_v01.py
+              href: https://github.com/nasa/ASDC_Data_and_User_Services/blob/main/suborbital/TOLNet/tolnet_v01.py
+      - section: "<strong>POWER</strong> (Prediction Of Worldwide Energy Resources) Project"
+        href: POWER/index.qmd
+        contents:
+        - section: "How do I..."
+          contents:
+          - text: Plotting a map of temperature data
+            href: POWER/how_to_plot_temperature_from_POWER.ipynb
       - text: "Learning more"
         href: additional_quarto_docs/learning-more.qmd
       - text: "Contributing"
