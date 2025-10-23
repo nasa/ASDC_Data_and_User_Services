@@ -4,7 +4,7 @@ date: last-modified
 author: "Atmospheric Science Data Center (ASDC)"
 ---
 
-{{< include ../mission-index-blurb.qmd >}}
+{{< include ../../mission-index-blurb.qmd >}}
 
 ---
 
