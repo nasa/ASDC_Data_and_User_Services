@@ -44,6 +44,10 @@ website:
               contents:
               - text: Plotting ozone number densities
                 href: CALIPSO/how_to_plot_ozone_number_densities.ipynb
+              - text: Plotting CALIPSO Backscatter
+                href: CALIPSO/how_to_plot_backscatter_for_CALIPSO.ipynb
+              - text: Plotting CALIPSO-NVF Backscatter
+                href: CALIPSO/how_to_plot_backscatter_for_CALIPSO_NVF.ipynb
         - section: "<strong>CERES</strong> (Clouds and the Earth's Radiant Energy System)"
           href: CERES/index.qmd
           contents:
