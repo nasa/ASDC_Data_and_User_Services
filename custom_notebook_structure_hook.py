@@ -7,6 +7,27 @@ import os
 import json
 
 
+# Regex patterns for validating required notebook sections.
+# Each heading pattern matches markdown headings (## or ###) with optional whitespace and colons.
+PATTERNS = {
+    "date_last_modified": [
+        r"---\ndate: last-modified\n---",  # Exact YAML frontmatter for last-modified date
+    ],
+    "summary_or_overview": [
+        r"#{2,3}\s*Summary\s*:?\s*\n",  # Matches "## Summary:" or "### Summary"
+        r"#{2,3}\s*Overview\s*:?\s*\n",  # Matches "## Overview:" or "### Overview"
+    ],
+    "prerequisites": [
+        r"#{2,3}\s*Prerequisites\s*:?\s*\n",  # Matches "## Prerequisites:" or "### Prerequisites"
+    ],
+    "author": [
+        r"#{2,3}\s*Notebook Author / Affiliation\s*:?\s*\n",  # Full form with affiliation
+        r"#{2,3}\s*Notebook Author\s*:?\s*\n",  # "Notebook Author" variant
+        r"#{2,3}\s*Author\s*:?\s*\n",  # Short "Author" form
+    ],
+}
+
+
 def _parse_notebook(notebook_path):
     """Parses a Jupyter Notebook and extracts the content of Markdown cells.
 
@@ -73,47 +94,13 @@ def check_all_expected_items_present(filename, contents):
         "author": False,
     }
 
-    # Define regex patterns that allow for optional whitespace and colons
-    summary_patterns = [
-        r"###\s*Summary\s*:?\s*\n",
-        r"##\s*Summary\s*:?\s*\n",
-        r"###\s*Overview\s*:?\s*\n",
-        r"##\s*Overview\s*:?\s*\n",
-    ]
-    prerequisites_patterns = [
-        r"###\s*Prerequisites\s*:?\s*\n",
-        r"##\s*Prerequisites\s*:?\s*\n",
-    ]
-    author_patterns = [
-        r"###\s*Notebook Author / Affiliation\s*:?\s*\n",
-        r"##\s*Notebook Author / Affiliation\s*:?\s*\n",
-        r"###\s*Author\s*:?\s*\n",
-        r"##\s*Author\s*:?\s*\n",
-        r"###\s*Notebook Author\s*:?\s*\n",
-        r"##\s*Notebook Author\s*:?\s*\n",
-    ]
-
     for content in contents:
-        if content == "---\ndate: last-modified\n---":
-            presence_of["date_last_modified"] = True
-
-        # Check for summary/overview using regex
-        for pattern in summary_patterns:
-            if re.search(pattern, content):
-                presence_of["summary_or_overview"] = True
-                break
-
-        # Check for prerequisites using regex
-        for pattern in prerequisites_patterns:
-            if re.search(pattern, content):
-                presence_of["prerequisites"] = True
-                break
-
-        # Check for author using regex
-        for pattern in author_patterns:
-            if re.search(pattern, content):
-                presence_of["author"] = True
-                break
+        # Check for presence of each regex-defined pattern
+        for pattern_name, patterns in PATTERNS.items():
+            for pattern in patterns:
+                if re.search(pattern, content):
+                    presence_of[pattern_name] = True
+                    break
 
     error_found = False
     items_missing = []
