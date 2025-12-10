@@ -50,33 +50,6 @@ def _parse_notebook(notebook_path):
     return markdown_cells_content
 
 
-def _contains_any_substring(text, substrings, case_sensitive=False, strip_spaces=True):
-    """Checks if a string contains any of the substrings in a list (Case insensitive).
-
-    Args:
-      text: The string to search in.
-      substrings: A list of substrings to search for.
-
-    Returns:
-      True if the string contains at least one of the substrings, False otherwise.
-    """
-    if not case_sensitive:
-        text = text.lower()
-    if strip_spaces:
-        text = re.sub(r" +", "", text).strip()
-
-    for substring in substrings:
-        this_substring = substring
-        if not case_sensitive:
-            this_substring = this_substring.lower()
-        if strip_spaces:
-            this_substring = re.sub(r" +", "", this_substring).strip()
-
-        if this_substring in text:
-            return True
-    return False
-
-
 def check_all_expected_items_present(filename, contents):
     """Inspects Markdown for whether it includes specific items.
 
