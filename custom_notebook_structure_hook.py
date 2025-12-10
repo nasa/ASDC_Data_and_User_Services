@@ -72,36 +72,48 @@ def check_all_expected_items_present(filename, contents):
         "prerequisites": False,
         "author": False,
     }
+
+    # Define regex patterns that allow for optional whitespace and colons
+    summary_patterns = [
+        r"###\s*Summary\s*:?\s*\n",
+        r"##\s*Summary\s*:?\s*\n",
+        r"###\s*Overview\s*:?\s*\n",
+        r"##\s*Overview\s*:?\s*\n",
+    ]
+    prerequisites_patterns = [
+        r"###\s*Prerequisites\s*:?\s*\n",
+        r"##\s*Prerequisites\s*:?\s*\n",
+    ]
+    author_patterns = [
+        r"###\s*Notebook Author / Affiliation\s*:?\s*\n",
+        r"##\s*Notebook Author / Affiliation\s*:?\s*\n",
+        r"###\s*Author\s*:?\s*\n",
+        r"##\s*Author\s*:?\s*\n",
+        r"###\s*Notebook Author\s*:?\s*\n",
+        r"##\s*Notebook Author\s*:?\s*\n",
+    ]
+
     for content in contents:
         if content == "---\ndate: last-modified\n---":
             presence_of["date_last_modified"] = True
 
-        if _contains_any_substring(
-            content,
-            [
-                "### Summary\n",
-                "## Summary\n",
-                "### Overview\n",
-                "## Overview\n",
-            ],
-        ):
-            presence_of["summary_or_overview"] = True
+        # Check for summary/overview using regex
+        for pattern in summary_patterns:
+            if re.search(pattern, content):
+                presence_of["summary_or_overview"] = True
+                break
 
-        if _contains_any_substring(content, ["### Prerequisites\n", "## Prerequisites\n"]):
-            presence_of["prerequisites"] = True
+        # Check for prerequisites using regex
+        for pattern in prerequisites_patterns:
+            if re.search(pattern, content):
+                presence_of["prerequisites"] = True
+                break
 
-        if _contains_any_substring(
-            content,
-            [
-                "### Notebook Author / Affiliation\n",
-                "## Notebook Author / Affiliation\n",
-                "### Author\n",
-                "## Author\n",
-                "### Notebook Author\n",
-                "## Notebook Author\n",
-            ],
-        ):
-            presence_of["author"] = True
+        # Check for author using regex
+        for pattern in author_patterns:
+            if re.search(pattern, content):
+                presence_of["author"] = True
+                break
 
     error_found = False
     items_missing = []
