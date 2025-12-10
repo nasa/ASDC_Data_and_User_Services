@@ -5,11 +5,11 @@ import re
 import sys
 import os
 import json
+from typing import List, Tuple, Dict
 
 
 # Regex patterns for validating required notebook sections.
-# Each heading pattern matches markdown headings (## or ###) with optional whitespace and colons.
-PATTERNS = {
+PATTERNS: Dict[str, List[str]] = {
     "date_last_modified": [
         r"---\ndate: last-modified\n---",  # Exact YAML frontmatter for last-modified date
     ],
@@ -27,8 +27,16 @@ PATTERNS = {
     ],
 }
 
+# Human-readable names for error messages
+SECTION_NAMES: Dict[str, str] = {
+    "date_last_modified": "Date last-modified frontmatter",
+    "summary_or_overview": "Summary or Overview section",
+    "prerequisites": "Prerequisites section",
+    "author": "Author section",
+}
 
-def _parse_notebook(notebook_path):
+
+def _parse_notebook(notebook_path: str) -> List[str]:
     """Parses a Jupyter Notebook and extracts the content of Markdown cells.
 
     Args:
@@ -50,7 +58,7 @@ def _parse_notebook(notebook_path):
     return markdown_cells_content
 
 
-def check_all_expected_items_present(filename, contents):
+def check_all_expected_items_present(filename: str, contents: List[str]) -> Tuple[bool, List[str]]:
     """Inspects Markdown for whether it includes specific items.
 
     Args:
@@ -58,14 +66,10 @@ def check_all_expected_items_present(filename, contents):
         contents (list): A list of strings, where each string is a Markdown cell.
 
     Returns:
-        Whether errors were found, i.e., False if the notebook includes all specific items, True otherwise.
+        A tuple of (error_found, items_missing) where error_found is a boolean and
+        items_missing is a list of missing section keys.
     """
-    presence_of = {
-        "date_last_modified": False,
-        "summary_or_overview": False,
-        "prerequisites": False,
-        "author": False,
-    }
+    presence_of = {key: False for key in PATTERNS.keys()}
 
     for content in contents:
         # Check for presence of each regex-defined pattern
@@ -74,6 +78,9 @@ def check_all_expected_items_present(filename, contents):
                 if re.search(pattern, content):
                     presence_of[pattern_name] = True
                     break
+
+        if all(presence_of.values()):
+            break  # All sections found, no need to check remaining cells
 
     error_found = False
     items_missing = []
@@ -85,8 +92,12 @@ def check_all_expected_items_present(filename, contents):
     return error_found, items_missing
 
 
-def main():
-    """Main function."""
+def main() -> int:
+    """Main function.
+
+    Returns:
+        Exit code: 0 for success, 1 for errors.
+    """
     filenames = sys.argv[1:]
     errors_found = False
 
@@ -94,7 +105,7 @@ def main():
         if not os.path.exists(filename):
             print(f"Error: File not found: {filename}")
             errors_found = True
-            break
+            continue
 
         try:
             markdown_contents = _parse_notebook(filename)
@@ -107,7 +118,8 @@ def main():
                 filename, markdown_contents
             )
             if items_missing:
-                print(f"{', '.join(items_missing)} not found in {filename}.")
+                readable_missing = [SECTION_NAMES[item] for item in items_missing]
+                print(f"{', '.join(readable_missing)} not found in {filename}.")
         else:
             print("No markdown cells found.")
 
