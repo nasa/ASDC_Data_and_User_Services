@@ -5,7 +5,7 @@ ci:
   autofix_prs: false # Comment "pre-commit.ci autofix" on a PR to trigger
 
 default_language_version:
-  python: python3.9
+  python: python3.10
 
 repos:
   - repo: https://github.com/gitleaks/gitleaks

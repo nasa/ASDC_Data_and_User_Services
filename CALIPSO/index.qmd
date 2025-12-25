@@ -11,3 +11,7 @@ author: "Atmospheric Science Data Center (ASDC)"
 ## An introduction to...
 
 #### - [Plotting ozone number densities](../CALIPSO/how_to_plot_ozone_number_densities.ipynb)
+
+#### - [Plotting CALIPSO Backscatter](../CALIPSO/how_to_plot_backscatter_for_CALIPSO.ipynb)
+
+#### - [Plotting CALIPSO NVF Backscatter](../CALIPSO/how_to_plot_backscatter_for_CALIPSO_NVF.ipynb)

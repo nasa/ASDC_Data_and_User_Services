@@ -137,3 +137,5 @@ dmypy.json
 
 # Mac Finder
 .DS_Store
+
+index_files/*
