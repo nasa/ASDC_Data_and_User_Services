@@ -24,32 +24,26 @@ from notebook_utils import (
 REQUIRED_ELEMENTS = {
     "date_last_modified": {
         "patterns": [r"---\s*\ndate:\s*last-modified\s*\n---\s*"],
-        "description": "Date last modified header (---\\ndate: last-modified\\n---)",
+        "description": "Date last-modified frontmatter",
     },
     "summary_or_overview": {
         "patterns": [
-            r"###\s*Summary\s*:?\s*\n",
-            r"##\s*Summary\s*:?\s*\n",
-            r"###\s*Overview\s*:?\s*\n",
-            r"##\s*Overview\s*:?\s*\n",
+            r"#{2,3}\s*Summary\s*:?\s*\n",  # Matches "## Summary:" or "### Summary"
+            r"#{2,3}\s*Overview\s*:?\s*\n",  # Matches "## Overview:" or "### Overview"
         ],
         "description": "Summary or Overview section",
     },
     "prerequisites": {
         "patterns": [
-            r"###\s*Prerequisites\s*:?\s*\n",
-            r"##\s*Prerequisites\s*:?\s*\n",
+            r"#{2,3}\s*Prerequisites\s*:?\s*\n",  # Matches "## Prerequisites:" or "### Prerequisites"
         ],
         "description": "Prerequisites section",
     },
     "author": {
         "patterns": [
-            r"###\s*Notebook Author[s]?\s?\/\s?Affiliation\s*:?\s*\n",
-            r"##\s*Notebook Author[s]?\s?\/\s?Affiliation\s*:?\s*\n",
-            r"###\s*Author\s*:?\s*\n",
-            r"##\s*Author\s*:?\s*\n",
-            r"###\s*Notebook Author\s*:?\s*\n",
-            r"##\s*Notebook Author\s*:?\s*\n",
+            r"#{2,3}\s*Notebook Author[s]?\s?\/\s?Affiliation\s*:?\s*\n",  # Full form with affiliation
+            r"#{2,3}\s*Notebook Author\s*:?\s*\n",  # "Notebook Author" variant
+            r"#{2,3}\s*Author\s*:?\s*\n",  # Short "Author" form
         ],
         "description": "Author section",
     },
