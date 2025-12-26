@@ -1,0 +1,38 @@
+[project]
+name = "ASDC_Data_and_User_Services"
+version = "1.0.0"
+description = "Data Tutorials and User Services for the NASA Atmospheric Science Data Center (ASDC)"
+readme = "README.md"
+requires-python = ">=3.10, <4"
+dependencies = [
+    "boto3>=1.41.5",
+    "cartopy>=0.25.0",
+    "earthaccess>=0.14.0",
+    "geopy>=2.4.1",
+    "h5py>=3.15.1",
+    "harmony-py>=1.3.3",
+    "ipyleaflet>=0.20.0",
+    "ipython>=8.37.0",
+    "ipywidgets>=8.1.8",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.8",
+    "netcdf4>=1.7.3",
+    "numpy>=2.2.6",
+    "obstore>=0.8.2",
+    "pandas>=2.3.3",
+    "pycno>=0.3.2",
+    "pyhdf>=0.11.6",
+    "pyproj>=3.7.1",
+    "pyrsig>=0.11.1",
+    "requests>=2.32.5",
+    "s3fs>=2025.12.0",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.15.3",
+    "shapely>=2.0.7",
+    "tqdm>=4.67.1",
+    "virtualizarr>=1.2.0",
+    "xarray>=2025.6.1",
+]
+
+[project.urls]
+Repository = "https://github.com/nasa/ASDC_Data_and_User_Services"
