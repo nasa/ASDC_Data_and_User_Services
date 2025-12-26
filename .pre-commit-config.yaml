@@ -5,7 +5,7 @@ ci:
   autofix_prs: false # Comment "pre-commit.ci autofix" on a PR to trigger
 
 default_language_version:
-  python: python3.9
+  python: python3.10
 
 repos:
   - repo: https://github.com/gitleaks/gitleaks
@@ -56,9 +56,18 @@ repos:
 
   - repo: local # Use 'local' for custom hooks in the repository
     hooks:
-      - id: check-custom-notebook-structure # A unique identifier for your hook
-        name: Check for custom notebook structure # A descriptive name
-        entry: custom_notebook_structure_hook.py # Path to your script, relative to the repository root
-        language: script # Specify 'script' for executable files
+      - id: check-notebook-headers
+        name: Check notebook headers
+        entry: python .git-hooks/check-notebook-headers.py
+        language: system
         files: '\.ipynb$' # Optional: Regex to specify file types to check
         exclude: ".*\/additional_drafts\/.*"
+
+  - repo: local
+    hooks:
+      - id: check-notebook-imports
+        name: Check notebook imports against pyproject.toml
+        entry: python .git-hooks/check-notebook-imports.py
+        language: system
+        types: [jupyter]
+        pass_filenames: false

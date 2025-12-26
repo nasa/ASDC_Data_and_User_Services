@@ -11,6 +11,7 @@ citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/learning-more.h
 
 The following are recommended and/or enforced via the CI/CD workflow:
 
+- **Python Version**: This project requires Python 3.10 or higher. All code and notebooks should be compatible with Python 3.10+.
 - Use `ruff` for linting and formatting.
 - Wherever possible and appropriate, move inline comments into notebook Markdown cells.
 - Wherever possible and appropriate, replace static references to local files with code that will programmatically pull data files when running a notebook.
