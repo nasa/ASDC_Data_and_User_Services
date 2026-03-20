@@ -1,0 +1,333 @@
+
+Name of HDF file to be read:
+< CER_SYN1deg-M3Hour_Sample_R5V1
+
+ Name of 5-zone 5-region SYN1deg-M3Hour file :CER_SYN1deg-M3Hour_Sample_R5V1
+
+
+*********************************************************
+*        Start Example 1   (2 dimensional data)         *
+*********************************************************
+ SDS name: "Region Number" 
+Rank: "2" 
+type: "5" 
+sds_dims[0]: "5" 
+sds_dims[1]: "5" 
+sds_strt[0]: "0" 
+sds_strt[1]: "0" 
+sds_incr[0]: "1" 
+sds_incr[1]: "1" 
+sds_edge[0]: "5" 
+sds_edge[1]: "5" 
+
+
+*********************************************************
+*  Example 1:   ( ONLY PRINTING MAX OF 5 PER ZONE)      *
+*********************************************************
+
+Region Number for Zone 1
+
+   Longitude Region (1)[1] = 30241.000000
+   Longitude Region (2)[2] = 30242.000000
+   Longitude Region (3)[3] = 30243.000000
+   Longitude Region (4)[4] = 30244.000000
+   Longitude Region (5)[5] = 30245.000000
+
+Region Number for Zone 2
+
+   Longitude Region (1)[6] = 30601.000000
+   Longitude Region (2)[7] = 30602.000000
+   Longitude Region (3)[8] = 30603.000000
+   Longitude Region (4)[9] = 30604.000000
+   Longitude Region (5)[10] = 30605.000000
+
+Region Number for Zone 3
+
+   Longitude Region (1)[11] = 30961.000000
+   Longitude Region (2)[12] = 30962.000000
+   Longitude Region (3)[13] = 30963.000000
+   Longitude Region (4)[14] = 30964.000000
+   Longitude Region (5)[15] = 30965.000000
+
+Region Number for Zone 4
+
+   Longitude Region (1)[16] = 31321.000000
+   Longitude Region (2)[17] = 31322.000000
+   Longitude Region (3)[18] = 31323.000000
+   Longitude Region (4)[19] = 31324.000000
+   Longitude Region (5)[20] = 31325.000000
+
+Region Number for Zone 5
+
+   Longitude Region (1)[21] = 31681.000000
+   Longitude Region (2)[22] = 31682.000000
+   Longitude Region (3)[23] = 31683.000000
+   Longitude Region (4)[24] = 31684.000000
+   Longitude Region (5)[25] = 31685.000000
+
+
+*********************************************************
+*             Start Example 2   (3 Dimensional data)    *
+*********************************************************
+ SDS: "Surface type percent coverage" 
+Rank: "3" 
+type: "5" 
+sds_dims[0]: "20" 
+sds_dims[1]: "5" 
+sds_dims[2]: "5" 
+
+
+
+************************************************************
+*  Example 2:   ( ONLY PRINTING MAX OF 2 PER DIMENSION)    *
+************************************************************
+
+Surface type percent coverage for surface type =  16
+
+
+Surface type percent coverage for Zone 1
+      Longitude Region (1)[1] = 0.000000
+      Longitude Region (2)[2] = 0.000000
+
+
+Surface type percent coverage for Zone 2
+      Longitude Region (1)[6] = 0.000000
+      Longitude Region (2)[7] = 0.000000
+
+
+Surface type percent coverage for surface type =  17
+
+
+Surface type percent coverage for Zone 1
+      Longitude Region (1)[26] = 100.000000
+      Longitude Region (2)[27] = 100.000000
+
+
+Surface type percent coverage for Zone 2
+      Longitude Region (1)[31] = 100.000000
+      Longitude Region (2)[32] = 100.000000
+
+
+
+*********************************************************
+*                      Start Example 3  (4 Dimensions)  *
+*********************************************************
+ SDS: "Aerosol Opt. Depth at 0.66um in Ocean" 
+Rank: "4" 
+type: "5" 
+sds_dims[0]: "2" 
+sds_dims[1]: "8" 
+sds_dims[2]: "5" 
+sds_dims[3]: "5" 
+
+
+************************************************************
+*  Example 3:   ( ONLY PRINTING MAX OF 2 PER DIMENSION)    *
+************************************************************
+
+Aerosol Opt. Depth at 0.66um in Ocean Stat type =  1  MEAN 
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Hour 1
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 1
+      Longitude Region (1)[1] = 0.126584
+      Longitude Region (2)[2] = 0.116272
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 2
+      Longitude Region (1)[6] = 0.128552
+      Longitude Region (2)[7] = 0.103793
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Hour 2
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 1
+      Longitude Region (1)[26] = 0.126021
+      Longitude Region (2)[27] = 0.115796
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 2
+      Longitude Region (1)[31] = 0.127554
+      Longitude Region (2)[32] = 0.103621
+
+
+Aerosol Opt. Depth at 0.66um in Ocean Stat type =  2  STANDARD DEVIATION 
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Hour 1
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 1
+      Longitude Region (1)[201] = 0.018062
+      Longitude Region (2)[202] = 0.027209
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 2
+      Longitude Region (1)[206] = 0.063017
+      Longitude Region (2)[207] = 0.018470
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Hour 2
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 1
+      Longitude Region (1)[226] = 0.018518
+      Longitude Region (2)[227] = 0.027083
+
+
+Aerosol Opt. Depth at 0.66um in Ocean for Zone 2
+      Longitude Region (1)[231] = 0.062183
+      Longitude Region (2)[232] = 0.018644
+
+
+
+
+*********************************************************
+*                      Start Example 4   (5 dimensions) *
+*********************************************************
+ SDS: "Tuned Total-Sky LW Up" 
+Rank: "5" 
+type: "5" 
+sds_dims[0]: "5" 
+sds_dims[1]: "2" 
+sds_dims[2]: "8" 
+sds_dims[3]: "5" 
+sds_dims[4]: "5" 
+
+
+
+************************************************************
+*  Example 4:   ( ONLY PRINTING MAX OF 2 PER DIMENSION)    *
+************************************************************
+
+Tuned Total-Sky LW Up:   Profile level =  1  
+
+
+Tuned Total-Sky LW Up:   Stat type =  1  MEAN 
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 1
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[1] = 205.456253
+      Longitude Region (2)[2] = 208.333939
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[6] = 203.135284
+      Longitude Region (2)[7] = 202.391617
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 2
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[26] = 198.685562
+      Longitude Region (2)[27] = 203.993103
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[31] = 197.929138
+      Longitude Region (2)[32] = 199.166779
+
+
+Tuned Total-Sky LW Up:   Stat type =  2  STANDARD DEVIATION 
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 1
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[201] = 42.588955
+      Longitude Region (2)[202] = 44.938511
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[206] = 45.935017
+      Longitude Region (2)[207] = 50.567596
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 2
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[226] = 44.876076
+      Longitude Region (2)[227] = 44.617386
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[231] = 47.085213
+      Longitude Region (2)[232] = 48.255337
+
+
+Tuned Total-Sky LW Up:   Profile level =  2  
+
+
+Tuned Total-Sky LW Up:   Stat type =  1  MEAN 
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 1
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[401] = 203.583679
+      Longitude Region (2)[402] = 206.575470
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[406] = 201.201797
+      Longitude Region (2)[407] = 200.456345
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 2
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[426] = 196.593903
+      Longitude Region (2)[427] = 202.078094
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[431] = 195.829361
+      Longitude Region (2)[432] = 197.103424
+
+
+Tuned Total-Sky LW Up:   Stat type =  2  STANDARD DEVIATION 
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 1
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[601] = 43.925877
+      Longitude Region (2)[602] = 46.328476
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[606] = 47.377884
+      Longitude Region (2)[607] = 52.161510
+
+
+Tuned Total-Sky LW Up:  Monthly 3 hour avg for hour 2
+
+
+Tuned Total-Sky LW Up for Zone 1
+      Longitude Region (1)[626] = 46.308002
+      Longitude Region (2)[627] = 46.026089
+
+
+Tuned Total-Sky LW Up for Zone 2
+      Longitude Region (1)[631] = 48.565144
+      Longitude Region (2)[632] = 49.780163
+
+
+
+*********************************************************
+*    Example 5:   (vdata)                                      *
+*********************************************************
+
+ASSOCIATEDPLATFORMSHORTNAME = Merge                           

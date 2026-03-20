@@ -1,0 +1,89 @@
+#!/bin/csh -f
+#------------------------------------------------------------------------------
+#
+#DESCRIPTION:  This script compiles the C routines necessary to read
+#              an BDS HDF file. Paths to the HDF 'include' and 'lib'
+#              directories must be defined. This sample script uses
+#              environment variables to make these definitions.
+#
+# The environment variables HDFINC and HDFLIB need to be set.
+#   HDFINC - Path to the directory containing the HDF include files.
+#   HDFLIB - Path to the directory containing the HDF library.
+#
+# Example:
+#   The following values of HDFINC and HDFLIB were used on an SGI at the 
+#   CERES Science Computing Facility at NASA Langley Research Center.
+#
+#   Modify these two lines to the correct path of the location of your
+#   HDF include directory and your lib directory.
+#
+#   setenv HDFINC HDF4.1r5/irix_n32/include
+#   setenv HDFLIB HDF4.1r5/irix_n32/lib
+#
+#   For a Unix Sun system with Solaris 2.8 on the system, use the 
+#   following set up.
+#   setenv HDFINC /HDF4.1r5/solaris8_32/include
+#   setenv HDFLIB /HDF4.1r5/solaris8_32/lib
+#
+#  The C compiler and compiler flags specifications depend on the
+#  computer and operating system and, for SGIs, on the object code
+#  word size of the installed HDF libraries.  Examples are given for 
+#  systems on which the code has been tested.  Additional compile 
+#  information is available from 
+#    - the NCSA HDF web site at
+#         http://hdf.ncsa.uiuc.edu/
+#
+#    - the README file in your top level HDF directory, or 
+#    - in the directory release_notes/compile.txt in your 
+#      HDF installation directory path.
+#  
+#  Below are the generic statements needed to compile and link this
+#  example software:
+#
+#COMPILER FLAGS -c -I$HDFINC readHDFfuncs.c 
+#COMPILER FLAGS -c -I$HDFINC test_rdHDF.c
+#COMPILER FLAGS -s -o rd readHDFfuncs.o test_rdHDF.o -L$HDFLIB -lmfhdf -ldf -lz
+#
+#  where appropriate values are substituted for COMPILER and FLAGS.
+#  The values for tested operating systems are:
+#
+#	computer and
+#       operating system	COMPILER	FLAGS
+#       -----------------------------------------------------
+#	SGI (IRIX 6.2 & 6.4)	cc		-32/-n32/-64*
+#	HP (HP-UX 10.10)	c89		none
+#       Sun (SunOS 4.1.3)	acc		none
+#	Sun (Solaris 2.5)	cc		-Xc
+#
+#  * The flag setting for the SGI machine is determined by the HDF library
+#    object code installed on your system.  One source for this information
+#    is to look at the sample C compilation statements in the README file 
+#    in your top level HDF directory.  More information about the different
+#    object forms is available from the cc man page on SGI systems:
+#	man cc
+#
+#  On SUN Solaris systems an additional library (libnsl.a) must be 
+#  included to properly load and execute.  In this case, the third compile 
+#  line is
+#
+# cc -s -o rd readHDFfuncs.o test_rdHDF.o -L$HDFLIB -lmfhdf -ldf -lz -lnsl
+#  On SUN Solaris 2.8 system using the GNU compiler, the command is
+#  as follows with HDF /HDF4.1r5/solaris8_32/
+# gcc -c -I$HDFINC readHDFfuncs.c
+# gcc -c -I$HDFINC test_rdHDF.c
+# gcc -s -o rd readHDFfuncs.o test_rdHDF.o -L$HDFLIB -lmfhdf -ldf -lz -ljpeg -lnsl
+#
+# Example compile commands for an SGI with HDF libraries in n32 object form:
+# 
+#cc -n32 -w -c -I$HDFINC readHDFfuncs.c 
+#cc -n32 -w -c -I$HDFINC test_rdHDF.c
+#cc -n32 -w -s -o rd readHDFfuncs.o test_rdHDF.o -L$HDFLIB -lmfhdf -ldf -lz -ljpeg
+#
+#
+# An example of the compile command for an SGI with the HDF libraries
+# in n32 object form using the GNU C compiler.
+# with HDF /HDF4.1r5/irix_n32/
+#gcc -n32 -w -c -I$HDFINC readHDFfuncs.c 
+#gcc -n32 -w -c -I$HDFINC test_rdHDF.c
+#gcc -n32 -w -s -o rd readHDFfuncs.o test_rdHDF.o -L$HDFLIB -lmfhdf -ldf -lz -ljpeg
+

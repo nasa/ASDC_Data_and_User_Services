@@ -1,0 +1,200 @@
+#
+# @(#) File name: Makefile.fci2  Release: 1.1  Date: 3/22/94, 17:49:21
+#
+###########################################################################
+
+
+###########################################################################
+#  --->> SETUP FOR SUNOS 4.1
+###########################################################################
+
+             AS = as
+
+# -SYSTEM DEPENDENT CHANGES-----------------------------
+#  Change the CC compiler assignment as appropriate 
+#      for your system:
+#           CC = cc                     #%% others
+           CC = /usr/lang/acc          #%% SunOS 4.1.3
+# ------------------------------------------------------
+
+             FC = f77
+            CPP = /lib/cpp
+             LD = ld
+           LINT = lint
+        INSTALL = install
+           TAGS = ctags
+             RM = rm -f
+             MV = mv
+             LN = ln -s
+         RANLIB = ranlib
+RANLIBINSTFLAGS = -t
+             AR = ar
+       ARFLAGS = rlv   # non solaris
+#        ARFLAGS = rsv   # solaris
+# usage: ar [-V] key[vcs] [posname] archive file [name] ...
+#     where key is one of the following: r[uabi], m[abi], d, q, t, p, x
+
+             LS = ls
+       LINTOPTS = -axz
+    LINTLIBFLAG = -C
+           MAKE = make
+
+# -SYSTEM DEPENDENT CHANGES-----------------------------
+#  Comment/uncomment STD_CPP_DEFINES and STD_DEFINES 
+#    definitions as appropriate for your system:
+
+  STD_CPP_DEFINES = -DSUNOS          #%% SunOS 4.1.3
+# STD_CPP_DEFINES =                  #%% others
+
+      STD_DEFINES = -DSUNOS           #%% SunOS 4.1.3
+#     STD_DEFINES = -Xa -w            #%% Solaris 5.3
+#    STD_DEFINES = -DIRIX -ansi -32  #%% Silicon Graphics IRIX64 
+#    STD_DEFINES = -DHPUX            #%% Hewlett Packard  HP-UX 
+#     = -Aa -DHPUX                   #%% HP-UX  K&R ascii
+#
+# ------------------------------------------------------
+#  Comment/uncomment PROJECT defines
+#        PROJECT = LWFLUX          #%% FIRE AX CMS LONG WAVE FLUX
+#        PROJECT = SOLAR_DAY       #%% FIRE AX CMS SOLAR DAY
+#        PROJECT = SOLAR_HR        #%% FIRE AX CMS SOLAR HR 
+#        PROJECT = SOLAR_MN        #%% FIRE AX CMS SOLAR MN 
+#        PROJECT = SOLAR_WK        #%% FIRE AX CMS SOLAR WK 
+#        PROJECT = SST_DAY         #%% FIRE AX CMS SST DAY
+#        PROJECT = SST_WEEK        #%% FIRE AX CMS SST WEEK
+#        PROJECT = SST_FNTS        #%% FIRE AX CMS SST FNTS
+#	 PROJECT = SST_CLOUD       #%% NOT SUPPORTED
+# ------------------------------------------------------
+
+# set PROJECT according to mission:
+         PROJECT = SST_DAY         #%% FIRE AX CMS SST DAY
+
+# for internal use only; CSC switches are: -DINSPECTION_ -DDBG_
+CSC     =
+
+
+      SYSLIBDIR = /usr/lib
+SYSLAST_LIBRARIES = -lm
+
+          CFLOW = cflow
+     CFLOWFLAGS =
+
+.c.o:
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+.f.o:
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+###########################################################################
+# definitions common to all Makefiles - do not edit
+
+          SHELL = /bin/sh
+
+        DESTDIR =
+
+    DEBUGGEDCFLAGS = -g 
+   OPTIMIZEDCFLAGS = -O
+    PROFILEDCFLAGS = -O -pg
+          CPPFLAGS = $(INCLUDES) $(STD_CPP_DEFINES)
+
+           PATHSEP = /
+
+##   Can't use optimized version, because there is a bug in compiling one 
+##   of the programs.
+##
+           CCFLAGS = -g -w
+            CFLAGS = $(CCFLAGS) $(STD_DEFINES) $(U_C_DEFINES)
+         LINTFLAGS = $(LINTOPTS) $(CPPFLAGS) -DLINT
+
+         COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+            LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+         COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+            LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+           LINT.c  = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+
+
+         RM_CMD = $(RM) *.ln *.BAK *.bak *.o core errs ,* *~ *.a \
+			.emacs_* make.log MakeOut
+
+###########################################################################
+# -SYSTEM DEPENDENT CHANGES-----------------------------
+
+###   Include file and library functions are specified as in the local
+###   directory.  REDEFINE to the appropriate directory if needed.
+
+#INCLUDES = -I.
+
+INCLUDES = -I.
+
+LIB_CMS_DIR = .
+
+INCLUDE_DIR = .
+
+LIB_DIR = .
+
+
+###   Fire cms data read software: ----------------------------
+CMS_SRC = fire_ax_cms_read.c
+
+
+all: cms 
+
+
+cms: $(CMS_SRC) 
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -D$(PROJECT) $(CSC) \
+-o $@ $(CMS_SRC)
+
+
+whatever = project projects names PROJECT PROJECTS NAMES
+$(whatever):
+	@echo " "
+	@echo "                   CMS General Read Makefile"
+	@echo "              (Centre de Meteorologie Spatiale)"
+	@echo " "
+	@echo " >>valid project names are:"
+	@echo "        PROJECT = LWFLUX          #%% FIRE AX CMS LONG WAVE FLUX"
+	@echo "        PROJECT = SOLAR_DAY       #%% FIRE AX CMS SOLAR DAY"
+	@echo "        PROJECT = SOLAR_HR        #%% FIRE AX CMS SOLAR HR "
+	@echo "        PROJECT = SOLAR_MN        #%% FIRE AX CMS SOLAR MN "
+	@echo "        PROJECT = SOLAR_WK        #%% FIRE AX CMS SOLAR WK "
+	@echo "        PROJECT = SST_DAY         #%% FIRE AX CMS SST DAY"
+	@echo "        PROJECT = SST_WEEK        #%% FIRE AX CMS SST WEEK"
+	@echo "        PROJECT = SST_FNTS        #%% FIRE AX CMS SST FNTS"
+	@echo "        PROJECT = SST_CLOUD       #%% NOT SUPPORTED
+	@echo " "
+	@echo " >>inspection syntax note: make CSC=-DINSPECTION_ PROJECT=*"
+	@echo " "
+	@echo " "
+
+
+install:: all
+	$(INSTALL) -w -c $(INSTLIBFLAGS) all
+
+clean::
+	$(RM) cms $(LIB_CMS)
+	$(RM_CMD) \#*
+
+debug:
+	$(MAKE) "CCFLAGS=-g"
+
+#depend:: $(DEPEND)
+
+depend::
+	makedepend -s "# DO NOT DELETE" --  $(CFLAGS) $(CPPFLAGS) $(CCFLAG)  -- $(CMS_LIB_SRC) $(CMS_SRC)
+
+
+#$(DEPEND):
+makedepend:
+	@echo "MAKING $@"; \
+	$(MAKE)
+
+#############################################################################
+#  dependencies generated by makedepend
+
+# DO NOT DELETE
+
+fire_ax_cms_read.o: /usr/include/malloc.h /usr/include/sys/stat.h
+fire_ax_cms_read.o: /usr/include/sys/types.h /usr/include/sys/stdtypes.h
+fire_ax_cms_read.o: /usr/include/sys/sysmacros.h /usr/include/stdio.h
+fire_ax_cms_read.o: /usr/include/string.h /usr/include/unistd.h
+fire_ax_cms_read.o: /usr/include/time.h

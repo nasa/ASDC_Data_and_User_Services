@@ -1,0 +1,2459 @@
+ Name of HDF file to be read:  CER_ES9_Aqua-FM3_Sample_024024.200306
+
+ SDS [ 1 ] :  Region number
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  1.,  10368.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.0000      145.0000      146.0000      147.0000      148.0000
+  ______________________________________________________________________
+ SDS [ 2 ] :  Geographic scene type
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  1.,  5.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = 1 = ocean, 2 = land, 3 = snow, 4 = desert, 5 = coast
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          3.0000        3.0000        3.0000        3.0000        3.0000
+  ______________________________________________________________________
+ SDS [ 3 ] :  Scene fraction histogram(1)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        137.7000      149.9500      147.6500      143.4000      146.2500
+  ______________________________________________________________________
+ SDS [ 4 ] :  Scene fraction histogram(2)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 5 ] :  Scene fraction histogram(3)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 6 ] :  Scene fraction histogram(4)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        295.3000      278.0600      277.3600      279.6000      278.7500
+  ______________________________________________________________________
+ SDS [ 7 ] :  Number of hourboxes
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  1.,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        433.0000      428.0000      425.0000      423.0000      425.0000
+  ______________________________________________________________________
+ SDS [ 8 ] :  Start position of hourbox data
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  7713792.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000      433.0000      861.0000     1286.0000     1709.0000
+  ______________________________________________________________________
+ SDS [ 9 ] :  Solar incidence
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  500000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :     373204.1875   372493.8125   372493.8125   372493.8125   372493.8125
+  ______________________________________________________________________
+ SDS [ 10 ] :  Net radiant flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  -200.,  200.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         -4.7500       -3.1400       -2.9700       -2.9200       -2.9600
+  ______________________________________________________________________
+ SDS [ 11 ] :  Longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        221.5000      222.9000      222.8000      222.6000      222.7000
+  ______________________________________________________________________
+ SDS [ 12 ] :  Longwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        204.5000      209.8000      210.0000      210.0000      210.8000
+  ______________________________________________________________________
+ SDS [ 13 ] :  Longwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        235.1000      240.6000      240.2000      240.2000      240.0000
+  ______________________________________________________________________
+ SDS [ 14 ] :  Longwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          7.1600        8.4200        8.4300        8.5400        8.6700
+  ______________________________________________________________________
+ SDS [ 15 ] :  Number of days of longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         30.0000       30.0000       30.0000       30.0000       30.0000
+  ______________________________________________________________________
+ SDS [ 16 ] :  Shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        301.6000      297.6000      297.5000      297.7000      297.7000
+  ______________________________________________________________________
+ SDS [ 17 ] :  Shortwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        266.8000      262.1000      259.9000      259.6000      256.6000
+  ______________________________________________________________________
+ SDS [ 18 ] :  Shortwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        329.4000      323.1000      321.6000      322.5000      326.5000
+  ______________________________________________________________________
+ SDS [ 19 ] :  Shortwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         13.3500       15.0700       15.5100       15.5500       16.3400
+  ______________________________________________________________________
+ SDS [ 20 ] :  Number of days of shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         30.0000       30.0000       30.0000       30.0000       30.0000
+  ______________________________________________________________________
+ SDS [ 21 ] :  Albedo
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Total-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.5818        0.5753        0.5751        0.5754        0.5753
+  ______________________________________________________________________
+ SDS [ 22 ] :  Solar incidence
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  500000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :     373204.1875   372493.8125   372493.8125   372493.8125   372493.8125
+  ______________________________________________________________________
+ SDS [ 23 ] :  Net radiant flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  -200.,  200.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         -0.5100        3.5800        2.4400        3.9900        3.2400
+  ______________________________________________________________________
+ SDS [ 24 ] :  Longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        231.3000      231.3000      231.1000      230.9000      230.8000
+  ______________________________________________________________________
+ SDS [ 25 ] :  Longwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        226.0000      226.1000      225.7000      226.0000      225.0000
+  ______________________________________________________________________
+ SDS [ 26 ] :  Longwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        238.6000      240.8000      240.7000      240.6000      240.3000
+  ______________________________________________________________________
+ SDS [ 27 ] :  Longwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          3.7700        3.8200        3.8300        3.8800        4.1400
+  ______________________________________________________________________
+ SDS [ 28 ] :  Number of days of longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         29.0000       24.0000       22.0000       22.0000       23.0000
+  ______________________________________________________________________
+ SDS [ 29 ] :  Shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        287.5000      282.5000      283.8000      282.5000      283.3000
+  ______________________________________________________________________
+ SDS [ 30 ] :  Shortwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        261.1000      258.2000      256.0000      256.4000      254.2000
+  ______________________________________________________________________
+ SDS [ 31 ] :  Shortwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        314.2000      307.9000      318.9000      309.3000      313.6000
+  ______________________________________________________________________
+ SDS [ 32 ] :  Shortwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         11.6100       12.7600       14.5100       12.6800       13.2700
+  ______________________________________________________________________
+ SDS [ 33 ] :  Number of days of shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         29.0000       24.0000       22.0000       22.0000       23.0000
+  ______________________________________________________________________
+ SDS [ 34 ] :  Albedo
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Day), Clear-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.5547        0.5461        0.5485        0.5460        0.5476
+  ______________________________________________________________________
+ SDS [ 35 ] :  Solar incidence
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  500000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :     373204.1875   372493.8125   372493.8125   372493.8125   372493.8125
+  ______________________________________________________________________
+ SDS [ 36 ] :  Net radiant flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  -200.,  200.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         -4.7500       -3.1400       -2.9700       -2.9200       -2.9600
+  ______________________________________________________________________
+ SDS [ 37 ] :  Longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        221.5000      222.9000      222.8000      222.6000      222.7000
+  ______________________________________________________________________
+ SDS [ 38 ] :  Longwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        221.0000      220.8000      220.9000      220.5000      220.4000
+  ______________________________________________________________________
+ SDS [ 39 ] :  Longwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        222.3000      225.6000      225.1000      224.6000      224.9000
+  ______________________________________________________________________
+ SDS [ 40 ] :  Longwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.3300        1.4500        1.3900        1.3800        1.3000
+  ______________________________________________________________________
+ SDS [ 41 ] :  Number of hours of longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         24.0000       24.0000       24.0000       24.0000       24.0000
+  ______________________________________________________________________
+ SDS [ 42 ] :  Shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        301.6000      297.6000      297.5000      297.7000      297.7000
+  ______________________________________________________________________
+ SDS [ 43 ] :  Shortwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        289.0000      243.4000      243.2000      244.1000      244.1000
+  ______________________________________________________________________
+ SDS [ 44 ] :  Shortwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        314.9000      349.2000      349.5000      349.7000      349.9000
+  ______________________________________________________________________
+ SDS [ 45 ] :  Shortwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          9.3300       37.5100       37.7500       37.3700       37.3200
+  ______________________________________________________________________
+ SDS [ 46 ] :  Number of hours of shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         24.0000       24.0000       24.0000       24.0000       24.0000
+  ______________________________________________________________________
+ SDS [ 47 ] :  Albedo
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Total-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.5818        0.5753        0.5751        0.5754        0.5753
+  ______________________________________________________________________
+ SDS [ 48 ] :  Solar incidence
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  500000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :     373204.1875   372493.8125   372493.8125   372493.8125   372493.8125
+  ______________________________________________________________________
+ SDS [ 49 ] :  Net radiant flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  -200.,  200.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         -0.6800        2.7800        1.4300        2.7900        2.1400
+  ______________________________________________________________________
+ SDS [ 50 ] :  Longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        231.5000      232.1000      232.1000      232.1000      231.9000
+  ______________________________________________________________________
+ SDS [ 51 ] :  Longwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        231.3000      231.0000      231.3000      231.3000      231.2000
+  ______________________________________________________________________
+ SDS [ 52 ] :  Longwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        231.8000      232.9000      232.9000      233.1000      232.5000
+  ______________________________________________________________________
+ SDS [ 53 ] :  Longwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.1200        0.5300        0.5200        0.5500        0.4400
+  ______________________________________________________________________
+ SDS [ 54 ] :  Number of hours of longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         24.0000       24.0000       24.0000       24.0000       24.0000
+  ______________________________________________________________________
+ SDS [ 55 ] :  Shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        287.5000      282.5000      283.8000      282.5000      283.3000
+  ______________________________________________________________________
+ SDS [ 56 ] :  Shortwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        271.6000      236.0000      236.9000      235.9000      236.0000
+  ______________________________________________________________________
+ SDS [ 57 ] :  Shortwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        302.6000      332.1000      333.9000      331.5000      334.0000
+  ______________________________________________________________________
+ SDS [ 58 ] :  Shortwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         10.8500       33.4700       33.7000       33.3200       34.0100
+  ______________________________________________________________________
+ SDS [ 59 ] :  Number of hours of shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         24.0000       24.0000       24.0000       24.0000       24.0000
+  ______________________________________________________________________
+ SDS [ 60 ] :  Albedo
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly (Hour), Clear-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.5547        0.5461        0.5485        0.5460        0.5476
+  ______________________________________________________________________
+ SDS [ 61 ] :  Solar constant, distance corrected
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  1300.,  1450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :       1327.4000     1327.0000     1326.6000     1326.3000     1325.9000
+ data ( 2, 1: 5) :       1327.4000     1327.0000     1326.6000     1326.3000     1325.9000
+ data ( 3, 1: 5) :       1327.4000     1327.0000     1326.6000     1326.3000     1325.9000
+ data ( 4, 1: 5) :       1327.4000     1327.0000     1326.6000     1326.3000     1325.9000
+ data ( 5, 1: 5) :       1327.4000     1327.0000     1326.6000     1326.3000     1325.9000
+  ______________________________________________________________________
+ SDS [ 62 ] :  Solar incidence
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  15000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :      11950.2998    12015.5000    12077.2998    12135.9004    12191.0996
+ data ( 2, 1: 5) :      11927.5996    11992.5996    12054.2998    12112.7998    12167.9004
+ data ( 3, 1: 5) :      11927.5996    11992.5996    12054.2998    12112.7998    12167.9004
+ data ( 4, 1: 5) :      11927.5996    11992.5996    12054.2998    12112.7998    12167.9004
+ data ( 5, 1: 5) :      11927.5996    11992.5996    12054.2998    12112.7998    12167.9004
+  ______________________________________________________________________
+ SDS [ 63 ] :  Longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        216.8000      217.4000      214.7000      216.7000      215.1000
+ data ( 2, 1: 5) :        221.5000      219.6000      214.0000      215.5000      213.2000
+ data ( 3, 1: 5) :        221.1000      219.5000      214.8000      215.5000      213.6000
+ data ( 4, 1: 5) :        220.3000      219.9000      214.6000      214.4000      214.6000
+ data ( 5, 1: 5) :        220.1000      220.8000      214.8000      214.0000      215.9000
+  ______________________________________________________________________
+ SDS [ 64 ] :  Longwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        213.8000      215.5000      212.8000      215.4000      212.9000
+ data ( 2, 1: 5) :        219.3000      213.8000      207.6000      204.3000      194.4000
+ data ( 3, 1: 5) :        219.6000      212.5000      204.6000      207.8000      197.1000
+ data ( 4, 1: 5) :        215.9000      213.3000      205.1000      204.2000      197.8000
+ data ( 5, 1: 5) :        217.4000      213.8000      203.3000      206.9000      198.6000
+  ______________________________________________________________________
+ SDS [ 65 ] :  Longwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        218.2000      218.3000      216.0000      217.8000      217.4000
+ data ( 2, 1: 5) :        223.6000      221.9000      219.5000      226.4000      225.4000
+ data ( 3, 1: 5) :        224.6000      222.1000      220.8000      226.9000      225.8000
+ data ( 4, 1: 5) :        223.8000      222.2000      220.6000      224.1000      225.4000
+ data ( 5, 1: 5) :        224.3000      224.5000      220.4000      224.0000      226.1000
+  ______________________________________________________________________
+ SDS [ 66 ] :  Longwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          1.4200        0.7000        0.9200        0.7900        1.7200
+ data ( 2, 1: 5) :          1.5100        2.3800        3.6900        6.5100       10.8000
+ data ( 3, 1: 5) :          1.4800        3.1200        4.5700        5.6400       10.9000
+ data ( 4, 1: 5) :          2.1000        2.5400        3.6800        6.0100       10.2300
+ data ( 5, 1: 5) :          2.0800        2.6400        3.8500        5.3400        9.7600
+  ______________________________________________________________________
+ SDS [ 67 ] :  Number of hours of longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         15.0000       14.0000       15.0000       15.0000       14.0000
+ data ( 2, 1: 5) :         14.0000       14.0000       14.0000       15.0000       14.0000
+ data ( 3, 1: 5) :         15.0000       14.0000       15.0000       14.0000       13.0000
+ data ( 4, 1: 5) :         15.0000       13.0000       15.0000       14.0000       15.0000
+ data ( 5, 1: 5) :         15.0000       13.0000       15.0000       13.0000       15.0000
+  ______________________________________________________________________
+ SDS [ 68 ] :  Shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        300.1000      298.7000      299.2000      301.9000      303.3000
+ data ( 2, 1: 5) :        304.5000      304.8000      301.8000      299.2000      297.9000
+ data ( 3, 1: 5) :        305.0000      305.1000      300.6000      299.7000      296.4000
+ data ( 4, 1: 5) :        306.8000      307.1000      300.5000      300.5000      295.5000
+ data ( 5, 1: 5) :        307.0000      305.9000      299.0000      303.2000      295.0000
+  ______________________________________________________________________
+ SDS [ 69 ] :  Shortwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        285.1000      284.6000      287.3000      289.6000      290.2000
+ data ( 2, 1: 5) :        243.5000      240.8000      237.7000      235.8000      239.0000
+ data ( 3, 1: 5) :        245.4000      241.5000      236.1000      237.8000      239.0000
+ data ( 4, 1: 5) :        245.0000      240.5000      236.0000      238.1000      240.0000
+ data ( 5, 1: 5) :        246.2000      239.9000      236.1000      241.4000      241.5000
+  ______________________________________________________________________
+ SDS [ 70 ] :  Shortwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        313.7000      311.9000      310.5000      314.0000      315.4000
+ data ( 2, 1: 5) :        367.1000      368.6000      359.5000      364.6000      352.0000
+ data ( 3, 1: 5) :        368.6000      372.0000      357.9000      358.5000      349.6000
+ data ( 4, 1: 5) :        369.1000      372.3000      359.0000      364.0000      351.2000
+ data ( 5, 1: 5) :        368.6000      371.5000      357.9000      365.3000      347.6000
+  ______________________________________________________________________
+ SDS [ 71 ] :  Shortwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          9.9800        9.6700        8.5000        8.6700        8.5800
+ data ( 2, 1: 5) :         45.2400       45.9600       43.0600       44.9100       39.2700
+ data ( 3, 1: 5) :         44.4900       46.5400       41.8300       44.6100       38.0000
+ data ( 4, 1: 5) :         44.2800       46.6500       41.6100       45.8700       35.8400
+ data ( 5, 1: 5) :         44.5700       46.6100       41.2600       45.6200       36.1700
+  ______________________________________________________________________
+ SDS [ 72 ] :  Number of hours of shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         15.0000       14.0000       15.0000       15.0000       14.0000
+ data ( 2, 1: 5) :         14.0000       14.0000       14.0000       15.0000       14.0000
+ data ( 3, 1: 5) :         15.0000       14.0000       15.0000       14.0000       13.0000
+ data ( 4, 1: 5) :         15.0000       13.0000       15.0000       14.0000       15.0000
+ data ( 5, 1: 5) :         15.0000       13.0000       15.0000       13.0000       15.0000
+  ______________________________________________________________________
+ SDS [ 73 ] :  Albedo
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Total-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          0.6026        0.5966        0.5946        0.5970        0.5970
+ data ( 2, 1: 5) :          0.6127        0.6101        0.6008        0.5928        0.5876
+ data ( 3, 1: 5) :          0.6137        0.6105        0.5986        0.5939        0.5847
+ data ( 4, 1: 5) :          0.6173        0.6146        0.5984        0.5955        0.5829
+ data ( 5, 1: 5) :          0.6178        0.6123        0.5952        0.6007        0.5819
+  ______________________________________________________________________
+ SDS [ 74 ] :  Longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        226.7000      226.3000      227.1000      227.0000      226.9000
+ data ( 2, 1: 5) :        229.4000      229.4000      229.4000      229.4000      228.0000
+ data ( 3, 1: 5) :        229.2000      229.2000      229.2000      229.2000      227.4000
+ data ( 4, 1: 5) :        228.2000      228.2000      228.2000      228.2000      226.8000
+ data ( 5, 1: 5) :        226.5000      226.5000      226.5000      226.5000      227.0000
+  ______________________________________________________________________
+ SDS [ 75 ] :  Longwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        226.1000      226.1000      226.4000      226.9000      226.9000
+ data ( 2, 1: 5) :        229.4000      229.4000      229.4000      229.4000      227.5000
+ data ( 3, 1: 5) :        229.2000      229.2000      229.2000      229.2000      226.9000
+ data ( 4, 1: 5) :        228.2000      228.2000      228.2000      228.2000      226.2000
+ data ( 5, 1: 5) :        226.5000      226.5000      226.5000      226.5000      226.5000
+  ______________________________________________________________________
+ SDS [ 76 ] :  Longwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        227.9000      226.4000      227.2000      227.2000      227.0000
+ data ( 2, 1: 5) :        229.4000      229.4000      229.4000      229.4000      229.0000
+ data ( 3, 1: 5) :        229.2000      229.2000      229.2000      229.2000      229.2000
+ data ( 4, 1: 5) :        228.2000      228.2000      228.2000      228.2000      228.2000
+ data ( 5, 1: 5) :        226.5000      226.5000      226.5000      226.5000      227.6000
+  ______________________________________________________________________
+ SDS [ 77 ] :  Longwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          0.5900        0.0700        0.2700        0.0900        0.0400
+ data ( 2, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.4400
+ data ( 3, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.8900
+ data ( 4, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.8200
+ data ( 5, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.3900
+  ______________________________________________________________________
+ SDS [ 78 ] :  Number of hours of longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          5.0000        0.0000        2.0000        2.0000        1.0000
+ data ( 2, 1: 5) :          0.0000        0.0000        0.0000        1.0000        3.0000
+ data ( 3, 1: 5) :          0.0000        0.0000        0.0000        0.0000        2.0000
+ data ( 4, 1: 5) :          0.0000        0.0000        0.0000        0.0000        3.0000
+ data ( 5, 1: 5) :          0.0000        0.0000        0.0000        0.0000        4.0000
+  ______________________________________________________________________
+ SDS [ 79 ] :  Shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        285.7000  ************      286.0000      292.1000      286.5000
+ data ( 2, 1: 5) :    ************  ************  ************      266.4000      277.9000
+ data ( 3, 1: 5) :    ************  ************  ************  ************      285.7000
+ data ( 4, 1: 5) :    ************  ************  ************  ************      288.5000
+ data ( 5, 1: 5) :    ************  ************  ************  ************      285.5000
+  ______________________________________________________________________
+ SDS [ 80 ] :  Shortwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        264.8000  ************      270.2000      271.1000      271.4000
+ data ( 2, 1: 5) :    ************  ************  ************      223.7000      227.0000
+ data ( 3, 1: 5) :    ************  ************  ************  ************      233.9000
+ data ( 4, 1: 5) :    ************  ************  ************  ************      236.4000
+ data ( 5, 1: 5) :    ************  ************  ************  ************      239.1000
+  ______________________________________________________________________
+ SDS [ 81 ] :  Shortwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        301.0000  ************      300.5000      309.9000      301.5000
+ data ( 2, 1: 5) :    ************  ************  ************      308.8000      322.9000
+ data ( 3, 1: 5) :    ************  ************  ************  ************      332.9000
+ data ( 4, 1: 5) :    ************  ************  ************  ************      339.0000
+ data ( 5, 1: 5) :    ************  ************  ************  ************      331.7000
+  ______________________________________________________________________
+ SDS [ 82 ] :  Shortwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         11.4900        0.0000       10.3200       12.8800       10.9800
+ data ( 2, 1: 5) :          0.0000        0.0000        0.0000       30.9800       33.3500
+ data ( 3, 1: 5) :          0.0000        0.0000        0.0000        0.0000       35.0300
+ data ( 4, 1: 5) :          0.0000        0.0000        0.0000        0.0000       35.4600
+ data ( 5, 1: 5) :          0.0000        0.0000        0.0000        0.0000       33.3900
+  ______________________________________________________________________
+ SDS [ 83 ] :  Number of hours of shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  24.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = hours
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          5.0000        0.0000        2.0000        2.0000        1.0000
+ data ( 2, 1: 5) :          0.0000        0.0000        0.0000        1.0000        3.0000
+ data ( 3, 1: 5) :          0.0000        0.0000        0.0000        0.0000        2.0000
+ data ( 4, 1: 5) :          0.0000        0.0000        0.0000        0.0000        3.0000
+ data ( 5, 1: 5) :          0.0000        0.0000        0.0000        0.0000        4.0000
+  ______________________________________________________________________
+ SDS [ 84 ] :  Albedo
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  day
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Daily, Clear-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          0.5737        0.0000        0.5684        0.5777        0.5640
+ data ( 2, 1: 5) :          0.0000        0.0000        0.0000        0.5278        0.5481
+ data ( 3, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.5634
+ data ( 4, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.5690
+ data ( 5, 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.5631
+  ______________________________________________________________________
+ SDS [ 85 ] :  Solar incidence
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  50000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :      14760.2998    14814.0996    14918.0996    15065.2002    15245.2998
+ data ( 2, 1: 5) :      13152.2998    13313.7002    13625.5000    14066.4004    14606.5000
+ data ( 3, 1: 5) :      13152.2998    13313.7002    13625.5000    14066.4004    14606.5000
+ data ( 4, 1: 5) :      13152.2998    13313.7002    13625.5000    14066.4004    14606.5000
+ data ( 5, 1: 5) :      13152.2998    13313.7002    13625.5000    14066.4004    14606.5000
+  ______________________________________________________________________
+ SDS [ 86 ] :  Longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        221.4000      221.4000      221.9000      222.1000      222.3000
+ data ( 2, 1: 5) :        223.1000      221.7000      221.3000      221.7000      222.6000
+ data ( 3, 1: 5) :        223.5000      221.9000      221.2000      221.9000      222.9000
+ data ( 4, 1: 5) :        223.3000      221.9000      221.1000      221.6000      222.8000
+ data ( 5, 1: 5) :        223.0000      222.0000      221.3000      221.5000      222.7000
+  ______________________________________________________________________
+ SDS [ 87 ] :  Longwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        201.7000      200.5000      204.5000      206.5000      208.5000
+ data ( 2, 1: 5) :        205.3000      196.9000      198.0000      199.2000      204.3000
+ data ( 3, 1: 5) :        205.8000      201.8000      197.7000      200.6000      203.7000
+ data ( 4, 1: 5) :        204.2000      201.5000      198.8000      202.9000      204.0000
+ data ( 5, 1: 5) :        203.0000      201.4000      199.8000      202.2000      204.0000
+  ______________________________________________________________________
+ SDS [ 88 ] :  Longwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        236.6000      236.5000      236.5000      235.7000      235.0000
+ data ( 2, 1: 5) :        243.0000      242.0000      242.2000      242.4000      243.0000
+ data ( 3, 1: 5) :        243.2000      241.9000      240.8000      239.8000      241.1000
+ data ( 4, 1: 5) :        243.4000      241.9000      240.5000      239.7000      240.4000
+ data ( 5, 1: 5) :        243.1000      241.9000      240.8000      240.2000      240.1000
+  ______________________________________________________________________
+ SDS [ 89 ] :  Longwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          8.0200        8.2200        8.0900        7.7600        7.5200
+ data ( 2, 1: 5) :         10.9500       11.8000       11.6100       11.6000       10.9000
+ data ( 3, 1: 5) :         10.3700       11.2300       11.5800       11.4700       10.8300
+ data ( 4, 1: 5) :         10.4600       10.8200       11.1500       10.9400       10.6900
+ data ( 5, 1: 5) :         10.5300       10.5500       11.2600       10.8800       10.6400
+  ______________________________________________________________________
+ SDS [ 90 ] :  Number of days of longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         18.0000       16.0000       18.0000       19.0000       19.0000
+ data ( 2, 1: 5) :         18.0000       16.0000       18.0000       19.0000       17.0000
+ data ( 3, 1: 5) :         19.0000       17.0000       17.0000       18.0000       19.0000
+ data ( 4, 1: 5) :         17.0000       17.0000       19.0000       17.0000       18.0000
+ data ( 5, 1: 5) :         18.0000       15.0000       19.0000       19.0000       18.0000
+  ______________________________________________________________________
+ SDS [ 91 ] :  Longwave sum of estimates
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  15000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :       3998.1001     3494.0000     4021.3999     4224.3999     4228.6001
+ data ( 2, 1: 5) :       3998.3999     3518.3000     4013.3999     4181.3999     3830.1001
+ data ( 3, 1: 5) :       4252.2002     3771.6001     3748.8999     3970.8000     4271.2998
+ data ( 4, 1: 5) :       3763.8000     3826.0000     4169.1001     3757.8000     4019.6001
+ data ( 5, 1: 5) :       4000.8999     3359.6001     4196.2002     4210.2002     4005.0000
+  ______________________________________________________________________
+ SDS [ 92 ] :  Longwave sum of estimates squared
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  5000000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = (Watts per square meter)squared
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :     889094.6250   763950.3125   899772.8125   940263.5000   942094.3125
+ data ( 2, 1: 5) :     890135.1250   776097.1250   896769.5000   923131.3750   864487.8125
+ data ( 3, 1: 5) :     954103.8750   838663.6875   828832.0000   878552.6875   962084.1250
+ data ( 4, 1: 5) :     835343.8125   862833.1875   917226.0000   832642.5000   899789.5000
+ data ( 5, 1: 5) :     891328.1250   753777.1250   929838.5000   934928.6250   893195.5000
+  ______________________________________________________________________
+ SDS [ 93 ] :  Shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        289.1000      290.0000      291.4000      293.4000      295.8000
+ data ( 2, 1: 5) :        247.3000      252.7000      261.3000      272.5000      286.3000
+ data ( 3, 1: 5) :        247.0000      252.1000      260.9000      272.0000      285.5000
+ data ( 4, 1: 5) :        248.4000      253.2000      262.2000      273.6000      285.0000
+ data ( 5, 1: 5) :        248.1000      253.3000      261.8000      273.0000      285.2000
+  ______________________________________________________________________
+ SDS [ 94 ] :  Shortwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        254.5000      255.3000      256.9000      259.7000      265.4000
+ data ( 2, 1: 5) :        213.1000      223.0000      230.8000      239.3000      247.5000
+ data ( 3, 1: 5) :        216.7000      221.7000      228.5000      237.5000      248.0000
+ data ( 4, 1: 5) :        214.0000      216.7000      229.4000      237.7000      247.1000
+ data ( 5, 1: 5) :        214.0000      216.6000      226.3000      233.9000      242.8000
+  ______________________________________________________________________
+ SDS [ 95 ] :  Shortwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        311.4000      311.9000      312.6000      314.4000      316.8000
+ data ( 2, 1: 5) :        271.7000      291.3000      301.9000      315.0000      334.4000
+ data ( 3, 1: 5) :        274.6000      285.4000      299.0000      321.4000      320.7000
+ data ( 4, 1: 5) :        275.9000      285.5000      297.8000      327.5000      328.6000
+ data ( 5, 1: 5) :        278.9000      285.9000      295.5000      312.0000      332.7000
+  ______________________________________________________________________
+ SDS [ 96 ] :  Shortwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         13.4000       13.3500       13.0700       12.7300       12.9200
+ data ( 2, 1: 5) :         14.0200       14.8600       15.4300       18.0400       21.0400
+ data ( 3, 1: 5) :         13.6200       14.4400       16.1200       18.4900       19.0300
+ data ( 4, 1: 5) :         14.7400       15.0400       15.2300       18.4700       18.6600
+ data ( 5, 1: 5) :         15.0600       15.2900       15.5400       17.6600       20.7800
+  ______________________________________________________________________
+ SDS [ 97 ] :  Number of days of shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         18.0000       16.0000       18.0000       19.0000       19.0000
+ data ( 2, 1: 5) :         18.0000       16.0000       18.0000       19.0000       17.0000
+ data ( 3, 1: 5) :         19.0000       17.0000       17.0000       18.0000       19.0000
+ data ( 4, 1: 5) :         17.0000       17.0000       19.0000       17.0000       18.0000
+ data ( 5, 1: 5) :         18.0000       15.0000       19.0000       19.0000       18.0000
+  ______________________________________________________________________
+ SDS [ 98 ] :  Shortwave sum of estimates
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  45000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :       5194.7998     4692.7002     5228.6001     5539.0000     5613.3999
+ data ( 2, 1: 5) :       4480.3999     4040.3000     4684.2002     5197.0000     4814.5000
+ data ( 3, 1: 5) :       4681.2002     4279.1001     4470.7998     4918.2002     5370.6001
+ data ( 4, 1: 5) :       4247.0000     4234.6001     5053.7002     4642.7002     5100.2002
+ data ( 5, 1: 5) :       4463.8999     3747.2000     4972.2998     5170.3999     5171.2998
+  ______________________________________________________________________
+ SDS [ 99 ] :  Shortwave sum of estimates squared
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  50000000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = (Watts per square meter)squared
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :    1502484.1250  1379059.5000  1521484.2500  1618460.1250  1660960.2500
+ data ( 2, 1: 5) :    1119175.8750  1023970.1875  1222008.1250  1428063.5000  1369949.2500
+ data ( 3, 1: 5) :    1157438.6250  1080165.5000  1180239.0000  1350466.2500  1523579.7500
+ data ( 4, 1: 5) :    1064457.5000  1058622.2500  1348438.0000  1275212.2500  1449936.3750
+ data ( 5, 1: 5) :    1110872.1250   938963.8750  1306994.8750  1412389.0000  1492379.3750
+  ______________________________________________________________________
+ SDS [ 100 ] :  Albedo
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Total-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          0.5876        0.5873        0.5860        0.5843        0.5822
+ data ( 2, 1: 5) :          0.5640        0.5695        0.5753        0.5811        0.5879
+ data ( 3, 1: 5) :          0.5635        0.5682        0.5745        0.5801        0.5865
+ data ( 4, 1: 5) :          0.5666        0.5705        0.5774        0.5836        0.5854
+ data ( 5, 1: 5) :          0.5660        0.5707        0.5764        0.5822        0.5858
+  ______________________________________________________________________
+ SDS [ 101 ] :  Solar incidence
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  50000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :      14286.2002    14338.2002    14438.7002    14580.7998    14754.9004
+ data ( 2, 1: 5) :      10595.0000    10723.9004    10972.9004    11325.0996    11756.4004
+ data ( 3, 1: 5) :       9729.5996     9847.7002    10075.9004    10398.5000    10793.7002
+ data ( 4, 1: 5) :       9729.5996     9847.7002    10075.9004    10398.5000    10793.7002
+ data ( 5, 1: 5) :      10161.5000    10285.0000    10523.5996    10861.0000    11274.2998
+  ______________________________________________________________________
+ SDS [ 102 ] :  Longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        231.5000      231.5000      231.6000      231.6000      231.5000
+ data ( 2, 1: 5) :        232.2000      231.9000      232.0000      232.2000      232.2000
+ data ( 3, 1: 5) :        232.1000      231.6000      232.0000      232.2000      232.8000
+ data ( 4, 1: 5) :        232.5000      231.8000      231.7000      232.1000      232.4000
+ data ( 5, 1: 5) :        231.8000      231.2000      231.2000      231.7000      231.9000
+  ______________________________________________________________________
+ SDS [ 103 ] :  Longwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        226.3000      226.1000      226.6000      226.7000      226.9000
+ data ( 2, 1: 5) :        225.7000      225.6000      225.6000      225.5000      225.5000
+ data ( 3, 1: 5) :        226.1000      226.2000      226.2000      226.1000      226.0000
+ data ( 4, 1: 5) :        225.5000      225.5000      225.4000      225.3000      225.2000
+ data ( 5, 1: 5) :        225.3000      225.4000      225.5000      225.6000      225.6000
+  ______________________________________________________________________
+ SDS [ 104 ] :  Longwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        241.7000      241.8000      242.0000      240.7000      239.4000
+ data ( 2, 1: 5) :        243.0000      242.0000      242.8000      243.5000      243.0000
+ data ( 3, 1: 5) :        243.2000      241.9000      242.6000      243.4000      243.3000
+ data ( 4, 1: 5) :        243.4000      241.9000      241.9000      242.0000      241.8000
+ data ( 5, 1: 5) :        243.1000      241.9000      240.8000      241.8000      241.7000
+  ______________________________________________________________________
+ SDS [ 105 ] :  Longwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          4.1700        4.1400        4.1000        4.0400        3.9700
+ data ( 2, 1: 5) :          4.8600        4.5300        4.7000        5.1100        4.8900
+ data ( 3, 1: 5) :          4.7400        4.4000        4.5300        4.6500        5.1900
+ data ( 4, 1: 5) :          5.0300        4.7300        4.3700        4.3600        4.6400
+ data ( 5, 1: 5) :          4.8200        4.5600        4.5600        4.7000        5.0500
+  ______________________________________________________________________
+ SDS [ 106 ] :  Number of days of longwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         14.0000       13.0000       14.0000       16.0000       14.0000
+ data ( 2, 1: 5) :          7.0000        6.0000       10.0000       10.0000       10.0000
+ data ( 3, 1: 5) :          8.0000        8.0000        8.0000        9.0000       12.0000
+ data ( 4, 1: 5) :          6.0000       10.0000        9.0000        9.0000       10.0000
+ data ( 5, 1: 5) :          9.0000        9.0000        9.0000       11.0000       10.0000
+  ______________________________________________________________________
+ SDS [ 107 ] :  Longwave sum of estimates
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  15000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :       3258.5000     3009.2000     3260.6001     3715.6001     3269.0000
+ data ( 2, 1: 5) :       1642.7000     1405.6000     2334.0000     2344.6001     2360.5000
+ data ( 3, 1: 5) :       1889.5000     1863.0000     1871.5000     2102.0000     2817.3999
+ data ( 4, 1: 5) :       1412.5000     2343.2000     2090.8000     2106.6001     2340.3000
+ data ( 5, 1: 5) :       2104.5000     2095.8000     2107.0000     2569.2000     2333.8000
+  ______________________________________________________________________
+ SDS [ 108 ] :  Longwave sum of estimates squared
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  5000000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = (Watts per square meter)squared
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :     758648.5000   696690.1250   759615.6875   863080.6250   763473.3750
+ data ( 2, 1: 5) :     385596.5938   329378.0000   544835.1875   549971.1250   557348.6875
+ data ( 3, 1: 5) :     446417.0000   433976.8125   437927.8125   491104.6875   661692.5000
+ data ( 4, 1: 5) :     332618.0000   549280.8750   485830.0000   493198.1875   547828.6250
+ data ( 5, 1: 5) :     492275.1875   488163.8125   493489.4063   600187.3125   544872.0000
+  ______________________________________________________________________
+ SDS [ 109 ] :  Shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        273.2000      274.6000      276.6000      279.5000      282.6000
+ data ( 2, 1: 5) :        241.1000      245.1000      251.9000      260.4000      270.6000
+ data ( 3, 1: 5) :        243.4000      247.2000      253.1000      262.1000      271.9000
+ data ( 4, 1: 5) :        241.7000      245.9000      253.1000      261.1000      270.1000
+ data ( 5, 1: 5) :        241.6000      247.2000      254.4000      260.6000      269.9000
+  ______________________________________________________________________
+ SDS [ 110 ] :  Shortwave flux minimum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        249.2000      250.1000      251.8000      253.3000      253.8000
+ data ( 2, 1: 5) :        213.1000      222.2000      230.7000      236.7000      245.5000
+ data ( 3, 1: 5) :        216.7000      221.7000      228.5000      236.3000      245.8000
+ data ( 4, 1: 5) :        214.0000      216.7000      228.4000      235.9000      246.3000
+ data ( 5, 1: 5) :        214.0000      216.6000      226.3000      231.6000      241.9000
+  ______________________________________________________________________
+ SDS [ 111 ] :  Shortwave flux maximum value
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :        296.4000      297.5000      297.7000      299.4000      302.2000
+ data ( 2, 1: 5) :        278.8000      282.3000      289.0000      298.3000      309.7000
+ data ( 3, 1: 5) :        273.5000      276.9000      282.1000      295.7000      311.5000
+ data ( 4, 1: 5) :        273.5000      276.9000      290.5000      296.2000      303.6000
+ data ( 5, 1: 5) :        274.3000      277.7000      286.2000      297.4000      296.2000
+  ______________________________________________________________________
+ SDS [ 112 ] :  Shortwave flux standard deviation
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          9.7600        9.6900        9.8700       10.3200       11.1200
+ data ( 2, 1: 5) :         16.7700       16.4000       16.3100       17.1600       17.1900
+ data ( 3, 1: 5) :         14.7700       14.5300       14.7800       15.2100       16.3800
+ data ( 4, 1: 5) :         14.8800       14.2200       14.1100       14.1500       14.8300
+ data ( 5, 1: 5) :         14.5600       13.7100       14.1400       15.1400       15.9000
+  ______________________________________________________________________
+ SDS [ 113 ] :  Number of days of shortwave flux
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  31.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = days
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :         14.0000       13.0000       14.0000       16.0000       14.0000
+ data ( 2, 1: 5) :          7.0000        6.0000       10.0000       10.0000       10.0000
+ data ( 3, 1: 5) :          8.0000        8.0000        8.0000        9.0000       12.0000
+ data ( 4, 1: 5) :          6.0000       10.0000        9.0000        9.0000       10.0000
+ data ( 5, 1: 5) :          9.0000        9.0000        9.0000       11.0000       10.0000
+  ______________________________________________________________________
+ SDS [ 114 ] :  Shortwave sum of estimates
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  45000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :       3822.8999     3562.3999     3902.1001     4423.2998     3951.2000
+ data ( 2, 1: 5) :       1663.0000     1412.9000     2528.2000     2547.1001     2655.3999
+ data ( 3, 1: 5) :       1885.2000     1944.2000     2001.6000     2290.5000     3248.6001
+ data ( 4, 1: 5) :       1400.9000     2417.7000     2284.3000     2279.0000     2674.2000
+ data ( 5, 1: 5) :       2108.8999     2206.6001     2247.8000     2814.1001     2715.1001
+  ______________________________________________________________________
+ SDS [ 115 ] :  Shortwave sum of estimates squared
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  50000000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = (Watts per square meter)squared
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :    1044986.5000   977653.1875  1089226.7500  1224540.5000  1117473.8750
+ data ( 2, 1: 5) :     397101.3125   332981.0938   641444.1250   650978.3750   707551.8125
+ data ( 3, 1: 5) :     445412.5938   474265.3125   503031.8125   583506.3125   883137.3750
+ data ( 4, 1: 5) :     327765.5938   587145.8750   581878.3125   577843.8125   717573.8125
+ data ( 5, 1: 5) :     495014.8125   543052.1875   563204.0000   722564.6875   740265.1250
+  ______________________________________________________________________
+ SDS [ 116 ] :  Albedo
+     Number of Dims:  2
+ 
+  Dimension =>   1     [ 5 ]  region
+  Dimension =>   2     [ 5 ]  hour
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Monthly Hourly, Clear-sky Averages
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  2
+  Dimensions: [ 2*5 ]
+ data ( 1, 1: 5) :          0.5547        0.5555        0.5556        0.5559        0.5555
+ data ( 2, 1: 5) :          0.5462        0.5484        0.5510        0.5518        0.5524
+ data ( 3, 1: 5) :          0.5503        0.5523        0.5527        0.5544        0.5542
+ data ( 4, 1: 5) :          0.5464        0.5494        0.5526        0.5524        0.5505
+ data ( 5, 1: 5) :          0.5468        0.5528        0.5560        0.5520        0.5506
+  ______________________________________________________________________
+ SDS [ 117 ] :  Region number
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  1.,  10368.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.0000        1.0000        1.0000        1.0000        1.0000
+  ______________________________________________________________________
+ SDS [ 118 ] :  Number of hourboxes
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  1.,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        433.0000      433.0000      433.0000      433.0000      433.0000
+  ______________________________________________________________________
+ SDS [ 119 ] :  Hourbox number
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  1.,  744.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.0000        2.0000        4.0000        6.0000        7.0000
+  ______________________________________________________________________
+ SDS [ 120 ] :  Time of observation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  2449340.,  2458600.
+  Attribute =>   2    _FillValue =  3.4028234663852886E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Julian days
+ 
+  SDS data type: 8byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :    2452791.5073  2452791.5760  2452791.6446  2452791.7133  2452791.7820
+  ______________________________________________________________________
+ SDS [ 121 ] :  Scene fraction(1)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0200        0.0260        0.0040        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 122 ] :  Scene fraction(2)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 123 ] :  Scene fraction(3)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 124 ] :  Scene fraction(4)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.9800        0.9740        0.9960        1.0000        1.0000
+  ______________________________________________________________________
+ SDS [ 125 ] :  Albedo factor(1)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.5617        0.5708        0.5758        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 126 ] :  Albedo factor(2)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 127 ] :  Albedo factor(3)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0000        0.0000        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 128 ] :  Albedo factor(4)
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.6058        0.6084        0.6083        0.6062        0.6048
+  ______________________________________________________________________
+ SDS [ 129 ] :  Cosine of the solar zenith angle
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = n/a
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.3551        0.3564        0.3628        0.3725        0.3778
+  ______________________________________________________________________
+ SDS [ 130 ] :  Satellite zenith angle
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  90.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = degrees
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         57.2400       57.2200       57.2000       57.1900       57.1700
+  ______________________________________________________________________
+ SDS [ 131 ] :  Azimuth angle
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  360.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = degrees
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        113.4000      113.4000      113.3900      113.3900      113.3900
+  ______________________________________________________________________
+ SDS [ 132 ] :  Solar incidence
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watt hours per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        471.3000      473.1000      481.6000      494.4000      501.4000
+  ______________________________________________________________________
+ SDS [ 133 ] :  Longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        215.2000      213.8000      214.7000      214.8000      216.3000
+  ______________________________________________________________________
+ SDS [ 134 ] :  Longwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        182.5000      180.4000      188.2000      185.8000      199.4000
+  ______________________________________________________________________
+ SDS [ 135 ] :  Longwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        228.8000      229.0000      228.0000      224.7000      224.6000
+  ______________________________________________________________________
+ SDS [ 136 ] :  Longwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          9.1000        9.1000        6.2000        5.5000        3.6000
+  ______________________________________________________________________
+ SDS [ 137 ] :  Number of longwave flux estimates
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  5000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        455.0000      453.0000      457.0000      454.0000      455.0000
+  ______________________________________________________________________
+ SDS [ 138 ] :  Longwave flux maximum difference
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :    ************  ************  ************  ************  ************
+  ______________________________________________________________________
+ SDS [ 139 ] :  Shortwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        285.1000      287.4000      292.9000      299.7000      303.2000
+  ______________________________________________________________________
+ SDS [ 140 ] :  Shortwave flux minimum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        256.6000      248.5000      251.7000      252.6000      249.8000
+  ______________________________________________________________________
+ SDS [ 141 ] :  Shortwave flux maximum value
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        358.3000      359.3000      341.6000      344.8000      350.1000
+  ______________________________________________________________________
+ SDS [ 142 ] :  Shortwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :         21.1800       20.6400       18.7100       19.3200       19.6600
+  ______________________________________________________________________
+ SDS [ 143 ] :  Number of shortwave flux estimates
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  5000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        455.0000      453.0000      457.0000      454.0000      455.0000
+  ______________________________________________________________________
+ SDS [ 144 ] :  Shortwave flux maximum difference
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1400.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :    ************  ************  ************  ************  ************
+  ______________________________________________________________________
+ SDS [ 145 ] :  Clear-sky longwave flux
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  50.,  450.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :        227.8000      227.9000      227.5000  ************  ************
+  ______________________________________________________________________
+ SDS [ 146 ] :  Clear-sky longwave flux standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  350.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = Watts per square meter
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.7500        0.7400        0.7800  ************  ************
+  ______________________________________________________________________
+ SDS [ 147 ] :  Number of clear-sky longwave flux estimates
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  5000.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = number
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          9.0000       12.0000        2.0000  ************  ************
+  ______________________________________________________________________
+ SDS [ 148 ] :  Clear-sky albedo standard deviation
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  1.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = unitless
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          0.0050        0.0060        0.0000        0.0000        0.0000
+  ______________________________________________________________________
+ SDS [ 149 ] :  Longitude
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  360.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = degrees
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.2500        1.2500        1.2500        1.2500        1.2500
+  ______________________________________________________________________
+ SDS [ 150 ] :  Colatitude
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  hourbox
+ 
+  Attribute =>   1    valid_range =  0.E+0,  180.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Hourbox Data
+  Attribute =>   4    units = degrees
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.2500        1.2500        1.2500        1.2500        1.2500
+  ______________________________________________________________________
+ SDS [ 151 ] :  Longitude
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  360.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = degrees
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.2500        1.2500        3.7500        6.2500        8.7500
+  ______________________________________________________________________
+ SDS [ 152 ] :  Colatitude
+     Number of Dims:  1
+ 
+  Dimension =>   1     [ 5 ]  region
+ 
+  Attribute =>   1    valid_range =  0.E+0,  180.
+  Attribute =>   2    _FillValue =  3.402823466E+38
+  Attribute =>   3    long_name = Regional Summary Data
+  Attribute =>   4    units = degrees
+ 
+  SDS data type: 4byte real, sds_rank =  1
+  Dimensions: [ 5 ]
+ data ( 1: 5) :          1.2500        3.7500        3.7500        3.7500        3.7500
+  ______________________________________________________________________
+  VDATA[ 1 ] SHORTNAME,RANGEBEGINNINGDATE,RANGEBEGINNINGTIME,RANGEENDINGDATE,RANGEENDINGTIME,AUTOMATICQUALITYFLAG,AUTOMATICQUALITYFLA
+ GEXPLANATION,ASSOCIATEDPLATFORMSHORTNAME,ASSOCIATEDINSTRUMENTSHORTNAME,LOCALGRANULEID,LOCALVERSIONID,CERPRODUCTIONDATETIME,NUMBEROFR
+ ECORDS,PRODUCTGENERATIONLOC 1
+  --- Field ( 1  of  14 ) : SHORTNAME
+   data type: character string
+       value: CDS9_HAB
+  --- Field ( 2  of  14 ) : RANGEBEGINNINGDATE
+   data type: character string
+       value: 2003-06-01
+  --- Field ( 3  of  14 ) : RANGEBEGINNINGTIME
+   data type: character string
+       value: 00:00:04.678819
+  --- Field ( 4  of  14 ) : RANGEENDINGDATE
+   data type: character string
+       value: 2003-06-30
+  --- Field ( 5  of  14 ) : RANGEENDINGTIME
+   data type: character string
+       value: 23:59:57.031642
+  --- Field ( 6  of  14 ) : AUTOMATICQUALITYFLAG
+   data type: character string
+       value: Passed
+  --- Field ( 7  of  14 ) : AUTOMATICQUALITYFLAGEXPLANATION
+   data type: character string
+       value: Refer to Log Files
+  --- Field ( 8  of  14 ) : ASSOCIATEDPLATFORMSHORTNAME
+   data type: character string
+       value: Aqua
+  --- Field ( 9  of  14 ) : ASSOCIATEDINSTRUMENTSHORTNAME
+   data type: character string
+       value: FM3
+  --- Field ( 10  of  14 ) : LOCALGRANULEID
+   data type: character string
+       value: CER_ES9_Aqua-FM3_Edition2_024024.200306
+  --- Field ( 11  of  14 ) : LOCALVERSIONID
+   data type: character string
+       value: Clib-20031112 TK5.2.7 HDF-4.1r3 HDFEOS- 2.4v1 SW484 ANC484
+  --- Field ( 12  of  14 ) : CERPRODUCTIONDATETIME
+   data type: character string
+       value: 2004-02-23T13:21:04
+  --- Field ( 13  of  14 ) : NUMBEROFRECORDS
+   data type: 4byte integer
+       value( 1 , 1 : 1 ):  10082
+  --- Field ( 14  of  14 ) : PRODUCTGENERATIONLOC
+   data type: character string
+       value: NASA Langley Research Center, HOST - warlock OS - IRIX64
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+   CHDF_N_SOFTWARE_START_NOTICE
+       compress_main()
+        SOFTWARE COMPLETED. 

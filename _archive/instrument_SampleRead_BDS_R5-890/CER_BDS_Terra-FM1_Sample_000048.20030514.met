@@ -1,0 +1,699 @@
+
+GROUP                  = INVENTORYMETADATA
+  GROUPTYPE            = MASTERGROUP
+
+  GROUP                  = ECSDATAGRANULE
+
+    OBJECT                 = LOCALGRANULEID
+      NUM_VAL              = 1
+      VALUE                = "CER_BDS_Terra-FM1_Sample_000048.20030514"
+    END_OBJECT             = LOCALGRANULEID
+
+    OBJECT                 = LOCALVERSIONID
+      NUM_VAL              = 1
+      VALUE                = "Clib-20050729 TK5.2.7 HDF-4.1r3 HDFEOS- 2.4v1 SW599 ANC599"
+    END_OBJECT             = LOCALVERSIONID
+
+    OBJECT                 = PRODUCTIONDATETIME
+      NUM_VAL              = 1
+      VALUE                = "2005-11-21T21:24:15.000Z"
+    END_OBJECT             = PRODUCTIONDATETIME
+
+  END_GROUP              = ECSDATAGRANULE
+
+  GROUP                  = MEASUREDPARAMETER
+
+    OBJECT                 = MEASUREDPARAMETERCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = PARAMETERNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "GranuleParameters"
+      END_OBJECT             = PARAMETERNAME
+
+      GROUP                  = QAFLAGS
+        CLASS                = "1"
+
+        OBJECT                 = AUTOMATICQUALITYFLAG
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "Passed"
+        END_OBJECT             = AUTOMATICQUALITYFLAG
+
+        OBJECT                 = AUTOMATICQUALITYFLAGEXPLANATION
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "All three channels WN, SW, and Total had values less than 50% bad"
+        END_OBJECT             = AUTOMATICQUALITYFLAGEXPLANATION
+
+      END_GROUP              = QAFLAGS
+
+    END_OBJECT             = MEASUREDPARAMETERCONTAINER
+
+  END_GROUP              = MEASUREDPARAMETER
+
+  GROUP                  = COLLECTIONDESCRIPTIONCLASS
+
+    OBJECT                 = SHORTNAME
+      NUM_VAL              = 1
+      VALUE                = "CBBDS_AB"
+    END_OBJECT             = SHORTNAME
+
+    OBJECT                 = VERSIONID
+      NUM_VAL              = 1
+      VALUE                = 1
+    END_OBJECT             = VERSIONID
+
+  END_GROUP              = COLLECTIONDESCRIPTIONCLASS
+
+  GROUP                  = INPUTGRANULE
+
+    OBJECT                 = INPUTPOINTER
+      NUM_VAL              = 800
+      VALUE                = ("/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003133.2200.001.2003134025222", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.0000.001.2003134035528", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.0200.001.2003134060036", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.0400.001.2003134082121", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.0600.001.2003134093048", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.0800.001.2003134113830", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.1000.001.2003134132147", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.1200.001.2003134154601", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.1400.001.2003134170042", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.1600.001.2003134191330", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.1800.001.2003134213049", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.2000.001.2003134232825", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003134.2200.001.2003135004304", "/DAAC/instrument/data/ancillary/dynamic/AM1EPHN0.A2003135.0000.001.2003135040952", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003133.2200.001.2003134052629", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.0000.001.2003134080934", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.0200.001.2003134082222", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.0400.001.2003134095342", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.0600.001.2003134115242", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.0800.001.2003134141247", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.1000.001.2003134161325", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.1200.001.2003134173501", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.1400.001.2003134192644", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.1600.001.2003134215538", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.1800.001.2003134234047", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.2000.001.2003135014334", "/DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003134.2200.001.2003135024231", "
+          /DAAC/instrument/data/ancillary/dynamic/AM1ATTNF.A2003135.0000.001.2003135054756", "/CERES/instrument/development/denise_area/rel4/data/ancillary/static/FM1_Count_Conversion_Data.20051111", "/CERES/instrument/development/denise_area/rel4/data/ancillary/static/FM1_Offsets.20001004", "
+          /CERES/instrument/development/denise_area/rel4/data/ancillary/static/Analog_Location.20010701", "/CERES/instrument/development/denise_area/rel4/data/ancillary/static/Digital_Location.20010701", "
+          /CERES/instrument/development/denise_area/rel4/data/ancillary/static/FM1_Instrument_Engineering_Limits.20020910", "/CERES/instrument/development/denise_area/rel4/data/ancillary/static/FM1_Instrument_Engineering_Coefficients.20021216", "
+          /CERES/instrument/development/denise_area/rel4/data/ancillary/static/FM1_Scan_Mode_Offset_Map.20030529", "/CERES/instrument/development/denise_area/rel4/data/ancillary/static/FM1_Elevation_Profiles.20030529", "
+          /CERES/instrument/development/denise_area/rel4/data/ancillary/static/Main_Cover_Configuration_Logic_Table.20010701", "/CERES/instrument/development/denise_area/rel4/data/ancillary/static/MAM_Configuration_Logic_Table.20010701", "
+          /CERES/instrument/development/denise_area/rel4/data/ancillary/static/Instrument_Config_Logic_Table.20010701", "/DAAC/instrument/data/input/EOS_G131_LZ_2003-05-14T00-00-02Z_V01.CONS", "/DAAC/instrument/data/input/EOS_G131_LZ_2003-05-14T00-00-02Z_V01.DAT1")
+    END_OBJECT             = INPUTPOINTER
+
+  END_GROUP              = INPUTGRANULE
+
+  GROUP                  = SPATIALDOMAINCONTAINER
+
+    GROUP                  = HORIZONTALSPATIALDOMAINCONTAINER
+
+      GROUP                  = BOUNDINGRECTANGLE
+
+        OBJECT                 = WESTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = -180.000000
+        END_OBJECT             = WESTBOUNDINGCOORDINATE
+
+        OBJECT                 = NORTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 90.000000
+        END_OBJECT             = NORTHBOUNDINGCOORDINATE
+
+        OBJECT                 = EASTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 180.000000
+        END_OBJECT             = EASTBOUNDINGCOORDINATE
+
+        OBJECT                 = SOUTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = -90.000000
+        END_OBJECT             = SOUTHBOUNDINGCOORDINATE
+
+      END_GROUP              = BOUNDINGRECTANGLE
+
+    END_GROUP              = HORIZONTALSPATIALDOMAINCONTAINER
+
+  END_GROUP              = SPATIALDOMAINCONTAINER
+
+  GROUP                  = RANGEDATETIME
+
+    OBJECT                 = RANGEBEGINNINGTIME
+      NUM_VAL              = 1
+      VALUE                = "00:00:02.745209"
+    END_OBJECT             = RANGEBEGINNINGTIME
+
+    OBJECT                 = RANGEENDINGTIME
+      NUM_VAL              = 1
+      VALUE                = "00:00:48.945062"
+    END_OBJECT             = RANGEENDINGTIME
+
+    OBJECT                 = RANGEBEGINNINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2003-05-14"
+    END_OBJECT             = RANGEBEGINNINGDATE
+
+    OBJECT                 = RANGEENDINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2003-05-14"
+    END_OBJECT             = RANGEENDINGDATE
+
+  END_GROUP              = RANGEDATETIME
+
+  GROUP                  = PGEVERSIONCLASS
+
+    OBJECT                 = PGEVERSION
+      NUM_VAL              = 1
+      VALUE                = "000048"
+    END_OBJECT             = PGEVERSION
+
+  END_GROUP              = PGEVERSIONCLASS
+
+  GROUP                  = ADDITIONALATTRIBUTES
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "CERPGEName"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "1"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "CER1.1P3"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "2"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "SamplingStrategy"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "2"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "2"
+          VALUE                = "Terra-FM1"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "3"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "ProductionStrategy"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "3"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "3"
+          VALUE                = "Sample"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "4"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "4"
+        NUM_VAL              = 1
+        VALUE                = "CERDataDateYear"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "4"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "4"
+          VALUE                = "2003"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "5"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "5"
+        NUM_VAL              = 1
+        VALUE                = "CERDataDateMonth"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "5"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "5"
+          VALUE                = "05"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "6"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "6"
+        NUM_VAL              = 1
+        VALUE                = "CERDataDateDay"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "6"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "6"
+          VALUE                = "14"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "7"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "7"
+        NUM_VAL              = 1
+        VALUE                = "CERHRofMonth"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "7"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "7"
+          VALUE                = "336"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "8"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "8"
+        NUM_VAL              = 1
+        VALUE                = "CERHRofDay"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "8"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "8"
+          VALUE                = "00"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "9"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "9"
+        NUM_VAL              = 1
+        VALUE                = "ScanMode"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "9"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "9"
+          VALUE                = "XTRK ONLY"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "10"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "10"
+        NUM_VAL              = 1
+        VALUE                = "SecondTimeConstantMode"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "10"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "10"
+          VALUE                = "On"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "11"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "11"
+        NUM_VAL              = 1
+        VALUE                = "EphemerisDataUsed"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "11"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "11"
+          VALUE                = "REAL"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "12"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "12"
+        NUM_VAL              = 1
+        VALUE                = "AttitudeDataUsed"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "12"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "12"
+          VALUE                = "REAL"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "13"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "13"
+        NUM_VAL              = 1
+        VALUE                = "PercentTotalChannelBad"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "13"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "13"
+          VALUE                = "12.500000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "14"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "14"
+        NUM_VAL              = 1
+        VALUE                = "PercentWindowChannelBad"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "14"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "14"
+          VALUE                = "12.500000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "15"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "15"
+        NUM_VAL              = 1
+        VALUE                = "PercentShortWaveChannelBad"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "15"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "15"
+          VALUE                = "12.500000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "16"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "16"
+        NUM_VAL              = 1
+        VALUE                = "PercentFAPS"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "16"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "16"
+          VALUE                = "0.000000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "17"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "17"
+        NUM_VAL              = 1
+        VALUE                = "PercentRAPS"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "17"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "17"
+          VALUE                = "0.000000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "18"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "18"
+        NUM_VAL              = 1
+        VALUE                = "PercentCrossTrack"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "18"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "18"
+          VALUE                = "100.000000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "19"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "19"
+        NUM_VAL              = 1
+        VALUE                = "PercentTransitional"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "19"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "19"
+          VALUE                = "0.000000"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "20"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "20"
+        NUM_VAL              = 1
+        VALUE                = "TOA_Model_Used"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "20"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "20"
+          VALUE                = "CERES-TOA"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "21"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "21"
+        NUM_VAL              = 1
+        VALUE                = "NumberInputFiles"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "21"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "21"
+          VALUE                = "41"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+  END_GROUP              = ADDITIONALATTRIBUTES
+
+  GROUP                  = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Terra"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "FM1"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Total Detector"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "2"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "Terra"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "FM1"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "Window Detector"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "3"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "Terra"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "FM1"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "ShortWave Detector"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+  END_GROUP              = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+END_GROUP              = INVENTORYMETADATA
+
+END

@@ -1,0 +1,277 @@
+
+Name of HDF file to be analyzed:
+CER_BDS_Terra-FM1_Sample_000048.20030514
+
+
+
+       -------ANALYZING SDS-------
+
+
+SDS "Raw Instrument Status Data": Rank = 2, Dimensions = (7,185), Type = 23
+SDS "Julian Date and Time": Rank = 2, Dimensions = (7,2), Type = 6
+SDS "Azimuth Position Count": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "Elevation Position Count": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "Radiance and mode flags": Rank = 2, Dimensions = (7,660), Type = 25
+SDS "Secondary Sample Level QA Flags": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "Primary Scan Level QA Flags": Rank = 2, Dimensions = (7,1), Type = 25
+SDS "Secondary Scan Level QA Flags": Rank = 2, Dimensions = (7,1), Type = 23
+SDS "Converted Azimuth Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Converted Elevation Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES Viewing Zenith at Surface": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES Solar Zenith at Surface": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES Relative Azimuth at Surface": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Colatitude of CERES FOV at Surface": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Longitude of CERES FOV at Surface": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Cone Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Clock Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Cone Angle Rates": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Clock Angle Rates": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Colatitude of CERES FOV at TOA": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Longitude of CERES FOV at TOA": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES Viewing Zenith at TOA - Geocentric": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES Solar Zenith at TOA - Geocentric": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES Relative Azimuth at TOA - Geocentric": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Sample Aligned Analog Data": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "Drift Corrected SW Counts": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Drift Corrected WN Counts": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Drift Corrected TOT Counts": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Shortwave Detector Output": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "Window Detector Output": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "Total Detector Output": Rank = 2, Dimensions = (7,660), Type = 23
+SDS "CERES SW Filtered Radiances Upwards": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES WN Filtered Radiances Upwards": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "CERES TOT Filtered Radiances Upwards": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Count Conversion SW Sample Offsets": Rank = 2, Dimensions = (4,660), Type = 5
+SDS "Count Conversion WN Sample Offsets": Rank = 2, Dimensions = (4,660), Type = 5
+SDS "Count Conversion TOT Sample Offsets": Rank = 2, Dimensions = (4,660), Type = 5
+SDS "SW Spaceclamp Values": Rank = 2, Dimensions = (7,2), Type = 5
+SDS "WN Spaceclamp Values": Rank = 2, Dimensions = (7,2), Type = 5
+SDS "TOT Spaceclamp Values": Rank = 2, Dimensions = (7,2), Type = 5
+SDS "Solar Elevation Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Solar Azimuth Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Lunar Elevation Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "Lunar Azimuth Angles": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "SW Slow Mode and Double Drift Corrected Counts": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "WN Slow Mode and Double Drift Corrected Counts": Rank = 2, Dimensions = (7,660), Type = 5
+SDS "TOTAL Slow Mode and Double Drift Corrected Counts": Rank = 2, Dimensions = (7,660), Type = 5
+
+
+      -------ANALYZING VDATA-------
+
+
+Vdata "Satellite-Celestial Data": No. of Records = 7 
+ Vfield "Satellite Position at record start": Order = 3, Type = 6
+ Vfield "Satellite Position at record end": Order = 3, Type = 6
+ Vfield "Satellite Velocity at record start": Order = 3, Type = 6
+ Vfield "Satellite Velocity at record end": Order = 3, Type = 6
+ Vfield "Colatitude of Satellite at record start": Order = 1, Type = 5
+ Vfield "Longitude of Satellite at record start": Order = 1, Type = 5
+ Vfield "Colatitude of Satellite at record end": Order = 1, Type = 5
+ Vfield "Longitude of Satellite at record end": Order = 1, Type = 5
+ Vfield "Earth-Sun Distance": Order = 1, Type = 6
+ Vfield "Colatitude of Sun at Observation": Order = 1, Type = 5
+ Vfield "Longitude of Sun at Observation": Order = 1, Type = 5
+ Vfield "Earth-Moon Distance": Order = 1, Type = 6
+ Vfield "Colatitude of Moon at Observation": Order = 1, Type = 5
+ Vfield "Longitude of Moon at Observation": Order = 1, Type = 5
+ Vfield "Solar Beta Angle at record start": Order = 1, Type = 5
+ Vfield "Solar Eta Angle at record start": Order = 1, Type = 5
+ Vfield "Lunar Beta Angle at record start": Order = 1, Type = 5
+ Vfield "Lunar Eta Angle at record start": Order = 1, Type = 5
+
+Vdata "Converted Instrument Status Data": No. of Records = 7 
+ Vfield "Elevation Offset Correction": Order = 1, Type = 5
+ Vfield "Azimuth Offset Correction": Order = 1, Type = 5
+ Vfield "Azimuth Defined Crosstrack Position": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Position A": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Position B": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Solar Cal Position": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Cage Position": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Position Spare 1": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Position Spare 2": Order = 1, Type = 5
+ Vfield "Azimuth Defined Fixed Position Spare 3": Order = 1, Type = 5
+ Vfield "Azimuth Defined Normal Slew Rate": Order = 1, Type = 5
+ Vfield "Azimuth Defined Asynchronous Scan Rate": Order = 1, Type = 5
+ Vfield "Azimuth Defined Synchronous Scan Rate": Order = 1, Type = 5
+ Vfield "Azimuth Position Error": Order = 1, Type = 5
+ Vfield "DAP Minimum Execution Time": Order = 1, Type = 5
+ Vfield "DAP Maximum Execution Time": Order = 1, Type = 5
+ Vfield "ICP Minimum Execution Time": Order = 1, Type = 5
+ Vfield "ICP Maximum Execution Time": Order = 1, Type = 5
+ Vfield "Instrument ID Number": Order = 1, Type = 23
+ Vfield "Packet Data Indicator": Order = 1, Type = 23
+ Vfield "Packet Data Version": Order = 1, Type = 23
+ Vfield "Science Packet Quick Look Status Flag": Order = 1, Type = 23
+ Vfield "Packet Timecode Indicator": Order = 1, Type = 23
+ Vfield "Packet Counter - Relative": Order = 1, Type = 23
+ Vfield "Packet Counter - Absolute": Order = 1, Type = 25
+
+Vdata "Position Counts": No. of Records = 7 
+ Vfield "ACA Encoder Clear Track A": Order = 3, Type = 23
+ Vfield "ACA Encoder Clear Track B": Order = 3, Type = 23
+ Vfield "ECA Encoder Clear Track A": Order = 3, Type = 23
+ Vfield "ECA Encoder Clear Track B": Order = 3, Type = 23
+ Vfield "Main Cover Position 1": Order = 3, Type = 23
+ Vfield "Main Cover Position 2": Order = 3, Type = 23
+ Vfield "MAM Cover Position": Order = 3, Type = 23
+ Vfield "Azimuth Brake Position": Order = 3, Type = 23
+ Vfield "SPS 1 Narrow FOV": Order = 60, Type = 23
+ Vfield "SPS 1 Wide FOV": Order = 60, Type = 23
+ Vfield "SPS 2 Narrow FOV": Order = 60, Type = 23
+ Vfield "SPS 2 Wide FOV": Order = 60, Type = 23
+
+Vdata "Temperature Counts": No. of Records = 7 
+ Vfield "Total Channel Heater DAC Value": Order = 12, Type = 23
+ Vfield "SW Channel Heater DAC Value": Order = 12, Type = 23
+ Vfield "WN Channel Heater DAC Value": Order = 12, Type = 23
+ Vfield "Blackbody Heater DAC Value": Order = 12, Type = 23
+ Vfield "Total Detector Control Temperature": Order = 12, Type = 23
+ Vfield "Total Detector Monitor Temperature": Order = 12, Type = 23
+ Vfield "SW Detector Control Temperature": Order = 12, Type = 23
+ Vfield "SW Detector Monitor Temperature": Order = 12, Type = 23
+ Vfield "WN Detector Control Temperature": Order = 12, Type = 23
+ Vfield "WN Detector Monitor Temperature": Order = 12, Type = 23
+ Vfield "Total Blackbody Temperature": Order = 12, Type = 23
+ Vfield "WN Blackbody Temperature": Order = 12, Type = 23
+ Vfield "Elevation Spindle Temperature - Motor": Order = 3, Type = 23
+ Vfield "Elevation Spindle Temperature - CW": Order = 3, Type = 23
+ Vfield "Elevation Bearing Temperature - Motor": Order = 3, Type = 23
+ Vfield "Elevation Bearing Temperature - CW": Order = 3, Type = 23
+ Vfield "SWICS Photodiode Temperature": Order = 3, Type = 23
+ Vfield "Sensor Module Temperature": Order = 3, Type = 23
+ Vfield "Sensor Electronics Temperature": Order = 3, Type = 23
+ Vfield "Main Cover Motor Temperature": Order = 3, Type = 23
+ Vfield "MAM Total Baffle Temperature 1": Order = 3, Type = 23
+ Vfield "MAM Total Baffle Temperature 2": Order = 3, Type = 23
+ Vfield "MAM Assembly SW Temperature": Order = 3, Type = 23
+ Vfield "MAM Assembly Total Temperature": Order = 3, Type = 23
+ Vfield "DAA Radiator Temperature": Order = 3, Type = 23
+ Vfield "DAA Processor Electronics Temperature": Order = 3, Type = 23
+ Vfield "DAA ADC Electronics Temperature": Order = 3, Type = 23
+ Vfield "ECA Radiator Temperature": Order = 3, Type = 23
+ Vfield "ECA Electronics Temperature": Order = 3, Type = 23
+ Vfield "ACA Electronics Temperature": Order = 3, Type = 23
+ Vfield "Azimuth Lower Bearing Temperature": Order = 3, Type = 23
+ Vfield "Azimuth Upper Bearing Temperature": Order = 3, Type = 23
+ Vfield "ICA Radiator Temperature": Order = 3, Type = 23
+ Vfield "ICA Processor Electronics Temperature": Order = 3, Type = 23
+ Vfield "ICA ADC Electronics Temperature": Order = 3, Type = 23
+ Vfield "PCA Radiator Temperature": Order = 3, Type = 23
+ Vfield "PCA Electronics Temperature": Order = 3, Type = 23
+ Vfield "Pedestal Temperature 1 Brake Housing": Order = 3, Type = 23
+ Vfield "Pedestal Temperature 2 Isolator": Order = 3, Type = 23
+
+Vdata "Voltage and Torque Counts": No. of Records = 7 
+ Vfield "Detector +120V Bias": Order = 3, Type = 23
+ Vfield "Detector -120V Bias": Order = 3, Type = 23
+ Vfield "SWICS Photodiode Output": Order = 3, Type = 23
+ Vfield "SWICS Lamp Current": Order = 3, Type = 23
+ Vfield "ICA +5V Digital": Order = 3, Type = 23
+ Vfield "ICA +15V to ECA/ICA": Order = 3, Type = 23
+ Vfield "ICA -15V to ECA/ICA": Order = 3, Type = 23
+ Vfield "ICA +5V Analog": Order = 3, Type = 23
+ Vfield "ICA +10V Bias": Order = 3, Type = 23
+ Vfield "ICA +15V Internal": Order = 3, Type = 23
+ Vfield "ICA -15V Internal": Order = 3, Type = 23
+ Vfield "DAA Ground Reference 1": Order = 3, Type = 23
+ Vfield "DAA Ground Reference 2": Order = 3, Type = 23
+ Vfield "DAA -10V Reference": Order = 3, Type = 23
+ Vfield "DAA +130V": Order = 3, Type = 23
+ Vfield "DAA -130V": Order = 3, Type = 23
+ Vfield "DAA +12V": Order = 3, Type = 23
+ Vfield "DAA -12V": Order = 3, Type = 23
+ Vfield "DAA +15V": Order = 3, Type = 23
+ Vfield "DAA -15V": Order = 3, Type = 23
+ Vfield "DAA +5V": Order = 3, Type = 23
+ Vfield "DAA +10V Reference": Order = 3, Type = 23
+ Vfield "ECA Torque Output": Order = 12, Type = 23
+ Vfield "ACA Torque Output": Order = 12, Type = 23
+
+Vdata "Converted Temperatures": No. of Records = 7 
+ Vfield "Total Detector Control Temperature": Order = 12, Type = 5
+ Vfield "Total Detector Monitor Temperature": Order = 12, Type = 5
+ Vfield "SW Detector Control Temperature": Order = 12, Type = 5
+ Vfield "SW Detector Monitor Temperature": Order = 12, Type = 5
+ Vfield "WN Detector Control Temperature": Order = 12, Type = 5
+ Vfield "WN Detector Monitor Temperature": Order = 12, Type = 5
+ Vfield "Total Blackbody Temperature": Order = 12, Type = 5
+ Vfield "WN Blackbody Temperature": Order = 12, Type = 5
+ Vfield "Elevation Spindle Temperature - Motor": Order = 3, Type = 5
+ Vfield "Elevation Spindle Temperature - CW": Order = 3, Type = 5
+ Vfield "Elevation Bearing Temperature - Motor": Order = 3, Type = 5
+ Vfield "Elevation Bearing Temperature - CW": Order = 3, Type = 5
+ Vfield "SWICS Photodiode Temperature": Order = 3, Type = 5
+ Vfield "Sensor Module Temperature": Order = 3, Type = 5
+ Vfield "Sensor Electronics Temperature": Order = 3, Type = 5
+ Vfield "Main Cover Motor Temperature": Order = 3, Type = 5
+ Vfield "MAM Total Baffle Temperature 1": Order = 3, Type = 5
+ Vfield "MAM Total Baffle Temperature 2": Order = 3, Type = 5
+ Vfield "MAM Assembly SW Temperature": Order = 3, Type = 5
+ Vfield "MAM Assembly Total Temperature": Order = 3, Type = 5
+ Vfield "DAA Radiator Temperature": Order = 3, Type = 5
+ Vfield "DAA Processor Electronics Temperature": Order = 3, Type = 5
+ Vfield "DAA ADC Electronics Temperature": Order = 3, Type = 5
+ Vfield "ECA Radiator Temperature": Order = 3, Type = 5
+ Vfield "ECA Electronics Temperature": Order = 3, Type = 5
+ Vfield "ACA Electronics Temperature": Order = 3, Type = 5
+ Vfield "Azimuth Lower Bearing Temperature": Order = 3, Type = 5
+ Vfield "Azimuth Upper Bearing Temperature": Order = 3, Type = 5
+ Vfield "ICA Radiator Temperature": Order = 3, Type = 5
+ Vfield "ICA Processor Electronics Temperature": Order = 3, Type = 5
+ Vfield "ICA ADC Electronics Temperature": Order = 3, Type = 5
+ Vfield "PCA Radiator Temperature": Order = 3, Type = 5
+ Vfield "PCA Electronics Temperature": Order = 3, Type = 5
+ Vfield "Pedestal Temperature 1 - Brake Housing": Order = 3, Type = 5
+ Vfield "Pedestal Temperature 2 - Isolator": Order = 3, Type = 5
+
+Vdata "Converted Voltages and Torques": No. of Records = 7 
+ Vfield "Detector +120V Bias": Order = 3, Type = 5
+ Vfield "Detector -120V Bias": Order = 3, Type = 5
+ Vfield "SWICS Lamp Current": Order = 3, Type = 5
+ Vfield "ICA +5V Digital": Order = 3, Type = 5
+ Vfield "ICA +15V to ECA/ACA": Order = 3, Type = 5
+ Vfield "ICA -15V to ECA/ACA": Order = 3, Type = 5
+ Vfield "ICA +5V Analog": Order = 3, Type = 5
+ Vfield "ICA +10V Bias": Order = 3, Type = 5
+ Vfield "ICA +15V Internal": Order = 3, Type = 5
+ Vfield "ICA -15V Internal": Order = 3, Type = 5
+ Vfield "DAA Ground Reference 1": Order = 3, Type = 5
+ Vfield "DAA Ground Reference 2": Order = 3, Type = 5
+ Vfield "DAA -10V Reference": Order = 3, Type = 5
+ Vfield "DAA +130V": Order = 3, Type = 5
+ Vfield "DAA -130V": Order = 3, Type = 5
+ Vfield "DAA +12V": Order = 3, Type = 5
+ Vfield "DAA -12V": Order = 3, Type = 5
+ Vfield "DAA +15V": Order = 3, Type = 5
+ Vfield "DAA -15V": Order = 3, Type = 5
+ Vfield "DAA +5V": Order = 3, Type = 5
+ Vfield "DAA +10V Reference": Order = 3, Type = 5
+ Vfield "Elevation Torque Output": Order = 12, Type = 5
+ Vfield "Azimuth Torque Output": Order = 12, Type = 5
+
+Vdata "Count Conversion Constants": No. of Records = 1 
+ Vfield "SW Channel Gain Coefficients": Order = 6, Type = 5
+ Vfield "WN Channel Gain Coefficients": Order = 6, Type = 5
+ Vfield "Total Channel Gain Coefficients": Order = 6, Type = 5
+ Vfield "SW Channel 2nd Time Constants": Order = 2, Type = 5
+ Vfield "WN Channel 2nd Time Constants": Order = 2, Type = 5
+ Vfield "Total Channel 2nd Time Constants": Order = 2, Type = 5
+ Vfield "SW Radiance Edit Limits": Order = 2, Type = 5
+ Vfield "WN Radiance Edit Limits": Order = 2, Type = 5
+ Vfield "Total Radiance Edit Limits": Order = 2, Type = 5
+
+Vdata "CERES_metadata": No. of Records = 1 
+ Vfield "SHORTNAME": Order = 32, Type = 4
+ Vfield "RANGEBEGINNINGDATE": Order = 32, Type = 4
+ Vfield "RANGEBEGINNINGTIME": Order = 32, Type = 4
+ Vfield "RANGEENDINGDATE": Order = 32, Type = 4
+ Vfield "RANGEENDINGTIME": Order = 32, Type = 4
+ Vfield "AUTOMATICQUALITYFLAG": Order = 64, Type = 4
+ Vfield "AUTOMATICQUALITYFLAGEXPLANATION": Order = 256, Type = 4
+ Vfield "ASSOCIATEDPLATFORMSHORTNAME": Order = 32, Type = 4
+ Vfield "ASSOCIATEDINSTRUMENTSHORTNAME": Order = 32, Type = 4
+ Vfield "LOCALGRANULEID": Order = 96, Type = 4
+ Vfield "LOCALVERSIONID": Order = 64, Type = 4
+ Vfield "CERPRODUCTIONDATETIME": Order = 32, Type = 4
+ Vfield "NUMBEROFRECORDS": Order = 1, Type = 24
+ Vfield "PRODUCTGENERATIONLOC": Order = 256, Type = 4

@@ -1,0 +1,107 @@
+NARSTO Data Flag,NARSTO Data Qualification Flag Description,Process Point,Flag Category,Supersite Detailed Flag,Acronym Derivation,Detailed Flag Description,CCAQS Flag Type Code,CCAQS Flag Type,SORT CODE
+V0,Valid value,All Process Points,All Categories,NIE,No Issues Encountered,No Problems or Issues Encountered,V0,Valid value,1
+V0,Valid value,Data Analysis,Analysis,NLC,Non-Listed Compound,Compound Not Listed but Compound Found,V0,Valid value,1
+V0,Valid value,Data Analysis,Analysis,VCD,Value ConfirmeD,Value Confirmed,V0,Valid value,1
+V0,Valid value,Data Analysis,Calculated,DAV,Data AVeraged,Data Averaged,V0,Valid value,1
+V0,Valid value,Field/Lab,Calibration,CFC,Correction Factor Calibration,"Correction Factor, Calibration",V0,Valid value,1
+V0,Valid value,Field/Lab,Calibration,CTP,Correction Temp Pressure,"Correction Factor, Std. Temp. and Pressure",V0,Valid value,1
+V0,Valid value,Field/Lab,Procedure,WUS,Wrong UnitS,Wrong Units,V0,Valid value,1
+V0,Valid value,Field/Lab,QC,BDQ,Between  Detection/Quantification,Between Instrument Detection and Quantification Limits,V0,Valid value,1
+V0,Valid value,Lab,Calculated,ROR,Recalculated Or Reprocessed,Recalculated or Reprocessed,V0,Valid value,1
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,AND,Analyte Not Detected,Analyte Not Detected,V1,Valid value but comprised wholly or partially of below-MDL data,2
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,BDD,Below Daily Detection,"Daily Detection Limit, Less than ",V1,Valid value but comprised wholly or partially of below-MDL data,2
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,BID,Below Instrument Detection,"Instrument Detection Limit, Less than",V1,Valid value but comprised wholly or partially of below-MDL data,2
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,BMD,Below Method Detection,"Method Detection Limit, Less than",V1,Valid value but comprised wholly or partially of below-MDL data,2
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,BSA,Below SAmple Detection,"Sample-Specific Detection Limit, Less than",V1,Valid value but comprised wholly or partially of below-MDL data,2
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,BSY,Below SYstem Detection,"System Detection Limit, Less than",V1,Valid value but comprised wholly or partially of below-MDL data,2
+V1,Valid value but comprised wholly or partially of below-MDL data,Field/Lab,QC,OBS,Operation Beyond Scale,"Value Not Confirmed, Operation Beyond Scale Setting ",V1,Valid value but comprised wholly or partially of below-MDL data,2
+V2,Valid estimated value,Data Analysis,Calculated,NCS,No Calibration Standard,"Estimated Value, No Calibration Standard",V2,Valid estimated value,3
+V2,Valid estimated value,Data Analysis,Calculated,OLP,Outside Limit of Precision,"Estimated Value, Outside Limit of Precision",V2,Valid estimated value,3
+V3,Valid interpolated value,Data Analysis,Calculated,ITV,InTerpolated Value,Interpolated Value,V2,Valid estimated value,3
+V2,Valid estimated value,Field,QC,AOR,Above Operating Range,"Operating Range, Greater than",V2,Valid estimated value,3
+V2,Valid estimated value,Field,QC,BOR,Below Operating Range,"Operating Range, Less than",V2,Valid estimated value,3
+V2,Valid estimated value,Field,QC,MOL,Mass Outside Limits,"Fraction of Total Mass, Out of Acceptable Limits",V2,Valid estimated value,3
+V2,Valid estimated value,Field/Lab,Analysis,ALM,ALternate Method,Alternate Method,V2,Valid estimated value,3
+V2,Valid estimated value,Field/Lab,QC,OOR,Outside Operating Range,"Operating Range, Not within",V2,Valid estimated value,3
+V2,Valid estimated value,Lab,Analysis,RSL,ReSLoped,Resloped,V1,Valid value but comprised wholly or partially of below-MDL data,3
+V2,Valid estimated value,Lab,Analysis,VNC,Value Not Confirmed,Value Not Confirmed,V2,Valid estimated value,3
+V4,Valid value despite failing to meet some QC or statistical criteria,Data Analysis,Calculated,UHA,Unacceptable Hourly Average,Time Period Average with less than 75% of possible data points,S,Suspect value,4
+V5,Valid value but qualified because of possible contamination,Field,Procedure,WRC,Weather Related Contamination,Weather Related Contamination,S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Field,Procedure,WTO,Wrong Times/Oversampled ,"Wrong Times, Oversampled",S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Field,Procedure,WTU,Wrong Times/Undersampled  ,"Wrong Times, Undersampled",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field,QC,FDF,Field Duplicated Failed,"Field Duplicate, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field,QC,FRS,Flow Rate Suspect,"Flow Rate, Problem or Suspect",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field,QC,VSF,Verification Solution Failed,"Lab Calibration Verification Solution, Failed",S,Suspect value,4
+V5,Valid value but qualified because of possible contamination,Field/Lab,Procedure,SCN,Suspected ContaminatioN,"Suspected Contamination, Lab Analysis or Field",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,BSF,Blank Sample Failed ,"Blank Sample, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,CSF,Calibration Sample Failed ,"Calibration Sample, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,DCF,Drift Check Failed ,"Drift Check, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,ISF,Internal Standard Failed ,"Internal Standard, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,LBH,Likely Biased High,Likely Biased High,S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,LBL,Likely Biased Low,Likely Biased Low,S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,LCF,Linearity Check Failed ,"Linearity Check, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,PCF,Performance Check Failed ,"Performance Check, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,RMD,Replicate Measurements Disagree,Replicate Measurements Disagree,S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,RMF,Reference Material Failed,"Reference Material, Failed",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,RMI,Reference Measurement Inconsistent ,"Reference Method Measurement, Inconsistent",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Field/Lab,QC,SRF,Standard Reference Failed ,"Standard Reference Material, Failed",S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Field/Lab,Sampling,PSO,Partial Sample Overloaded,"Partial Sample, Due to Overload",S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions ,Handling,Procedure,COC,Chain Of Custody,Chain-of-Custody Evidence Trail Broken or Lost,S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Handling,Procedure,DNL,Damaged/Not Lost,"Sample Container Damaged, No Sample Lost",S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Handling,Procedure,DSL,Damaged/Sample Lost,"Sample Container Damaged, Sample Lost",S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Handling,Procedure,EHT,Exceeded Holding Time,Exceeded Holding Time,S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions,Handling,Procedure,ISP,Improper Sample Preservation,Improper Sample Preservation,S,Suspect value,4
+V6,Valid value but qualified due to non-standard sampling conditions ,Lab,Procedure,ILG,Illegible/Guess,"Illegible Paperwork or Mislabeled, Made Guess",S,Suspect value,4
+V4,Valid value despite failing to meet some QC or statistical criteria,Lab,QC,LDF,Lab Duplicate Failed,"Lab Duplicate, Failed",S,Suspect value,4
+M1,Missing value because no value is available,Data Analysis,Analysis,ANC,ANalysis Cancelled ,"No Result Reported, Analysis Canceled",M,Missing value,5
+M1,Missing value because no value is available,Data Analysis,Analysis,NAL,Not Analyzed/Listed,Compound Not Analyzed but Compound Listed,M,Missing value,5
+M1,Missing value because no value is available,Data Analysis,QC,NRI,Nothing Reported - Interference ,"No Result Reported, Interference",M,Missing value,5
+M1,Missing value because no value is available ,Field,Instrument,OEL,Operator Error Loading,"Sample Loading, Operator Error",M,Missing value,5
+M1,Missing value because no value is available ,Field,Instrument,SAM,SAmpler Malfunction,Sampler Malfunction,M,Missing value,5
+M1,Missing value because no value is available,Field,Instrument,SAU,Site Access Unavailable ,"Site Access, Unavailable",M,Missing value,5
+M1,Missing value because no value is available,Field,Instrument,SHP,SHipment Problems,Shipment Problems,M,Missing value,5
+M1,Missing value because no value is available,Field,Instrument,SIS,Safety IssueS,Safety Issues,M,Missing value,5
+M1,Missing value because no value is available,Field,Instrument,SNA,Sampler Not Activated,Sampler Not Activated,M,Missing value,5
+M1,Missing value because no value is available,Field,Procedure,EER,Entry ErroR,"No Result Reported, Entry Error",M,Missing value,5
+M1,Missing value because no value is available,Field,Procedure,FAC,Field ACcident,"No Result Reported, Field Accident",M,Missing value,5
+M1,Missing value because no value is available,Field,Procedure,WDY,Wrong DaY,Wrong Day,M,Missing value,5
+M1,Missing value because no value is available,Field/Lab,Instrument,INF,INstrument Failure,Instrument Failure,M,Missing value,5
+M1,Missing value because no value is available,Field/Lab,Instrument,NSQ,Not Sufficient Quantity,"No Result Reported, Insufficient Quantity of Sample ",M,Missing value,5
+M1,Missing value because no value is available,Field/Lab,Instrument,VAN,VANdalism,Vandalism,M,Missing value,5
+M1,Missing value because no value is available,Field/Lab,Procedure,ILP,Illegible Label Paperwork,Illegible Label or Paperwork,M,Missing value,5
+M1,Missing value because no value is available ,Field/Lab,Procedure,ZME,Zero ModE,Zero Mode,M,Missing value,5
+M2,Missing value because invalidated by Data Originator,Data Analysis,QC,OSR,Off-Scale Reading,Off-Scale Reading,I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Data Analysis,QC,VCH,Value Change High,"Value Change Too High, Above Physical Limit ",I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Data Analysis,QC,VTH,Value Too High,"Value Too High, Above Physical Limit ",I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field,Instrument,EMM,Electrical or Mechnical Malfunction,"Problem, Electrical or Mechanical Malfunction",I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field,Instrument,IAS,Invalid Air Sample,"Invalid, Air Sample",I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field,Procedure,CSU,Contamination Source Unknown,"Known Contamination, Source Unknown",I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field,Procedure,WFR,Wrong FilteR,Wrong Filter,I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field,Sampling,NRE,Not RepresentativE,Not Representative,I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field/Lab,Calibration,CFB,Correction Factor Blank ,"Correction Factor, Blank ",I,Invalid value,6
+M2,Missing value because invalidated by Data Originator,Field/Lab,QC,QSF,QC Samples Failed,"Multiple QC Samples, Failed",I,Invalid value,6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,,,,,
+
+
+
+
+
+
+,,,,,
+,,,,,
+,,,,,
