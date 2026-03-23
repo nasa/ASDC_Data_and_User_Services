@@ -1,0 +1,264 @@
+#
+# @(#) File name: Makefile.fci2  Release: 1.1  Date: 3/22/94, 17:49:21
+#
+
+###########################################################################
+             AS = as
+
+# -SYSTEM DEPENDENT CHANGES-----------------------------
+#  Change the CC compiler assignment as appropriate 
+#      for your system:
+#            CC = cc                     #%% others
+             CC = /usr/lang/acc          #%% SunOS 4.1.3
+# ------------------------------------------------------
+
+             FC = f77
+            CPP = /lib/cpp
+             LD = ld
+           LINT = lint
+        INSTALL = install
+           TAGS = ctags
+             RM = rm -f
+             MV = mv
+             LN = ln -s
+         RANLIB = ranlib
+RANLIBINSTFLAGS = -t
+             AR = ar
+        ARFLAGS = rlv
+             LS = ls
+       LINTOPTS = -axz
+    LINTLIBFLAG = -C
+           MAKE = make
+
+# -SYSTEM DEPENDENT CHANGES-----------------------------
+#  Comment/uncomment STD_CPP_DEFINES and STD_DEFINES 
+#    definitions as appropriate for your system:
+
+  STD_CPP_DEFINES = -DSUNOS          #%% SunOS 4.1.3
+# STD_CPP_DEFINES =                  #%% others
+
+     STD_DEFINES = -DSUNOS           #%% SunOS 4.1.3
+#    STD_DEFINES = -Xa -w            #%% Solaris 5.3
+#    STD_DEFINES = -DIRIX -ansi -32  #%% Silicon Graphics IRIX64 
+#    STD_DEFINES = -Aa -DHPUX        #%% Hewlett Packard  HP-UX 
+#
+# ------------------------------------------------------
+
+      SYSLIBDIR = /usr/lib
+SYSLAST_LIBRARIES = -lm
+
+          CFLOW = cflow
+     CFLOWFLAGS =
+
+.c.o:
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+.f.o:
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+###########################################################################
+# definitions common to all Makefiles - do not edit
+
+          SHELL = /bin/sh
+
+        DESTDIR =
+
+    DEBUGGEDCFLAGS = -g
+   OPTIMIZEDCFLAGS = -O
+    PROFILEDCFLAGS = -O -pg
+          CPPFLAGS = $(INCLUDES) $(STD_CPP_DEFINES)
+
+           PATHSEP = /
+
+##   Can't use optimized version, because there is a bug in compiling one 
+##   of the programs.
+##
+           CCFLAGS = -g
+            CFLAGS = $(CCFLAGS) $(STD_DEFINES) $(U_C_DEFINES)
+         LINTFLAGS = $(LINTOPTS) $(CPPFLAGS) -DLINT
+
+         COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+            LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+         COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+            LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+           LINT.c  = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+
+
+         RM_CMD = $(RM) *.ln *.BAK *.bak *.o core errs ,* *~ *.a \
+			.emacs_* make.log MakeOut
+
+###########################################################################
+# -SYSTEM DEPENDENT CHANGES-----------------------------
+
+###   Include file and library functions are specified as in the local
+###   directory.  REDEFINE to the appropriate directory if needed.
+###   The program expects the file "fci2_sw.h" in the INCLUDES directory.
+
+#INCLUDES = -I.
+INCLUDES = 
+LIB_FCI2_DIR = .
+
+FCI2_LIB_SRC = fci2_lib.c
+
+FCI2_SRCS = fci2_sw.c
+
+INCLUDE_DIR = -I/usr/local/hdf-3.3r4/mfhdf/libsrc -I/usr/local/hdf-3.3r4/mfhdf/port -I/usr/local/hdf-3.3r4/hdf/include
+
+LIB_DIR = -L/usr/local/hdf-3.3r4/mfhdf/libsrc -lnetcdf /usr/local/hdf-3.3r4/hdf/lib/libdf.a
+
+
+
+###   One program (genpro.c) is used to read both kingair and sabreliner 
+###   data files.
+
+FCI2_AIRCRAFT = genpro.c
+
+
+LIB_FCI2 = $(LIB_FCI2_DIR)/lib_fci2.a
+
+
+FCI2_OBJS = $(FCI2_SRCS:.c=.o)
+
+FCI2_LIB_OBJS = $(FCI2_LIB_SRC:.c=.o)
+
+
+FCI2_netCDF_READ_SRC_C = mas_read_netcdf_c.c
+
+FCI2_netCDF_READ_SRC_F = mas_read_netcdf_c.f
+
+
+###   One program is used to read ci2 his data files.
+
+FCI2_HIS_SRC = fire_ci2_his_read.c
+
+
+
+all:: $(LIB_FCI2) class_sonde csu_prt6 csu_sondes csu_station1 csu_station2 \
+csu_wndprfl doplr_lidar maps noaa_wndprfl nws_sonde pams raman_lidar \
+ci2_kingair ci2_sabreliner mas_read_netcdf_c mas_read_netcdf_f \
+fire_ci2_his_read
+
+
+$(LIB_FCI2): $(FCI2_LIB_OBJS)
+	$(RM) $@
+	$(AR) $(ARFLAGS) $@ `lorder $(FCI2_LIB_OBJS) | tsort`
+	$(RANLIB) $@
+
+class_sonde: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DCLASS_SONDE -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+csu_prt6: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DCSU_PRT6 -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+csu_sondes: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DCSU_SONDES -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+csu_station1: $(LIB_FCI2) $(FCI2_OBJS) 
+	$(RM) $@
+	$(LINK.c) -DSTATION1 -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+csu_station2: $(LIB_FCI2) $(FCI2_OBJS) 
+	$(RM) $@
+	$(LINK.c) -DSTATION2 -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+csu_wndprfl: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DCSU_WND -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+#	$(RM_CMD) \#*
+
+doplr_lidar: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DDOPLR_LIDAR -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+maps: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DMAPS -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+noaa_wndprfl: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DNOAA_WND -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+nws_sonde: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DNWS_SONDE -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+pams: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DPAMS -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+raman_lidar: $(LIB_FCI2) $(FCI2_OBJS)
+	$(RM) $@
+	$(LINK.c) -DRAMAN_LIDAR -o $@ $(FCI2_OBJS) $(LIB_FCI2)
+
+ci2_kingair: $(LIB_FCI2) $(FCI2_AIRCRAFT)
+	$(RM) $@
+	$(LINK.c) -DF2_KINGAIR -o $@ $(FCI2_AIRCRAFT) $(LIB_FCI2)
+
+ci2_sabreliner: $(LIB_FCI2) $(FCI2_AIRCRAFT)
+	$(RM) $@
+	$(LINK.c) -o $@ $(FCI2_AIRCRAFT) $(LIB_FCI2)
+
+
+fire_ci2_his_read: $(FCI2_HIS_SRC)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -o $@ $(FCI2_HIS_SRC)
+
+
+mas_read_netcdf_c: $(FCI2_netCDF_READ_SRC_C)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG $(INCLUDE_DIR) -o $@ $(FCI2_netCDF_READ_SRC_C) $(LIB_DIR)
+
+
+mas_read_netcdf_f: $(FCI2_netCDF_READ_SRC_F)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG $(INCLUDE_DIR) -o $@ $(FCI2_netCDF_READ_SRC_F) $(LIB_DIR)
+
+
+install:: all
+	$(INSTALL) -c $(INSTLIBFLAGS) all
+
+clean::
+	$(RM) class_sonde csu_prt6 csu_sondes csu_station1 csu_station2 \
+	csu_wndprfl doplr_lidar maps noaa_wndprfl nws_sonde pams raman_lidar \
+	ci2_kingair ci2_sabreliner mas_read_netcdf_c mas_read_netcdf_f \
+	fire_ci2_his_read
+	$(RM_CMD) \#*
+
+debug:
+	$(MAKE) "CCFLAGS=-g"
+
+#depend:: $(DEPEND)
+
+depend::
+	makedepend -s "# DO NOT DELETE" --  $(CFLAGS) $(CPPFLAGS) $(CCFLAG)  -- $(FCI2_AIRCRAFT) $(FCI2_SRCS) $(FCI2_HIS_SRC)
+
+#$(DEPEND):
+makedepend:
+	@echo "MAKING $@"; \
+	$(MAKE)
+
+#############################################################################
+#  dependencies generated by makedepend
+
+# DO NOT DELETE
+
+genpro.o: /usr/include/signal.h /usr/include/sys/signal.h
+genpro.o: /usr/include/vm/faultcode.h /usr/include/stdio.h
+genpro.o: /usr/include/stdlib.h /usr/include/sys/stdtypes.h
+genpro.o: /usr/include/malloc.h /usr/include/sys/types.h
+genpro.o: /usr/include/sys/sysmacros.h /usr/include/sys/param.h
+genpro.o: /usr/include/machine/param.h /usr/include/string.h
+genpro.o: /usr/include/limits.h
+fci2_sw.o: /usr/include/values.h fci2_sw.h /usr/include/signal.h
+fci2_sw.o: /usr/include/sys/signal.h /usr/include/vm/faultcode.h
+fci2_sw.o: /usr/include/stdio.h /usr/include/stdlib.h
+fci2_sw.o: /usr/include/sys/stdtypes.h /usr/include/sys/types.h
+fci2_sw.o: /usr/include/sys/sysmacros.h /usr/include/sys/file.h
+fci2_sw.o: /usr/include/sys/fcntlcom.h /usr/include/sys/stat.h
+fci2_sw.o: /usr/include/sys/param.h /usr/include/machine/param.h
+fci2_sw.o: /usr/include/string.h /usr/include/math.h
+fci2_sw.o: /usr/include/floatingpoint.h /usr/include/sys/ieeefp.h
+fci2_sw.o: /usr/include/varargs.h

@@ -1,0 +1,239 @@
+CONSENSUS METADATA STANDARD: SITE IDENTIFIER (Site)
+
+
+REVISION DATE: September 20, 2000.
+
+
+CHECK FOR LATEST VERSION ONLINE: Before using this document, and
+periodically thereafter, please check for an updated version at
+ http://cdiac.esd.ornl.gov/programs/NARSTO/metadatastandards.  The latest
+version will be called consensus_site_id_standard.
+
+SCOPE
+
+This specification describes a standard for identifying fixed sites used by
+studies or networks for air quality sampling and monitoring.  Future
+expansion may incorporate advice or standards for mobile sites.  This
+standard will be used by the USEPA Supersites program and by Canada's
+NAtChem, and it will be recommended as a site identifier convention by the
+NARSTO Quality Systems Science Center.  Studies or networks using this
+standard will maintain lists of sites for reference by others.
+
+
+SUMMARY
+
+A site will be assigned a 12-character site identifier which includes a
+four-character site abbreviation (also known as a "site mnemonic").  The
+first four characters identify a study or network.  Studies or networks
+using this standard will maintain a Web-accessible or otherwise available
+site list carrying the site identifiers and additional variables with
+information about each site, and they will inform the NARSTO QSSC of this. 
+The most important additional variables are latitude and longitude in units
+of decimal degrees, with negative signs for south latitudes and west
+longitudes; and elevation above mean sea level of the ground level at the
+site in units of meters. Also highly recommended are the state, county, and
+monitor ID fields of the EPA AIRS identifier, if the site has one, and
+information about land use and type of location.  Additional, detailed
+information about sites should be kept in study/network databases.  Site
+abbreviations should be consistent across studies and networks where
+possible. 
+
+
+SPECIFICATIONS
+
+These are the detailed mandatory specifications.  Recommended guidelines 
+and optional procedures are in the next section. 
+
+ 1. Site identifier construction: The NARSTO Standard Site Identifier will
+be constructed as follows.  The full 12 columns must be used, and no blanks
+are permitted.
+
+COLUMNS         CONTENTS
+
+01-04           Study or network acronym (see Appendix A), beginning
+                with a character
+05-06           Country code (following the ISO3166 Standard)
+07-08           State or Province code (from the NARSTO Data Management
+                Handbook; see References)
+09-12           Site abbreviation (site mnemonic), beginning with a
+                character
+
+ 2. Additional information: Each study or network participating in this
+standard will maintain a master list of site identifiers and available key
+information, preferably accessible from the Internet with a Web browser and
+also downloadable, but in any case able to be provided on request. The key
+information, when available, will be provided in the specified units or
+using the specified nomenclature.  Location (latitude, longitude, and
+elevation data) are the most important key information; every effort must
+be made to provide these. Latitude and longitude data will be in units of
+decimal degrees, with negative signs for south latitudes and west
+longitudes.  Elevation will be elevation above mean sea level of the ground
+level at the site in units of meters.  Also highly recommended as key
+information are the EPA AIRS site identifier, if available, and information
+about land use and location type.  The state (2 digits), county (3 digits),
+and monitor ID (4 digits) fields (as a single string of nine digits) of the
+EPA AIRS identifier, if the site has one, will be stored as a character
+string. If the site has no AIRS identifier, the text "NONE" will be stored
+instead.  If it is not known whether the site has an AIRS identifier, the
+text "UNKNOWN" should be stored; this is discouraged.  Also, land use and
+location type information, using the EPA AIRS specification, should be
+provided (see IMPLEMENTATION secion below)
+
+ 3. Uniqueness: For a given site, the 12-character site name must be unique
+in the global list.  Therefore, for a given network, country, and state,
+the site abbreviation (columns 9-12) must be distinct.
+
+ 4. Upper case: Study/network lists and other reference lists will maintain
+site identifiers in upper case.  Uniqueness will be based on the
+characters, and will be case-insensitive.
+
+ 5. Allowable characters: The site identifier will be constructed of
+letters in the standard alphabet (A through Z), the numbers 0 through 9,
+and the underscore character.  All 12 characters must be non-blank.  The
+last character of the site identifier can be repeated to avoid blanks, or
+underscore (_) character(s) can be used instead of a blank.
+
+ 6. Begin identifier and abbreviation with a character: Neither the site
+identifier (the full 12- character field) nor the site abbreviation
+(characters 9-12) may begin with a number or underscore.  Stated
+differently, characters 1 and 9 in the site identifier must be alphabetic.
+
+
+GUIDANCE
+
+ 7. Recommended use: Columns 9-12 can be used as a site abbreviation when a
+shorter name is needed for mapping or similar purposes.  The site
+abbreviation should be mnemonic for the site's common name, to the extent
+this can be accomplished without causing a conflict with existing
+abbreviations.
+
+ 8. Ubiquity : The same four character site abbreviation should, if
+possible, be used to represent this same site if it is used in other
+studies or networks (where the first four characters of the 12 would
+differ). However, this is not a requirement.
+
+ 9. Intra-network uniqueness (optional): Within a given network (as defined
+by the first four characters), the site abbreviations should be kept
+distinct, even if they are in a different state/province and therefore
+would not strictly need to be distinct.
+
+10. Co-located instruments: Co-location information should not be embedded
+in the site names.  Rather, when multiple instruments are used at a site,
+other means should be used to indicate which data are to be considered
+primary and which not primary.  For example, the instrument identifier
+could carry a leading field indicating P for primary instruments, or Cx
+(where x is a number) for co-located instruments.
+
+11. Additional information: Additional information [beyond the key
+information identified in item (2) above] is relevant for sites, and should
+be maintained by study/network data systems. This includes the site
+abbreviation (carried as a separate field to facilitate searches); a common
+name; a site description (e.g., address); a city where relevant; the
+county; method used to obtain location coordinates; accuracy of the
+location coordinates; and other information.  The EPA AIRS AQS Data
+Dictionary contains a list of variables (fields) that could be considered
+(available by download from http://www.epa.gov/ttn/airs/airsmans.html)
+
+12. Indication of sampling elevation: The site's elevation information
+characterizes the ground level. Samples or measurements are typically taken
+above ground level.  The measurement or sampling height(s) should be
+provided as part of the data or metadata.
+
+IMPLEMENTATION
+
+     Study or Network Acronyms
+
+We anticipate that this list will expand considerably in future.
+
+EPA Supersites study names: The EPA Supersites Studies (and the Canadian
+Supersite) will be differentiated to carry the individual Supersites, as
+follows.  C denotes Canada, E denotes EPA; S denotes Supersites study; 1 or
+2 denotes Phase 1 or 2, and the fourth character denotes the particular
+Supersite.  For Canada, which does not identify phases, the third and
+fourth characters denote Toronto, the focus of the study.
+
+ CSTO - Toronto Supersite
+ ES1A - Atlanta Supersite
+ ES2B - Baltimore Supersite
+ ES2F - Fresno Supersite
+ ES2G - Gulf Coast (Texas) Supersite
+ ES2L - LA Supersite
+ ES2N - New York Supersite
+ ES2P - Pittsburgh Supersite
+ ES2S - St. Louis Supersite
+
+
+     Examples of names
+
+These are some fictitious examples of names using this convention.
+
+ ES2FUSCAASPN (fictitious Aspen Springs site)
+ ES2GUSTXCRPC (fictitious Corpus Christi site)
+ CSTOCAONNCHQ (fictitious NAtChem Headquarters site)
+
+
+     Specification of Land Use and Location Type
+
+Land use and location type are highly recommended additional information to
+provide.  The definitions below were taken on June 20, 2000 from
+http://www.epa.gov/airsdata/help/hmoncols.htm
+
+Land use: The prevalent land use within 1/4 mile of the site.  Values are:
+Residential; Commercial; Industrial; Agricultural; Forest; Desert; Mobile;
+Blighted; and Not Available.
+
+Location type:  A general characterization of the setting where the site is
+located.  Values are: Urban/ Center City; Suburban; Rural; and Not
+Available.
+
+
+     Master List of Site Identifiers for USEPA Supersites Program
+
+We anticipate that a master list of site names from the Supersites program
+will be assembled from the individual Supersites lists early in Phase 3 of
+the Supersites program.  The master list would include, from the individual
+Supersites lists, the recommended additional information about each site,
+as available: latitude, longitude, and elevation; EPA AIRS identifier; land
+use category; and location type category.
+
+
+     Recommended Format for Transmittal of Site Identifier Data
+
+We recommend that exchanges of site identifiers files (with the recommended
+additional information) be done using comma-separated format to provide
+information in this order: site identifier, latitude, longitude, elevation,
+EPA AIRS identifier (or NONE or UNKNOWN), land use, and location type.  
+The first record should identify the variable names, and the second row
+units ("decimal degrees" for lat and lon; "meters asl" for elevation;
+"none" for the character variables).
+
+
+REFERENCES
+
+NARSTO Data Management Handbook (ORNL/CDIAC-112/R2), 1999, S.W. 
+Christensen, T.A. Boden, L.A. Hook, and M.-D. Cheng. (Preparation and
+electronic publishing by NARSTO Quality Systems Science Center)
+(http://cdiac.esd.ornl.gov/programs/NARSTO/).  Oak Ridge National
+Laboratory, Oak Ridge, TN, USA.
+
+
+DEVELOPMENT BACKGROUND
+
+The EPA Supersites program recognized, in March 2000, a need for
+standardization of key metadata, including site names (identifiers).  The
+NARSTO/Supersites Data Management Working Group (DMWG) discussed site
+naming standards in many conference calls (see
+ftp://cdiac.esd.ornl.gov/.private/narsto/ssdmwg/minutes).  In particular,
+Bill Sukloff (Environment Canada), Dave Sullivan (TNRCC/TEXAQS), and Sig
+Christensen (NARSTO QSSC) worked this issue and brought proposals back to
+the DMWG. The resulting standard is similar to that used by Canada's
+NAtChem; will support both Supersites and international site names (and
+therefore would be suitable for adoption by NARSTO), and contains site
+abbreviations (short site mnemonic names) that can be used for map labels.  
+Les Hook reviewed the near-final draft, and proposed the standard syntax
+shown here for presenting the specification.  On August 15, the DMWG
+approved changes that clarified that elevation is of the ground level at
+the site, and that measurement or sampling height should be specified as
+part of the data or metadata.  On September 20, the heading material was
+changed to warn the user to check for the latest version before
+use, and the standard was moved to the NARSTO Web site.

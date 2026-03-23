@@ -1,0 +1,156 @@
+#
+# %Z% File name: %M%  Release: %I%  Date: %G%, %U%
+#
+
+###########################################################################
+             AS = as
+             CC = cc 
+             FC = f77
+            CPP = /lib/cpp
+             LD = ld
+           LINT = lint
+        INSTALL = install
+           TAGS = ctags
+             RM = rm -f
+             MV = mv
+             LN = ln -s
+         RANLIB = ranlib
+RANLIBINSTFLAGS = -t
+             AR = ar
+        ARFLAGS = rlv
+             LS = ls
+       LINTOPTS = -axz
+    LINTLIBFLAG = -C
+           MAKE = make
+STD_CPP_DEFINES = 
+    STD_DEFINES = -DSUNOS
+#    STD_DEFINES = -Aa -DHPUX
+
+      SYSLIBDIR = /usr/lib
+SYSLAST_LIBRARIES = -lm
+
+          CFLOW = cflow
+     CFLOWFLAGS =
+
+.c.o:
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+.f.o:
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+###########################################################################
+# definitions common to all Makefiles - do not edit
+
+          SHELL = /bin/sh
+
+        DESTDIR =
+
+    DEBUGGEDCFLAGS = -g
+   OPTIMIZEDCFLAGS = -O
+    PROFILEDCFLAGS = -O -pg
+          CPPFLAGS = $(INCLUDES) $(STD_CPP_DEFINES)
+
+           PATHSEP = /
+
+           CCFLAGS = -g
+            CFLAGS = $(CCFLAGS) $(STD_DEFINES) $(U_C_DEFINES)
+            FFLAGS = -g $(STD_DEFINES) $(U_C_DEFINES)
+         LINTFLAGS = $(LINTOPTS) $(CPPFLAGS) -DLINT
+
+         COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+            LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+         COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+            LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+           LINT.c  = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+
+
+         RM_CMD = $(RM) *.ln *.BAK *.bak *.o core errs ,* *~ *.a \
+			.emacs_* make.log MakeOut
+
+###########################################################################
+
+###   Include file and library functions are specified as in the local 
+###   directory.  REDEFINE to the appropriate directory if needed.
+###   MODIFY THE NEXT TWO LINES!
+
+INCLUDE_DIR = -I/usr/local/hdf-3.3r4/mfhdf/libsrc -I/usr/local/hdf-3.3r4/mfhdf/port -I/usr/local/hdf-3.3r4/hdf/include
+
+LIB_DIR = -L/usr/local/hdf-3.3r4/mfhdf/libsrc /-lnetcdf usr/local/hdf-3.3r4/hdf/lib/libdf.a
+
+
+FIRE_ASTEX_netCDF_READ_SRC_C = mas_read_netcdf.c
+FIRE_ASTEX_netCDF_READ_SRC_F = mas_read_netcdf.f
+FIRE_ASTEX_ER2_LIDAR_READ_SRC = fax_read_er2_lidar.c
+FIRE_ASTEX_RADIOSONDE_READ_SRC = faxrad_read.c
+FIRE_ASTEX_PSU_CEIL_READ_SRC = fax_psu_ceil_read.c
+FIRE_ASTEX_PSU_H2OVAP_READ_SRC = fax_psu_h2ovap_read.c
+FIRE_ASTEX_PSU_MALBAL_READ_SRC = fax_psu_malbal_read.c
+FIRE_ASTEX_PSU_WNDMAL_READ_SRC = fax_psu_wndmal_read.c
+FIRE_ASTEX_ERS1_ALTITRM_SRC = fire_ax_ers1_altimtr.c
+FIRE_ASTEX_ERS1_MCRWRAD_SRC = fire_ax_ers1_mcrwrad.c
+FIRE_ASTEX_CMS_CLOUD_SRC = fire_ax_cms_cloud.c
+FIRE_ASTEX_CMS_LWFLUX_SRC = fire_ax_cms_lwflux.c
+all:: mas_read_netcdf_c mas_read_netcdf_f fax_read_er2_lidar faxrad_read fax_psu_ceil_read fax_psu_h2ovap_read fax_psu_malbal_read fax_psu_wndmal_read ers1altm ers1mcrw cmscloud cmslwflux
+
+
+
+mas_read_netcdf_c: $(FIRE_ASTEX_netCDF_READ_SRC_C)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG $(INCLUDE_DIR) -o $@ $(FIRE_ASTEX_netCDF_READ_SRC_C) $(LIB_DIR)
+
+
+ers1altm: $(FIRE_ASTEX_ERS1_ALTITRM_SRC)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -o $@ $(FIRE_ASTEX_ERS1_ALTITRM_SRC) 
+
+ers1mcrw: $(FIRE_ASTEX_ERS1_MCRWRAD_SRC)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -o $@ $(FIRE_ASTEX_ERS1_MCRWRAD_SRC) 
+
+cmscloud: $(FIRE_ASTEX_CMS_CLOUD_SRC)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -o $@ $(FIRE_ASTEX_CMS_CLOUD_SRC) 
+
+cmslwflux: $(FIRE_ASTEX_CMS_LWFLUX_SRC)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -o $@ $(FIRE_ASTEX_CMS_LWFLUX_SRC) 
+
+mas_read_netcdf_f: $(FIRE_ASTEX_netCDF_READ_SRC_F)
+	$(RM) $@
+	$(LINK.f) -DNO_HAVE_PROTOTYPES -DNO_STDARG $(INCLUDE_DIR) -o $@ $(FIRE_ASTEX_netCDF_READ_SRC_F) $(LIB_DIR)
+fax_read_er2_lidar:
+	$(RM) $@
+	$(LINK.c) -o $@ $(FIRE_ASTEX_ER2_LIDAR_READ_SRC) 
+
+faxrad_read:
+	$(RM) $@
+	$(LINK.c) -o $@ $(FIRE_ASTEX_RADIOSONDE_READ_SRC) 
+
+fax_psu_ceil_read:
+	$(RM) $@
+	$(LINK.c) -o $@ $(FIRE_ASTEX_PSU_CEIL_READ_SRC) 
+
+fax_psu_h2ovap_read:
+	$(RM) $@
+	$(LINK.c) -o $@ $(FIRE_ASTEX_PSU_H2OVAP_READ_SRC) 
+
+fax_psu_malbal_read:
+	$(RM) $@
+	$(LINK.c) -o $@ $(FIRE_ASTEX_PSU_MALBAL_READ_SRC) 
+
+fax_psu_wndmal_read:
+	$(RM) $@
+	$(LINK.c) -o $@ $(FIRE_ASTEX_PSU_WNDMAL_READ_SRC) 
+
+install:: all
+	$(INSTALL) -c $(INSTLIBFLAGS) all
+
+clean::
+	$(RM) mas_read_netcdf_c mas_read_netcdf_f fax_read_er2_lidar
+	$(RM) faxrad_read fax_psu_ceil_read fax_psu_h2ovap_read
+	$(RM) fax_psu_malbal_read fax_psu_wndmal_read ers1altm ers1mcrw
+	$(RM) cmscloud cmslwflux
+	$(RM_CMD) \#*
+
+debug:
+	$(MAKE) "CCFLAGS=-g"

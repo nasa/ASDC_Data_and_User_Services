@@ -1,0 +1,5630 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 18 FMDOCUMENT
+0 0 /Times-Roman FMFONTDEFINE
+1 0 /Times-Bold FMFONTDEFINE
+2 0 /Courier-Bold FMFONTDEFINE
+3 0 /Times-BoldItalic FMFONTDEFINE
+4 0 /Times-Italic FMFONTDEFINE
+5 0 /Courier FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(1) 536 34.17 T
+1 24 Q
+(FIRE Cirrus 2 Readme) 186.35 704 T
+1 16 Q
+(1.0  Intr) 72 621.33 T
+(oduction) 127.26 621.33 T
+0 12 Q
+-0.43 (This \336le contains information about the First ISSCP Regional Experiment \050FIRE\051 Cirrus 2 sample) 72 594 P
+-0.18 (read software and data \336les. These are the data sets that are available through the Langley DAAC:) 72 580 P
+2 F
+(\245) 108 560 T
+0 F
+(FIRE_CI2_CIT) 126 560 T
+(A) 200.38 560 T
+(TN_1HZ) 207.71 560 T
+2 F
+(\245) 108 546 T
+0 F
+(FIRE_CI2_CIT) 126 546 T
+(A) 200.38 546 T
+(TN_PMS) 207.71 546 T
+2 F
+(\245) 108 532 T
+0 F
+(FIRE_CI2_CLASS_SONDE) 126 532 T
+2 F
+(\245) 108 518 T
+0 F
+(FIRE_CI2_CSU_PR) 126 518 T
+(T6) 225.3 518 T
+2 F
+(\245) 108 504 T
+0 F
+(FIRE_CI2_CSU_SONDES) 126 504 T
+2 F
+(\245) 108 490 T
+0 F
+(FIRE_CI2_CSU_STN1) 126 490 T
+2 F
+(\245) 108 476 T
+0 F
+(FIRE_CI2_CSU_STN2) 126 476 T
+2 F
+(\245) 108 462 T
+0 F
+(FIRE_CI2_CSU_WNDPRFS) 126 462 T
+2 F
+(\245) 108 448 T
+0 F
+(FIRE_CI2_DOPLR_LIDAR) 126 448 T
+2 F
+(\245) 108 434 T
+0 F
+(FIRE_CI2_ER2_MAS) 126 434 T
+2 F
+(\245) 108 420 T
+0 F
+(FIRE_CI2_KINGAIR) 126 420 T
+2 F
+(\245) 108 406 T
+0 F
+(FIRE_CI2_LARC8_LIDAR) 126 406 T
+2 F
+(\245) 108 392 T
+0 F
+(FIRE_CI2_MAPS) 126 392 T
+2 F
+(\245) 108 378 T
+0 F
+(FIRE_CI2_NOAA_WNDPFS) 126 378 T
+2 F
+(\245) 108 364 T
+0 F
+(FIRE_CI2_NWS_IN_SND) 126 364 T
+2 F
+(\245) 108 350 T
+0 F
+(FIRE_CI2_NWS_OUT_SND) 126 350 T
+2 F
+(\245) 108 336 T
+0 F
+(FIRE_CI2_P) 126 336 T
+(AMS) 187.57 336 T
+2 F
+(\245) 108 322 T
+0 F
+(FIRE_CI2_RAMAN_LIDAR) 126 322 T
+2 F
+(\245) 108 308 T
+0 F
+(FIRE_CI2_SABRELINER) 126 308 T
+2 F
+(\245) 108 294 T
+0 F
+(FIRE_CI2_SKYCAMERA) 126 294 T
+2 F
+(\245) 108 280 T
+0 F
+(FIRE_CI2_SPECT_SIRIS) 126 280 T
+-0.09 (The read software is provided for sixteen FIRE Cirrus 2 data sets. Among these data sets, two air-) 72 254 P
+(craft data sets \050i.e., KINGAIR, and SABRELINER\051 are in binary format, one in National Center) 72 240 T
+-0.1 (for Supercomputing Applications\325 \050NCSA\051 HDF netCDF format, and the others are in ASCII for-) 72 226 P
+-0.17 (mat. The 13 ASCII data sets are divided into six groups: sondes, surface observations, lidar) 72 212 P
+-0.17 (, wind) 507.35 212 P
+(pro\336les, models, and aircraft. The groupings of the data sets closely follow the FIRE Cirrus 2) 72 198 T
+(granules conventions. This \322readme\323 \336le includes the following four other sections:) 72 184 T
+2 F
+(\245) 108 164 T
+0 F
+(Section 2.0 - describes all sample C programs \050source \336les\051.) 126 164 T
+2 F
+(\245) 108 144 T
+0 F
+(Section 3.0 - discusses how to create the executables from the C program\050s\051.) 126 144 T
+2 F
+(\245) 108 124 T
+0 F
+(Section 4.0 - demonstrates how to invoke the run-time executable\050s\051.) 126 124 T
+2 F
+(\245) 108 104 T
+0 F
+(Section 5.0 - provides general information on the data sets.) 126 104 T
+2 F
+(\245) 108 84 T
+0 F
+(Section 6.0 - provides more detailed implementation notes.) 126 84 T
+FMENDPAGE
+%%EndPage: "1" 1
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(2) 536 34.17 T
+0 12 Q
+(If users have questions while using the FIRE Cirrus 2 sample read software, please contact the) 72 712 T
+(Langley Science Data and User Services \050UDS\051 of) 72 698 T
+(\336ce. The UDS may be reached by E-Mail:) 314.71 698 T
+-0.39 (userserv@eosdis.larc.nasa.gov) 72 684 P
+-0.39 (, by telephone at \050804\051864-8656, or by F) 218.57 684 P
+-0.39 (AX at \050804\051864-8807. The) 409.92 684 P
+(SUDS mailing address is:) 72 670 T
+0 10 Q
+(Langley DAAC User Services Of) 108 651.33 T
+(\336ce) 242.23 651.33 T
+(Mail Stop 157D) 108 638.33 T
+(NASA Langley Research Center) 108 625.33 T
+(Hampton, V) 108 612.33 T
+(A 23681-0001) 156.15 612.33 T
+(USA) 108 599.33 T
+1 16 Q
+(2.0  Read Softwar) 72 559.33 T
+(e Files) 193.47 559.33 T
+0 12 Q
+(The sample read programs for FIRE Cirrus 2 data sets are primarily developed in C language.) 72 532 T
+(Some data sets also have sample Fortran read programs. These C programs have been tested on) 72 518 T
+(the \324Sun4\325 and \324HP\325 Unix-based workstations. All library functions in the C source codes are) 72 504 T
+-0.44 (tested for ANSI C conformance. Because some data sets can share the same C read program, there) 72 490 P
+(are less C programs than the number of data sets. A total of four dif) 72 476 T
+(ferent \336les are needed to gen-) 396.06 476 T
+(erate the executable \336le\050s\051 for one, many) 72 462 T
+(, or all of the 15 data sets. A \324Make\336le\325 \050called Make-) 267.49 462 T
+(\336le.fci2\051 is included for the convenience of creating the executable \336les from the C source \336les.) 72 448 T
+(These \336les and their purposes are listed as follows:) 72 434 T
+2 F
+(\245) 72 414 T
+1 F
+(Make\336le.fci2) 90 414 T
+0 F
+( - contains a set of commands to build the run-time executables.) 156.32 414 T
+2 F
+(\245) 72 394 T
+1 F
+(genpr) 90 394 T
+(o.c) 119.78 394 T
+0 F
+( -) 134.11 394 T
+(reads GENPRO formatted data, i.e., Kingair and Sabreliner data sets.) 144 394 T
+2 F
+(\245) 72 374 T
+1 F
+(fci2_sw) 90 374 T
+(.c) 127.33 374 T
+0 F
+( -) 135.66 374 T
+-0.02 (contains the sample read routines for all FIRE Cirrus 2 data sets in ASCII format.) 145.66 374 P
+(The functions in this C program are named closely after the applicable data sets.) 144 360 T
+2 F
+(\245) 72 340 T
+1 F
+-0.09 (fci2_lib.c) 90 340 P
+0 F
+-0.09 ( - has a collection of library routines that are used by more than one read routines in) 136.33 340 P
+(the fci2_sw) 144 326 T
+(.c \336le.) 198.88 326 T
+2 F
+(\245) 72 306 T
+1 F
+(fci2_sw) 90 306 T
+(.h) 127.33 306 T
+0 F
+( - de\336nes constants and data structures used in the read routines for the ASCII data) 137 306 T
+(sets.) 144 292 T
+2 F
+(\245) 72 272 T
+1 F
+(fhdf_netcdf.c) 90 272 T
+0 F
+(-) 160.66 272 T
+(reads the FIRE HDF formatted \336les that were written using the) 167.65 272 T
+-10.27 (netCDF exten-) 479.28 272 P
+(sions) 171 258 T
+2 F
+(\245) 72 238 T
+0 F
+(.) 90 238 T
+1 F
+(mas_r) 96 238 T
+(ead_netcdf.c) 127.78 238 T
+0 F
+(-) 195.1 238 T
+(reads the FIRE HDF formatted \336les that were written using the) 202.09 238 T
+(NetCDF extensions. This is the C version of the read software.) 171 224 T
+2 F
+(\245) 72 204 T
+1 F
+(mas_r) 90 204 T
+(ead_netcdf.f) 121.78 204 T
+0 F
+(-) 187.76 204 T
+(reads the FIRE HDF formatted \336les that were written using the) 194.76 204 T
+-4.06 (NetCDF) 500.39 204 P
+-0.3 (extensions. This is the FOR) 171 190 P
+-0.3 (TRAN 77 version of the read software. This code) 302.09 190 P
+(is also available from the data producer) 171 176 T
+(\325) 360.73 176 T
+(s home page. The URL is) 364.07 176 T
+(http://ltpwww) 171 162 T
+(.gsfc.nasa.gov/MODIS/MAS/sw) 237.56 162 T
+(.html.) 393.11 162 T
+2 F
+(\245) 72 142 T
+1 F
+(mas_r) 90 142 T
+(ead_netcdf.i) 121.78 142 T
+0 F
+( - is the include \336le to be used with the FOR) 184.1 142 T
+(TRAN 77 version of the read) 395.71 142 T
+(software for the program called mas_read_netcdf.f \050listed above\051.This code) 171 128 T
+(is also available from the data producer) 171 114 T
+(\325) 360.73 114 T
+(s home page. The URL is) 364.07 114 T
+(http://ltpwww) 171 100 T
+(.gsfc.nasa.gov/MODIS/MAS/sw) 237.56 100 T
+(.html.) 393.11 100 T
+FMENDPAGE
+%%EndPage: "2" 2
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(3) 536 34.17 T
+0 12 Q
+(In addition to these \336les, there are 1) 72 712 T
+(1 individual C programs in the same directory) 243.53 712 T
+(. These C pro-) 463.73 712 T
+-0.13 (grams together can perform the functions of the above two \336les: fci2_sw) 72 698 P
+-0.13 (.c and fci2_sw) 418.77 698 P
+-0.13 (.h. Each C) 487.39 698 P
+(program is a complete read program for one ASCII data set. Among the sondes data group,) 72 684 T
+-0.08 (nws_in_sonde, and nws_out_sonde data sets have the same data and record or) 72 670 P
+-0.08 (ganizations, hence,) 445.51 670 P
+(one C program is provided to read both data sets. Among the surface observations data group,) 72 656 T
+(csu_station1 and csu_station2 data sets have the similar variables, one C program is provided to) 72 642 T
+(read these two data sets. These \336les and their applicable data set\050s\051 are listed in T) 72 628 T
+(able 1. Individ-) 461.08 628 T
+(ual C Program and its Data Set\050s\051.) 72 614 T
+1 16 Q
+(3.0  Cr) 72 204.33 T
+(eating C Executable Files) 118.37 204.33 T
+0 12 Q
+(The user can have two ways of building the sample read program for one or multiple data sets) 72 177 T
+-0.37 (from the C source \336les. One is using the \324make\325 command with the \336le \324Make\336le\325, which requires) 72 163 P
+-0.4 (the \336ve \336les listed in Section 2.0. The other is using the C compiler \324cc\325. Section 3.1 illustrates the) 72 149 P
+-0.35 (\336rst method, and Section 3.2 illustrates the second method. The \336rst method is simpler to use than) 72 135 P
+(the second one. The symbol \324%\325 in this section stands for Unix command line prompt.) 72 121 T
+79.75 268 522 275 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+85.75 271.16 211.74 271.16 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 -208 1000 792 C
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(a. These C executable \336le names are de\336ned in the \336le \324Make\336le\325. Users can change the name in the) 91.75 261.33 T
+(Make\336le or during compilation to create dif) 91.75 249.33 T
+(ferent executable \336le names.) 267.09 249.33 T
+1 F
+(T) 85.75 565.33 T
+(ABLE 1. Individual C Pr) 91.68 565.33 T
+(ograms and its Data Set\050s\051) 198.46 565.33 T
+1 12 Q
+(C File Name) 96 543 T
+(Executable File Name) 195 543 T
+1 9.6 Q
+(a) 306.98 547.8 T
+1 12 Q
+(Applicable Data Sets) 348 543 T
+0 F
+(class_sonde.c) 85.75 525 T
+(class_sonde) 195 525 T
+(FIRE_CI2_CLASS_SONDE) 348 525 T
+(csu_prt6.c) 85.75 507 T
+(csu_prt6) 195 507 T
+(FIRE_CI2_) 348 507 T
+(CSU_PR) 404 507 T
+(T6) 447.3 507 T
+(csu_sondes.c) 85.75 489 T
+(csu_sondes) 195 489 T
+(FIRE_CI2_) 348 489 T
+(CSU_SONDES) 404 489 T
+(csu_station.c) 85.75 471 T
+(csu_station1, csu_station2) 195 471 T
+(FIRE_CI2_CSU_STN1) 348 471 T
+(and) 465.01 471 T
+(FIRE_CI2_CSU_STN2) 348 457 T
+(csu_wndpr\337.c) 85.75 439 T
+(csu_wndpr\337) 195 439 T
+(FIRE_CI2_CSU_WNDPRFS) 348 439 T
+(doplr_lidar) 85.75 421 T
+(.c) 138.41 421 T
+(doplr_lidar) 195 421 T
+(FIRE_CI2_DOPLR_LIDAR) 348 421 T
+(maps.c) 85.75 403 T
+(maps) 195 403 T
+(FIRE_CI2_MAPS) 348 403 T
+(noaa_wndpr\337.c) 85.75 385 T
+(noaa_wndpr\337) 195 385 T
+(FIRE_CI2_NOAA_WNDPFS) 348 385 T
+(nws_sonde.c) 85.75 367 T
+(nws_sonde) 195 367 T
+(FIRE_CI2_NWS_IN_SND) 348 367 T
+(and) 482.33 367 T
+(FIRE_CI2_NWS_OUT_SND) 348 353 T
+(pams.c) 85.75 335 T
+(pams) 195 335 T
+(FIRE_CI2_P) 348 335 T
+(AMS) 409.57 335 T
+(raman_lidar) 85.75 317 T
+(.c) 143.07 317 T
+(raman_lidar) 195 317 T
+(FIRE_CI2_RAMAN_LIDAR) 348 317 T
+(mas_read_netcdf.c) 85.75 299 T
+(mas_read_netcdf_c) 195 299 T
+(FIRE_CI2_ER2_MAS) 348 299 T
+(mas_read_netcdf.f) 85.75 281 T
+(mas_read_netcdf_f) 195 281 T
+(FIRE_CI2_ER2_MAS) 348 281 T
+79.75 558 79.75 276 2 L
+V
+2 H
+0 Z
+N
+189 560 189 274 2 L
+V
+N
+342 560 342 274 2 L
+V
+N
+522 558 522 276 2 L
+V
+N
+78.75 559 523 559 2 L
+V
+N
+78.75 537 523 537 2 L
+V
+N
+78.75 519 523 519 2 L
+V
+N
+78.75 501 523 501 2 L
+V
+N
+78.75 483 523 483 2 L
+V
+N
+78.75 451 523 451 2 L
+V
+N
+78.75 433 523 433 2 L
+V
+N
+78.75 415 523 415 2 L
+V
+N
+78.75 397 523 397 2 L
+V
+N
+78.75 379 523 379 2 L
+V
+N
+78.75 347 523 347 2 L
+V
+N
+78.75 329 523 329 2 L
+V
+N
+78.75 311 523 311 2 L
+V
+N
+78.75 293 523 293 2 L
+V
+N
+78.75 275 523 275 2 L
+V
+N
+FMENDPAGE
+%%EndPage: "3" 3
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(4) 536 34.17 T
+1 14 Q
+(3.1  Cr) 72 710.67 T
+(eate with \324make\325 command) 112.57 710.67 T
+0 12 Q
+(T) 72 684 T
+(o build the executable read programs for the FIRE Cirrus 2 data sets which require specialized) 78.49 684 T
+(software type) 72 670 T
+(%) 108 644 T
+1 F
+(make -f Make\336le.fci2 all) 121 644 T
+0 F
+-0.21 (It will produce 15 executable \336les for all 13 FIRE Cirrus 2 ASCII data sets \050i.e., data sets listed in) 72 618 P
+(T) 72 604 T
+(able 1. column 3\051, two executable \336les for Kingair and Sabreliner data sets, and one executable) 78.49 604 T
+(\336le for the FIRE CI2 ER2 MAS data set. If by chance, the \336le Make\336le.fci2 was renamed to the) 72 590 T
+-0.31 (default \336le name of \322Make\336le\323 or \322make\336le,\323 the following command compiles all code to create) 72 576 P
+(executables for each read program.) 72 562 T
+1 F
+(% make all) 108 536 T
+0 F
+(T) 72 510 T
+(o build the individual read program\050s\051 for one or multiple FIRE Cirrus 2 data set\050s\051, at the com-) 78.49 510 T
+(mand line prompt, type) 72 496 T
+(%) 108 470 T
+1 F
+(make data_set_name\050s\051) 121 470 T
+0 F
+(where) 72 444 T
+1 F
+(data_set_name\050s\051) 104.32 444 T
+0 F
+( is one or more of the executable \336le name\050s\051 in T) 193.63 444 T
+(able 1. column 2 plus) 432.41 444 T
+(ci2_kingair and ci2_sabreliner) 72 430 T
+(. This command will produce the executable \336le\050s\051 for the) 217.31 430 T
+1 F
+(data_set_name\050s\051) 72 416 T
+0 F
+(. If using the make\336le to compile the) 161.32 416 T
+1 F
+(mas_r) 340.97 416 T
+(ead_netcdf_c) 372.74 416 T
+0 F
+( read program on a) 440.06 416 T
+(SUN Solaris system, remove the  \322$\050T) 72 402 T
+(ARGET_ARCH\051\323 from the LINT) 256.02 402 T
+(.c, LINK.c, and COM-) 418.1 402 T
+(PILE.c lines to avoid compile option con\337icts.) 72 388 T
+1 14 Q
+(3.2  Cr) 72 354.67 T
+(eate with C compiler \324cc\325) 112.57 354.67 T
+0 12 Q
+-0.23 (This method uses the combinations of library source \336le fci2_lib.c, and a C source \336le \050i.e., either) 72 328 P
+-0.15 (genpro.c or one of C \336le\050s\051 in T) 72 314 P
+-0.15 (able 1. column 1\051. The include \336le fci2_sw) 222.75 314 P
+-0.15 (.h should also be in the) 427.23 314 P
+(same directory) 72 300 T
+(. T) 142.2 300 T
+(o build the executable \336le for csu_sondes data set from the csu_sondes.c source) 154.69 300 T
+(\336le, type) 72 286 T
+(%) 108 260 T
+1 F
+(cc -o csu_sondes csu_sondes.c fci2_lib.c) 121 260 T
+0 F
+(Every C executable \336le in the T) 72 234 T
+(able 1. column 2 can be built the same as csu_sondes except for) 223.8 234 T
+(csu_station1 and csu_station2. Since one C program is used to produce two executable \336les, a) 72 220 T
+(minus D option \050-D\051 needs to be de\336ned for the C preprocessor when compiling for csu_station1) 72 206 T
+(data. For example, to build the executable for csu_station1 data set, type) 72 192 T
+(%) 108 166 T
+1 F
+(cc -DHPUX) 121 166 T
+0 9.6 Q
+(1) 181.31 170.8 T
+1 12 Q
+( -DST) 186.11 166 T
+(A) 215.56 166 T
+(TION1 -o csu_station1 csu_station.c fci2_lib.c) 223.33 166 T
+72 117 540 137 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 125 204 125 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(1.  Because some unix systems do not support math functions nint\050\051, and this function is needed in csu_prt6 and) 72 110.33 T
+-0.26 (csu_station source \336les, a C preprocessor parameter \050i.e., -DHPUX\051 is used when building the program. Therefore, to) 72 98.33 P
+(build the executable for csu_prt6 data set, type) 72 86.33 T
+(% cc -DHPUX -o csu_prt6 csu_prt6.c fci2_lib.c) 108 71.33 T
+FMENDPAGE
+%%EndPage: "4" 4
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(5) 536 34.17 T
+0 12 Q
+(and, to build the executable for csu_station2 data set, type) 72 712 T
+(%) 108 686 T
+1 F
+(cc -DHPUX -o csu_station2 csu_station.c fci2_lib.c) 121 686 T
+0 F
+(Similarly) 72 660 T
+(, to build the ci2_kingair for Kingair data set from one source \336le genpro.c, type) 115.9 660 T
+(%) 108 634 T
+1 F
+(cc -DF2_KINGAIR -o ci2_kingair genpr) 121 634 T
+(o.c fci2_lib.c) 327.43 634 T
+0 F
+(And, type the following to create ci2_sabreliner for Sabreliner data set) 72 608 T
+(%) 108 582 T
+1 F
+(cc -o ci2_sabr) 121 582 T
+(eliner genpr) 190.76 582 T
+(o.c fci2_lib.c) 252.88 582 T
+0 F
+(NOTE that the details of C preprocessor options are handled in the Make\336le under the \336rst) 72 556 T
+(method. One read routine is used for FIRE Kingair and Sabreliner GENPRO formatted data sets.) 72 542 T
+(But the FIRE Cirrus 2 Kingair data set has an extra padding of 4 bytes after every three logical) 72 528 T
+(records, the preprocessor option \050-DF2_KINGAIR\051 is needed to skip the four bytes every three) 72 514 T
+(logical records.) 72 500 T
+-0.34 (T) 72 474 P
+-0.34 (o use the command line to compile the FIRE_CI2 _ER2_MAS read software, it is recommended) 78.49 474 P
+(the user set environment variables to specify command line de\336nitions, required HDF libraries,) 72 460 T
+-0.31 (and include directories. This would decrease the amount of typing for the user every time the read) 72 446 P
+(software has to be recompiled. T) 72 432 T
+(o set the environment variables, type:) 228.46 432 T
+1 F
+(% setenv INCLUDE_DIR \322-I/usr/local/hdf-3.3r4/mfhdf/libsr) 108 406 T
+(c -I/usr/local/hdf-3.3r4/) 418.45 406 T
+(mfhdf/port -I/usr/local/hdf-3.3r3/hdf/include\323) 72 392 T
+(% setenv LIB_DIR \322-L/usr/local/hdf-3.3r4/mfhdf/libsr) 108 366 T
+(c -lnetcdf /usr/local/hdf-3.3r4/) 387.13 366 T
+(hdf/lib/libdf.a\323) 72 352 T
+3 F
+(NOTE:) 72 326 T
+4 F
+( Please make sur) 108.66 326 T
+(e that you set the corr) 189.86 326 T
+(ect path for these include \336les and libraries befor) 294.41 326 T
+(e) 531.29 326 T
+(compiling this pr) 72 312 T
+(ogram.) 153.56 312 T
+0 F
+(T) 72 286 T
+(o build the executable for the FIRE_CI2_ER2_MAS type:) 78.49 286 T
+1 F
+(% cc $INCLUDE_DIR -DNO_HA) 108 260 T
+(VE_PROT) 282.1 260 T
+(OTYPES -DNO_STDARG) 337.88 260 T
+(mas_r) 72 246 T
+(ead_netcdf.c $LIB_DIR) 103.78 246 T
+(NOTE:) 72 220 T
+0 F
+( The ANSI V) 110 220 T
+(ersion of the C compiler \050acc\051 was used to compile this V) 172.99 220 T
+(ersion of the HDF) 447.95 220 T
+-0.18 (Library \0503.3r4\051. If you compile source code that accesses the HDF compiler of older versions, the) 72 206 P
+(other versions of the C compiler \050cc\051 can be used.) 72 192 T
+1 16 Q
+(4.0  Invoking Read Softwar) 72 151.33 T
+(e) 258.83 151.33 T
+0 12 Q
+(This section illustrates the invocation of the executable \336les. Section 4.1 describes how to run) 72 124 T
+(read programs for the ASCII data sets. Section 4.2 describes how to run read programs for two) 72 110 T
+(aircraft data sets \050in binary\051. Section 4.3 describes how to run the read program for the HDF data) 72 96 T
+(sets with the netCDF extensions.) 72 82 T
+FMENDPAGE
+%%EndPage: "5" 5
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(6) 536 34.17 T
+1 14 Q
+(4.1  Running Read Pr) 72 710.67 T
+(ograms for the ASCII Data Sets) 201.26 710.67 T
+0 12 Q
+(All executable \336les for FIRE Cirrus 2 ASCII data sets can accept multiple data \336les as the ar) 72 684 T
+(gu-) 516.05 684 T
+(ments. W) 72 670 T
+(ith the exception of doplr_lidar) 117.52 670 T
+(, all output are sent to the standard output device \050i.e.,) 266.35 670 T
+(stdout\051. Or) 72 656 T
+(, the output can be sent to a \336le with the Unix redirection command. The doplr_lidar) 123.52 656 T
+(has two parts of data: pro\336les directory and the pro\336les records. The pro\336les directory data are) 72 642 T
+(written to the stdout, but the pro\336les records are written to a \336le) 72 628 T
+0 9.6 Q
+(2) 378.3 632.8 T
+0 12 Q
+(. For all data sets, any error in) 383.1 628 T
+(reading the data will be written to the standard error device \050i.e., stderr\051. The following example) 72 614 T
+(illustrates how to invoke \324pams\325 to read three data \336les.) 72 600 T
+(%) 108 574 T
+1 F
+(pams st6nov18.data st1nov17.data st4dec07.data) 121 574 T
+0 F
+(will read and print out the contents of three \336les, i.e., st6nov18.data, st1nov17.data, and) 72 548 T
+(st4dec07.data, to the stdout. The invocation of the read program for FIRE Cirrus 2 ASCII data) 72 534 T
+(sets are the same except for the maps data set. The maps executable provides an additional capa-) 72 520 T
+(bility to allow users the option to specify printing of the min. max. values of the terrain data and) 72 506 T
+(all variables\325) 72 492 T
+(s latitude and longitude data. For example,) 133.66 492 T
+(%) 108 466 T
+1 F
+(maps ci2_maps_91) 121 466 T
+(1) 216.67 466 T
+(124_03 ci2_maps_91) 222.01 466 T
+(1) 326.35 466 T
+(1) 331.69 466 T
+(18_00) 337.03 466 T
+0 F
+(%) 108 440 T
+1 F
+(maps -s ci2_maps_91) 121 440 T
+(1) 228.34 440 T
+(124_03 ci2_maps_91) 233.68 440 T
+(1) 338.02 440 T
+(1) 343.36 440 T
+(18_00) 348.7 440 T
+0 F
+(the \336rst one will read and print out the contents of two \336les, i.e., ci2_maps_91) 72 414 T
+(1) 446.2 414 T
+(124_03, and) 451.75 414 T
+(ci2_maps_91) 72 400 T
+(1) 135.55 400 T
+(1) 141.11 400 T
+(18_00. The second one will prompt the user to enter the \336le names of the terrain) 146.66 400 T
+-0.14 (and latitude/longitude data. After the user enters the \336le names, it will print out the min. max. val-) 72 386 P
+(ues of the terrain and latitude/longitude data and the contents of two data \336les) 72 372 T
+(\322ci2_maps_91) 72 358 T
+(1) 140.88 358 T
+(124_03\323 and \322ci2_maps_91) 146.44 358 T
+(1) 279.97 358 T
+(1) 285.53 358 T
+(18_00\323.) 291.08 358 T
+1 14 Q
+(4.2  Running Read Pr) 72 324.67 T
+(ograms for the Binary Data Sets) 201.26 324.67 T
+0 12 Q
+-0.06 (Currently) 72 298 P
+-0.06 (, the executable \336les for Kingair and Sabreliner aircraft data sets can run one data \336le at) 117.22 298 P
+(each invocation. The aircraft data \336les are or) 72 284 T
+(ganized in pairs, i.e., one header \336le has a corre-) 286.38 284 T
+(sponding \337ight data \336le. In order to process the data \336le accurately) 72 270 T
+(, the header \336le needs to be) 391.84 270 T
+(speci\336ed as an ar) 72 256 T
+(gument preceding the data \336le ar) 154.09 256 T
+(gument. For example, if the Kingair data \336le) 311.51 256 T
+1 F
+(ci2_ka_\337t01_91) 72 242 T
+(1) 151.34 242 T
+(109) 156.68 242 T
+0 F
+(.dat is to be processed, and its corresponding header \336le is) 174.68 242 T
+1 F
+(ci2_ka_\337t01_91) 72 228 T
+(1) 151.34 228 T
+(109) 156.68 228 T
+0 F
+(.hdr) 174.68 228 T
+(, then type) 193.2 228 T
+(%) 108 202 T
+1 F
+(ci2_kingair ci2_ka_\337t01_91) 121 202 T
+(1) 261.35 202 T
+(109.hdr ci2_ka_\337t01_91) 266.69 202 T
+(1) 388.7 202 T
+(109.dat) 394.04 202 T
+0 F
+-0.44 (will read the binary data in RF01.dat and send the output to the standard output device. The output) 72 176 P
+(can be sent to a \336le by typing) 72 162 T
+72 114 540 134 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 122 204 122 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(2.  The output \336le is automatically generated with the name containing the input \336le name plus the process id as the) 72 107.33 T
+(\336le name extension. Because the process id for each invocation of the executable is dif) 72 95.33 T
+(ferent under Unix system, the) 418.69 95.33 T
+(output \336le name will be dif) 72 83.33 T
+(ferent at each run. If for some reason the output \336le can not be created, the output will be) 180.43 83.33 T
+(sent to the standard output device.) 72 71.33 T
+FMENDPAGE
+%%EndPage: "6" 6
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(7) 536 34.17 T
+0 12 Q
+(%) 108 712 T
+1 F
+(ci2_kingair ci2_ka_\337t01_91) 121 712 T
+(1) 261.35 712 T
+(109.hdr ci2_ka_\337t01_91) 266.69 712 T
+(1) 388.7 712 T
+(109.dat > any_\336le_name) 394.04 712 T
+0 F
+(See Section 5.6 IMPLEMENT) 72 686 T
+(A) 218.36 686 T
+(TION NOTES for the data output.) 225.7 686 T
+1 14 Q
+(4.3  Running the Read Pr) 72 652.67 T
+(ogram for the FIRE_CI2_ER2_MAS Data Set) 223.42 652.67 T
+0 12 Q
+(Currently) 72 626 T
+(, the executable mas_read_netcdf.c read program \050C version\051 for the) 117.22 626 T
+(FIRE_CI2_ER2_MAS data set does not accept command line ar) 72 612 T
+(guments. When this program is) 381.08 612 T
+-0.47 (executed, it requests an input \336lename. The output \336lename is automatically created by appending) 72 598 P
+(\322.rpt\323 to the input \336le name. After entering the \336lename, the user is presented with a parameter) 72 584 T
+-0.2 (selection list. Upon completing the parameter selection process, the user is provided the option of) 72 570 P
+(including the global parameters in the report \336le. At this point, the program generates the report) 72 556 T
+(\336le and exits. The following line will begin program execution:) 72 542 T
+1 F
+(% mas_r) 108 516 T
+(ead_netcdf_c) 154.78 516 T
+0 F
+(A sample of the interactive program execution is provide in Section 6.0.) 72 490 T
+1 16 Q
+(5.0  Data Sets Information) 72 449.33 T
+0 12 Q
+(There are six subsections describing each data set group. Each subsection is further divided into) 72 422 T
+-0.26 (subsection\050s\051 to contain descriptions of each data set. The data sets information are obtained from) 72 408 P
+(the text \336le or documents, from the data producer) 72 394 T
+(, or embedded metadata information in the data) 309.14 394 T
+-0.21 (\336les. The high-level data set descriptions, the data \336les, the variables in the data \336les, and the con-) 72 380 P
+-0.19 (tacts for data production are given under each data set. Some data sets contain the responses from) 72 366 P
+(the data producer to answer questions on the data contents. These questions/responses are col-) 72 352 T
+(lected under the data notes.) 72 338 T
+1 14 Q
+(5.1  SONDES) 72 304.67 T
+0 12 Q
+(There are four sondes data sets in FIRE Cirrus 2 data: class_sonde, nws_in_sonde,) 72 278 T
+-0.45 (nws_out_sonde, and csu_sondes. Among them, nws_in_sonde, and nws_out_sonde data sets have) 72 264 P
+(the same variables, hence, they are described in one subsection.) 72 250 T
+1 F
+(5.1.1  CLASS_SONDE) 72 218 T
+0 F
+(NCAR class_sonde data were collected during November and December of 1991. Sounding \336les) 72 192 T
+(for CaPE from Melbourne and Cape Canaveral AF Base, and Orlando are not supported by) 72 178 T
+(NCAR. Note that among the three versions of a given sounding that NCAR class data have, Lan-) 72 164 T
+(gley DAAC has only \322i\323 version, which is the sounding data with data interpolated to every 5mb) 72 150 T
+(level. NCAR class data can be accessed by the A) 72 136 T
+(TD SUDS software \050SUDS runs on UNIX) 305.94 136 T
+(machines in an X-window environment\051.) 72 122 T
+1 F
+(FILES) 72 96 T
+0 F
+(:) 106.68 96 T
+FMENDPAGE
+%%EndPage: "7" 7
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(8) 536 34.17 T
+0 12 Q
+-0.42 (NCAR class sonde data consist of 29 granules. The granule is named ci2_XXX_date, where XXX) 72 712 P
+(is the site id, and date the temporal coverage of the collected data. Each granule has multiple) 72 698 T
+(ASCII data \336les. The date and time of the soundings have been coded into the \336le names. Each) 72 684 T
+(class sonde \336le is named \324imddhhMM.sta\325, where) 72 670 T
+(m) 314.3 670 T
+( is the month \050values [1-9, a-c]; b=Nov\051,) 323.64 670 T
+(dd) 521.04 670 T
+(the day of month,) 72 656 T
+(hh the) 159.66 656 T
+(hour sounding start \050GMT was used for CaPE\051, MM the) 192.32 656 T
+(minute for) 464.63 656 T
+(sounding start \050hhMM is approximate\051, and) 72 642 T
+(sta) 284.32 642 T
+(the 3-letter station ID.) 300.65 642 T
+(The \336rst 12 lines in a data \336le contain header information, followed by the three-line variables) 72 616 T
+(headings, followed by the class sonde records.) 72 602 T
+1 F
+(V) 72 576 T
+(ARIABLES:) 79.12 576 T
+0 F
+-0.42 (Each record contains 21 variables. V) 72 550 P
+-0.42 (ariables are separated by white space\050s\051. These variables with) 245.19 550 P
+(their units are listed in order below) 72 536 T
+(.) 239.2 536 T
+1 F
+(V) 108 516 T
+(ariable Name) 115.56 516 T
+0 10 Q
+(1.) 72 502.33 T
+(T) 108 502.33 T
+(ime into launch \050minutes\051) 113.76 502.33 T
+(2.) 72 489.33 T
+(Pressure \050mb\051) 108 489.33 T
+(3.) 72 476.33 T
+(T) 108 476.33 T
+(emperature \050C\051) 113.41 476.33 T
+(4.) 72 463.33 T
+(Dewpt - dewpoint temperature \050C\051) 108 463.33 T
+(5.) 72 450.33 T
+(RH - relative humidity \050%\051) 108 450.33 T
+(6.) 72 437.33 T
+(Uwind \050m/s\051) 108 437.33 T
+(7.) 72 424.33 T
+(Vwind \050m/s\051) 108 424.33 T
+(8.) 72 411.33 T
+(Wspd - wind speed \050m/s\051) 108 411.33 T
+0 8 Q
+(3) 208.54 415.33 T
+0 10 Q
+(9.) 72 398.33 T
+(Dir - wind direction \050degrees\051) 108 398.33 T
+(10.) 72 385.33 T
+(dZ \050m/s\051) 108 385.33 T
+(1) 72 372.33 T
+(1.) 76.63 372.33 T
+(Longitude \050degrees\051) 108 372.33 T
+(12.) 72 359.33 T
+(Latitude \050degrees\051) 108 359.33 T
+(13.) 72 346.33 T
+(Range \050km\051) 108 346.33 T
+(14.) 72 333.33 T
+(Angle \050degrees\051) 108 333.33 T
+(15.) 72 320.33 T
+(Altitude \050m\051) 108 320.33 T
+(16.) 72 307.33 T
+(Qp \050mb\051) 108 307.33 T
+(17.) 72 294.33 T
+(Qt \050c\051) 108 294.33 T
+(18.) 72 281.33 T
+(Qh \050%\051) 108 281.33 T
+(19.) 72 268.33 T
+(Qu \050m/s\051) 108 268.33 T
+(20.) 72 255.33 T
+(Qv \050m/s\051) 108 255.33 T
+(21.) 72 242.33 T
+(Quv \050m/s\051) 108 242.33 T
+1 12 Q
+(NOTES ON DA) 72 217 T
+(T) 153.12 217 T
+(A) 160.24 217 T
+0 F
+(Some data \336les have a negative number for the \336rst time entry) 72 191 T
+(, and in the \336rst row of data the) 370.18 191 T
+(variables, Qt, Qp, Qh, Qu, Qv) 72 177 T
+(, and Quv all have the value 77.00. Also, the latitudes and longi-) 215.2 177 T
+-0.11 (tudes after the \336rst row are all zeros. The answers from Dave Starr \050starr@climate.gsfc.nasa.gov\051) 72 163 P
+(about the above questions are listed as follows.) 72 149 T
+72 97 540 117 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 105 204 105 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 9 Q
+0 X
+0 0 0 1 0 0 0 K
+(3.  The wind speed data for Orlando are stated as being in m/s, as are the Uwind and Vwind components. However) 72 91 T
+(, it is possible) 485.05 91 T
+(that the wind speed is actually in *knots*, since the wind speed value tends to be too great, given the u and v components.) 72 80 T
+FMENDPAGE
+%%EndPage: "8" 8
+%%Page: "9" 9
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(9) 536 34.17 T
+0 12 Q
+(1\051 Data in the \336rst row are surface conditions obtained from the P) 72 712 T
+(AMS \050Portable Automated) 386.17 712 T
+(Mesoscale Station\051 station observations and not the CLASS sonde itself. These are pre-launch) 72 698 T
+(surface conditions. The negative time may indicate how long before the sonde release \050at time =) 72 684 T
+(0\051 the P) 72 670 T
+(AMS data were taken. \050P) 108.23 670 T
+(AMS data were automatically telemetered to NCAR and then) 228.1 670 T
+(incorporated into CLASS sonde data processing.\051) 72 656 T
+-0.14 (2\051 All the Q parameters are \322quality indicator\323 parameters. They are computed based on the local) 72 630 P
+(standard deviation of the relevant actual data quantity \050e.g., Qp is for the pressure observations\051) 72 616 T
+-0.08 (over the \322local smoothing window\323 used. They are not really relevant to the surface observations) 72 602 P
+-0.38 (and I doubt that the 77\325) 72 588 P
+-0.38 (s have much meaning for the surface level. Note that the CLASS data were) 181.75 588 P
+(actually sampled at about a 2-second interval \050about 10 meters in height\051 while the 5-mb product) 72 574 T
+(has about a 50-100m resolution in the troposphere. NCAR typically uses a 20-second local win-) 72 560 T
+(dow for smoothing, quality control, etc.) 72 546 T
+-0.33 (3\051 The latitudes and longitudes after the \336rst row are all zeros are a test sounding that did not have) 72 520 P
+(any winds. W) 72 506 T
+(ithout any winds, there are no locations given above the surface level. T) 137.84 506 T
+(ry another) 482.69 506 T
+-0.29 (sonde further into the data set and you will most likely \336nd locations given at levels above the sur-) 72 492 P
+(face.) 72 478 T
+1 F
+(CONT) 72 452 T
+(ACTS FOR DA) 105.78 452 T
+(T) 185.56 452 T
+(A PRODUCTION INFORMA) 192.67 452 T
+(TION) 347.1 452 T
+0 F
+(R. Rilling) 108 426 T
+(M. Case \050for information about SUDS\051) 252 426 T
+0 10 Q
+(NCAR A) 108 407.33 T
+(TD/RDP) 144.39 407.33 T
+(303-497-8756) 252 407.33 T
+(303-497-8842) 108 394.33 T
+(e-mail: rilling@ncar) 108 381.33 T
+(.ucar) 189.15 381.33 T
+(.edu) 208.31 381.33 T
+1 12 Q
+(5.1.2  NWS_IN_SONDE & NWS_OUT_SONDE) 72 350 T
+0 F
+(The nws_in_sonde and nws_out_sonde data sets were collected at various stations. The) 72 324 T
+(nws_in_sonde data were collected for the period from Nov) 72 310 T
+(. 13, 1991 to Dec. 7, 1991. The) 353.82 310 T
+(nws_out_sonde data were collected from Nov) 72 296 T
+(. 20, 1991 to Dec. 7, 1991. Both have the same \336le) 291.5 296 T
+-0.38 (and record or) 72 282 P
+-0.38 (ganizations, and contain the same variables. Thus, these two data sets share the same) 135 282 P
+(read routine to retrieve the records.) 72 268 T
+1 F
+(FILES:) 72 242 T
+0 F
+(The nws_in_sonde data set consists of 17 granules. The nws_out_sonde data set consists of 31) 72 216 T
+(granules. Each granule is named ci2_XXX_yym1d1_m2d2, where XXX is the 3-letter station) 72 202 T
+(name, m1d1 the beginning month and date, and m2d2 the end month and date of the data. Each) 72 188 T
+(granule has multiple ASCII data \336les. Each \336le is named XXX.nnnn, where XXX is the same 3-) 72 174 T
+(letter station name as the granule, and \324nnnn\325 the ascent number) 72 160 T
+(. The \336rst ten lines in a data \336le) 378.28 160 T
+-0.43 (contain header information, followed by two-line variables heading, followed by the NWS sondes) 72 146 P
+-0.16 (records. The Fortran format for the variables is: \0503x, f7.2, f8.3, f6.1, 2\050f7.2\051, 2\050f6.1\051, f9.4, 2\050f7.2\051,) 72 132 P
+(4\050f6.1\051, f8.0, 2\050f7.2\051, 2\050f8.3\051, 2\050f9.4\051\051.) 72 118 T
+1 F
+(V) 72 92 T
+(ARIABLES:) 79.12 92 T
+FMENDPAGE
+%%EndPage: "9" 9
+%%Page: "10" 10
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(10) 532 34.17 T
+0 12 Q
+(Each record starts with the number of level, followed by 21 variables, and ends with the same) 72 712 T
+(number of level.  V) 72 698 T
+(ariables are separated by white space\050s\051.  These variables with their units are) 164.32 698 T
+(listed in order below) 72 684 T
+(.) 170.21 684 T
+1 F
+(V) 108 664 T
+(ariable Name) 115.56 664 T
+0 10 Q
+(1.) 72 650.33 T
+(time into launch \050minutes\051) 108 650.33 T
+(2.) 72 637.33 T
+(height \050km\051) 108 637.33 T
+(3.) 72 624.33 T
+(pressure \050mb\051) 108 624.33 T
+(4.) 72 611.33 T
+(temperature \050C\051) 108 611.33 T
+(5.) 72 598.33 T
+(theta - potential temperature \050K\051) 108 598.33 T
+(6.) 72 585.33 T
+(rh - relative humidity with respect to water \050percent\051) 108 585.33 T
+(7.) 72 572.33 T
+(rh - relative humidity with respect to ice \050percent\051) 108 572.33 T
+(8.) 72 559.33 T
+(sphum - speci\336c humidity \050g/kg\051) 108 559.33 T
+(9.) 72 546.33 T
+(dewpt - dewpoint temperature \050C\051) 108 546.33 T
+(10.) 72 533.33 T
+(frstpt - frost point temperature \050C\051) 108 533.33 T
+(1) 72 520.33 T
+(1.) 76.63 520.33 T
+(speed - wind speed \050m/s\051) 108 520.33 T
+(12.) 72 507.33 T
+(direc - wind direction \050degrees\051) 108 507.33 T
+(13.) 72 494.33 T
+(u - zonal component of wind \050m/s\051) 108 494.33 T
+(14.) 72 481.33 T
+(v - meridians component of wind \050m/s\051) 108 481.33 T
+(15.) 72 468.33 T
+(ascent - ascent rate \050m/min\051) 108 468.33 T
+(16.) 72 455.33 T
+(lapse - lapse rate \050C/km\051) 108 455.33 T
+(17.) 72 442.33 T
+(dtheta - potential temperature lapse rate \050K/km\051) 108 442.33 T
+(18.) 72 429.33 T
+(x - longitudinal distance of sonde with respect to point of origin \050km\051) 108 429.33 T
+(19.) 72 416.33 T
+(y - latitudinal distance of sonde with respect to point of origin \050km\051) 108 416.33 T
+(20.) 72 403.33 T
+(lat - latitudinal position of sonde \050degrees N\051) 108 403.33 T
+(21.) 72 390.33 T
+(long - longitudinal position of sonde \050degrees W\051) 108 390.33 T
+1 12 Q
+(CONT) 72 365 T
+(ACTS FOR DA) 105.78 365 T
+(T) 185.56 365 T
+(A PRODUCTION INFORMA) 192.67 365 T
+(TION) 347.1 365 T
+0 F
+(Dave Starr) 108 339 T
+(Andrew Lare) 324 339 T
+0 10 Q
+(Code 913, NASA/GSFC) 108 320.33 T
+(Applied Research Corp.) 324 320.33 T
+(Greenbelt, MD 20771) 108 307.33 T
+(\050301\051286-9129) 108 294.33 T
+(\050301\051286-9588) 324 294.33 T
+(E-mail: starr@climate.gsfc.nasa.gov) 108 281.33 T
+(lare@eos913c.gsfc.nasa.gov) 324 281.33 T
+1 12 Q
+(5.1.3  CSU SONDES) 72 250 T
+0 F
+(The CSU sonde data were generated in support of the FIRE Phase II Cirrus observation \336eld) 72 224 T
+(experiment held in Cof) 72 210 T
+(feyville, Kansas during the period from 13 November to 06 December) 182.77 210 T
+-0.16 (1991 at the Parsons KG&E Power Plant. The data covered at 37 deg 18 min N and 95 deg 07 min) 72 196 P
+(W) 72 182 T
+(, with a vertical resolution usually of roughly 5-10 m. They were provided to allow a calcula-) 82.22 182 T
+(tion of an approximate location of the sonde.) 72 168 T
+1 F
+(FILES) 72 142 T
+0 F
+(:) 106.68 142 T
+-0.46 (CSU sondes data set includes 16 granules. Each is named ci2_par_yymmdd. Each granule has one) 72 116 P
+-0.44 (or multiple ASCII data \336les with the name \324yymmdd.hhMM\325, where yy is the year) 72 102 P
+-0.44 (, mm the month) 462.75 102 P
+(\050only 1) 72 88 T
+(1 and 12 are valid\051, dd the day) 105.89 88 T
+(, and hhMM the hour and minute when the data were col-) 251.08 88 T
+(lected. Data points with values of -9999 are considered bad.) 72 74 T
+FMENDPAGE
+%%EndPage: "10" 10
+%%Page: "11" 11
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(1) 532.29 34.17 T
+(1) 536 34.17 T
+1 12 Q
+(V) 72 712 T
+(ARIABLES) 79.12 712 T
+0 F
+(:) 140.46 712 T
+(There are 10 variables in a record; variables are separated by white space\050s\051. The Fortran 77 for-) 72 686 T
+(mat for these variables is: \0503I3,F6.2,6F10.3\051. These variables with units and estimated precision) 72 672 T
+(\050in units\051 are listed in order below) 72 658 T
+(.) 234.53 658 T
+1 F
+(V) 108 632 T
+(ariable Name) 115.56 632 T
+(Pr) 324 632 T
+(ecision) 336.44 632 T
+(Min) 396 632 T
+(Max) 450 632 T
+0 10 Q
+(1.) 72 613.33 T
+(julian day \050UTC\051) 108 613.33 T
+(0.0001) 324 613.33 T
+(157) 351.13 613.33 T
+(1) 396 613.33 T
+(365) 450 613.33 T
+(2.) 72 600.33 T
+(hour \050UTC\051) 108 600.33 T
+(1) 324 600.33 T
+(0) 396 600.33 T
+(23) 450 600.33 T
+(3.) 72 587.33 T
+(minute \050UTC\051) 108 587.33 T
+(1) 324 587.33 T
+(0) 396 587.33 T
+(59) 450 587.33 T
+(4.) 72 574.33 T
+(second \050UTC\051) 108 574.33 T
+(0.01) 324 574.33 T
+(0) 396 574.33 T
+(59.99) 450 574.33 T
+(5.) 72 561.33 T
+(geopotential height \050km\051) 108 561.33 T
+(0.01) 324 561.33 T
+(0) 396 561.33 T
+(50) 450 561.33 T
+(6.) 72 548.33 T
+(pressure \050mb\051) 108 548.33 T
+(1) 324 548.33 T
+(5) 396 548.33 T
+(1050) 450 548.33 T
+(7.) 72 535.33 T
+(temperature \050K\051) 108 535.33 T
+(0.5) 324 535.33 T
+(183) 396 535.33 T
+(323) 450 535.33 T
+(8.) 72 522.33 T
+(relative humidity \050%\051) 108 522.33 T
+(3) 324 522.33 T
+(5) 396 522.33 T
+(100) 450 522.33 T
+0 8 Q
+(4) 465 526.33 T
+0 10 Q
+(9.) 72 509.33 T
+(azimuth angle \050deg\051) 108 509.33 T
+(0.5) 324 509.33 T
+(0) 396 509.33 T
+(360) 450 509.33 T
+0 8 Q
+(5) 465 513.33 T
+0 10 Q
+(10.) 72 496.33 T
+(elevation angle \050deg\051) 108 496.33 T
+(0.5) 324 496.33 T
+(-90) 396 496.33 T
+(90) 450 496.33 T
+1 12 Q
+(CONT) 72 471 T
+(ACTS FOR DA) 105.78 471 T
+(T) 185.56 471 T
+(A PRODUCTION INFORMA) 192.67 471 T
+(TION) 347.1 471 T
+0 F
+(Paul F) 108 445 T
+(. Hein) 138.05 445 T
+0 10 Q
+(Department of Atmospheric Science) 108 426.33 T
+(Colorado State University) 108 413.33 T
+(Fort Collins, CO 80523) 108 400.33 T
+(T) 108 387.33 T
+(elephone: \050303\051 491-8714;   F) 113.41 387.33 T
+(AX: \050303\051 491-8449) 232.38 387.33 T
+(Internet: hein@trueno.atmos.colostate.edu) 108 374.33 T
+1 14 Q
+(5.2  SURF) 72 341.67 T
+(ACE OBSER) 132.02 341.67 T
+(V) 212.04 341.67 T
+(A) 220.34 341.67 T
+(TIONS) 229.42 341.67 T
+0 12 Q
+(There are four data sets in this group: csu_prt6, csu_station1, csu_station2, and pams. They are) 72 315 T
+(described in the following four subsections.) 72 301 T
+1 F
+(5.2.1  CSU_PR) 72 269 T
+(T6) 147.58 269 T
+0 F
+-0.14 (The csu_prt6 radiometer data set was produced by the ASD of CSU in support of the FIRE Phase) 72 243 P
+-0.16 (II Cirrus Intensive Field Observations \050IFO\051 conducted in Cof) 72 229 P
+-0.16 (feyville, Kansas. The csu_prt6 data) 368.49 229 P
+(were collected during the period from 18 Nov 1991 \050day 322\051 to 07 Dec 1991 \050day 341\051 at the) 72 215 T
+-0.1 (Parsons KG&E Power Plant, Parsons, Kansas \05037 deg 18 min N and 95 deg 07 min W\051. The PR) 72 201 P
+-0.1 (T) 529.78 201 P
+-0.1 (-) 536 201 P
+(6 is an all-purpose chopped bolometer) 72 187 T
+(. It was operated with a 2 degree \336eld of view pointing ver-) 254.98 187 T
+(tically upward. The \336lter employed narrowed the spectral band to range from about 885 to 945) 72 173 T
+(inverse centimeters \050the infrared window region\051. The PR) 72 159 T
+(T) 348.55 159 T
+(-6 was not run in a continuous mode.) 354.78 159 T
+(When operating, data were sampled every 5 seconds. NOTE that there were temporal gaps in the) 72 145 T
+(data.) 72 131 T
+72 102 540 122 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 110 204 110 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 9 Q
+0 X
+0 0 0 1 0 0 0 K
+(4.  A humidity of 20% is often observed as a minimum value, especially at low pressures and cold temperatures.) 72 96 T
+-0.24 (5.  Because of problems tracking the sonde, the angles of the) 72 82 P
+-0.24 (tracking antenna should be used with caution.  This precision number) 290.13 82 P
+(is only under IDEAL conditions.  Precision varied.) 72 71 T
+FMENDPAGE
+%%EndPage: "11" 11
+%%Page: "12" 12
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(12) 532 34.17 T
+1 12 Q
+(FILES) 72 712 T
+0 F
+(:) 106.68 712 T
+(The csu_prt6 data set includes 15 ASCII data \336les. They are named \324ci2_prt6_yymmdd\325, where) 72 686 T
+(yy is the year) 72 672 T
+(, mm the month \050only 1) 135.84 672 T
+(1 and 12 are valid\051, and dd the day when the data were col-) 248.74 672 T
+(lected.) 72 658 T
+1 F
+(V) 72 632 T
+(ARIABLES) 79.12 632 T
+0 F
+(:) 140.46 632 T
+(There are four variables in a record; variables are separated by white space\050s\051. These variables) 72 606 T
+(with units and estimated precision \050in units\051 are listed in order below) 72 592 T
+(.) 401.52 592 T
+1 F
+(V) 108 572 T
+(ariable Name) 115.56 572 T
+(Pr) 324 572 T
+(ecision) 336.44 572 T
+(Min) 396 572 T
+(Max) 450 572 T
+0 10 Q
+(1.) 72 558.33 T
+(julian day \050UTC\051) 108 558.33 T
+(0.0001) 324 558.33 T
+(157) 351.13 558.33 T
+(1) 396 558.33 T
+(365) 450 558.33 T
+(2.) 72 545.33 T
+(hour) 108 545.33 T
+(-minute \050UTC\051) 126.13 545.33 T
+(1) 324 545.33 T
+(0) 396 545.33 T
+(2359) 450 545.33 T
+(3.) 72 532.33 T
+(second \050UTC\051) 108 532.33 T
+(0.1) 324 532.33 T
+(0) 396 532.33 T
+(59.9) 450 532.33 T
+(4.) 72 519.33 T
+(equivalent brightness temperature \050K\051) 108 519.33 T
+(1) 324 519.33 T
+(150) 396 519.33 T
+(300) 450 519.33 T
+1 12 Q
+(CONT) 72 494 T
+(ACTS FOR DA) 105.78 494 T
+(T) 185.56 494 T
+(A PRODUCTION INFORMA) 192.67 494 T
+(TION) 347.1 494 T
+0 F
+(Same as the CSU sondes contact.) 72 468 T
+1 F
+(5.2.2  CSU_ST) 72 436 T
+(A) 145.79 436 T
+(TION1:) 153.56 436 T
+0 F
+(The csu_station1 surface radiation data set was produced by the ASD of CSU in support of the) 72 410 T
+(FIRE Phase II Cirrus IFO conducted in Cof) 72 396 T
+(feyville, Kansas. CSU Station 1 point data were col-) 280.76 396 T
+-0.09 (lected every 2 minutes for the period from 1) 72 382 P
+-0.09 (1 Nov 1991 \050day 315\051 to 8 Dec 1991 \050day 342\051 at the) 282.83 382 P
+-0.3 (Parsons KG&E Power Plant) 72 368 P
+-0.3 (Parsons, Kansas \05037 deg 18 min N and 95 deg 07 min W\051. NOTE the) 209.48 368 P
+(2 minute values were instantaneous readings.) 72 354 T
+1 F
+(FILES) 72 328 T
+0 F
+(:) 106.68 328 T
+(The csu_station1 data set comprises 29 ASCII \336les. Each \336le is named \324ci2_s1kge_yymmdd\325,) 72 302 T
+(where yy is the year) 72 288 T
+(, mm the month, and dd the day when the data were collected. Missing data) 168.16 288 T
+(and extreme values are marked with -9999.0.) 72 274 T
+1 F
+(V) 72 248 T
+(ARIABLES) 79.12 248 T
+0 F
+(:) 140.46 248 T
+-0.27 (A total of 19 variables in a record; variables are separated by white space\050s\051. These variables with) 72 222 P
+(units and estimated precision \050in units\051 are listed in order below) 72 208 T
+(.) 377.18 208 T
+1 F
+(V) 108 188 T
+(ariable Name) 115.56 188 T
+(Pr) 324 188 T
+(ecision) 336.44 188 T
+(Min) 396 188 T
+(Max) 450 188 T
+0 11 Q
+(1.) 72 173.67 T
+(time \050fraction of julian day) 108 173.67 T
+(, UTC\051) 225.82 173.67 T
+(0.0001) 324 173.67 T
+(157) 353.84 173.67 T
+(1) 396 173.67 T
+(365) 450 173.67 T
+0 10 Q
+(2.) 72 160.33 T
+(wind speed \050m/s\051) 108 160.33 T
+(0.5) 324 160.33 T
+(0) 396 160.33 T
+(100) 450 160.33 T
+(3.) 72 147.33 T
+(wind direction \050degrees\051) 108 147.33 T
+(5.0) 324 147.33 T
+(0) 396 147.33 T
+(360) 450 147.33 T
+(4.) 72 134.33 T
+(temperature \050C\051) 108 134.33 T
+(0.2) 324 134.33 T
+(-40) 396 134.33 T
+(40) 450 134.33 T
+0 8 Q
+(6) 460 138.33 T
+0 10 Q
+(5.) 72 121.33 T
+(relative humidity \050%\051) 108 121.33 T
+(5.0) 324 121.33 T
+(0) 396 121.33 T
+(100) 450 121.33 T
+72 88 540 108 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 96 204 96 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 9 Q
+0 X
+0 0 0 1 0 0 0 K
+-0.1 (6.  Some relative humidity data have values above 100%, but within the precision of the instrument and data. Other variables may) 72 82 P
+(have similar values exceeding the min/max limits.) 72 71 T
+FMENDPAGE
+%%EndPage: "12" 12
+%%Page: "13" 13
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(13) 532 34.17 T
+0 10 Q
+(6.) 72 713.33 T
+(solar total irradiance \050W/m2\051) 108 713.33 T
+(5.0) 324 713.33 T
+(0) 396 713.33 T
+(1500) 450 713.33 T
+(7.) 72 700.33 T
+(near infrared irradiance \050W/m2\051) 108 700.33 T
+(5.0) 324 700.33 T
+(0) 396 700.33 T
+(1500) 450 700.33 T
+(8.) 72 687.33 T
+(infrared irradiance \050W/m2\051) 108 687.33 T
+(5.0) 324 687.33 T
+(0) 396 687.33 T
+(600) 450 687.33 T
+(9.) 72 674.33 T
+(dome temperature \050K\051) 108 674.33 T
+(0.2) 324 674.33 T
+(233) 396 674.33 T
+(313) 450 674.33 T
+(10.) 72 661.33 T
+(sink temperature \050K\051) 108 661.33 T
+(0.2) 324 661.33 T
+(233) 396 661.33 T
+(313) 450 661.33 T
+(1) 72 648.33 T
+(1.) 76.63 648.33 T
+(direct solar - yellow \336lter \050W/m2\051 [20 sec]) 108 648.33 T
+(5.0) 324 648.33 T
+(0) 396 648.33 T
+(1500) 450 648.33 T
+(12.) 72 635.33 T
+(direct solar - red \336lter \050W/m2\051 [43 sec]) 108 635.33 T
+(5.0) 324 635.33 T
+(0) 396 635.33 T
+(1500) 450 635.33 T
+(13.) 72 622.33 T
+(direct solar - dark red \336lter \050W/m2\051 [67 sec]) 108 622.33 T
+(5.0) 324 622.33 T
+(0) 396 622.33 T
+(1500) 450 622.33 T
+(14.) 72 609.33 T
+(direct solar - no \336lter \050W/m2\051 [90 sec]) 108 609.33 T
+(5.0) 324 609.33 T
+(0) 396 609.33 T
+(1500) 450 609.33 T
+(15.) 72 596.33 T
+(direct solar - no \336lter \050W/m2\051 [20 sec]) 108 596.33 T
+(5.0) 324 596.33 T
+(0) 396 596.33 T
+(1500) 450 596.33 T
+(16.) 72 583.33 T
+(direct solar - no \336lter \050W/m2\051 [43 sec]) 108 583.33 T
+(5.0) 324 583.33 T
+(0) 396 583.33 T
+(1500) 450 583.33 T
+(17.) 72 570.33 T
+(direct solar - no \336lter \050W/m2\051 [67 sec]) 108 570.33 T
+(5.0) 324 570.33 T
+(0) 396 570.33 T
+(1500) 450 570.33 T
+(18.) 72 557.33 T
+(direct solar - no \336lter \050W/m2\051 [90 sec]) 108 557.33 T
+(5.0) 324 557.33 T
+(0) 396 557.33 T
+(1500) 450 557.33 T
+(19.) 72 544.33 T
+(hour) 108 544.33 T
+(-minute \050hhmm UTC\051) 126.13 544.33 T
+(0.16667) 324 544.33 T
+(0) 396 544.33 T
+(240) 450 544.33 T
+0 12 Q
+(NOTE: V) 72 519 T
+(ariables 14 and 18 have the same name. The data producer explained as follows: There) 117.66 519 T
+(were two pyrheliometers tracking the sun; one had a \336lter wheel and the other did not. The two) 72 505 T
+(identical variables are dif) 72 491 T
+(ferent because they come from 2 dif) 193.42 491 T
+(ferent pyrheliometers though they) 366.48 491 T
+-0.04 (are measuring the same thing at the same time. The second variable is the non-\336ltered pyrheliom-) 72 477 P
+(eter) 72 463 T
+(.) 89.33 463 T
+1 F
+(INSTRUMENT) 72 437 T
+(A) 152.45 437 T
+(TION) 160.22 437 T
+0 F
+(:) 190.9 437 T
+2 F
+(\245) 72 417.67 T
+0 11 Q
+(Campbell data logger -- time, hour) 85.75 417.67 T
+(-minute) 238.28 417.67 T
+2 12 Q
+(\245) 72 402.67 T
+0 11 Q
+(R.M. Y) 85.75 402.67 T
+(oung W) 117.95 402.67 T
+(ind Sensor -- wind speed and direction) 152.65 402.67 T
+2 12 Q
+(\245) 72 387.67 T
+0 11 Q
+(Campbell Model 207 Probe -- temperature and relative humidity) 85.75 387.67 T
+2 12 Q
+(\245) 72 372.67 T
+0 11 Q
+(Eppley Pyranometer -- solar total and near infrared irradiance \050.28-2.8 microns\051) 85.75 372.67 T
+2 12 Q
+(\245) 72 357.67 T
+0 11 Q
+(Eppley Pyr) 85.75 357.67 T
+(geometer -- infrared irradiance \0504-50 microns\051, and dome and sink temperatures) 134.74 357.67 T
+2 12 Q
+(\245) 72 342.67 T
+0 11 Q
+-0.12 (Eppley Pyrheliometer -- direct solar irradiance \05010 deg fov  \050no \336lter -- .28-2.8 microns; yellow \336lter --) 85.75 342.67 P
+(.55-2.8 microns; red \336lter -- .695-2.8 microns; dark red \336lter -- 1.0-2.8 microns\051\051) 85.75 329.67 T
+1 12 Q
+(CONT) 72 304 T
+(ACTS FOR DA) 105.78 304 T
+(T) 185.56 304 T
+(A PRODUCTION INFORMA) 192.67 304 T
+(TION) 347.1 304 T
+0 F
+(Same as the CSU sondes contact.) 72 278 T
+1 F
+(5.2.3  CSU_ST) 72 246 T
+(A) 145.79 246 T
+(TION2:) 153.56 246 T
+0 F
+(The csu_station2 surface radiation data set was collected every 2 minutes for the period from) 72 220 T
+(November 13 through December 8, 1991 at T) 72 206 T
+(ri-City Airport, Parsons, Kansas, 37 deg 20 min N,) 290.87 206 T
+(95 deg 30 min 30 sec W) 72 192 T
+(. NOTE the 2 minute values were instantaneous readings.) 187.55 192 T
+1 F
+(FILES) 72 166 T
+0 F
+(:) 106.68 166 T
+-0.29 (The csu_station2 data set consists of 26 ASCII \336les. Each data \336le is named \324ci2_s2tri_yymmdd\325,) 72 140 P
+(where yy is the year) 72 126 T
+(, mm the month, and dd the day when the data were collected. Missing data) 168.16 126 T
+(and extreme values are marked with -9999.0.) 72 112 T
+1 F
+(V) 72 86 T
+(ARIABLES) 79.12 86 T
+0 F
+(:) 140.46 86 T
+FMENDPAGE
+%%EndPage: "13" 13
+%%Page: "14" 14
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(14) 532 34.17 T
+0 12 Q
+-0.24 (A total of 1) 72 712 P
+-0.24 (1 variables in a record; variables are separated by white space\050s\051. These variables with) 125.83 712 P
+(units and estimated precision \050in units\051 are listed in order below) 72 698 T
+(.) 377.18 698 T
+1 F
+(V) 108 678 T
+(ariable Name) 115.56 678 T
+(Pr) 324 678 T
+(ecision) 336.44 678 T
+(Min) 396 678 T
+(Max) 450 678 T
+0 11 Q
+(1.) 72 663.67 T
+(time \050fraction of julian day) 108 663.67 T
+(, UTC\051) 225.82 663.67 T
+(0.0001) 324 663.67 T
+(157) 353.84 663.67 T
+(0) 396 663.67 T
+(367) 450 663.67 T
+0 10 Q
+(2.) 72 650.33 T
+(wind speed \050m/s\051) 108 650.33 T
+(0.5) 324 650.33 T
+(0) 396 650.33 T
+(100) 450 650.33 T
+(3.) 72 637.33 T
+(wind direction \050degrees\051) 108 637.33 T
+(5.0) 324 637.33 T
+(0) 396 637.33 T
+(360) 450 637.33 T
+(4.) 72 624.33 T
+(temperature \050C\051) 108 624.33 T
+(0.2) 324 624.33 T
+(-40) 396 624.33 T
+(40) 450 624.33 T
+(5.) 72 611.33 T
+(relative humidity \050%\051) 108 611.33 T
+(5.0) 324 611.33 T
+(0) 396 611.33 T
+(100) 450 611.33 T
+0 8 Q
+(7) 465 615.33 T
+0 10 Q
+(6.) 72 598.33 T
+(solar total irradiance \050W/m2\051) 108 598.33 T
+(5.0) 324 598.33 T
+(0) 396 598.33 T
+(1500) 450 598.33 T
+(7.) 72 585.33 T
+(near infrared irradiance \050W/m2\051) 108 585.33 T
+(5.0) 324 585.33 T
+(0) 396 585.33 T
+(1500) 450 585.33 T
+(8.) 72 572.33 T
+(infrared irradiance \050W/m2\051) 108 572.33 T
+(5.0) 324 572.33 T
+(0) 396 572.33 T
+(600) 450 572.33 T
+(9.) 72 559.33 T
+(dome temperature \050K\051) 108 559.33 T
+(0.2) 324 559.33 T
+(233) 396 559.33 T
+(313) 450 559.33 T
+(10.) 72 546.33 T
+(sink temperature \050K\051) 108 546.33 T
+(0.2) 324 546.33 T
+(233) 396 546.33 T
+(313) 450 546.33 T
+(1) 72 533.33 T
+(1.) 76.63 533.33 T
+(hour) 108 533.33 T
+(-minute \050hhmm UTC\051) 126.13 533.33 T
+(0.16667) 324 533.33 T
+(0) 396 533.33 T
+(2400) 450 533.33 T
+1 12 Q
+(INSTRUMENT) 72 508 T
+(A) 152.45 508 T
+(TION:) 160.22 508 T
+0 F
+(The csu_staion2 instruments include all but the Eppley Pyrheliometer as in the csu_station1) 72 482 T
+(instruments.) 72 468 T
+1 F
+(CONT) 72 442 T
+(ACTS FOR DA) 105.78 442 T
+(T) 185.56 442 T
+(A PRODUCTION INFORMA) 192.67 442 T
+(TION) 347.1 442 T
+0 F
+(Same as the CSU sondes contact.) 72 416 T
+1 F
+(5.2.4  P) 72 384 T
+(AMS) 108.44 384 T
+0 F
+(The pams data set was taken during the FIRE Cirrus 2 Experiment from the period 13 Nov 1991) 72 358 T
+(to 07 Dec 1991 at six sites. Since FIRE Cirrus 2 Experiment was approximately 25 days long,) 72 344 T
+(there were 25 data \336les for each of 6 sites where P) 72 330 T
+(AMS data were collected.) 312.49 330 T
+1 F
+(FILES) 72 304 T
+0 F
+(:) 106.68 304 T
+(The pams data set consists of 6 granules which represents 6 sites. Each granule is named) 72 278 T
+(ci2_pamX_91) 72 264 T
+(1) 139.55 264 T
+(1) 145.1 264 T
+(13_1207, where X is the site number) 150.66 264 T
+(, 91 the year) 327.16 264 T
+(, 1) 385.99 264 T
+(1) 397.55 264 T
+(13 the beginning date, and) 403.1 264 T
+-0.04 (1207 the end date. Each granule has 25 ASCII \336les. Each \336le is named \324stXmmmdd.data\325, where) 72 250 P
+-0.36 (X is the same site number as in the granule, mmm \050either nov or dec\051 the month, and dd the day of) 72 236 P
+(the data being collected. Each \336le starts with a header line, followed by 1440 data records. Miss-) 72 222 T
+(ing value code is -99.00 for all parameters. The Fortran format for the header line is:) 72 208 T
+(\050a8,i2,2x,3\050i2\051,3\050f10.4\051\051, and the Fortran format for the variables is: \050i4,2x,12\050f7.2,1x\051,2x,12\050i2\051\051) 72 194 T
+1 F
+(V) 72 168 T
+(ARIABLES) 79.12 168 T
+0 F
+(:) 140.46 168 T
+(Each record has an observation # \050record #\051, 12 variables, and 12 quality \337ags \050QA\051) 72 142 T
+0 9.6 Q
+(8) 474.56 146.8 T
+0 12 Q
+( for each of) 479.36 142 T
+(the 12 variables. These variables with the units are listed in order below) 72 128 T
+(.) 416.16 128 T
+72 88 540 108 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 96 204 96 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 9 Q
+0 X
+0 0 0 1 0 0 0 K
+-0.1 (7.  Some relative humidity data have values above 100%, but within the precision of the instrument and data. Other variables may) 72 82 P
+(have similar values exceeding the min/max limits.) 72 71 T
+FMENDPAGE
+%%EndPage: "14" 14
+%%Page: "15" 15
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(15) 532 34.17 T
+1 12 Q
+(V) 108 712 T
+(ariable Name) 115.56 712 T
+0 11 Q
+(1.) 72 697.67 T
+(pressure \050mb\051) 108 697.67 T
+0 10 Q
+(2.) 72 684.33 T
+(temperature \050C\051) 108 684.33 T
+(3.) 72 671.33 T
+(wet bulb temperature \050C\051) 108 671.33 T
+(4.) 72 658.33 T
+(relative humidity \050percent\051) 108 658.33 T
+(5.) 72 645.33 T
+(mixing ratio \050g/kg\051) 108 645.33 T
+(6.) 72 632.33 T
+(potential temperature \050K\051) 108 632.33 T
+(7.) 72 619.33 T
+(u-wind component \050m/s\051) 108 619.33 T
+(8.) 72 606.33 T
+(v-wind component \050m/s\051) 108 606.33 T
+(9.) 72 593.33 T
+(avg. wind speed \050m/s\051) 108 593.33 T
+(10.) 72 580.33 T
+(wind direction \050degrees\051) 108 580.33 T
+(1) 72 567.33 T
+(1.) 76.63 567.33 T
+(maximum wind speed within the minute \050m/s\051) 108 567.33 T
+(12.) 72 554.33 T
+(downward solar irradiance \050W/m**2\051) 108 554.33 T
+1 12 Q
+(CONT) 72 529 T
+(ACTS FOR DA) 105.78 529 T
+(T) 185.56 529 T
+(A PRODUCTION INFORMA) 192.67 529 T
+(TION) 347.1 529 T
+0 F
+(Same as the NWS_IN_SONDE contact.) 72 503 T
+1 14 Q
+(5.3  LIDAR) 72 469.67 T
+0 12 Q
+(There are three data sets in this group: doppler lidar) 72 443 T
+(, larc8_lidar) 319.8 443 T
+(, and raman_lidar) 377.3 443 T
+(. Since) 460.96 443 T
+(larc8_lidar data are image data, it is not described here. The doppler lidar data set is described in) 72 429 T
+(subsection 5.3.1, and the raman lidar data set is described in subsection 5.3.2.) 72 415 T
+1 F
+(5.3.1  DOPPLER LIDAR) 72 383 T
+0 F
+-0.16 (The doppler lidar data set included wind pro\336les derived by the V) 72 357 P
+-0.16 (AD method for the FIRE Cirrus) 384.97 357 P
+-0.35 (2 top 5 priority days \05021, 25, 28, 30 of Nov 1991, and Dec. 5, 1991\051. The doppler lidar experiment) 72 343 P
+(objective was to obtain lidar measurements of relative backscatter signal intensity and radial) 72 329 T
+(velocity from cirrus clouds to study their microphysical and radiative properties. This data set) 72 315 T
+(provides V) 72 301 T
+(ertical pro\336les \050approx. 1.5 - 20.0 km AGL\051 data.) 123.66 301 T
+1 F
+(FILES:) 72 275 T
+0 F
+(This data set comprises six ASCII \336les in tabular format. Five of them are named) 72 249 T
+(\324\336re2vadDDMMMa\325, where DD is the day of month, MMM the month \050either nov or dec\051, and) 72 235 T
+(\324a\325 indicating ASCII \336le. The sixth \336le is named \324\336re2vad91a\325, which contains the entire year) 72 221 T
+(1991\325) 72 207 T
+(s data. Each ASCII \336le is derived from two corresponding binary \336les, i.e., directory and) 99.34 207 T
+72 175 540 195 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 183 204 183 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 9 Q
+0 X
+0 0 0 1 0 0 0 K
+(8.  The 12 quality \337ags for the 12 variables have one of the \336ve values \0500, 2, 7, 8, and 9\051. These values meanings are:) 72 169 T
+(NCAR derived variable quality \337ags values are:) 72 155 T
+(0 = good datum) 252 155 T
+(2 = outlier \050possible bad data\051) 252 141 T
+(9 = missing or bad datum) 252 127 T
+(D. Starr and D. Case\325) 72 113 T
+(s derived parameter quality \337ags values:) 148.99 113 T
+(0 = good datum \050let NCAR \337ag remain the same\051) 90 99 T
+(8 = suspected spurious data that NCAR \337agged as a good datum) 90 85 T
+(7 = suspected spurious data that NCAR gave a QA of 2 \050this QA # has only been applied to solar irradiance data\051) 90 71 T
+FMENDPAGE
+%%EndPage: "15" 15
+%%Page: "16" 16
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(16) 532 34.17 T
+0 12 Q
+-0.31 (data \336les. Thus, an ASCII \336le contains the directory of all pro\336les in this \336le and the pro\336les data.) 72 712 P
+(Each pro\336le starts with one directory line, followed by two header lines, followed by multiple) 72 698 T
+(pro\336le records.) 72 684 T
+1 F
+(V) 72 658 T
+(ARIABLES:) 79.12 658 T
+0 F
+-0.01 (There are 12 variables in the directory section, and nine variables in a pro\336le record. The Fortran) 72 632 P
+-0.14 (format for the directory variables is: \050I5, 2I8,3\050F8.2\051,4I4,2I6\051, and format for the pro\336le variables) 72 618 P
+(is: \0507\050F9.3\051, I4,x,F9.3\051. The variable values in the directory line should be the same as the corre-) 72 604 T
+(sponding line de\336ned in the directory of pro\336les section. The variables for the directory and the) 72 590 T
+(pro\336le record are listed in order below) 72 576 T
+(.) 255.84 576 T
+1 F
+(V) 108 556 T
+(ariable Name \050for dir) 115.56 556 T
+(ectory\051) 224.99 556 T
+0 10 Q
+(1.) 72 542.33 T
+(pro\336le number) 108 542.33 T
+(2.) 72 529.33 T
+(date) 108 529.33 T
+(3.) 72 516.33 T
+(time) 108 516.33 T
+(4.) 72 503.33 T
+(elevation angle) 108 503.33 T
+(5.) 72 490.33 T
+(begin azimuth) 108 490.33 T
+(6.) 72 477.33 T
+(end azimuth) 108 477.33 T
+(7.) 72 464.33 T
+(sweep number) 108 464.33 T
+(8.) 72 451.33 T
+(sweep direction) 108 451.33 T
+(9.) 72 438.33 T
+(quality \337ag) 108 438.33 T
+(10.) 72 425.33 T
+(site number) 108 425.33 T
+(1) 72 412.33 T
+(1.) 76.63 412.33 T
+(begin record number in data \336le) 108 412.33 T
+(12.) 72 399.33 T
+(end record number in data \336le) 108 399.33 T
+1 12 Q
+(V) 108 382 T
+(ariable Name \050for pr) 115.56 382 T
+(o\336le r) 221.65 382 T
+(ecord\051) 251.1 382 T
+0 10 Q
+(1.) 72 368.33 T
+(altitude \050km above ground level\051) 108 368.33 T
+(2.) 72 355.33 T
+(wind speed \050m/s\051) 108 355.33 T
+(3.) 72 342.33 T
+(wind direction \050degrees\051) 108 342.33 T
+(4.) 72 329.33 T
+(signal to noise ratio) 108 329.33 T
+(5.) 72 316.33 T
+(percent of good points \050%\051) 108 316.33 T
+(6.) 72 303.33 T
+(rms error) 108 303.33 T
+(7.) 72 290.33 T
+(vertical velocity diver) 108 290.33 T
+(gence \050m/s\051) 195.58 290.33 T
+(8.) 72 277.33 T
+(quality of each data value) 108 277.33 T
+(9.) 72 264.33 T
+(ener) 108 264.33 T
+(gy at each altitude.) 125.03 264.33 T
+1 12 Q
+(INSTRUMENT) 72 239 T
+(A) 152.45 239 T
+(TION) 160.22 239 T
+0 F
+(The doppler lidar is a pulsed, CO2, coherent, mobile laser radar system. Although the principal) 72 213 T
+(wavelength of operation is 10.6 micrometers, any wavelength between approximately 9 and 1) 72 199 T
+(1) 521.47 199 T
+-0.25 (micrometers may be used. The lidar system scanning capability includes elevation angles ranging) 72 185 P
+(from -5 through 90 degrees and full azimuth sweeps of 0 through 360 degrees. A pro\336le is sam-) 72 171 T
+(pled at every 1/2 hour during intensive mode, and at every 2 hours during monitoring mode.) 72 157 T
+1 F
+(CONT) 72 131 T
+(ACTS FOR DA) 105.78 131 T
+(T) 185.56 131 T
+(A PRODUCTION INFORMA) 192.67 131 T
+(TION) 347.1 131 T
+0 F
+(Janet Intrieri) 108 105 T
+0 10 Q
+(NOAA/ERL/WPL) 108 86.33 T
+(R/E/WP2) 108 73.33 T
+FMENDPAGE
+%%EndPage: "16" 16
+%%Page: "17" 17
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(17) 532 34.17 T
+0 10 Q
+(325 Broadway) 108 713.33 T
+(Boulder) 108 700.33 T
+(, CO 80303) 139.82 700.33 T
+(T) 108 687.33 T
+(elephone: \050303\051 497-6594; FTS: 320-6594; F) 113.41 687.33 T
+(AX: \050303\051 497-5318) 293.5 687.33 T
+(Internet: jintrieri@wpl.erl.gov) 108 674.33 T
+1 12 Q
+(5.3.2  RAMAN_LIDAR) 72 643 T
+0 F
+(GSFC raman_lidar water vapor mixing ratio \050wvmr\051 data with altitudes and times were collected) 72 617 T
+(for the period from 13 Nov 1991 to 07 Dec 1991. Each night consists of a series of one minute) 72 603 T
+(pro\336les. Data is summed for one minute in the detectors and saved to a \336le. For the 10 minute) 72 589 T
+(averaged data, the data is summed for 10 minutes before the calculations are performed. Each) 72 575 T
+(pro\336le has 75 meter resolution from 0.4135 to 10.299 kilometers. Zero \0500\051 km means sea level.) 72 561 T
+(The site altitude is 0.229 km and the \336rst data point is at 0.1845 km above ground level.) 72 547 T
+1 F
+(FILES) 72 521 T
+0 F
+(:) 106.68 521 T
+(Raman Lidar data set consists of 28 ASCII \336les. Each is named ci2_wvYYMMDD_Xm, where) 72 495 T
+(YY is the year) 72 481 T
+(, MM the month, and DD the day when the data were collected. X in the \336le name) 141.17 481 T
+(can only be either 1 or 10, indicating the 1 minute summed data or 10 minutes averaged data.) 72 467 T
+(Each \336le starts with two header lines. The \336rst header line contains the beginning and ending) 72 453 T
+(time, which have the format of YYYYMMDDhhmmss, where YY is the year) 72 439 T
+(, MM the month,) 443.78 439 T
+(DD the day) 72 425 T
+(, hh the hour) 126.54 425 T
+(, mm the minute, and ss the second of data observed in this \336le. The sec-) 186.72 425 T
+(ond header line contains the description of viewing geometry in \336le and the range of the water) 72 411 T
+(vapor mix ratio. The next line is the \322number of pro\336les\323 value, which can occur only once in) 72 397 T
+(each \336le. The \322time of pro\336le\323 and the \322number of heights\323 follow immediately) 72 383 T
+(. If there are X) 454.82 383 T
+(\322number of heights\323, there will be X occurrences of the \322height\323, \322water vapor mix ratio\323, and) 72 369 T
+(\322water vapor mix ratio error\323 lines following it. Then, the next \322time of pro\336le\323 follows. This) 72 355 T
+(repeats over the \322number of pro\336les\323 times. Data with values of 0 \050zero\051 are missing data.) 72 341 T
+1 F
+(V) 72 315 T
+(ARIABLES) 79.12 315 T
+0 F
+(:) 140.46 315 T
+(There are six variables in the data. These variables with units and estimated precision \050in units\051) 72 289 T
+(are listed in order below) 72 275 T
+(.) 187.86 275 T
+1 F
+(V) 108 255 T
+(ariable Name) 115.56 255 T
+(Pr) 324 255 T
+(ecision) 336.44 255 T
+(Min) 396 255 T
+(Max) 450 255 T
+0 11 Q
+(1.) 72 240.67 T
+(num of pro\336les) 108 240.67 T
+(1) 324 240.67 T
+(1) 396 240.67 T
+(710) 450 240.67 T
+0 10 Q
+(2.) 72 227.33 T
+(time of pro\336le \050ut-seconds\051) 108 227.33 T
+(60) 324 227.33 T
+(0) 396 227.33 T
+(86400) 450 227.33 T
+(3.) 72 214.33 T
+(number of heights \050lines\051) 108 214.33 T
+(1) 324 214.33 T
+(1) 396 214.33 T
+(131) 450 214.33 T
+(4.) 72 201.33 T
+(height - altitude \050meters\051) 108 201.33 T
+(75) 324 201.33 T
+(10) 396 201.33 T
+(75) 450 201.33 T
+(5.) 72 188.33 T
+(water vapor mix ratio \050g/kg\051) 108 188.33 T
+(0) 324 188.33 T
+(0) 396 188.33 T
+(20) 450 188.33 T
+(6.) 72 175.33 T
+(water vapor mix ratio error \050g/kg\051) 108 175.33 T
+(0) 324 175.33 T
+(0) 396 175.33 T
+(1) 450 175.33 T
+0 12 Q
+(The wvmr error in the data is a function of altitude. The data is believed to be good up to 10.229) 72 150 T
+(km MSL, which is all that is sent.) 72 136 T
+1 F
+(INSTRUMENT) 72 110 T
+(A) 152.45 110 T
+(TION) 160.22 110 T
+0 F
+(The GSFC water vapor raman lidar uses an excimer \050XEF\051 laser at 351 nm. The telescope \336lters) 72 84 T
+(out the laser wavelength and the raman shifted nitrogen, oxygen and water vapor wavelengths.) 72 70 T
+FMENDPAGE
+%%EndPage: "17" 17
+%%Page: "18" 18
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(18) 532 34.17 T
+0 12 Q
+-0.35 (The water vapor to nitrogen ratio is used to calculate the water vapor mixing ratio. Pro\336les of data) 72 712 P
+-0.16 (are collected every minute with a vertical spatial resolution of 75 meters. At start-up, all channels) 72 698 P
+-0.11 (receive the same signal from the telescope to determine the relative sensitivity between channels.) 72 684 P
+(Then, the water vapor over nitrogen raman shifted signals are proportional to the water vapor) 72 670 T
+(mixing ratio. The water/nitrogen ratio is calibrated to radiosondes coincident during this time to) 72 656 T
+(determine the constant to convert the water/nitrogen ratio to water vapor mixing ratio.) 72 642 T
+1 F
+(CONT) 72 616 T
+(ACTS FOR DA) 105.78 616 T
+(T) 185.56 616 T
+(A PRODUCTION INFORMA) 192.67 616 T
+(TION) 347.1 616 T
+0 F
+(Keith Evans) 108 590 T
+0 10 Q
+(CODE 917, NASA/GODDARD SP) 108 571.33 T
+(ACE FLIGHT CENTER) 250.41 571.33 T
+(Greenbelt, MD 20771) 108 558.33 T
+(\050301\051 286-91) 108 545.33 T
+(13) 160.12 545.33 T
+(keith@raman5.gsfc.nasa.gov) 108 532.33 T
+1 14 Q
+(5.4  WIND PROFILES) 72 499.67 T
+0 12 Q
+-0.33 (There are two FIRE Cirrus 2 data sets in this group: CSU wind pro\336les, and NOAA wind pro\336les.) 72 473 P
+(They are described in subsection 5.4.1 and subsection 5.4.2, respectively) 72 459 T
+(.) 420.49 459 T
+1 F
+(5.4.1  CSU W) 72 427 T
+(ind Pr) 140.78 427 T
+(o\336les) 172.91 427 T
+0 F
+-0.33 (The CSU wind pro\336les data set was produced by the ASD of CSU in support of the FIRE Phase II) 72 401 P
+(Cirrus IFO conducted in Cof) 72 387 T
+(feyville, Kansas. The CSU wind pro\336les data were single cycle data) 209.77 387 T
+-0.28 (collected for the period from 12 Nov 1991 to 7 Dec 1991 \050day 342\051 at Parsons, Kansas \05037 deg 18) 72 373 P
+(min N and 95 deg 07 min W\051. This data had been through a quality control program using the) 72 359 T
+-0.45 (W) 72 345 P
+-0.45 (eber and W) 82.37 345 P
+-0.45 (uertz QC subroutines. Thresholds of 4m/s and 5% size of lar) 136.3 345 P
+-0.45 (gest pattern was used on) 421.92 345 P
+-0.03 (combined-low/high-mode-opposing-beams pro\336le. Note that vertical velocity was assumed to be) 72 331 P
+(zero. \05028% of the data was marked as \322bad\323.\051) 72 317 T
+1 F
+(FILES) 72 291 T
+0 F
+(:) 106.68 291 T
+(The CSU wind pro\336les data consists of 26 granules. Each granule is named) 72 265 T
+(ci2_csuwnd_yymmdd. Each granule has one or multiple ASCII data \336les. The data \336le is named) 72 251 T
+(\324yymmddhh.wp\325, where yy is the year) 72 237 T
+(, mm the month, dd the day) 254.48 237 T
+(, and hh the hour the data were) 385.7 237 T
+(collected. Each \336le starts with a header line indicating the time, followed by the CSU wind pro-) 72 223 T
+(\336les data. The header line has the format YYMMDDHH, where YY is the year) 72 209 T
+(, MM the month,) 451.09 209 T
+(DD the day) 72 195 T
+(, and HH the hour \050UTC\051 of this data \336le. The Fortran format for the header is:) 126.54 195 T
+(\0504I2\051.Data with values of -9999.0 in u-wind and v-wind are bad data.) 72 181 T
+1 F
+(V) 72 155 T
+(ARIABLES) 79.12 155 T
+0 F
+(:) 140.46 155 T
+(There are four variables in the data; variables are separated by white spaces. The Fortran format) 72 129 T
+(for the data variables is: \050I2,F7.3,2F10.3\051. These variables with units and estimated precision \050in) 72 115 T
+(units\051 are listed in order below) 72 101 T
+(.) 218.2 101 T
+1 F
+(V) 108 81 T
+(ariable Name) 115.56 81 T
+(Pr) 324 81 T
+(ecision) 336.44 81 T
+(Min) 396 81 T
+(Max) 450 81 T
+0 10 Q
+(1.) 72 67.33 T
+(minute) 108 67.33 T
+(1) 324 67.33 T
+(0) 396 67.33 T
+(59) 450 67.33 T
+FMENDPAGE
+%%EndPage: "18" 18
+%%Page: "19" 19
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(19) 532 34.17 T
+0 10 Q
+(2.) 72 713.33 T
+(height \050km above MSL\051) 108 713.33 T
+(n/a) 324 713.33 T
+(n/a) 396 713.33 T
+(n/a) 450 713.33 T
+(3.) 72 700.33 T
+(u-wind \050m/s\051) 108 700.33 T
+(n/a) 324 700.33 T
+(n/a) 396 700.33 T
+(n/a) 450 700.33 T
+(4.) 72 687.33 T
+(v-wind \050m/s\051) 108 687.33 T
+(n/a) 324 687.33 T
+(n/a) 396 687.33 T
+(n/a) 450 687.33 T
+1 12 Q
+(CONT) 72 662 T
+(ACTS FOR DA) 105.78 662 T
+(T) 185.56 662 T
+(A PRODUCTION INFORMA) 192.67 662 T
+(TION) 347.1 662 T
+0 F
+(Same as the CSU sondes contact.) 72 636 T
+1 F
+(5.4.2  NOAA W) 72 604 T
+(ind Pr) 152.11 604 T
+(o\336les) 184.24 604 T
+0 F
+(The NOAA wind pro\336les data were collected during the period from Nov) 72 578 T
+(. 13, 1991 to Dec. 7,) 424.81 578 T
+-0.26 (1991. The original NOAA wind pro\336les data were stored in the Enhanced Binary Universal Form) 72 564 P
+(\050EBUF\051 format. These data \336les were processed and provided in ASCII format by the Langley) 72 550 T
+-0.11 (DAAC.   The same data in EBUF format are available of) 72 536 P
+-0.11 (f-line.) 343.88 536 P
+3 F
+-0.11 (NOTE: The conversion program) 375.77 536 P
+(assumed that the height increment on the observation station remains the same in a wind pro-) 72 522 T
+(\336les record) 72 508 T
+0 F
+(. The size of the ASCII NOAA wind pro\336les \336les range from 17 to 37 MB size.) 127 508 T
+(Expect to take a while to read the data.) 72 494 T
+1 F
+(FILES) 72 468 T
+0 F
+(:) 106.68 468 T
+-0.08 (The NOAA wind pro\336les data set consists of 25 ASCII \336les. A NOAA wind pro\336les \336le has mul-) 72 442 P
+(tiple wind pro\336les records. Each \336le is named ci2_noawnd_yymmdd_6m, where yy is the year) 72 428 T
+(,) 525.79 428 T
+(mm the month, and dd the day when the data were collected. A wind pro\336les record starts with) 72 414 T
+-0.31 (three header lines, followed by three lines of column headings, followed by wind pro\336le data, and) 72 400 P
+(ends with the parameter \322Pro\336ler in checkout mode \337ag\323 line. The \336rst header line contains date) 72 386 T
+(and time values, the second header line contains station latitude and longitude values, and the) 72 372 T
+(third header line contains the values for the parameters \322height of station above sea level\323 and) 72 358 T
+(\322height increment\323.) 72 344 T
+1 F
+(V) 72 318 T
+(ARIABLES:) 79.12 318 T
+0 F
+-0.12 (There are 10 variables in a NOAA wind pro\336le record. V) 72 292 P
+-0.12 (ariables are separated by white space\050s\051.) 344.43 292 P
+(The variable values are left-justi\336ed. These variables with their units are listed in order below) 72 278 T
+(.) 520.8 278 T
+1 F
+(V) 108 258 T
+(ariable Name) 115.56 258 T
+(Unit) 324 258 T
+0 10 Q
+(1.) 72 244.33 T
+(Height above station) 108 244.33 T
+(Meters) 324 244.33 T
+(2.) 72 231.33 T
+(Signal Power \0500th moment\051 North) 108 231.33 T
+(Decibels) 324 231.33 T
+(3.) 72 218.33 T
+(Signal Power \0500th moment\051 East) 108 218.33 T
+(Decibels) 324 218.33 T
+(4.) 72 205.33 T
+(Signal Power \0500th moment\051 V) 108 205.33 T
+(ertical) 227.44 205.33 T
+(Decibels) 324 205.33 T
+(5.) 72 192.33 T
+(Mean V) 108 192.33 T
+(elocity \0501st moment\051 North) 139.38 192.33 T
+(Meters/Second) 324 192.33 T
+(6.) 72 179.33 T
+(Mean V) 108 179.33 T
+(elocity \0501st moment\051 East) 139.38 179.33 T
+(Meters/Second) 324 179.33 T
+(7.) 72 166.33 T
+(Mean V) 108 166.33 T
+(elocity \0501st moment\051 V) 139.38 166.33 T
+(ertical) 231.32 166.33 T
+(Meters/Second) 324 166.33 T
+(8.) 72 153.33 T
+(V) 108 153.33 T
+(elocity variance \0502nd moment\051 North) 114.11 153.33 T
+(\050Meters/Second\051**2) 324 153.33 T
+(9.) 72 140.33 T
+(V) 108 140.33 T
+(elocity variance \0502nd moment\051 East) 114.11 140.33 T
+(\050Meters/Second\051**2) 324 140.33 T
+(10.) 72 127.33 T
+(V) 108 127.33 T
+(elocity variance \0502nd moment\051 V) 114.11 127.33 T
+(ertical) 245.75 127.33 T
+(\050Meters/Second\051**2) 324 127.33 T
+1 12 Q
+(CONT) 72 102 T
+(ACTS FOR DA) 105.78 102 T
+(T) 185.56 102 T
+(A PRODUCTION INFORMA) 192.67 102 T
+(TION) 347.1 102 T
+0 F
+(Gerry Mace) 108 76 T
+FMENDPAGE
+%%EndPage: "19" 19
+%%Page: "20" 20
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(20) 532 34.17 T
+0 10 Q
+(Phone: \050814\051 863-3663) 108 713.33 T
+(E-Mail: mace@essc.psu.edu) 108 700.33 T
+1 14 Q
+(5.5  MODELS) 72 667.67 T
+0 12 Q
+(MAPS data set is the only one in this group.) 72 641 T
+1 F
+(5.5.1  MAPS) 72 609 T
+0 F
+(For FIRE Cirrus 2, the MAPS analyses were available every 3 hours for the period of 00Z Nov) 72 583 T
+(.) 527.15 583 T
+(12, 1991 through 00Z Dec. 8, 1991. MAPS analyses generally were more accurate than the stan-) 72 569 T
+(dard NMC analyses. However) 72 555 T
+(, some exceptions were discovered) 216.82 555 T
+0 9.6 Q
+(9) 383.77 559.8 T
+0 12 Q
+(, which were due to computer) 388.57 555 T
+(,) 530.72 555 T
+(network, code failures, or missing data. See the \336le \324data_catalog_maps\325 for the temporal and) 72 541 T
+(spatial coverages information.) 72 527 T
+1 F
+(FILES) 72 501 T
+0 F
+(:) 106.68 501 T
+(Each MAPS analysis \336le contains 65250 lines and 7608900 bytes in ASCII format. The \336le nam-) 72 475 T
+(ing convention for the MAPS analysis \336les is: ci2_maps_yymmdd_hh, where yy is the year) 72 461 T
+(, mm) 510.83 461 T
+-0.03 (the month, dd the day) 72 447 P
+-0.03 (, and hh the starting hour when the data were collected. Some of the MAPS) 175.44 447 P
+(data information \336les are listed below) 72 433 T
+(.) 252.86 433 T
+2 F
+(\245) 72 413 T
+0 F
+(data_catalog_maps - V) 85.75 413 T
+(erbose explanation of the MAPS data) 195.05 413 T
+2 F
+(\245) 72 393 T
+0 F
+(data_catalog_mapslatlon - V) 85.75 393 T
+(erbose explanation of the MAPS latlon \336le) 222.39 393 T
+2 F
+(\245) 72 373 T
+0 F
+(data_catalog_mapsterrain - V) 85.75 373 T
+(erbose explanation of the MAPS terrain \336le) 226.37 373 T
+2 F
+(\245) 72 353 T
+0 F
+(maps_extremes.list - List of min & max values \050in integer values\051 for each variable in the) 85.75 353 T
+(MAPS data \336les) 85.75 339 T
+2 F
+(\245) 72 319 T
+0 F
+-0.17 (mapsterrain.dat - The 2-D topography \336eld describing the terrain height, which is not included) 85.75 319 P
+(in each MAPS data \336le) 85.75 305 T
+2 F
+(\245) 72 285 T
+0 F
+(mapsstat.dat - The statistical evaluation result of the MAPS analyses valid at 00Z and 12Z) 85.75 285 T
+(compared with NGM products, persistence and radiosonde data) 85.75 271 T
+2 F
+(\245) 72 251 T
+0 F
+(mapslatlon.dat - MAPS latitude and longitude data) 85.75 251 T
+-0.21 (MAPS uses an 81 \050x direction\051 x 62 \050y direction\051 horizontal Cartesian mesh with 60 km grid spac-) 72 225 P
+(ing on an Arakawa-A grid which has all variables de\336ned at each grid node. The information for) 72 211 T
+-0.05 (each horizontal \336eld consists of a header line containing the name of the variable and the vertical) 72 197 P
+(coordinate, followed by 62 groups of 81 \336eld values.) 72 183 T
+(Each group of 81 \336eld values represents one x direction row of grid node values, beginning with) 72 157 T
+(the southernmost row in the domain, and proceeding northward with succeeding groups. The 81) 72 143 T
+(values are ordered from the west to the east edges of the grid domain, and are listed in the \336le) 72 129 T
+-0.07 (using 13 numbers per line, with the last line in each group containing 3 values. There are 10 char-) 72 115 P
+72 78 540 98 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 86 204 86 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(9.  See section 6.1 and 8.1 of the \336le \324data_catalog_maps\325 for the validity of the MAPS data.) 72 71.33 T
+FMENDPAGE
+%%EndPage: "20" 20
+%%Page: "21" 21
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(21) 532 34.17 T
+0 12 Q
+(acters per \336eld value, and each value is right-justi\336ed with 3 decimal digits following an explicit) 72 712 T
+(decimal point, as in Fortran f10.3 format. Hence, the very \336rst \336eld value will be the pressure on) 72 698 T
+-0.14 (the sigma=1 surface at the southwest corner of the domain. The very last \336eld value will be the V) 72 684 P
+(wind component on the virtual theta=410K surface at the northeast corner of the domain.) 72 670 T
+1 F
+(V) 72 644 T
+(ARIABLES:) 79.12 644 T
+0 F
+(Each MAPS data analysis \336le contains a sequence of two-dimensional horizontal \336elds for the 6) 72 618 T
+-0.33 (variables at the 25 vertical coordinates. The sequence for the vertical levels is: sigma = 1, 0.8, 0.6,) 72 604 P
+-0.05 (0.4, 0.2, 0.0, then virtual theta = 272, 280, 286, 292, 296, 300, 304, 308, 312, 316, 320, 325, 330,) 72 590 P
+(335, 342, 350, 360, 380, and 410 K. These variables with units and the allowable min and max) 72 576 T
+(values are listed in order below) 72 562 T
+(.) 221.52 562 T
+1 F
+(V) 108 542 T
+(ariable Name) 115.56 542 T
+(Min) 324 542 T
+(Max) 396 542 T
+0 10 Q
+(1.) 72 528.33 T
+(Pressure \050mb\051) 108 528.33 T
+(50) 324 528.33 T
+(1500) 396 528.33 T
+0 8 Q
+(10) 416 532.33 T
+0 10 Q
+(2.) 72 515.33 T
+(Montgomery Streamfunction/g \050m\051) 108 515.33 T
+(26000) 324 515.33 T
+(4000) 396 515.33 T
+(3.) 72 502.33 T
+(V) 108 502.33 T
+(irtual Potential T) 114.62 502.33 T
+(emperature \050Deg K\051) 181.7 502.33 T
+(250) 324 502.33 T
+(420) 396 502.33 T
+(4.) 72 489.33 T
+(Condensation pressure \050mb\051) 108 489.33 T
+(50) 324 489.33 T
+(1400) 396 489.33 T
+(5.) 72 476.33 T
+(U-W) 108 476.33 T
+(ind \050m/s\051) 127.59 476.33 T
+(-120) 324 476.33 T
+(120) 396 476.33 T
+(6.) 72 463.33 T
+(V) 108 463.33 T
+(-W) 114.3 463.33 T
+(ind \050m/s\051) 126.67 463.33 T
+(-120) 324 463.33 T
+(120) 396 463.33 T
+0 12 Q
+-0.41 (NOTE: An iterative procedure is required to deduce the temperature and the mixing ratio from the) 72 438 P
+(virtual potential temperature and the condensation pressure since these MAPS variables are func-) 72 424 T
+(tions of both temperature and mixing ratio.) 72 410 T
+1 F
+(CONT) 72 384 T
+(ACTS FOR DA) 105.78 384 T
+(T) 185.56 384 T
+(A PRODUCTION INFORMA) 192.67 384 T
+(TION) 347.1 384 T
+0 F
+(Doug W) 108 358 T
+(estphal) 148.03 358 T
+(Bill McKie) 324 358 T
+0 10 Q
+(MS 245-5) 108 339.33 T
+(MS 245-3) 324 339.33 T
+(NASA Ames Research Center) 108 326.33 T
+(NASA Ames Research Center) 324 326.33 T
+(Mof) 108 313.33 T
+(fett Field, CA 94035) 125.04 313.33 T
+(Mof) 324 313.33 T
+(fett Field, CA 94035) 341.04 313.33 T
+(T) 108 300.33 T
+(elephone: 415-604-3522; FTS: 464-3522) 113.41 300.33 T
+(T) 324 300.33 T
+(elephone: 415-604-3632; FTS: 464-3625) 329.41 300.33 T
+(F) 108 287.33 T
+(AX: 415-604-3625) 112.82 287.33 T
+(F) 324 287.33 T
+(AX: 415-604-3625) 328.82 287.33 T
+(Internet: westphal@sky) 108 274.33 T
+(.arc.nasa.gov) 202.38 274.33 T
+(mckie@sky) 324 274.33 T
+(.arc.nasa.gov) 370.89 274.33 T
+1 14 Q
+(5.6  AIRCRAFT) 72 241.67 T
+0 12 Q
+(Aircraft data obtained during the FIRE Cirrus 2 experiment were classi\336ed according to the air-) 72 215 T
+(craft by which the measurements were taken. T) 72 201 T
+(wo aircraft data sets are described here: Kingair) 298.43 201 T
+(,) 527.53 201 T
+(and Sabreliner) 72 187 T
+(. Although they have dif) 140.99 187 T
+(ferent sets of variables, they are generated with the same) 257.76 187 T
+(format. Thus, one C read source \336le is used to parse the format and interpret the data for both air-) 72 173 T
+(craft data sets.) 72 159 T
+72 102 540 122 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 110 204 110 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+-0.04 (10.  V) 72 95.33 P
+-0.04 (alues of pressure and condensation pressure in excess of 1050 mb occur when the virtual potential temperature) 95.53 95.33 P
+-0.21 (at a surface point is high \050e.g. 300 K\051. The cooler virtual theta surfaces \050e.g. 272 - 296\051 are therefore below ground, at) 72 83.33 P
+(higher pressure.) 72 71.33 T
+FMENDPAGE
+%%EndPage: "21" 21
+%%Page: "22" 22
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(22) 532 34.17 T
+1 12 Q
+(5.6.1  KINGAIR & SABRELINER) 72 712 T
+0 F
+-0.08 (Kingair and Sabreliner data \336les for 1991 FIRE Cirrus 2 are provided by NCAR in GENPRO for-) 72 686 P
+(mat \050binary positive integers\051. The Kingair and Sabreliner data \336les are or) 72 672 T
+(ganized in pairs for an) 427.04 672 T
+(individual \337ight, i.e., header #1, \337ight #1 data, header #2, \337ight #2 data, etc... Header \336les are in) 72 658 T
+(ASCII format, and \337ight data are in binary format.) 72 644 T
+1 F
+(FILES:) 72 618 T
+0 F
+-0.18 (Kingair data set has 15 header) 72 592 P
+-0.18 (-data-\336le pairs for 15 \337ights. Sabreliner data set has 19 header) 215.81 592 P
+-0.18 (-data-) 512.02 592 P
+-0.28 (\336le pairs for 17 \337ights, among which \337ight 6 has three header) 72 578 P
+-0.28 (-data-\336le pairs. Each \337ight is named) 364.68 578 P
+-0.13 (ci2_aircraft_\337t#_\337ighttime, where \322aircraft\323 is either \324kng\325 or \324sa\325 to mean Kingair or Sabreliner) 72 564 P
+-0.13 (,) 534.13 564 P
+-0.3 (\337ight# is ranging from 01 to 15 for Kingair and 01 through 17 for Sabreliner \050\337ight 6 numbers are) 72 550 P
+(06a, 06b, and 06c\051, and \322\337ighttime\323 has the format of yymmdd to indicate the date of the \337ight,) 72 536 T
+(e.g., ci2_kng_\337t01_91) 72 522 T
+(1) 179.56 522 T
+(109, and ci2_sa_\337t02_91) 185.11 522 T
+(1) 305.66 522 T
+(1) 311.22 522 T
+(18. The \337ight name is the same as granule) 316.78 522 T
+(name. The header \336les are named granule_name.hdr) 72 508 T
+(, and the data \336les are named) 322.78 508 T
+(granule_name.dat for both aircraft data sets.) 72 494 T
+(A header \336le contains the variable names \050or called parameters\051, and the information regarding) 72 468 T
+-0.31 (sampling rate, scale factors, data size, etc. for the parameters. The data \336le contains data values of) 72 454 P
+(parameters over a speci\336ed time period.) 72 440 T
+1 F
+(V) 72 414 T
+(ARIABLES:) 79.12 414 T
+0 F
+(Each of the 15 Kingair data \336les has 144 variables, and each of 19 Sabreliner data \336les has 106) 72 388 T
+-0.41 (variables. Each variable is de\336ned as a 4 bytes unsigned integer) 72 374 P
+-0.41 (. The unsigned integer values have) 372.83 374 P
+-0.16 (to be converted to real numbers for correct reading. Usually the variables are sampled at 1 Hz per) 72 360 P
+-0.28 (second \050per genpro cycle\051, but some variables are sampled at higher rate. The sample read routine) 72 346 P
+(automatically retrieves the information for all de\336ned parameters, and interprets the binary data) 72 332 T
+(accordingly) 72 318 T
+(.) 127.87 318 T
+1 F
+(NOTES ON DA) 72 292 T
+(T) 153.12 292 T
+(A) 160.24 292 T
+0 F
+(Questions about instrumentation and speci\336c data parameters \050including their derivation, utiliza-) 72 266 T
+-0.35 (tion and units\051 should be directed to NCAR. There is one Kingair data \336le and one Sabreliner data) 72 252 P
+(\336le have small discrepancies between the header and the data beginning and ending times, and a) 72 238 T
+(negative time values on the last record. Larry Miloshevich from NCAR has the following) 72 224 T
+(response:) 72 210 T
+(The time values were incorrect \050negative\051 for the last few seconds of each \337ight, and there were) 72 184 T
+-0.33 (beginning time and ending time discrepancies of a few seconds between the times listed in the \336le) 72 170 P
+-0.31 (headers and the \336rst or last times of the initial and \336nal data records. My guess is that they are due) 72 156 P
+(to ef) 72 142 T
+(fects of turning the data system on and of) 93.44 142 T
+(f, since the header time interval for the \337ight is) 291.86 142 T
+(slightly longer than the interval of data collection \050i.e., perhaps time marks are recorded for the) 72 128 T
+(header when the data collection system is turned on or of) 72 114 T
+(f, but if it takes a couple of seconds for) 345.73 114 T
+(the system to begin or quit taking data then the data collection interval will be slightly shorter\051.) 72 100 T
+(Also, my guess is that the negative time values at the end of \336les might be due to \337ushing data) 72 86 T
+-0.22 (buf) 72 72 P
+-0.22 (fers when the system is shut down. In any case, the best advice for users of this data would be:) 87.78 72 P
+FMENDPAGE
+%%EndPage: "22" 22
+%%Page: "23" 23
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(23) 532 34.17 T
+0 12 Q
+-0.25 (1\051 use the time values associated with the data records and ignore the discrepancy with the header) 72 712 P
+(\336les, and 2\051 eliminate or otherwise don\325) 72 698 T
+(t use the ending records with negative time values, since) 263.42 698 T
+(other data in those records may be untrustworthy) 72 684 T
+(.) 306.18 684 T
+1 F
+(CONT) 72 658 T
+(ACTS FOR DA) 105.78 658 T
+(T) 185.56 658 T
+(A PRODUCTION INFORMA) 192.67 658 T
+(TION) 347.1 658 T
+0 F
+(Andy Heyms\336eld) 108 632 T
+0 10 Q
+(Phone: \050303\051 497-8181) 108 613.33 T
+(E-Mail: heyms@mmm.ncar) 108 600.33 T
+(.edu) 219.43 600.33 T
+1 14 Q
+(IMPLEMENT) 72 560.67 T
+(A) 158.86 560.67 T
+(TION NOTES) 167.93 560.67 T
+0 12 Q
+(The generic read program \050genpro.c\051 for FIRE aircraft \337ight data extracts the \337ight date, \337ight) 72 534 T
+-0.16 (start time, and \337ight end time from the header \336le \050not from the data \336le\051 because FIRE-I Kingair) 72 520 P
+-0.09 (\337ight data do not have the time variables \050HR, MIN, SEC\051 de\336ned as FIRE Cirrus 2 aircraft data.) 72 506 P
+(However) 72 492 T
+(, the minimum and maximum latitude and longitude values are obtained from the data) 115.5 492 T
+(\336le. The total number of records in the speci\336ed data \336les is printed out at the end of the output.) 72 478 T
+-0.41 (Because of the huge amount of data in the data \336le, the read program by default only prints out the) 72 452 P
+(selected 7 variables \0501st, 2nd, 3rd, 4th, 5th, 6th, and 7th variables, in that order\051 of all records in) 72 438 T
+(tabular format. The \322printf\323 statement in the C source \336le works as a demonstration of printing) 72 424 T
+-0.03 (out values of the desired variables. If all data values are to be printed out, users should recompile) 72 410 P
+(the genpro.c program with a \322-DDEBUG\323 preprocessor option and rerun the executable. The) 72 396 T
+(minus D option will produce the values of all variables for all records in the speci\336ed data \336le.) 72 382 T
+1 14 Q
+(5.7  HDF with netCDF Extensions) 72 348.67 T
+0 12 Q
+-0.04 (This data set was written in NCSA) 72 322 P
+-0.04 (\325) 237.08 322 P
+-0.04 (s HDF netCDF format. The data \336les are or) 240.42 322 P
+-0.04 (ganized by date of) 448.85 322 P
+(\337ight and straight line \337ight track.) 72 308 T
+1 F
+(5.7.1   FIRE_CI2_ER2_MAS Data Set) 72 276 T
+(LONG NAME FOR THIS DA) 72 250 T
+(T) 226.45 250 T
+(A SET) 233.57 250 T
+(:) 267.02 250 T
+0 F
+(First ISCCP Regional Experiment \050FIRE\051 Cirrus 2 NASA ER-2 Moderate Resolution Imaging) 72 224 T
+(Spectrometer \050MODIS\051 Airborne \050MAS\051 Data \050FIRE_CI2_ER2_MAS\051) 72 210 T
+1 F
+(FILES:) 72 184 T
+0 F
+-0.09 (FIRE_CI2_ER2_MAS data set \336les are pre\336xed with \322ci2_mas_\323 the indicate they belong to this) 72 158 P
+-0.27 (data set. This is followed by a six digit number \050yymmdd\051 that represents the year) 72 144 P
+-0.27 (, month and day) 460.74 144 P
+(the data was collected. The name ends with a period, \324.\325, followed by a three digit number which) 72 130 T
+(indicates which \337ight line is contained within the \336le.) 72 116 T
+1 F
+(V) 72 90 T
+(ARIABLES:) 79.12 90 T
+FMENDPAGE
+%%EndPage: "23" 23
+%%Page: "24" 24
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(24) 532 34.17 T
+0 12 Q
+(Both data sets contain 34 global attributes and 37 scienti\336c data sets \050i.e., variables\051 per data \336le.) 72 712 T
+(T) 72 692 T
+1 F
+(he global variable names ar) 79.33 692 T
+(e) 220.45 692 T
+0 F
+(:) 225.78 692 T
+(title) 144 672 T
+(CreationDate) 144 658 T
+(ExperimentName) 144 644 T
+(FlightDate) 144 630 T
+(FlightNumber) 144 616 T
+(ClockUsedT) 144 602 T
+(oProcess) 203.82 602 T
+(FlightLineNumber) 144 588 T
+(T) 144 574 T
+(otalFlightLines) 150.49 574 T
+(Credits) 144 560 T
+(MASDataUsersGuideSource) 144 546 T
+(ClockProblemDescription) 144 532 T
+(FIREClockOf) 144 518 T
+(fset\050INS-MAS\051Hours) 211.12 518 T
+(VIS/NIRCountSensitivityAdjustment) 144 504 T
+(SoftwareV) 144 490 T
+(ersion) 194.65 490 T
+(CalibrationV) 144 476 T
+(ersion) 205.33 476 T
+(data_set) 144 462 T
+(data_product) 144 448 T
+(geog_\337ag) 144 434 T
+(day_night_\337ag) 144 420 T
+(granule_version) 144 406 T
+(metadata_version) 144 392 T
+(producer_granule_id) 144 378 T
+(data_quality) 144 364 T
+(granule_size) 144 350 T
+(begin_date) 144 336 T
+(end_date) 144 322 T
+(lat_LL) 144 308 T
+(lon_LL) 144 294 T
+(lat_UL) 144 280 T
+(lon_UL) 144 266 T
+(lat_UR) 144 252 T
+(lon_UR) 144 238 T
+(lat_LR) 144 224 T
+(lon_LR) 144 210 T
+1 F
+( Sci. V) 75 184 T
+(ar #) 106.9 184 T
+(Data T) 145.22 184 T
+(ype     Label\050dimension lengths\051) 180 184 T
+0 F
+(    1) 72 158 T
+(\337oat) 144 158 T
+(Left50%ResponseW) 216 158 T
+(avelength\05012\051) 314.35 158 T
+(    2) 72 144 T
+(\337oat) 144 144 T
+(Central100%ResponseW) 216 144 T
+(avelength\05012\051) 335.69 144 T
+(    3) 72 130 T
+( \337oat) 144 130 T
+(Right50%ResponseW) 216 130 T
+(avelength\05012\051) 321.04 130 T
+(    4) 72 116 T
+( \337oat) 144 116 T
+(SolarSpectralIrradiance\05012\051) 216 116 T
+(    5) 72 102 T
+(short) 144 102 T
+(AnchorPointIndex\05073\051) 216 102 T
+(    6) 72 88 T
+(char) 144 88 T
+(DataSetHeader\0506720\051) 216 88 T
+(    7) 72 74 T
+(short) 144 74 T
+(DataFrameStatus\050560\051) 216 74 T
+FMENDPAGE
+%%EndPage: "24" 24
+%%Page: "25" 25
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(25) 532 34.17 T
+0 12 Q
+(    8) 72 712 T
+(short) 144 712 T
+(RunNumber\050560\051) 216 712 T
+(    9) 72 698 T
+(long) 144 698 T
+(ScanLineCounter\050560\051) 216 698 T
+(   10) 72 684 T
+(long) 144 684 T
+(ThumbWheelSwitches\050560\051) 216 684 T
+(   1) 72 670 T
+(1) 86.56 670 T
+(short) 144 670 T
+(ScanRate\050560\051) 216 670 T
+(   12) 72 656 T
+(long) 144 656 T
+(GreenwichMeanT) 216 656 T
+(ime\050560\051) 302.88 656 T
+(   13) 72 642 T
+(long) 144 642 T
+(MasT) 216 642 T
+(ime\050560\051) 243.58 642 T
+(   14) 72 628 T
+(long) 144 628 T
+(InsT) 216 628 T
+(ime\050560\051) 237.58 628 T
+(   15) 72 614 T
+(short) 144 614 T
+( S-BendIndicator\050560\051) 216 614 T
+(   16) 72 600 T
+(short) 144 600 T
+(AircraftRollCount\050560\051) 216 600 T
+(   17) 72 586 T
+(long) 144 586 T
+(Y) 216 586 T
+(earMonthDay\050560\051) 223.46 586 T
+(   18) 72 572 T
+(\337oat) 144 572 T
+(ScanlineT) 216 572 T
+(ime\050560\051) 264.24 572 T
+(   19) 72 558 T
+(short) 144 558 T
+(BlackBody1T) 216 558 T
+(emperature\050560 X 12\051) 282.49 558 T
+(   20) 72 544 T
+(short) 144 544 T
+(BlackBody2T) 216 544 T
+(emperature\050560 X 12\051) 282.49 544 T
+(   21) 72 530 T
+(short) 144 530 T
+(Ampli\336erGain\050560 X 12\051) 216 530 T
+(   22) 72 516 T
+(short) 144 516 T
+(BlackBody1Counts\050560 X 12\051) 216 516 T
+(   23) 72 502 T
+(short) 144 502 T
+(BlackBody2Counts\050560 X 12\051) 216 502 T
+(   24) 72 488 T
+(\337oat) 144 488 T
+(CalibrationSlope\050560 X 12\051) 216 488 T
+(   25) 72 474 T
+(\337oat) 144 474 T
+(CalibrationIntercept\050560 X 12\051) 216 474 T
+(   26) 72 460 T
+(\337oat) 144 460 T
+(PixelLatitude\050560 X 73\051) 216 460 T
+(   27) 72 446 T
+(\337oat) 144 446 T
+(PixelLongitude\050560 X 73\051) 216 446 T
+(   28) 72 432 T
+(\337oat) 144 432 T
+(SensorZenithAngle\050560 X 73\051) 216 432 T
+(    29) 72 418 T
+(\337oat) 144 418 T
+(SensorAzimuthAngle\050560 X 73\051) 216 418 T
+(   30) 72 404 T
+(\337oat) 144 404 T
+(SolarZenithAngle\050560 X 73\051) 216 404 T
+(   31) 72 390 T
+(\337oat) 144 390 T
+(SolarAzimuthAngle\050560 X 73\051) 216 390 T
+(   32) 72 376 T
+(\337oat) 144 376 T
+(AircraftLatitude\050560\051) 216 376 T
+(   33) 72 362 T
+(\337oat) 144 362 T
+(AircraftLongitude\050560\051) 216 362 T
+(   34) 72 348 T
+(\337oat) 144 348 T
+(AircraftHeading\050560\051) 216 348 T
+(   35) 72 334 T
+(\337oat) 144 334 T
+(AircraftAltitude\050560\051) 216 334 T
+(   36) 72 320 T
+(\337oat) 144 320 T
+(AircraftPitch\050560\051) 216 320 T
+(   37) 72 306 T
+(short) 144 306 T
+(CalibratedData\050560 X 12 X 716\051) 216 306 T
+1 F
+(NOTES ON DA) 72 260 T
+(T) 153.12 260 T
+(A) 160.24 260 T
+0 F
+(Dimension lengths show above may vary between \336les due to variations in the amount of data) 72 234 T
+(collected per \337ight track.) 72 220 T
+(These \336les also include some Level-0 MAS engineering data. The Level-0 data variables are) 72 194 T
+(identi\336ed in NASA T) 72 180 T
+(echnical Memorandum 104594, V) 174.83 180 T
+(ol. 3, which is titled:) 337.92 180 T
+(    MODIS T) 72 154 T
+(echnical Report Series, V) 132.16 154 T
+(olume 3, MODIS Airborne Simulator Level 1B) 253.25 154 T
+(Data) 504.9 154 T
+(User) 72 140 T
+(\325) 95.1 140 T
+(s Guide.) 98.44 140 T
+1 F
+(CONT) 72 114 T
+(ACTS FOR DA) 105.78 114 T
+(T) 185.56 114 T
+(A PRODUCTION INFORMA) 192.67 114 T
+(TION) 347.1 114 T
+0 F
+(Mr) 72 94 T
+(. Paul A. Hubanks) 86 94 T
+(MODIS Science Data Support T) 72 80 T
+(eam) 227.14 80 T
+FMENDPAGE
+%%EndPage: "25" 25
+%%Page: "26" 26
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(26) 532 34.17 T
+0 12 Q
+(Research and Data Systems Corporation) 72 712 T
+(7855 W) 72 698 T
+(alker Drive, Suite 400) 109.37 698 T
+(Greenbelt, MD 20770) 72 684 T
+(Phone: \050301\051 982-3724) 72 670 T
+(F) 72 656 T
+(AX: \050301\051 982-3749) 77.78 656 T
+(E-Mail: hubanks@ltpsun.gsfc.nasa.gov) 72 642 T
+1 F
+(INSTRUMENT) 72 604 T
+(A) 152.45 604 T
+(TION:) 160.22 604 T
+0 F
+(The MODIS Airborne Simulator \050MAS\051 is a modi\336ed Daedalus W) 72 578 T
+(ild\336re scanning spectrometer) 392.48 578 T
+(.) 531.13 578 T
+(The MAS spectrometer acquires high spatial resolution imagery in the wavelength range 0.55 to) 72 564 T
+-0.09 (14.3 microns. A total of 50 spectral bands are available in this range, and the digitizer can be con-) 72 550 P
+(\336gured to record any 12 of them during a \337ight.) 72 536 T
+1 16 Q
+(6.0  Implementation Notes) 72 495.33 T
+1 14 Q
+(6.1  FIRE Cirrus 2 ASTEX and FIRE Cirrus 2 MAS Pr) 72 460.67 T
+(ogram) 403.09 460.67 T
+0 12 Q
+-0.07 (This interactive read program \336rst requests the name of an input data \336le. The program opens the) 72 434 P
+(\336le and extracts a list of the data parameters it contains. This list is presented to the user a screen) 72 420 T
+-0.33 (full at a time. The user indicates which parameters should be included in the output report \336le. All) 72 406 P
+(parameters may be selected by entering a zero as the \336rst selection. Upon completion of the) 72 392 T
+(parameter selection process, the user is given the option of including all the global variables) 72 378 T
+(within the data \336le. A report \336le is then generated. A sample execution of the program is shown) 72 364 T
+(below:) 72 350 T
+1 F
+(sor) 72 324 T
+(cer) 87.78 324 T
+(er%) 103.55 324 T
+0 F
+( mas_netcdf_read_c) 126.2 324 T
+(This program reads the FIRE_ASTEX and FIRE_MAS netCDF data.) 72 310 T
+( Please enter Q to Quit or C to continue c) 72 296 T
+(        Please enter netCDF \336le name to read:) 72 268 T
+(ci2_mas_91) 72 254 T
+(1031.001) 129.55 254 T
+(Report \336le name is: ci2_mas_91) 72 240 T
+(1031.001.rpt) 226.88 240 T
+(  Item          Data T) 72 212 T
+(ype            Label\050dimension lengths\051) 162.14 212 T
+(  ====      =========     ========================) 72 198 T
+(    1         \337oat       Left50%ResponseW) 72 170 T
+(avelength\05012\051) 257.69 170 T
+(    2         \337oat       Central100%ResponseW) 72 156 T
+(avelength\05012\051) 279.02 156 T
+(    3         \337oat       Right50%ResponseW) 72 142 T
+(avelength\05012\051) 264.37 142 T
+(    4         \337oat       SolarSpectralIrradiance\05012\051) 72 128 T
+(    5         short       AnchorPointIndex\05073\051) 72 114 T
+(    6          char       DataSetHeader\0506720\051) 72 100 T
+(    7         short       DataFrameStatus\050560\051) 72 86 T
+(    8         short       RunNumber\050560\051) 72 72 T
+FMENDPAGE
+%%EndPage: "26" 26
+%%Page: "27" 27
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(27) 532 34.17 T
+0 12 Q
+(    9          long       ScanLineCounter\050560\051) 72 712 T
+(   10          long       ThumbWheelSwitches\050560\051) 72 698 T
+(   1) 72 684 T
+(1         short       ScanRate\050560\051) 86.56 684 T
+(   12          long       GreenwichMeanT) 72 670 T
+(ime\050560\051) 252.22 670 T
+(   13          long       MasT) 72 656 T
+(ime\050560\051) 192.91 656 T
+(   14          long       InsT) 72 642 T
+(ime\050560\051) 186.91 642 T
+(   15         short       S-BendIndicator\050560\051) 72 628 T
+(Please choose the numbers of the data items you wish to dump) 72 600 T
+(Enter -1 to display additional items or zero to end selection process) 72 586 T
+(NOTE: if you enter 0 as very \336rst entry) 72 572 T
+(, all variables will be displayed) 260.52 572 T
+(-1) 72 544 T
+(  Item      Data T) 72 516 T
+(ype     Label\050dimension lengths\051) 150.14 516 T
+(  ====      =========     ========================) 72 502 T
+(   16         short       AircraftRollCount\050560\051) 72 474 T
+(   17          long       Y) 72 460 T
+(earMonthDay\050560\051) 172.8 460 T
+(   18         \337oat       ScanlineT) 72 446 T
+(ime\050560\051) 210.58 446 T
+(   19         short       BlackBody1T) 72 432 T
+(emperature\050560 X 12\051) 231.49 432 T
+(   20         short       BlackBody2T) 72 418 T
+(emperature\050560 X 12\051) 231.49 418 T
+(   21         short       Ampli\336erGain\050560 X 12\051) 72 404 T
+(   22         short       BlackBody1Counts\050560 X 12\051) 72 390 T
+(   23         short       BlackBody2Counts\050560 X 12\051) 72 376 T
+(   24         \337oat       CalibrationSlope\050560 X 12\051) 72 362 T
+(   25         \337oat       CalibrationIntercept\050560 X 12\051) 72 348 T
+(   26         \337oat       PixelLatitude\050560 X 73\051) 72 334 T
+(   27         \337oat       PixelLongitude\050560 X 73\051) 72 320 T
+(   28         \337oat       SensorZenithAngle\050560 X 73\051) 72 306 T
+(   29         \337oat       SensorAzimuthAngle\050560 X 73\051) 72 292 T
+(   30         \337oat       SolarZenithAngle\050560 X 73\051) 72 278 T
+(Please choose the numbers of the data items you wish to dump) 72 250 T
+(Enter -1 to display additional items or zero to end selection process) 72 236 T
+(-1) 72 208 T
+(  Item      Data T) 72 180 T
+(ype     Label\050dimension lengths\051) 150.14 180 T
+(  ====      =========     ========================) 72 166 T
+(   31         \337oat       SolarAzimuthAngle\050560 X 73\051) 72 138 T
+(   32         \337oat       AircraftLatitude\050560\051) 72 124 T
+(   33         \337oat       AircraftLongitude\050560\051) 72 110 T
+(   34         \337oat       AircraftHeading\050560\051) 72 96 T
+(   35         \337oat       AircraftAltitude\050560\051) 72 82 T
+(   36         \337oat       AircraftPitch\050560\051) 72 68 T
+FMENDPAGE
+%%EndPage: "27" 27
+%%Page: "28" 28
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(FIRE Cirrus 2 Readme) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(28) 532 34.17 T
+0 12 Q
+(   37         short       CalibratedData\050560 X 12 X 716\051) 72 712 T
+(Please choose the numbers of the data items you wish to dump) 72 684 T
+(Enter -1 or zero to terminate selection process) 72 670 T
+(1) 72 656 T
+(2) 72 642 T
+(3) 72 628 T
+(4) 72 614 T
+(0) 72 600 T
+(W) 72 586 T
+(ould you like the global attributes included in the report? \050Y/N\051n) 82.37 586 T
+(  The data is then written to the report \336le.  Sample output from above is written below:) 72 546 T
+( This is the report \336le for the ci2_mas_91) 72 526 T
+(1031.001 \336le) 270.2 526 T
+( Left50%ResponseW) 72 484 T
+(avelength) 173.35 484 T
+(        units = microns) 72 470 T
+(0 , 0.676 , 1.581 , 1.909 , 2.064 , 2.1) 72 456 T
+(15 , 3.676 , 4.623 , 4.467 , 8.664 ,) 245.56 456 T
+(    10.7 , 1) 72 442 T
+(1.7  ;) 119.56 442 T
+( Central100%ResponseW) 72 414 T
+(avelength) 194.69 414 T
+(        units = microns) 72 400 T
+(0 , 0.681 , 1.617 , 1.933 , 2.088 , 2.139 , 3.748 , 4.695 , 4.539 , 8.8 ,) 72 386 T
+(    10.95 , 1) 72 372 T
+(1.95  ;) 125.56 372 T
+( Right50%ResponseW) 72 344 T
+(avelength) 180.04 344 T
+(        units = microns) 72 330 T
+(0 , 0.685 , 1.637 , 1.957 , 2.1) 72 316 T
+(1) 209.56 316 T
+(1 , 2.162 , 3.82 , 4.767 , 4.61) 215.11 316 T
+(1 , 9.003 ,) 352.67 316 T
+(    1) 72 302 T
+(1.2 , 12.2  ;) 89.56 302 T
+( SolarSpectralIrradiance) 72 282 T
+(        units = watts/meter2/micron) 72 268 T
+(        title = Sensor W) 72 254 T
+(eighted and Orbit Corrected Solar Spectral) 173.47 254 T
+(        Irradiance) 72 240 T
+(0 , 1517.228 , 249.3575 , 133.1342 , 99.10963 , 85.99516 , 1) 72 226 T
+(1.9167 ,) 362.56 226 T
+(    4.973752 , 5.785793 , 0.4060206 , 0.1725588 , 0.1218062  ;) 72 212 T
+FMENDPAGE
+%%EndPage: "28" 28
+%%Page: "29" 29
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(APPENDIX) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(29) 532 34.17 T
+0 24 Q
+(APPENDIX) 246.67 704 T
+1 14 Q
+(A-1:  Output fr) 72 662.67 T
+(om running \324make all\325 on HP workstation) 163.13 662.67 T
+5 10 Q
+(         cc -g -DHPUX  -I.   -c fci2_lib.c) 72 643.33 T
+(        rm -f ./lib_fci2.a) 72 630.33 T
+(        ar rlv ./lib_fci2.a \324lorder fci2_lib.o | tsort\324) 72 617.33 T
+(a - fci2_lib.o) 72 604.33 T
+(ar: creating ./lib_fci2.a) 72 591.33 T
+(        ranlib ./lib_fci2.a) 72 578.33 T
+(ranlib: ar already did it for you, see ar\0501\051.) 72 565.33 T
+(        rm -f class_sonde) 72 552.33 T
+(        cc  -DHPUX  -I.    -DCLASS_SONDE -o class_sonde fci2_sw.c ./lib_fci2.a) 72 539.33 T
+(        rm -f csu_prt6) 72 526.33 T
+(        cc  -DHPUX  -I.    -DCSU_PRT6 -o csu_prt6 fci2_sw.c ./lib_fci2.a) 72 513.33 T
+(        rm -f csu_sondes) 72 500.33 T
+(        cc  -DHPUX  -I.    -DCSU_SONDES -o csu_sondes fci2_sw.c ./lib_fci2.a) 72 487.33 T
+(        rm -f csu_station1) 72 474.33 T
+(        cc  -DHPUX  -I.    -DSTATION1 -o csu_station1 fci2_sw.c ./lib_fci2.a) 72 461.33 T
+(        rm -f csu_station2) 72 448.33 T
+(        cc  -DHPUX  -I.    -DSTATION2 -o csu_station2 fci2_sw.c ./lib_fci2.a) 72 435.33 T
+(        rm -f csu_wndprf) 72 422.33 T
+(l) 216 422.33 T
+(        cc  -DHPUX  -I.    -DCSU_WND -o csu_wndprf) 72 409.33 T
+(l fci2_sw.c ./lib_fci2.a) 372 409.33 T
+(        rm -f doplr_lidar) 72 396.33 T
+(        cc  -DHPUX  -I.    -DDOPLR_LIDAR -o doplr_lidar fci2_sw.c ./lib_fci2.a) 72 383.33 T
+(        rm -f maps) 72 370.33 T
+(        cc  -DHPUX  -I.    -DMAPS -o maps fci2_sw.c ./lib_fci2.a) 72 357.33 T
+(        rm -f noaa_wndprf) 72 344.33 T
+(l) 222 344.33 T
+(        cc  -DHPUX  -I.    -DNOAA_WND -o noaa_wndprf) 72 331.33 T
+(l fci2_sw.c ./lib_fci2.a) 384 331.33 T
+(        rm -f nws_sonde) 72 318.33 T
+(        cc  -DHPUX  -I.    -DNWS_SONDE -o nws_sonde fci2_sw.c ./lib_fci2.a) 72 305.33 T
+(        rm -f pams) 72 292.33 T
+(        cc  -DHPUX  -I.    -DPAMS -o pams fci2_sw.c ./lib_fci2.a) 72 279.33 T
+(        rm -f raman_lidar) 72 266.33 T
+(        cc  -DHPUX  -I.    -DRAMAN_LIDAR -o raman_lidar fci2_sw.c ./lib_fci2.a) 72 253.33 T
+(        rm -f ci2_kingair) 72 240.33 T
+(        cc  -DHPUX  -I.    -DF2_KINGAIR -o ci2_kingair genpro.c ./lib_fci2.a) 72 227.33 T
+(        rm -f ci2_sabreliner) 72 214.33 T
+(        cc  -DHPUX  -I.    -o ci2_sabreliner genpro.c ./lib_fci2.a) 72 201.33 T
+(        rm -f fhdf_netcdf) 72 188.33 T
+(       rm -f mas_read_netcdf_c) 72 166.33 T
+(        cc  -g -Aa -DHPUX      -DNO_HAVE_PROTOTYPES -DNO_STDARG -I../HDF3.3r4/) 72 154.33 T
+(mfhdf/libsrc -o fhdf_netcdf fhdf_netcdf.c -L../HDF3.3r4/hdf/lib -lnetcdf ../) 72 142.33 T
+(HDF3.3r4/hdf/lib/libdf.a) 72 130.33 T
+FMENDPAGE
+%%EndPage: "29" 29
+%%Page: "30" 30
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(APPENDIX) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(30) 532 34.17 T
+1 14 Q
+(A-2:  Output fr) 72 710.67 T
+(om running \324make all\325 on SUN4 workstation:) 163.13 710.67 T
+1 12 Q
+(% make -f Make\336le.fci2 all) 72 684 T
+5 10 Q
+(acc -g    -DSUNOS -sun4 -c  fci2_lib.c) 72 661.33 T
+(rm -f lib_fci2.a) 72 639.33 T
+(ar rlv lib_fci2.a `lorder fci2_lib.o | tsort`) 72 617.33 T
+(a - fci2_lib.o) 72 595.33 T
+(ar: creating lib_fci2.a) 72 573.33 T
+(ranlib lib_fci2.a) 72 551.33 T
+(acc -g    -DSUNOS -sun4 -c  fci2_sw.c) 72 529.33 T
+(\322fci2_sw.c\323, line 1324: warning: argument is incompatible with prototype: arg) 72 507.33 T
+(#4) 72 495.33 T
+(\322fci2_sw.c\323, line 1382: warning: argument is incompatible with prototype: arg) 72 473.33 T
+(#4) 72 461.33 T
+(\322fci2_sw.c\323, line 1383: warning: argument is incompatible with prototype: arg) 72 439.33 T
+(#4) 72 427.33 T
+(rm -f class_sonde) 72 405.33 T
+(acc -g    -DSUNOS  -sun4 -DCLASS_SONDE -o class_sonde fci2_sw.o ./lib_fci2.a) 72 383.33 T
+(rm -f csu_prt6) 72 361.33 T
+(acc -g    -DSUNOS  -sun4 -DCSU_PRT6 -o csu_prt6 fci2_sw.o ./lib_fci2.a) 72 339.33 T
+(rm -f csu_sondes) 72 317.33 T
+(acc -g    -DSUNOS  -sun4 -DCSU_SONDES -o csu_sondes fci2_sw.o ./lib_fci2.a) 72 295.33 T
+(rm -f csu_station1) 72 273.33 T
+(acc -g    -DSUNOS  -sun4 -DSTATION1 -o csu_station1 fci2_sw.o ./lib_fci2.a) 72 251.33 T
+(rm -f csu_station2) 72 229.33 T
+(acc -g    -DSUNOS  -sun4 -DSTATION2 -o csu_station2 fci2_sw.o ./lib_fci2.a) 72 207.33 T
+(rm -f csu_wndprf) 72 185.33 T
+(l) 168 185.33 T
+(acc -g    -DSUNOS  -sun4 -DCSU_WND -o csu_wndprf) 72 163.33 T
+(l fci2_sw.o ./lib_fci2.a) 360 163.33 T
+(rm -f doplr_lidar) 72 141.33 T
+(acc -g    -DSUNOS  -sun4 -DDOPLR_LIDAR -o doplr_lidar fci2_sw.o ./lib_fci2.a) 72 119.33 T
+(rm -f maps) 72 97.33 T
+(acc -g    -DSUNOS  -sun4 -DMAPS -o maps fci2_sw.o ./lib_fci2.a) 72 75.33 T
+FMENDPAGE
+%%EndPage: "30" 30
+%%Page: "31" 31
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+108 54 540 54 2 L
+0.25 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 8 Q
+(APPENDIX) 72 34.17 T
+(September 26, 1995) 273.89 34.17 T
+(31) 532 34.17 T
+5 10 Q
+(rm -f noaa_wndprf) 72 713.33 T
+(l) 174 713.33 T
+(acc -g    -DSUNOS  -sun4 -DNOAA_WND -o noaa_wndprf) 72 691.33 T
+(l fci2_sw.o ./lib_fci2.a) 372 691.33 T
+(rm -f nws_sonde) 72 669.33 T
+(acc -g    -DSUNOS  -sun4 -DNWS_SONDE -o nws_sonde fci2_sw.o ./lib_fci2.a) 72 647.33 T
+(rm -f pams) 72 625.33 T
+(acc -g    -DSUNOS  -sun4 -DPAMS -o pams fci2_sw.o ./lib_fci2.a) 72 603.33 T
+(rm -f raman_lidar) 72 581.33 T
+(acc -g    -DSUNOS  -sun4 -DRAMAN_LIDAR -o raman_lidar fci2_sw.o ./lib_fci2.a) 72 559.33 T
+(rm -f ci2_kingair) 72 537.33 T
+(acc -g    -DSUNOS  -sun4 -DF2_KINGAIR -o ci2_kingair genpro.c ./lib_fci2.a) 72 515.33 T
+(rm -f ci2_sabreliner) 72 493.33 T
+(acc -g    -DSUNOS  -sun4 -o ci2_sabreliner genpro.c ./lib_fci2.a) 72 471.33 T
+(rm -f mas_read_netcdf_c) 72 449.33 T
+(acc -g    -DSUNOS  -sun4 -DNO_HAVE_PROTOTYPES -DNO_STDARG -I/usr/local/hdf-) 72 427.33 T
+(3.3r4/mfhdf/libsrc -I/usr/local/hdf-3.3r4/mfhdf/port -I/usr/local/hdf-3.3r4/) 72 415.33 T
+(hdf/include -o mas_read_netcdf_c mas_read_netcdf.c -L/usr/local/hdf-3.3r4/) 72 403.33 T
+(mfhdf/libsrc -lnetcdf /usr/local/hdf-3.3r4/hdf/lib/libdf.a) 72 391.33 T
+(rm -f mas_read_netcdf_f) 72 369.33 T
+(f77   -sun4 -DNO_HAVE_PROTOTYPES -DNO_STDARG -I/usr/local/hdf-3.3r4/mfhdf/lib-) 72 347.33 T
+(src -I/usr/local/hdf-3.3r4/mfhdf/port -I/usr/local/hdf-3.3r4/hdf/include -o) 72 335.33 T
+(mas_read_netcdf_f mas_read_netcdf.f -L/usr/local/hdf-3.3r4/mfhdf/libsrc -) 72 323.33 T
+(lnetcdf /usr/local/hdf-3.3r4/hdf/lib/libdf.a) 72 311.33 T
+(mas_read_netcdf.f:) 72 289.33 T
+( MAIN:) 72 267.33 T
+(\322mas_constant.i\323, line 155: Warning: local variable \322dfntf_pcdfntf_convex\323) 72 245.33 T
+(never used) 72 233.33 T
+FMENDPAGE
+%%EndPage: "31" 31
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 31
+%%DocumentFonts: Times-Roman
+%%+ Times-Bold
+%%+ Courier-Bold
+%%+ Times-BoldItalic
+%%+ Times-Italic
+%%+ Courier
+%%EOF

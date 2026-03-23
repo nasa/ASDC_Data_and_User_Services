@@ -1,0 +1,189 @@
+
+Name of HDF file to be read:
+< CER_SYN1deg-Month_Sample_R5V1
+
+Name of 5-zone 5-region SYN1deg-Month HDF file:
+< CER_SYN1deg-Month_Sample_R5V1
+
+
+
+*********************************************************
+*      Start Example 1  (2 Dimensional data)            *
+*********************************************************
+ SDS: "Region Number" 
+Rank: "2" 
+type: "5" 
+sds_dims[0]: "5" 
+sds_dims[1]: "5" 
+
+
+
+*********************************************************
+*  Example 1:   ( ONLY PRINTING MAX OF 5 PER ZONE)      *
+*********************************************************
+
+Region Number for Zone 1
+
+   Longitude Region (1)[1] = 30298.000000
+   Longitude Region (2)[2] = 30299.000000
+   Longitude Region (3)[3] = 30300.000000
+   Longitude Region (4)[4] = 30301.000000
+   Longitude Region (5)[5] = 30302.000000
+
+Region Number for Zone 2
+
+   Longitude Region (1)[6] = 30658.000000
+   Longitude Region (2)[7] = 30659.000000
+   Longitude Region (3)[8] = 30660.000000
+   Longitude Region (4)[9] = 30661.000000
+   Longitude Region (5)[10] = 30662.000000
+
+Region Number for Zone 3
+
+   Longitude Region (1)[11] = 31018.000000
+   Longitude Region (2)[12] = 31019.000000
+   Longitude Region (3)[13] = 31020.000000
+   Longitude Region (4)[14] = 31021.000000
+   Longitude Region (5)[15] = 31022.000000
+
+Region Number for Zone 4
+
+   Longitude Region (1)[16] = 31378.000000
+   Longitude Region (2)[17] = 31379.000000
+   Longitude Region (3)[18] = 31380.000000
+   Longitude Region (4)[19] = 31381.000000
+   Longitude Region (5)[20] = 31382.000000
+
+Region Number for Zone 5
+
+   Longitude Region (1)[21] = 31738.000000
+   Longitude Region (2)[22] = 31739.000000
+   Longitude Region (3)[23] = 31740.000000
+   Longitude Region (4)[24] = 31741.000000
+   Longitude Region (5)[25] = 31742.000000
+
+
+*********************************************************
+*             Start Example 2   (3 Dimensional data)    *
+*********************************************************
+ SDS: "LW TOA Total-Sky" 
+Rank: "3" 
+type: "5" 
+sds_dims[0]: "2" 
+sds_dims[1]: "5" 
+sds_dims[2]: "5" 
+
+
+
+************************************************************
+*  Example 2:   ( ONLY PRINTING MAX OF 2 PER DIMENSION)    *
+************************************************************
+
+LW TOA Total-Sky Stat type =  1  MEAN 
+
+
+LW TOA Total-Sky for Zone 1
+      Longitude Region (1)[1] = 223.745819
+      Longitude Region (2)[2] = 222.126282
+
+
+LW TOA Total-Sky for Zone 2
+      Longitude Region (1)[6] = 225.942398
+      Longitude Region (2)[7] = 224.711517
+
+
+LW TOA Total-Sky Stat type =  2  STANDARD DEVIATION 
+
+
+LW TOA Total-Sky for Zone 1
+      Longitude Region (1)[26] = 2.680119
+      Longitude Region (2)[27] = 2.611786
+
+
+LW TOA Total-Sky for Zone 2
+      Longitude Region (1)[31] = 5.705183
+      Longitude Region (2)[32] = 7.391477
+
+
+
+*********************************************************
+*               Start Example 3   (4 Dimensional data)  *
+*********************************************************
+ SDS: "Tuned Total-Sky LW Up" 
+Rank: "4" 
+type: "5" 
+sds_dims[0]: "5" 
+sds_dims[1]: "2" 
+sds_dims[2]: "5" 
+sds_dims[3]: "5" 
+
+
+
+************************************************************
+*  Example 3:   ( ONLY PRINTING MAX OF 2 PER DIMENSION)    *
+************************************************************
+
+Tuned Total-Sky LW Up Flux Profile Level =  1  
+
+
+Tuned Total-Sky LW Up Stat type =  1  MEAN 
+
+
+Tuned Total-Sky LW Up for ZONE 1
+      Longitude Region (1)[1] = 220.426605
+      Longitude Region (2)[2] = 219.388245
+
+
+Tuned Total-Sky LW Up for ZONE 2
+      Longitude Region (1)[6] = 222.848663
+      Longitude Region (2)[7] = 220.917267
+
+
+Tuned Total-Sky LW Up Stat type =  2  STANDARD DEVIATION 
+
+
+Tuned Total-Sky LW Up for ZONE 1
+      Longitude Region (1)[26] = 4.075734
+      Longitude Region (2)[27] = 2.400707
+
+
+Tuned Total-Sky LW Up for ZONE 2
+      Longitude Region (1)[31] = 6.166586
+      Longitude Region (2)[32] = 7.356363
+
+
+Tuned Total-Sky LW Up Flux Profile Level =  2  
+
+
+Tuned Total-Sky LW Up Stat type =  1  MEAN 
+
+
+Tuned Total-Sky LW Up for ZONE 1
+      Longitude Region (1)[51] = 219.233704
+      Longitude Region (2)[52] = 218.171173
+
+
+Tuned Total-Sky LW Up for ZONE 2
+      Longitude Region (1)[56] = 221.712585
+      Longitude Region (2)[57] = 219.722275
+
+
+Tuned Total-Sky LW Up Stat type =  2  STANDARD DEVIATION 
+
+
+Tuned Total-Sky LW Up for ZONE 1
+      Longitude Region (1)[76] = 4.137157
+      Longitude Region (2)[77] = 2.518680
+
+
+Tuned Total-Sky LW Up for ZONE 2
+      Longitude Region (1)[81] = 6.296257
+      Longitude Region (2)[82] = 7.582287
+
+
+
+*********************************************************
+*    Example 4:      (vData )                           *
+*********************************************************
+
+ASSOCIATEDPLATFORMSHORTNAME = Merge                           

@@ -1,0 +1,99 @@
+#
+# %Z% File name: %M%  Release: %I%  Date: %G%, %U%
+#
+
+###########################################################################
+             AS = as
+             CC = cc 
+             FC = f77
+            CPP = /lib/cpp
+             LD = ld
+           LINT = lint
+        INSTALL = install
+           TAGS = ctags
+             RM = rm -f
+             MV = mv
+             LN = ln -s
+         RANLIB = ranlib
+RANLIBINSTFLAGS = -t
+             AR = ar
+        ARFLAGS = rlv
+             LS = ls
+       LINTOPTS = -axz
+    LINTLIBFLAG = -C
+           MAKE = make
+STD_CPP_DEFINES = 
+    STD_DEFINES = -DSUNOS
+#    STD_DEFINES = -Aa -DHPUX
+
+      SYSLIBDIR = /usr/lib
+SYSLAST_LIBRARIES = -lm
+
+          CFLOW = cflow
+     CFLOWFLAGS =
+
+.c.o:
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+.f.o:
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+###########################################################################
+# definitions common to all Makefiles - do not edit
+
+          SHELL = /bin/sh
+
+        DESTDIR =
+
+    DEBUGGEDCFLAGS = -g
+   OPTIMIZEDCFLAGS = -O
+    PROFILEDCFLAGS = -O -pg
+          CPPFLAGS = $(INCLUDES) $(STD_CPP_DEFINES)
+
+           PATHSEP = /
+
+           CCFLAGS = -g
+            CFLAGS = $(CCFLAGS) $(STD_DEFINES) $(U_C_DEFINES)
+            FFLAGS = -g $(STD_DEFINES) $(U_C_DEFINES)
+         LINTFLAGS = $(LINTOPTS) $(CPPFLAGS) -DLINT
+
+         COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+            LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+         COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+            LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+           LINT.c  = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+
+
+         RM_CMD = $(RM) *.ln *.BAK *.bak *.o core errs ,* *~ *.a \
+			.emacs_* make.log MakeOut
+
+###########################################################################
+
+###   Include file and library functions are specified as in the local 
+###   directory.  REDEFINE to the appropriate directory if needed.
+###   MODIFY THE NEXT TWO LINES!
+
+INCLUDE_DIR = -I/usr/local/hdf-3.3r4/mfhdf/libsrc -I/usr/local/hdf-3.3r4/mfhdf/port -I/usr/local/hdf-3.3r4/hdf/include
+
+LIB_DIR = -L/usr/local/hdf-3.3r4/mfhdf/libsrc /-lnetcdf usr/local/hdf-3.3r4/hdf/lib/libdf.a
+
+
+NIMBUS7_MLCE_SRC = read_nimbus7.c
+all:: nimbus7mlce 
+
+
+nimbus7mlce: $(NIMBUS7_MLCE_SRC)
+	$(RM) $@
+	$(LINK.c) -DNO_HAVE_PROTOTYPES -DNO_STDARG -o $@ $(NIMBUS7_MLCE_SRC) 
+
+
+
+install:: all
+	$(INSTALL) -c $(INSTLIBFLAGS) all
+
+clean::
+	$(RM) nimbus7mlce 
+	$(RM_CMD) \#*
+
+debug:
+	$(MAKE) "CCFLAGS=-g"

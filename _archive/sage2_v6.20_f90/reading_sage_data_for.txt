@@ -1,0 +1,164 @@
+READING SAGE II VERSION 6.10 FORMAT DATA USING FORTRAN 90.
+
+Since different fortran compilers handle binary unformatted data in
+different ways, it is not possible to provide a reader for the SAGE II
+data that will work with all hardware systems and all compilers.  But
+a number of general comments can be made.
+
+The files are unformatted (native format) binary files written on a 
+DEC Alpha by a program compiled using the DIGITAL Fortran 90 V5.2-705 
+compiler.  The data consists of two and four byte little endian integers
+and single and double precision little endian IEEE floating point data.
+The following code fragments should be sufficient for reading the SAGE II 
+data files on a DEC or PC system.
+
+use specinfo   !the specinfo.f90 file is provided
+implicit none
+integer :: unit=201,lrspec,recnum=1   !this unit number is just an example
+character (len=80) :: file = 'SAGE_II_SPEC_198410.6.10'   !example filename
+type(speciesinfo) spec
+
+!open the species structure file
+inquire(iolength=lrspec) spec
+open(unit=unit,file=file,action='read', &
+  form='unformatted',access='direct',recl=lrspec)
+
+!read the first record
+read(unit=unit,rec=recnum) spec
+
+!close the file
+close(unit)
+
+A text file is provided which contains the contents of the first two 
+records of the file SAGE_II_SPEC_198410.6.10.  Also provided is a f90
+subroutine called formatspec (in the file formatspec.f90), which can
+be used to print out one species record at a time with a standard format.
+The user can use these two file to test that the species structure files
+are being read correctly.  Just call formatspec twice, once for each of 
+the first two records of SAGE_II_SPEC_198410.6.10.  The arguments are 
+the file unit number to write to, and the entire record represented as
+a speciesinfo structure ("spec" in the above code fragment).  The resulting
+text file should be exactly identical to SAGE_II_SPEC_198410.6.10.txt
+provided here.  If it isn't, there are several possible causes...
+
+
+BYTE SWAPPING
+
+The SAGE II structure files contain little-endian data, that is, multiple
+byte data are stored with the least significant byte first.  Certain
+hardware systems, such as Sun workstations, store data with the most
+significant byte first.  Users of such systems will need to perform
+byte swapping on SAGE II data in order for it to be read correctly.  
+
+Some compilers provide various methods for performing byte-swapping
+automatically, although no such provision is given in the Fortran 90
+standard.  Look for a non-standard keyword to the open statement, such
+as "convert".  Also look for ways to specify that byte-swapping should
+be performed using compiler options, run-time options, or system
+environment variables.  Detailed information on these methods will 
+be found in the documentation accompanying the fortran 90 compiler.
+
+Note that some of these methods may not work for data in user-defined
+types.  If that is the case, the read statement will have to be
+modified to read in each component of the species structure separately.
+That is, the statement
+
+read(unit=unit,rec=recnum) spec 
+
+will have to be modified as
+
+read(unit=unit,rec=recnum) spec%tan_alt,spec%tan_lat,spec%tan_lon, &
+			   spec%nmc_pres,spec%nmc_temp,spec%nmc_dens, &
+{etc.}
+
+If the data still are not being read in correctly, proceed to the
+next section.
+
+If no method of performing automatic byte-swapping is found in the
+compiler documentation, users will have to manually perform
+byte-swapping in the application program.  Four byte integers and
+reals should have all four bytes reversed, so that what is
+read in as (byte-1)(byte-2)(byte-3)(byte-4) is changed to
+(byte-4)(byte-3)(byte-2)(byte-1).  Two byte integers will simply
+have the even and odd bytes interchanged.  One way to accomplish 
+such swapping is using the fortran 90 intrinsic routine mvbits,
+as in the following example.
+
+!four-byte swap
+   bitperbyte = bit_size(tan_alt(1))/4
+   btbd1 = 0
+   btbd2 = bitperbyte
+   btbd3 = bitperbyte*2
+   btbd4 = bitperbyte*3
+
+   call mvbits(tan_alt,btbd1,bitperbyte,output%tan_alt,btbd4)
+   call mvbits(tan_alt,btbd2,bitperbyte,output%tan_alt,btbd3)
+   call mvbits(tan_alt,btbd3,bitperbyte,output%tan_alt,btbd2)
+   call mvbits(tan_alt,btbd4,bitperbyte,output%tan_alt,btbd1)
+
+Note, however that mvbits accepts only integer arguments.  One
+way around this limitation is to read in all the four-byte real
+data as four-byte integer data, swap the bytes, and re-write
+the data to a temporary file.  The temporary file can then be
+read in the normal way.
+
+
+TROUBLE-SHOOTING OTHER POSSIBLE PROBLEMS 
+
+Because there is nothing in the fortran 90 standard specifying how
+different compilers treat binary unformatted data, it is possible
+that other irregularities can cause difficulties in reading SAGE II
+data.  
+
+A user encountering such difficulties should first examine
+the expected record size.  The following statement was included
+in the example code fragment given previously:
+
+type(speciesinfo) spec
+inquire(iolength=lrspec) spec
+
+The result, lrspec, should be a multiple of 2137.  If it is not, it
+may be true that the size of individual components is different from
+expected.  The user can perform inquiry statements on arrays of 
+integers of kind=2 and kind=4 and reals of kind=4 to determine 
+if the following are true:
+1. the size of integer(kind=4) should be the same as real(kind=4)
+2. the size of integer(kind=4) should be twice the size of integer(kind=2)
+3. the size of a variable of type speciesinfo should be 1482 times 
+the size of a (kind=4) variable plus 1310 times the size of a (kind=2)
+
+Note: the inquiry statement should be done on arrays rather than 
+on scalars.  The reason for this is that the "iolength" of a single
+(kind=2) integer may be the same as a single (kind=4) integer in order 
+to ensure that data are aligned on natural byte boundaries.  However,
+an array of 100 (kind=2) integers would be expected to be half the 
+size of an array of 100 (kind=4) integers.  Since two byte integers
+appear in the species structure only in arrays of even length, the
+iolength of an array of values is more relevant.
+
+On some compilers, some of the given conditions may be false.  For
+instance, the WorkShop f90 compiler that is used on many
+Sun systems reads and writes all integers as four bytes.  In other
+words, the kind specification (or the "n" in "integer*n") controls only
+the precision and range of the integer, not the amount of memory used
+for the variable.  For this reason, it is impossible to read two-byte
+integers in a straightforward way.  One option for users of such
+compilers is to create a dummy structure which represents arrays of
+(kind=2) integers as arrays of (kind=4) integers of half the length.
+Then the intrinsic routine mvbits can be used to split the bytes
+apart.
+
+The third condition specifies that the size of the speciesinfo record
+be equal to the sum of the sizes of its parts.  If this is not
+true, then the compiler pads the structure in a way different from
+the way it was written.  This is not expected to happen, because 
+the speciesinfo type is already defined in such a way that the data 
+are aligned on natural byte boundaries.  A natural boundary is a 
+multiple of the size of the data item.  Alignment on natural byte
+boundaries improves the efficiency of data storage and many compilers
+ensure this alignment by padding misaligned data.  If for some
+reason padding similar to this is being performed, the user can 
+examine the documentation accompanying the compiler for a way to
+turn it off.  Reading the data one component at a time, as described 
+in the section on Byte-Swapping, would also most likely solve this
+problem.

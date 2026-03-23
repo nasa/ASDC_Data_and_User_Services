@@ -1,0 +1,671 @@
+
+GROUP                  = INVENTORYMETADATA
+  GROUPTYPE            = MASTERGROUP
+
+  GROUP                  = ECSDATAGRANULE
+
+    OBJECT                 = LOCALGRANULEID
+      NUM_VAL              = 1
+      VALUE                = "CER_ISCCP-D2like-Mrg_GEO-MODIS_Edition3A_300301.201205"
+    END_OBJECT             = LOCALGRANULEID
+
+    OBJECT                 = LOCALVERSIONID
+      NUM_VAL              = 1
+      VALUE                = "Clib-20121210 TK5.2.18 HDF-4.2r6 HDFEOS- 2.18v SW000 ANC000"
+    END_OBJECT             = LOCALVERSIONID
+
+    OBJECT                 = PRODUCTIONDATETIME
+      NUM_VAL              = 1
+      VALUE                = "2013-11-07T18:25:29.000Z"
+    END_OBJECT             = PRODUCTIONDATETIME
+
+  END_GROUP              = ECSDATAGRANULE
+
+  GROUP                  = MEASUREDPARAMETER
+
+    OBJECT                 = MEASUREDPARAMETERCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = PARAMETERNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "GranuleParameters"
+      END_OBJECT             = PARAMETERNAME
+
+      GROUP                  = QAFLAGS
+        CLASS                = "1"
+
+        OBJECT                 = AUTOMATICQUALITYFLAG
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "Suspect"
+        END_OBJECT             = AUTOMATICQUALITYFLAG
+
+        OBJECT                 = AUTOMATICQUALITYFLAGEXPLANATION
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "QA flag explanation"
+        END_OBJECT             = AUTOMATICQUALITYFLAGEXPLANATION
+
+      END_GROUP              = QAFLAGS
+
+    END_OBJECT             = MEASUREDPARAMETERCONTAINER
+
+  END_GROUP              = MEASUREDPARAMETER
+
+  GROUP                  = COLLECTIONDESCRIPTIONCLASS
+
+    OBJECT                 = SHORTNAME
+      NUM_VAL              = 1
+      VALUE                = "CMISCCPAB"
+    END_OBJECT             = SHORTNAME
+
+    OBJECT                 = VERSIONID
+      NUM_VAL              = 1
+      VALUE                = 1
+    END_OBJECT             = VERSIONID
+
+  END_GROUP              = COLLECTIONDESCRIPTIONCLASS
+
+  GROUP                  = INPUTGRANULE
+
+    OBJECT                 = INPUTPOINTER
+      NUM_VAL              = 800
+      VALUE                = ("/ASDC_archive/CERES/GGEO/Composite_CALIB/2012/05/CER_GGEO_Composite_CALIB_000000.201205", "/SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/ancillary/CER9.0P3/static/igbp_map_id.20011106", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/ancillary/CER9.0P3/static/BDRF_snow_trmm", "/SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/ancillary/CER9.0P3/static/adm_trmm.bin", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z001", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z001", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z002", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z002", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z003", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z003", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z004", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z004", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z005", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z005", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z006", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z006", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z007", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z007", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z008", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z008", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z009", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z009", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z010", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z010", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z011", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z011", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z012", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z012", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z013", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z013", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z014", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z014", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z015", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z015", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z016", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z016", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z017", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z017", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z018", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z018", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z019", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z019", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z020", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z020", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z021", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z021", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z022", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z022", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z023", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z023", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z024", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z024", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z025", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z025", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z026", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z026", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z027", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z027", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z028", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z028", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z029", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z029", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z030", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z030", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z031", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z031", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z032", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z032", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z033", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z033", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/scr/scenemap.201205", "/SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/scr/NormCoeff.201205", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/scr/GeoIndex.201205", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z034", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z034", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z035", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z035", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z036", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z036", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z037", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z037", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z038", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z038", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z039", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z039", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z040", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z040", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z041", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z041", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z042", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z042", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z043", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z043", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z044", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z044", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z045", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z045", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z046", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z046", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z047", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z047", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z048", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z048", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z049", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z049", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z050", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z050", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z051", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z051", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z052", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z052", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z053", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z053", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z054", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z054", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z055", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z055", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z056", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z056", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z057", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z057", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z058", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z058", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z059", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z059", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z060", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z060", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z061", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z061", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z062", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z062", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z063", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z063", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z064", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z064", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z065", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z065", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z066", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z066", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z067", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z067", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z068", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z068", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z069", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z069", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z070", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z070", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z071", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z071", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z072", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z072", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z073", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z073", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z074", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z074", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z075", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z075", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z076", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z076", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z077", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z077", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z078", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z078", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z079", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z079", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z080", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z080", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z081", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z081", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z082", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z082", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z083", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z083", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z084", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z084", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z085", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z085", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z086", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z086", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z087", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z087", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z088", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z088", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z089", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z089", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z090", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z090", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z091", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z091", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z092", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z092", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z093", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z093", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z094", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z094", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z095", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z095", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z096", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z096", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z097", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z097", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z098", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z098", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z099", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z099", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z100", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z100", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z101", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z101", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z102", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z102", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z103", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z103", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z104", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z104", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z105", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z105", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z106", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z106", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z107", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z107", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z108", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z108", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z109", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z109", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z110", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z110", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z111", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z111", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z112", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z112", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z113", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z113", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z114", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z114", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z115", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z115", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z116", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z116", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z117", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z117", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z118", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z118", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z119", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z119", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z120", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z120", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z121", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z121", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z122", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z122", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z123", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z123", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z124", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z124", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z125", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z125", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z126", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z126", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z127", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z127", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z128", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z128", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z129", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z129", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z130", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z130", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z131", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z131", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z132", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z132", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z133", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z133", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z134", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z134", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z135", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z135", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z136", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z136", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z137", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z137", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z138", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z138", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z139", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z139", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z140", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z140", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z141", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z141", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z142", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z142", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z143", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z143", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z144", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z144", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z145", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z145", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z146", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z146", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z147", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z147", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z148", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z148", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z149", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z149", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z150", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z150", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z151", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z151", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z152", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z152", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z153", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z153", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z154", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z154", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z155", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z155", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z156", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Aqua-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Aqua-MODIS_Edition3A_300301.201205Z156", "
+          /SCF2/CERES/tisa/tisa_grid/DAAC_Delivery/DataProduct_Summary/hdf_5recs/tisa_grid/data/ISCCP-D2likeB/Terra-MODIS_Edition3A/2012/05/CER_ISCCP-D2likeB_Terra-MODIS_Edition3A_300301.201205Z157")
+    END_OBJECT             = INPUTPOINTER
+
+  END_GROUP              = INPUTGRANULE
+
+  GROUP                  = SPATIALDOMAINCONTAINER
+
+    GROUP                  = HORIZONTALSPATIALDOMAINCONTAINER
+
+      GROUP                  = BOUNDINGRECTANGLE
+
+        OBJECT                 = WESTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = -180.0
+        END_OBJECT             = WESTBOUNDINGCOORDINATE
+
+        OBJECT                 = NORTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 90.0
+        END_OBJECT             = NORTHBOUNDINGCOORDINATE
+
+        OBJECT                 = EASTBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = 180.0
+        END_OBJECT             = EASTBOUNDINGCOORDINATE
+
+        OBJECT                 = SOUTHBOUNDINGCOORDINATE
+          NUM_VAL              = 1
+          VALUE                = -90.0
+        END_OBJECT             = SOUTHBOUNDINGCOORDINATE
+
+      END_GROUP              = BOUNDINGRECTANGLE
+
+    END_GROUP              = HORIZONTALSPATIALDOMAINCONTAINER
+
+  END_GROUP              = SPATIALDOMAINCONTAINER
+
+  GROUP                  = RANGEDATETIME
+
+    OBJECT                 = RANGEBEGINNINGTIME
+      NUM_VAL              = 1
+      VALUE                = "00:00:00.000000"
+    END_OBJECT             = RANGEBEGINNINGTIME
+
+    OBJECT                 = RANGEENDINGTIME
+      NUM_VAL              = 1
+      VALUE                = "23:59:59.000000"
+    END_OBJECT             = RANGEENDINGTIME
+
+    OBJECT                 = RANGEBEGINNINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2012-05-01"
+    END_OBJECT             = RANGEBEGINNINGDATE
+
+    OBJECT                 = RANGEENDINGDATE
+      NUM_VAL              = 1
+      VALUE                = "2012-05-31"
+    END_OBJECT             = RANGEENDINGDATE
+
+  END_GROUP              = RANGEDATETIME
+
+  GROUP                  = PGEVERSIONCLASS
+
+    OBJECT                 = PGEVERSION
+      NUM_VAL              = 1
+      VALUE                = "300301"
+    END_OBJECT             = PGEVERSION
+
+  END_GROUP              = PGEVERSIONCLASS
+
+  GROUP                  = ADDITIONALATTRIBUTES
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "CERPGEName"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "1"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "1"
+          VALUE                = "CER9.0P3"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "2"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "SamplingStrategy"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "2"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "2"
+          VALUE                = "GEO-MODIS"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "3"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "ProductionStrategy"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "3"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "3"
+          VALUE                = "Edition3A"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "4"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "4"
+        NUM_VAL              = 1
+        VALUE                = "CERDataDateYear"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "4"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "4"
+          VALUE                = "2012"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "5"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "5"
+        NUM_VAL              = 1
+        VALUE                = "CERDataDateMonth"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "5"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "5"
+          VALUE                = "05"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+    OBJECT                 = ADDITIONALATTRIBUTESCONTAINER
+      CLASS                = "6"
+
+      OBJECT                 = ADDITIONALATTRIBUTENAME
+        CLASS                = "6"
+        NUM_VAL              = 1
+        VALUE                = "NumberInputFiles"
+      END_OBJECT             = ADDITIONALATTRIBUTENAME
+
+      GROUP                  = INFORMATIONCONTENT
+        CLASS                = "6"
+
+        OBJECT                 = PARAMETERVALUE
+          NUM_VAL              = 1
+          CLASS                = "6"
+          VALUE                = "320"
+        END_OBJECT             = PARAMETERVALUE
+
+      END_GROUP              = INFORMATIONCONTENT
+
+    END_OBJECT             = ADDITIONALATTRIBUTESCONTAINER
+
+  END_GROUP              = ADDITIONALATTRIBUTES
+
+  GROUP                  = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "1"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "GEO-MODIS"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "FM1/FM2/FM3/FM4"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "1"
+        NUM_VAL              = 1
+        VALUE                = "Total Detector"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "2"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "NOT SET"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "FM1/FM2/FM3/FM4"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "2"
+        NUM_VAL              = 1
+        VALUE                = "Window Detector"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+    OBJECT                 = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+      CLASS                = "3"
+
+      OBJECT                 = ASSOCIATEDPLATFORMSHORTNAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "NOT SET"
+      END_OBJECT             = ASSOCIATEDPLATFORMSHORTNAME
+
+      OBJECT                 = ASSOCIATEDINSTRUMENTSHORTNAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "FM1/FM2/FM3/FM4"
+      END_OBJECT             = ASSOCIATEDINSTRUMENTSHORTNAME
+
+      OBJECT                 = ASSOCIATEDSENSORSHORTNAME
+        CLASS                = "3"
+        NUM_VAL              = 1
+        VALUE                = "Shortwave Detector"
+      END_OBJECT             = ASSOCIATEDSENSORSHORTNAME
+
+    END_OBJECT             = ASSOCIATEDPLATFORMINSTRUMENTSENSORCONTAINER
+
+  END_GROUP              = ASSOCIATEDPLATFORMINSTRUMENTSENSOR
+
+END_GROUP              = INVENTORYMETADATA
+
+END

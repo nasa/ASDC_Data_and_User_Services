@@ -1,0 +1,2043 @@
+      PROGRAM DUMP
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+C<  NAME - DUMP                               MODULE - 6.2.DUMP
+C<  LANGUAGE - FORTRAN V                      TYPE - PROGRAM
+C<  VERSION - 1.0          DATE - 11/14/85    PROGRAMMER - J. SATRAN
+C<                                            SYSTEM DEVELOPMENT CORP.
+C					      PROGRAMMER - 
+C					       	E. SINGH -- SAIC
+C   VERSION - 2.0         DATE - 2/27/95      LANGLEY DAAC
+C   VERSION - 3.0         DATE - 2/16/96      PROGRAMMER - LIBBY SMITH
+C                                               SAIC
+C
+C<  PURPOSE - TO LIST A GIVEN REGION OR REGIONS FROM THE SCIENCE OUTPUT 
+C<            PRODUCT  (S-9 OR S-10)
+C
+C<  INPUT FILES -
+C<     INUNIT  - UNIT NUMBER FOR SCIENCE OUTPUT PRODUCT
+C<     IREAD   - UNIT NUMBER TO READ THE NAMELIST FROM  (SET TO UNIT 9) 
+C
+C<  OUTPUT FILES -
+C<     IOUNIT - UNIT NUMBER TO WRITE THE DUMP TO
+C
+C<  KEY LOCAL PARAMETERS -
+C<     IBUF   - ARRAY CONTAINING HEADER INFORMATION RETURNED BY G16HED
+C<     IDAT   - VARIABLE CONTAINING DATA DATE 
+C<     IFATAL - FATAL ERROR FOUND INDICATOR, 0 = NO ERROR,    1 = ERROR 
+C<     IFREC  - FIRST REGION DESIRED FROM TAPE BY USER
+C<     ILREC  - LAST REGION DESIRED FROM TAPE BY USER 
+C<     IPCODE - LOCATION OF THE 2-DIGIT PRODUCT CODE IN THE MTAPCD ARRAY
+C<     MTAPCD - ARRAY, DIMENSIONED 10 CONTAINING THE 2-DIGIT PRODUCT
+C<              CODES USED TO CREATE THE 14-BIT PRODUCT CODES
+C<     ISTATS - ERROR INDICATOR FOR OPENING A FILE
+C<     NRECR  - COUNTER OF NUMBER OF RECORDS READ 
+C<     IVAL   - FLAG TO INDICATE WHETHER HEADER RECORD MATCHES, 0 = YES 
+C<     IGEO   - GEOGRAPHIC SCENE TYPE RETURNED BY RECONE
+C<     IREGION- REGION NUMBER RETURNED BY RECONE
+C<     IRES   - RESOLUTION INPUT  (25,50,100) 
+C<     RES    - RESOLUTION/10.0 
+C<     NREC1  - LENGTH OF RECORD ONE 
+C<     NREP   - NUMBER OF REPETITIONS IN RECORD TWO 
+C<     IANS   - DETERMINES WHICH RECORD IS TO BE PRINTED
+C<     VSNIN  - NAME OF FILE WHICH CONTAINS THE UNPACKED RECORDS
+C
+C<  SUBROUTINES CALLED -
+C<     FLOAT  - INTRINSIC INTEGER TO REAL CONVERSION ROUTINE
+C<     G16HED - RETRIEVE THE HEADER RECORD FOR INPUT FILES
+C<     INT    - INTRINSIC TRUNCATE REAL TO INTEGER ROUTINE
+C<     IVLHED - VALIDATE INFORMATION ABOUT HEADER FOR FILE
+C<     IWORDS - DETERMINE NUMBER OF WORDS TO WRITE FOR A PACKED
+C<              RECORD (EVEN BOUNDRY 16 & 60 BITS)
+C<     READDATA - READS THE HEADER AND SCALE FACTORS
+C<     RECONE - READS A TYPE ONE DATA RECORD 
+C<     RECTWO - READS A TYPE TWO DATA RECORD
+C<     SCALEONE - SCALES TYPE ONE DATA RECORD
+C<     SCALETWO - SCALES TYPE TWO DATA RECORD
+C<     HRBOXES - DETERMINES NUMBER OF REPETITIONS FOR RECORD TWO
+C<     SETLOC - SET ALL LOCATIONS OF AN ARRAY TO A GIVEN VARIABLE
+C<     SETUP  - PROMPTS FOR REGION INPUT INFO, CHECKS AND SKIPS 
+C<              FILES IF NECESSARY. 
+C<     MOD    - FORTRAN INTRINSIC REMAINDERING FUNCTION
+C<     INIT   - INITIALIZE PROGRAM (READ NAMELIST)
+C
+C COMMONS USED: 
+C     /DATA/-   HEADER := ARRAY TO CONTAIN HEADER DATA
+C               REC1   := ARRAY TO CONTAIN UNSCALED VALUES OF RECORD ONE
+C		REC2   := ARRAY TO CONTAIN UNSCALED VALUES OF RECORD TWO
+C     /DATA2/-  SREC1  := ARRAY TO CONTAIN SCALED VALUES OF RECORD ONE
+C		SREC2  := ARRAY TO CONTAIN SCALED VALUES OF RECORD TWO
+C    /CHARACT/- VSNIN  := CHARACTER VARIABLE FOR VSN OF INPUT TAPE
+C    /CONSTS/ - NHR    := NUMBER OF HOUR BOXES
+C    /GLOBAL/ - ISUBNO := SUBSYSTEM NUMBER
+C               IVERSN := VERSION NUMBER
+C 
+C    /UNITS/  - MTAPCD := ARRAY WHICH CONTAINS 1ST 2 PRODUCT NUMBER 
+C               INUNIT := UNIT NUMBER FOR SCIENCE OUTPUT PRODUCT
+C               IOUNIT := UNIT NUMBER TO WRITE THE DUMP TO
+C               IOUNIT := UNIT NUMBER TO WRITE THE DUMP TO
+C    /SCALE/  - SCALE1 := ARRAY TO CONTAIN THE SCALE FACTORS FOR TYPE 
+C                         1 DATA RECORD 
+C               SCALE2 := ARRAY TO CONTAIN THE SCALE FACTORS FOR TYPE 
+C                         TWO DATA RECORDS
+C               NSCAL1 := NUMBER OF ELEMENTS IN SCALE1
+C               NSCAL2 := NUMBER OF ELEMENTS IN SCALE2
+C   /TPARAMS/ - IDBREG := ARRAY TO CONTAIN THE REGIONS
+C               ILAST  := ARRAY TO CONTAIN THE LAST REGION IN EACH FILE 
+C               IREGTOT:= VARIABLE CONTAINING THE NUMBER OF REGIONS DESIRED 
+C               IFIRST := VARIABLE CONTAINING THE FIRST REGION ON TAPE
+C               NFILES := VARIABLE CONTAINING THE NUMBER OF FILES ON TAPE 
+C   /STRNG/   - STRING := ARRAY CONTAINING UNPACKED HEADER AND SCALE FACTORS
+C               STRING2 := ARRAY CONTAINING UNPACKED RECORD ONE DATA
+C               STRING3 := ARRAY CONTAINING UNPACKED RECORD TWO DATA
+C
+C<  EXIT STATES -
+C<     NORMAL - NO PROBLEMS
+C<     ERROR  - PROBLEMS VERIFYING FILES
+C
+C<  COMMENTS -
+C            - 09-27-95 Modified program to assign the correct scale
+C              factor to data values for S-9 record one (Monthly Hourly).
+C              Also modified print statement to print out the correct number
+C              of values for record two when there are 50000 values in the
+C              array.
+C
+C              Modified text so that the program states that it is able
+C              to read S-10N data sets as well.  Any code which states
+C              that it is working with S-10 should be considered that
+C              it is able to read S-10N as well.
+C
+C           -  02-16-96 Modified program to set INST parameter to 1 if
+C              reading nonscanner data;  Also modified printing of record
+C              2 to use format 81 if scanner data (32 words) and format 82
+C              if nonscanner data (38 words).
+C
+C  Contact Information:
+C       EOSDIS Langley Research Center DAAC User and Data Services
+C       Mail Stop 157D
+C       Langley Research Center
+C       Hampton, Virginia 23681-0001
+C       USA
+C
+C       Telephone:   (804) 864-8656
+C       FAX:         (804) 864-8807
+C       E-mail:      userserv@eosdis.larc.nasa.gov
+C                         - or -
+C                    userserv@192.107.191.17
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+	INTEGER STRING(240),STRING2(1980),STRNGSC(3720),STRING3(50000)
+	INTEGER HEADER(15),REC1(1860),REC2(50000)
+	REAL SREC1(1860),SREC2(50000)
+	INTEGER SCALE1(67),SCALE2(38)
+	INTEGER MTAPCD(18)
+	INTEGER IDBREG(10225),ILAST(7),eidx
+	CHARACTER VSNIN*80
+C
+      	COMMON /CHARACT/ VSNIN
+C
+      	COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD,
+     1                  NREC1,FILVAL,NHR,NREP,LWORD,IRTYP, 
+     2                  IPRNT,INST 
+C
+      	COMMON /GLOBAL/ ISUBNO,IVERSN,MSGUNT,IVAR(3),RVAR(3)
+C
+      	COMMON /UNITS/ MTAPCD,INUNIT,IOUNIT,IREAD,IUNITDB 
+C
+    	COMMON /DATA/ HEADER,REC1,REC2
+C
+ 	COMMON /DATA2/ SREC1,SREC2
+C
+      	COMMON /SCALE/ SCALE1,SCALE2,NSCAL1,NSCAL2
+C
+	COMMON /STRNG/ STRING,STRING2,STRING3,STRNGSC
+C 
+      	COMMON /TPARAMS/ IDBREG,ILAST,IREGTOT,IFIRST,NFILES
+C
+	COMMON /RDFILE/ IUNH
+C 
+C
+C      	DIMENSION IBUF(8)
+C
+      	DATA MTAPCD/60,61,62,63,64,65,66,67,68,69,82,83,84,85,86,87,88
+     +             ,89/
+      	DATA ISUBNO/6/,IVERSN/1/,IFATAL/0/
+C
+C 
+C 
+CCCCCCCCCCCCCCCCCC     BEGIN DUMP     CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC 
+C 
+        PRINT *,'PLEASE ENTER 1= S9 TAPE, 2= S10 OR S10N TAPE:'
+        READ *, IANSW
+      	IBINRY = 0
+
+C 
+C 
+C<     *** INITALIZE DUMP PROGRAM
+C
+      	CALL INIT(IFATAL)
+      	IF (IFATAL.EQ.0) THEN
+
+           NRECR = 0
+           NHR = 0
+           IVAL = 0
+C 
+           CALL SETUP(IFREC,ILREC)
+C 
+C<      *** WRITE REPORT HEADER TO OUTPUT FILE
+C
+           idat = (iyear*100) + month
+           RES = FLOAT(IRES) / 10.0
+           WRITE (IOUNIT,100) IFREC,ILREC,ISATCD,RES,KIND,IDAT 
+           WRITE (95,*) IFREC,ILREC,ISATCD,RES,KIND,IDAT
+C
+C<	*** READ HEADERS AND SCALE FACTORS FOR
+C           EITHER S-9 OR S-10
+C
+           eidx = lnblnk(vsnin)
+	   CALL COPEN(VSNIN(1:eidx),eidx,IUNH)
+	   CALL CREAD(IUNH,240,STRING,IERR)
+C
+	   CALL READDATA
+C
+C<     *** READ DATA ONE RECORD AND SCALE FOR
+C          EITHER S-9 OR S-10
+C
+           IF(IANSW .EQ. 1) THEN
+             CALL CREAD(IUNH,3720,STRNGSC,IERR2)
+           ELSE
+    	     CALL CREAD(IUNH,1980,STRING2,IERR2)
+           ENDIF
+C
+           CALL RECONE(IREGION,IGEO,IANSW)
+           CALL SCALEONE(IANSW)
+           WRITE(IOUNIT,120) IREGION,IGEO 
+C
+C<	*** READ THE REGIONS REQUESTED FOR RECORDS ONE AND TWO
+C<	    AND SCALE THEM AND PRINT IF REQUESTED
+C
+           print *, "RETRIEVING REQUESTED REGIONS FROM FILE..."
+	   DO 2000 IREG = 1,IREGTOT
+ 1000         if (iregion .eq. 0) then
+c       *** END OF FILE HAS APPARENTLY BEEN REACHED.
+C       *** REPORT ANY REMAINING REQUESTED REGIONS AS
+C       *** MISSING FROM FILE AND EXIT LOOP.
+                 PRINT *,'REGION',IDBREG(IREG),' IS NOT ON THE TAPE'
+                 write(iounit,84) IDBREG(IREG)
+                 goto 2000
+              end if
+
+c 1000	     CONTINUE
+C
+C<  	*** IF REGION REQUESTED IS LESS THAN WHAT IS READ,
+C<      *** BYPASS THE RECORDS TILL THE REQUESTED REGION 
+C<	*** IS FOUND - THIS IS DONE FOR EITHER S-9 OR S-10
+C
+	     IF(IREGION .LT. IDBREG(IREG)) THEN
+               CALL HRBOXES(NBYTES,ISIZE)
+	       IF(ISIZE .EQ. 0) THEN
+                 IF(IANSW .EQ.1) THEN
+		   CALL SETLOC(0,3720,STRNGSC)
+		   IERR2 = 0
+		   CALL CREAD(IUNH,3720,STRNGSC,IERR2)
+                 ELSE
+                   CALL SETLOC(0,1980,STRING2)
+		   IERR2 = 0
+                   CALL CREAD(IUNH,1980,STRING2,IERR2)
+                 ENDIF
+                 CALL RECONE(IREGION,IGEO,IANSW)
+                 CALL SCALEONE(IANSW)
+	       ELSE
+	         CALL SETLOC(0,50000,STRING3)
+	         IERR3 = 0
+	         CALL CREAD(IUNH,NBYTES,STRING3,IERR3)
+                 CALL RECTWO(ISIZE)
+                 IF(IANSW .EQ.1) THEN
+                   CALL SETLOC(0,3720,STRNGSC)
+                   IERR2 = 0
+                   CALL SETLOC(0,3720,STRNGSC)
+                   CALL CREAD(IUNH,3720,STRNGSC,IERR2)
+                 ELSE
+                   CALL SETLOC(0,1980,STRING2)
+                   IERR2 = 0
+                   CALL SETLOC(0,1980,STRING2)
+                   CALL CREAD(IUNH,1980,STRING2,IERR2)
+                 ENDIF
+                 CALL RECONE(IREGION,IGEO,IANSW)
+                 CALL SCALEONE(IANSW)
+	       ENDIF
+               GOTO 1000
+	     ENDIF
+C
+C<  	*** IF REGION REQUESTED IS NOT ON THE TAPE, 
+C<	*** PRINT ERROR MSG
+C
+             IF(IREGION .GT. IDBREG(IREG)) THEN
+                 PRINT *,'REGION',IDBREG(IREG),' IS NOT ON THE TAPE'
+                 write(iounit,84) IDBREG(IREG)
+                 GO TO 2000
+             ENDIF
+C
+C<  	*** IF REQUESTED REGION IS FOUND, FIND WHICH RECORD 
+C<	*** NEEDS TO BE PRINTED AND THEN PRINT THEM
+C
+             IF(IREGION .EQ. IDBREG(IREG)) THEN
+               print *, "FOUND REGION ",idbreg(ireg)
+               PRINT*,'DO YOU WANT TO READ ONLY RECORD ONE, '
+               PRINT*,'ONLY RECORD TWO, OR BOTH RECORD ONE AND TWO'
+               PRINT*,'1=RECORD ONE; 2 = RECORD TWO; 3 = BOTH '
+               READ *, IANS
+	       NBYTES = 0
+	       ISIZE = 0
+               CALL HRBOXES(NBYTES,ISIZE)
+	       IF(ISIZE .EQ. 0) THEN
+                 IF(IANSW .EQ.1) THEN
+		   CALL SETLOC(0,3720,STRNGSC)
+		   IERR2 = 0
+                   CALL CREAD(IUNH,3720,STRNGSC,IERR2)
+                   CALL RECONE(IREGION,IGEO,IANSW)
+                   CALL SCALEONE(IANSW)
+                 ELSE
+                   CALL SETLOC(0,1980,STRING2)
+                   IERR2 = 0
+                   CALL CREAD(IUNH,1980,STRING2,IERR2)
+                   CALL RECONE(IREGION,IGEO,IANSW)
+                   CALL SCALEONE(IANSW)
+                 ENDIF
+	       ELSE
+ 	         CALL SETLOC(0,50000,STRING3)
+	         IERR3 = 0
+	         CALL CREAD(IUNH,NBYTES,STRING3,IERR3)
+                 CALL RECTWO(ISIZE)
+                 CALL SCALETWO(ISIZE,IANSW)
+	       ENDIF
+C
+C<  	*** PRINT ONLY RECORD ONE OF REQUESTED REGION
+C
+               IF(IANS .EQ. 1) THEN
+                 WRITE(IOUNIT,60) IREGION
+                 WRITE(IOUNIT,62) SREC1(1),SREC1(2)
+                 IF(IANSW .EQ.1) THEN
+                   WRITE(IOUNIT,61) (SREC1(I),I=3,1860)
+                 ELSE
+                   WRITE(IOUNIT,63) (SREC1(I),I=3,979)
+                   WRITE(IOUNIT,64) (SREC1(I),I=980,982)
+                 ENDIF
+               ENDIF
+C
+C<  	*** PRINT ONLY RECORD TWO OF REQUESTED REGION
+C
+               IF(IANS .EQ. 2) THEN
+      	         IF(ISIZE .EQ. 0) THEN
+                   WRITE(IOUNIT,79) IREGION
+	         ELSE
+                   WRITE(IOUNIT,80) IREGION
+C +++
+C
+C 2/16/96 - Changed code to test inst to see if scanner (inst = 0) or nonscanner data
+C           (inst = 1) so correct format statement would be used (81 for scanner, 82
+C           for nonscanner.
+C +++
+                   if (inst.eq.0) then
+		   IF(ISIZE .EQ. 50000) THEN
+c +++
+c 12/31/95 Changed statement to use format 81 instead of format 82 so
+c          record 2 would be printed using the format for 32 words
+c          as is needed for scanner data.
+c +++
+                     WRITE(IOUNIT,81) (SREC2(I),I=1,49970)
+	       	     WRITE(IOUNIT,83) (SREC2(I),I=49971,ISIZE)
+		   ELSE
+		     WRITE(IOUNIT,81) (SREC2(I),I=1,ISIZE)
+		   ENDIF
+                   else
+		   IF(ISIZE .EQ. 50000) THEN
+                     WRITE(IOUNIT,82) (SREC2(I),I=1,49970)
+	       	     WRITE(IOUNIT,83) (SREC2(I),I=49971,ISIZE)
+		   ELSE
+		     WRITE(IOUNIT,82) (SREC2(I),I=1,ISIZE)
+		   ENDIF
+                   endif                 
+	         ENDIF
+               ENDIF
+C
+C<  	*** PRINT BOTH RECORD ONE AND RECORD TWO OF THE 
+C<      *** REQUESTED REGION
+C
+               IF(IANS .EQ. 3) THEN
+
+c        write(99, 99) (i, i=3,979)
+                 WRITE(IOUNIT,60) IREGION
+                 WRITE(IOUNIT,62) SREC1(1),SREC1(2)
+                 IF(IANSW .EQ. 1) THEN
+                   WRITE(IOUNIT,61) (SREC1(I),I=3,1860)
+                 ELSE
+                   WRITE(IOUNIT,63) (SREC1(I),I=3,979)
+                   WRITE(IOUNIT,64) (SREC1(I),I=980,982)
+                 ENDIF
+		 IF(ISIZE .EQ. 0) THEN
+		   WRITE(IOUNIT,79) IREGION
+		 ELSE
+                   WRITE(IOUNIT,80) IREGION
+C +++
+C
+C 2/16/96 - Changed code to test inst to see if scanner (inst = 0) or nonscanner data
+C           (inst = 1) so correct format statement would be used (81 for scanner, 82
+C           for nonscanner.
+C +++
+                   if (inst.eq.0) then
+	           IF(ISIZE .EQ. 50000) THEN
+c +++
+c 12/31/95 Changed statement to use format 81 instead of format 82 so
+c          record 2 would be printed using the format for 32 words
+c          as is needed for scanner data.
+c +++
+                     WRITE(IOUNIT,81) (SREC2(I),I=1,49970)
+		     WRITE(IOUNIT,83) (SREC2(I),I=49971,ISIZE)
+		   ELSE
+		     WRITE(IOUNIT,81) (SREC2(I),I=1,ISIZE)
+		   ENDIF
+                   else
+	           IF(ISIZE .EQ. 50000) THEN
+                     WRITE(IOUNIT,82) (SREC2(I),I=1,49970)
+		     WRITE(IOUNIT,83) (SREC2(I),I=49971,ISIZE)
+		   ELSE
+		     WRITE(IOUNIT,82) (SREC2(I),I=1,ISIZE)
+		   ENDIF
+                 endif
+	         ENDIF
+               ENDIF
+	      IERR2 = 0
+              IF(IANSW .EQ. 1) THEN
+                CALL SETLOC(0,3720,STRNGSC)
+                CALL CREAD(IUNH,3720,STRNGSC,IERR2)
+              ELSE
+                CALL SETLOC(0,1980,STRING2)
+                CALL CREAD(IUNH,1980,STRING2,IERR2)
+              ENDIF
+              CALL RECONE(IREGION,IGEO,IANSW)
+              CALL SCALEONE(IANSW)
+	    ENDIF
+2000       CONTINUE
+C
+3000       ITERM = 0
+	ENDIF     
+C
+C<     *** FORMAT STATEMENTS
+C
+60     FORMAT(/, ' REGION ',I6,'   RECORD TYPE ONE :',
+     1        /, ' -----------------------------------')
+61     FORMAT(/,T3,', SCENE FRAC-HIST = ', 4(2X,F7.2),
+     2       //,T3,'MONTHLY (DAY) ',4(/,T3,7(1X, F10.2)),
+     3       //,T3, 'MONTHLY (HOUR)', 4(/,T3,7(1X,F10.2)),
+     4       //,T3,'DAILY',
+     5        31(//,T2,'*',3(T3,7(1X,F10.2),/),T3,4(1X,F10.2)),
+     6       //,T3,'MONTHLY/HOURLY',
+     7        24(//,T2,'*',6(1X,F10.2),6(/,T3,6(1X,F10.2))),
+     8       //,T3,'MONTHLY(N/HR-DAY) = ',F10.2)
+62     FORMAT(T3,'REGION NUMBER =',F7.1,', SCENE TYPE =',F5.1)
+63     FORMAT(/,T3,' SCENE FRAC-HIST ', 9(F7.2),
+     2       //,T3,'MONTHLY (DAY) ',2(/,T3,7(1X,F10.2)),
+     3       //,T3,'MONTHLY (HOUR)',2(/,T3,7(1X,F10.2)),
+     4       //,T3,'DAILY',
+     5        31(//,'*',T3,7(1X,F10.2),/,T3,7(1X,F10.2)),
+     6       //, T3, 'MONTHLY/HOURLY',
+     7       /, 24(/,'*',3(T2,7(1X,F10.2),/)), 
+     8       /,T3,'MONTHLY(N/HR-DAY) = ',F10.2,3X,' N9 DFLAG =',F3.0)
+64     FORMAT(/,T3,'E DFLAG =',F3.0,3X,'N10 DFLAG =',F3.0,
+     +       'HSINE FLAG',F3.0)
+79     FORMAT(//,'THERE IS NO RECORD TWO FOR THIS REGION #: ',I6)
+80     FORMAT (/, ' REGION ',I6,'  RECORD TYPE TWO :', 
+     1        /, ' -----------------------------------')
+81     FORMAT(999(T6,//,'*',3(T7,8(1X,F10.4),/),T7,8(1X,F10.4)))
+82     FORMAT(1315(T6,//,'*',5(T3,7(1X,F10.4),/),T3,3(1X,F10.4)))
+83     FORMAT(30(/,'*',T3,6(1X,F10.4)))
+84     FORMAT(//,'REGION #',I5,' NOT ON FILE')
+90     FORMAT(' TAPE HUNG TO BE DUMPED DOES NOT MATCH DUMP',
+     1        ' REQUIREMENTS AS INPUT TO NAMELIST',//,
+     2        ' VALUES RETURNED FROM HEADER: ',I14,7(2X,I10)) 
+100    FORMAT('1',25X,' DUMP REGIONS ',I6,' THRU ',I6,' FOR SAT CODE' 
+     1   ,' NUMBER ',I1,/,23X,' RESOLUTION: ',F4.1,2X,A4,' FOR THE ',
+     2   'FOLLOWING MONTH (YYYYMM): ',I6)
+110    FORMAT(' ERROR NUMBER ',I5,' FOUND WHILE TRYING TO READ INPUT')
+120    FORMAT ('IREGION = ',I4,3X,' IGEO = ',I4)
+
+99     FORMAT(/,T3,' SCENE FRAC-HIST ', 9(I7),
+     2       //,T3,'MONTHLY (DAY) ',2(/,T3,7(1X,I10)),
+     3       //,T3,'MONTHLY (HOUR)',2(/,T3,7(1X,I10)),
+     4       //,T3,'DAILY',
+     5        31(//,'*',T3,7(1X,I10),/,T3,7(1X,I10)),
+     6       //, T3, 'MONTHLY/HOURLY',
+     7       /, 24(/,'*',3(T2,7(1X,I10),/)), 
+     8       /,T3,'MONTHLY(N/HR-DAY) = ',I10,3X,' N9 DFLAG =',I3)
+C
+C
+      STOP      
+      END
+C
+C
+      SUBROUTINE INIT(IFATAL)
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+C<  NAME - INIT                               MODULE - 6.2.INIT-DUMP
+C<  LANGUAGE - FORTRAN V                      TYPE - SUBROUTINE
+C<  VERSION - RELEASE 1.0  DATE - 01/22/85    PROGRAMMER - J. SATRAN
+C<                                            SYSTEM DEVELOPMENT CORP.
+C
+C<  PURPOSE - TO READ NAMELIST INPUT
+C
+C<  BOTH PARAMETERS -
+C<    /CONSTS/- ALL VARIABLES
+C<    /UNITS /- ALL VARIABLES
+C<    /SCALE/ - ALL VARIABLES
+C
+C<  OUTPUT PARAMETERS -
+C<     IFATAL - FATAL ERROR FOUND INDICATOR
+C
+C<  KEY LOCAL PARAMETERS -
+C<     ISATCD - SATELLITE CODE
+C<     MONTH  - DATA MONTH
+C<     IYEAR  - DATA YEAR 
+C<     IRES   - RESOLUTION (25,50 OR 100) 
+C<     INST   - FLAG TO INDICATE SCANNER OR NONSCANNER DATA
+C<              0 = SCANNER
+C<              1 = NONSCANNER
+C<     IRTYP  - FLAG TO INDICATE PRINTING DESIRED 
+C<              1 = PRINT TYPE 1 DATA RECORDS 
+C<              2 = PRINT TYPE 2 DATA RECORDS 
+C<              3 = PRINT BOTH TYPE 1 AND TYPE 2 DATA RECORDS 
+C<     IPRNT  - FLAG INDICATING WHETHER PRINTING IS DESIRED 
+C<              IPRNT  =   1 - PRINTING DESIRED 
+C<              IPRNT .NE. 1 - NO PRINTING DESIRED
+C<     VSNIN  - CHARACTER VARIABLE WHICH IS VSN OF INPUT TAPE 
+C<     NMODSC - NUMBER OF SCANNER SW SCENE TYPES
+C<     NMODNS - NUMBER OF NONSCANNER SW SCENE TYPES
+C
+C<  SUBROUTINES CALLED -
+C<     INUTIL - INITIALIZE UTILITY LIBRARY ROUTINES (ERBELIB)
+C
+C<  EXIT STATES -
+C<     NORMAL ONLY
+C
+C<  RESTRICTIONS -
+C<     NAMELIST INPUT MUST BE READ FROM UNIT NINE.
+C
+C<  COMMENTS -
+C<     NAMELIST I/O IS NON-ANSI STANDARDS
+C<     IF A FATAL ERROR IS FOUND PROCESSING CONTINUES UNTIL ALL
+C<     SUBSYSTEM INITIALIZATION IS COMPLETE.  THE SUBSYSTEM WILL
+C<     THEN BE SHUT DOWN WITH AN ABNORMAL TERMINATION.
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+      CHARACTER VSNIN*80
+      INTEGER MTAPCD(18),scale1(67),scale2(38)
+C
+      COMMON /CHARACT/ VSNIN
+C
+      COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD,
+     1                NREC1,FILVAL,NHR,NREP,LWORD,IRTYP, 
+     2                IPRNT,INST 
+C
+      COMMON /UNITS/ MTAPCD,INUNIT,IOUNIT,IREAD,IUNITDB 
+C
+      COMMON /SCALE/ SCALE1,SCALE2,NSCAL1,NSCAL2
+C
+      NAMELIST /GENRAL/ ISATCD,MONTH,IYEAR,IRES,INST
+     1         ,IRTYP,IPRNT,VSNIN,FOV
+C
+      DATA NMODSC/4/,NMODNS/9/,INUNIT/1/,IOUNIT/2/,IREAD/9/,NSCAL1/67/, 
+     1     NSCAL2/26/,FILVAL/32767.0/,IYEAR/0/,MONTH/0/,ISATCD/0/,
+     2     IUNITDB/7/ 
+C	
+	OPEN(IOUNIT)
+C
+C<     *** READ NAMELIST INPUT
+c
+c         READ (IREAD,GENRAL)
+c     ***DUMMY STUFF FOR RIGHT NOW
+c        ISATCD = 2
+c        MONTH  = 10
+c        IYEAR  = 89
+c        IRES   = 100
+c        INST   = 1
+        IRTYP   = 3
+        IPRNT   = 1
+c        VSNIN =  '92LFB11'
+
+
+        PRINT *,'PLEASE ENTER FILENAME (COMPLETE PATH IF NOT IN'
+        PRINT *,'CURRENT DIRECTORY): '
+        READ (*,"(a)") VSNIN
+        inst = 99
+        do while (inst .ne. 0  .and. inst .ne. 1)
+           print *, 'PLEASE ENTER 0=SCANNER 1=NONSCANNER: '
+           read *, inst
+        end do
+        ires = 99
+        do while (ires .ne. 25 .and. ires .ne. 50 .and.
+     +       ires .ne. 100)
+           print *, 'PLEASE ENTER RESOLUTION 25(SC), 50(NF), 100(SF): '
+           read *, ires
+        end do
+        isatcd = 99
+        do while (isatcd .lt. 1 .or. isatcd .gt. 7)
+           print *, 'PLEASE ENTER SATELLITE CODE (1-7): '
+           read *, isatcd
+        end do
+        month = 99
+        do while (month .lt. 1 .or. month .gt. 12)
+           print *, 'PLEASE ENTER DATA MONTH (1-12): '
+           read *, month
+        end do
+        iyear = 999
+        do while (iyear .lt. 1984)
+           print *, 'PLEASE ENTER DATA YEAR (YYYY): '
+           read *, iyear
+        end do
+        
+ 
+C
+C<     *** WRITE NAMELIST TO IOUNIT
+C
+      WRITE (IOUNIT,GENRAL)
+C
+C<     *** MAKE SURE YEAR AND MONTH WERE INPUT
+C
+      IF (IYEAR.NE.0) THEN
+         IF (MONTH.NE.0) THEN
+C
+C<     *** MONTH NOT INPUT
+C
+         ELSE
+            WRITE (IOUNIT,30)
+            IFATAL = 1
+         ENDIF
+C
+C<     *** YEAR NOT INPUT
+C
+      ELSE
+         WRITE (IOUNIT,40)
+         IFATAL = 1
+      ENDIF
+C
+C<     *** SET THE INFORMATION NECESSARY FOR THIS RESOLUTION
+C
+      NREC1 = 990
+      NREP = 38
+      LWORD = 978
+      IF (IRES.EQ.25) THEN
+         NREC1 = 1860
+         NREP = 32
+         LWORD = 1846
+         NMODS = NMODSC
+c         IPCODE = 1
+      ELSE IF (IRES.EQ.50) THEN
+C +++
+C
+C 2/16/96 Added changing inst to 1 if nonscanner data
+C
+C +++
+         INST = 1
+         NMODS = NMODNS
+c         IF (FOV .EQ. 1) IPCODE = 3 
+c         IF (FOV.EQ.2) IPCODE = 5 
+      ELSE IF (IRES.EQ.100) THEN
+C +++
+C
+C 2/16/96 Added changing inst to 1 if nonscanner data
+C
+C +++
+         INST = 1
+         NMODS = NMODNS
+c         IF(FOV. EQ.1)IPCODE = 7
+c         IF (FOV.EQ.2) IPCODE = 9 
+C
+C<     *** RESOLUTION NOT INPUT OR INPUT WRONG
+C
+      ELSE
+         WRITE (IOUNIT,50)
+         IFATAL = 1
+      ENDIF
+      CLOSE(IREAD)
+C
+20    FORMAT (' ERROR NUMBER',I5,' FOUND WHEN OPENING INPUT FILE')
+30    FORMAT (' MONTH TO PROCESS NOT INPUT')
+40    FORMAT (' YEAR TO PROCESS NOT INPUT')
+50    FORMAT (' RESOLUTION NOT INPUT')
+      RETURN
+      END
+C
+C
+      FUNCTION IWORDS(NWORDS)
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+C<  NAME - IWORDS                             MODULE - 6.2.IWORDS-DUMP
+C<  LANGUAGE - FORTRAN V                      TYPE - FUNCTION
+C<  VERSION - RELEASE 3.0  DATE - 12/01/83    PROGRAMMER - J. SATRAN
+C<                                            SYSTEM DEVELOPMENT CORP.
+C
+C<  PURPOSE - TO COMPUTE THE NUMBER OF 60-BIT WORDS WHICH IS ALSO
+C<            A MULTIPLE OF 16-BIT WORDS AND IS .GE. NWORDS
+C
+C<  INPUT PARAMETERS -
+C<     NWORDS - NUMBER OF 60-BIT WORDS WHICH ARE ALREADY IN THE ARRAY
+C
+C<  OUTPUT PARAMETERS -
+C<     IWORDS - NUMBER OF 60-BIT WORDS THAT IS ALSO A MULTIPLE OF
+C<              16-BIT WORDS
+C
+C<  SUBROUTINES CALLED -
+C<     MOD    - INTRINSIC REMAINDERING FUNCTION
+C
+C<  EXIT STATES -
+C<     NORMAL - ONLY
+C
+C<  COMMENTS -
+C<     THE RECORDS WRITTEN TO EXTERNAL PRODUCTS ARE IN 16-BIT
+C<     FORMAT.  FOR EASE OF READING, ALL RECORDS ARE WRITTEN IN
+C<     A MULTIPLE BOTH BOTH 60-BITS AND 16-BITS.  FOUR 60-BIT
+C<     WORDS (A TOTAL OF 240 BITS) IS THE SMALLEST EVEN BOUNDARY
+C<     (15 16-BIT WORDS) THAT MEETS THIS CRITERIA.
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+      IWORDS = NWORDS
+      NBITS = NWORDS * 60
+      LBITS = MOD(NBITS,240)
+      IF (LBITS.NE.0) THEN
+         IWORDS = NWORDS + ((240-LBITS) / 60)
+      ENDIF
+      RETURN
+      END
+C 
+C 
+      SUBROUTINE SETUP(IFREC,ILREC)
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C
+C<  NAME - SETUP                             MODULE - 6.2.SETUP-DUMP
+C<  LANGUAGE - FORTRAN V                      TYPE - SUBROUTINE 
+C<  VERSION - RELEASE 3.0  DATE - 12/01/83    PROGRAMMER - J. SATRAN
+C<                                            SYSTEM DEVELOPMENT CORP.
+C
+C<  PURPOSE - TO PROMPT THE USER FOR DESIRED REGION INFORMATION,
+C<            READ TAPE INFORMATION FROM TAPE10, CHECK WHETHER
+C<            SKIPPING IS NECESSARY AND SKIP FILES IF SO. 
+C
+C<  INPUT PARAMETERS -
+C<     IANS   - FLAG TO INDICATE CONSECUTIVE REGIONS (ENTER INTERACTIVELY)
+C<     IDBREG - ARRAY CONTAINING DESIRED REGIONS (ENTER INTERACTIVELY)
+C<     IDUM   - DUMMY VARIABLE FOR READ STATEMENT 
+C<     IFIRST - FIRST REGION ON INPUT TAPE (READ FROM TAPE10) 
+C<     ILAST  - ARRAY CONTAINING LAST REGION ON EACH FILE ON INPUT
+C<     IREGTOT- NUMBER OF DESIRED REGIONS (ENTER INTERACTIVELY) 
+C<     NFILES - NUMBER OF FILES ON INPUT TAPE (READ FROM TAPE10)
+C<     S9VSN  - VSN OF INPUT TAPE (READ FROM TAPE10)
+C<              TAPE (READ FROM TAPE10) 
+C
+C<  OUTPUT PARAMETERS -
+C<     IFREC  - FIRST REGION NUMBER DESIRED 
+C<     ILREC  - LAST REGION NUMBER DESIRED
+C
+C<  SUBROUTINES CALLED -
+C
+C<  EXIT STATES -
+C<     NORMAL - ONLY
+C
+C<  COMMENTS -
+C
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C 
+C 
+      CHARACTER S9VSN*7,VSNIN*80
+      INTEGER IDBREG(10225),ILAST(7),IREGTOT,IFIRST,NFILES
+      integer itemp(10225)
+C 
+      COMMON /CHARACT/ VSNIN
+C 
+      COMMON /TPARAMS/ IDBREG,ILAST,IREGTOT,IFIRST,NFILES
+C 
+      COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD, 
+     2                NREC1,FILVAL,NHR,NREP,LWORD,IRTYP, 
+     3                IPRNT,INST
+      NAMELIST /TP10/ S9VSN, NFILES, IFIRST, ILAST
+C 
+C 
+      CALL SETLOC(0,10225,IDBREG)
+C 
+C 
+      
+      ifirst = 0
+      do while (ifirst .le. 0)
+         print *, 'PLEASE ENTER FIRST REGION ON FILE: '
+         read *, ifirst
+      end do
+      ilast(1) = 0
+      do while (ilast(1) .lt. ifirst )
+         print *, 'PLEASE ENTER LAST REGION ON FILE: '
+         read *, ilast(1)
+      end do
+
+  150 PRINT *,'ENTER TOTAL NUMBER OF REGIONS TO BE PROCESSED' 
+      READ *, IREGTOT 
+      PRINT *,'WILL THIS BE A CONSECUTIVE SERIES OF REGIONS?' 
+      PRINT *,'     1=YES,  0=NO    ' 
+      READ *, IANS
+C 
+      IF (IANS.EQ.1) THEN 
+        PRINT *, 'ENTER FIRST REGION IN THE SERIES' 
+        READ *, IDBREG(1) 
+        IFREC = IDBREG(1) 
+        DO 200 I=2,IREGTOT
+          IDBREG(I) = IDBREG(I-1) + 1 
+          PRINT *,'REGION NUMBER ',I,' IS ',IDBREG(I) 
+  200   CONTINUE
+        ILREC = IDBREG(IREGTOT) 
+C 
+      ELSE
+C 
+        DO 300 I=1,IREGTOT
+          PRINT *,'ENTER REGION NUMBER ',I
+          READ *,IDBREG(I)
+  300   CONTINUE
+        IFREC = IDBREG(1) 
+        ILREC = IDBREG(IREGTOT) 
+C 
+      ENDIF 
+C
+C
+c      READ (10,TP10)
+c **** DUMMY STUFF FOR RIGHT NOW *****
+        NFILES = 1
+        IFIRST = 1
+        ILAST(2) = 0
+        ILAST(3) = 0
+        ILAST(4) = 0
+        ILAST(5) = 0
+        ILAST(6) = 0
+        ILAST(7) = 0
+        
+
+        PRINT *,'TAPE PARAMETERS: ',VSNIN,' ',NFILES,IFIRST 
+        PRINT *,'NUMBER OF FILES ON TAPE: ',NFILES
+        PRINT *,'FIRST REGION ON THE TAPE: ',IFIRST 
+        PRINT *,'LAST REGION IN EACH FILE: ',(ILAST(I),I=1,NFILES)
+C     
+      do i=1,iregtot
+         max = idbreg(i)
+         do j = 1, iregtot
+            if (idbreg(j) .ge. max) then
+               max = idbreg(j)
+               maxpos = j
+            end if
+         end do
+         itemp(iregtot+1-i) = max
+         idbreg(maxpos) = 0
+      end do
+
+      do i = 1,iregtot
+         idbreg(i) = itemp(i)
+      end do
+      
+
+
+C 
+c      IF ((IDBREG(1).LT.IFIRST).OR.(IDBREG(1).GT.ILAST(NFILES))) THEN 
+c         PRINT *,'FIRST REGION REQUESTED IS NOT ON TAPE.'
+c         PRINT *,'DO YOU WISH TO RE-ENTER REGIONS?'
+c         PRINT *,'    1=YES,  0=NO   ' 
+c         READ *, IANS
+c         IF (IANS.EQ.1) GOTO 150 
+c      ENDIF 
+
+
+
+C
+C
+      RETURN
+      END 
+C
+C
+	SUBROUTINE READDATA
+C
+C**********************************************************************
+C
+C<  NAME: READDATA
+C<  LANGUAGE: FORTRAN			   PROGRAMMER: E.SINGH -- SAIC
+C<  
+C<  PURPOSE: OPENS FILE USING CREAD AND COPEN.  IT READS THE HEADER
+C<           INFORMATION AND PUTS IT INTO THE HEADER ARRAY.  IT ALSO 
+C<           READS THE SCALE FACTORS AND PUTS IT INTO THE SCALE1 AND
+C<           SCALE2 ARRAYS
+C<
+C<  INPUT PARAMETERS:
+C<	/STRNG/ - STRING
+C<      /SCALE/ - SCALE1,SCALE2,NSCAL1,NSCAL2
+C<      /DATA/ - HEADER
+C<
+C<  SUBROUTINES CALLED:
+C< 	SETLOC - INITIALIZATION PROCEDURE
+C< 	GBYTE - UNPACKS THE PACKED STRING
+C<
+C<  OUTPUT STATES:
+C<	NORMAL ONLY
+C
+C**********************************************************************
+C
+	INTEGER STRING(240),STRING2(1980),STRING3(50000),STRNGSC(3720)
+        INTEGER HEADER(15),REC1(1860),REC2(50000)
+	INTEGER SCALE1(67),SCALE2(38)
+	INTEGER TEMP(105)
+C
+        COMMON /STRNG/ STRING,STRING2,STRING3,STRNGSC
+        COMMON /SCALE/ SCALE1,SCALE2,NSCAL1,NSCAL2
+        COMMON /DATA/ HEADER,REC1,REC2
+C
+C<	*** INITIALIZATION ROUTINE 
+C
+	CALL SETLOC(0,15,HEADER)
+	CALL SETLOC(0,67,SCALE1)
+ 	CALL SETLOC(0,26,SCALE2)
+	CALL SETLOC(0,105,TEMP)
+C
+C<	*** UNPACK THE HEADER INTO STRING
+C
+	INDEX = 0
+	DO 10 I = 1,15
+	  CALL GBYTES(STRING,HEADER(I),INDEX,16,0,2)
+	  INDEX = INDEX + 16
+10      CONTINUE
+C
+C<	*** IF HEADER VALUES ARE ZERO, PUT THEM
+C<	*** INTO A TEMPORARY ARRAY
+C
+	I = 1
+	CALL GBYTE(STRING,TEMP(1),INDEX,16)
+	DO WHILE(TEMP(I) .EQ.0)
+	  I = I + 1
+	  INDEX = INDEX + 16
+	  CALL GBYTE(STRING,TEMP(I),INDEX,16)
+	ENDDO
+C
+C<	*** UNPACK THE SCALE FACTOR ONE INTO STRING
+C<
+	DO 20 I = 1,NSCAL1
+	  CALL GBYTE(STRING,SCALE1(I),INDEX,16)
+	  INDEX = INDEX + 16
+20      CONTINUE
+C
+	CALL SETLOC(0,105,TEMP)
+C
+	I = 1
+	CALL GBYTE(STRING,TEMP(I),INDEX,16)
+	DO WHILE( TEMP(I) .EQ. 0)
+	  I = I + 1
+	  INDEX = INDEX + 16
+	  CALL GBYTE(STRING,TEMP(I),INDEX,16)
+	ENDDO
+C
+C<	*** UNPACK SCALE FACTOR TWO INTO STRING
+C
+	DO 30 I = 1,(NSCAL2 + 12)
+	  CALL GBYTE(STRING,SCALE2(I),INDEX,16)
+	  INDEX = INDEX + 16
+30      CONTINUE
+C
+C<	*** PRINT THE SCALE FACTORS
+C
+	WRITE(2,119)
+	WRITE(2,120) (SCALE1(J),J=1,60)
+	WRITE(2,121) (SCALE1(J),J=61,NSCAL1)
+	WRITE(2,122)
+	WRITE(2,120) (SCALE2(J),J=1,20)
+        WRITE(2,123) (SCALE2(J),J=21,NSCAL2)
+C
+119	FORMAT(//,'SCALE FACTORS FOR RECORD ONE: ')
+120 	FORMAT(/,10(1X,I5))
+121	FORMAT(/,7(1X,I5))
+122	FORMAT(//,'SCALE FACTORS FOR RECORD TWO: ')
+123  	FORMAT(//,6(1X,I5))
+C
+	RETURN
+	END
+C
+C
+	SUBROUTINE RECONE(IREGION,IGEO,IANSW)
+C
+C********************************************************************
+C
+C< NAME: RECONE
+C< LANGUAGE - FORTRAN			PROGRAMMER: E. SINGH -- SAIC
+C<
+C< PURPOSE: READS RECORD ONE OF THE REGION
+C
+C< INPUT PARAMETERS:
+C<	/DATA/ - REC1
+C<	/STRNG/ - STRING2
+C
+C< OUTPUT PARAMETERS:
+C<	IREGION: REGION NUMBER FOUND IN THE FIRST RECORD OF REC ONE
+C<	IGEO: GEO SCENE TYPE 
+C
+C********************************************************************
+C
+	INTEGER HEADER(15),REC1(1860),REC2(50000)
+	INTEGER STRING(240),STRING2(1980),STRING3(50000),STRNGSC(3720)
+	INTEGER TEMP(1860),IREGION,IGEO,IANSW
+C
+	COMMON /DATA/ HEADER,REC1,REC2
+	COMMON /STRNG/ STRING,STRING2,STRING3,STRNGSC
+	COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD,NREC1,
+     +	                FILVAL,NHR,NREP,LWORD,IRTYP,IPRNT,INST
+C
+C<	*** INITIALIZE ARRAYS
+C
+	CALL SETLOC(0,1860,REC1)
+	CALL SETLOC(0,1860,TEMP)
+C
+C<	*** UNPACK RECORD ONE INTO STRING, CHECK IF FIRST
+C<	*** FEW VALUES ARE ZERO, IF YES THEN PUT INTO 
+C< 	*** TEMPORARY ARRAY
+C
+	INDEX = 0
+	I = 1
+        IF(IANSW .EQ. 1) THEN
+          CALL GBYTE(STRNGSC,TEMP(1),INDEX,16)
+          DO WHILE (TEMP(I) .EQ. 0)
+            I = I + 1
+            INDEX = INDEX + 16
+            CALL GBYTE(STRNGSC,TEMP(I),INDEX,16)
+          ENDDO
+
+c          DO 10 I = 1,NREC1
+c	    CALL GBYTE(STRNGSC,REC1(I),INDEX,16)
+c	    INDEX = INDEX + 16
+c10	  CONTINUE
+          call sesprd(strngsc,rec1,16,32,930,itwrds)
+        ELSE
+          CALL GBYTE(STRING2,TEMP(1),INDEX,16)
+          DO WHILE (TEMP(I) .EQ. 0)
+	    I = I + 1
+	    INDEX = INDEX + 16
+	    CALL GBYTE(STRING2,TEMP(I),INDEX,16)
+	  ENDDO
+
+c	  DO 20 I = 1,NREC1
+c	    CALL GBYTE(STRING2,REC1(I),INDEX,16)
+c	    INDEX = INDEX + 16
+c20	  CONTINUE
+          call sesprd(string2,rec1,16,32,495,itwrds)
+        ENDIF
+C
+C<	*** PUT REGION NUMBER AND GEO SCENE TYPE INTO
+C<	*** THE IREGION AND IGEO PARAMETERS
+C
+	IREGION = REC1(1)
+	IGEO = REC1(2)/100
+C
+	RETURN
+	END
+C
+C 
+	SUBROUTINE HRBOXES(NBYTES,ISIZE)
+C
+C*****************************************************************
+C
+C< NAME: HRBOXES
+C< LANGUAGE: FORTRAN		       PROGRAMER: E.SINGH--SAIC
+C
+C< PURPOSE: CALCULATES THE NUMBER OF REPETITIONS OF THE HOUR 
+C<          BOXES READ IN FROM RECORD ONE 
+C
+C< INPUT PARAMETER:
+C< 	/DATA/ - REC1
+C<	/CONSTS/ - NREP,LWORD
+C
+C< OUTPUT PARAMETERS:
+C<	NBYTES: NUMBER OF BYTES THAT NEEDS TO BE READ FOR REC TWO
+C<	ISIZE: LENGTH OF RECORD TWO
+C
+C*****************************************************************
+C
+	INTEGER NBYTES,ISIZE
+	INTEGER HEADER(15),REC1(1860),REC2(50000)
+C
+	COMMON /DATA/ HEADER,REC1,REC2
+	COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD,
+     +                  NREC1,FILVAL,NHR,NREP,LWORD,IRTYP,
+     +                  IPRNT,INST
+C
+	NBYTES = 0
+	ISIZE = 0
+	REP = 0.0
+C
+C<	*** NUMBER OF HOUR BOXES FOUND IN RECORD ONE
+C
+        NHRDAY = REC1(LWORD)
+C
+C<	*** CALCULATE THE REPETITIONS 
+C
+        REP = NHRDAY*NREP
+C
+C<	*** THERE ARE 3.75 (16 BIT) RECORDS IN 60 BITS
+C<	*** DIVIDE THE REPETITIONS TO FIT 16 BIT SIZE
+	REP = REP/3.75
+C
+C<	*** TRUNCATE AFTER THE DECIMAL POINT
+C
+	NUM16 = INT(REP)
+C	
+C<	*** CHECK IF ONE NEEDS TO BE ADDED TO THE CALCULATED
+C<	*** REPETITION ( ONLY IF REMAINDER IS NOT EQUAL TO 0)
+C
+	ZREP = REP - FLOAT(NUM16)
+	IF(ZREP .NE. 0) THEN
+	  NUM16 = NUM16 + 1
+	ENDIF
+C
+C<	***CALCULATE THE NUMBER OF BYTES AND LENGTH OF REC2
+C
+	ISIZE = IWORDS(NUM16)*3.75
+        NBYTES = 2*ISIZE
+C
+	RETURN
+	END
+C
+C
+	SUBROUTINE RECTWO(ISIZE)
+C
+C****************************************************************
+C
+C< NAME: RECTWO
+C< LANGUAGE: FORTRAN		PROGRAMMER: E.SINGH -- SAIC
+C
+C< PURPOSE: READS RECORD TWO FROM THE DATA SET AND PUTS
+C<	    IT INTO THE REC2 ARRAY
+C
+C< INPUT PARAMETER:
+C<	/DATA/ - REC2
+C<	/STRNG/ - STRING3
+C<	ISIZE - LENGTH OF RECORD TWO
+C
+C< SUBROUTINES USED:
+C<	SETLOC - INITIALIZATION PROCEDURE
+C<	GBYTE - UNPACKS RECORD TWO DATA
+C
+C****************************************************************
+C
+	INTEGER HEADER(15),REC1(1860),REC2(50000),STRNGSC(3720)
+	INTEGER STRING(240),STRING2(1980),STRING3(50000)
+	INTEGER TEMP(50000),ISIZE,ndata
+C
+        COMMON /DATA/ HEADER,REC1,REC2
+	COMMON /STRNG/ STRING,STRING2,STRING3,STRNGSC
+C
+	CALL SETLOC(0,50000,REC2)
+	CALL SETLOC(0,50000,TEMP)
+C
+C<	*** UNPACKS RECORD TWO INTO STRING3 ONLY IF
+C<	*** FIRST FEW VALUES ARE NOT ZERO
+C
+        INDEX = 0
+	I = 1
+	CALL GBYTE(STRING3,TEMP(1),INDEX,16)
+	DO WHILE (TEMP(I).EQ.0)
+	  I = I + 1
+	  INDEX = INDEX + 16
+	  CALL GBYTE(STRING3,TEMP(I),INDEX,16)
+	ENDDO
+ 
+ 	DO 10 I = 1,ISIZE
+ 	  CALL GBYTE(STRING3,REC2(I),INDEX,16)
+ 	  INDEX = INDEX + 16
+10      CONTINUE
+c        ndata = isize/2
+c        call sesprd(string3,rec2,16,32,ndata,itwrds)
+C
+	RETURN
+	END
+C
+C
+	SUBROUTINE SCALEONE(IANSW)
+C
+C*************************************************************
+C     
+C< NAME: SCALEONE
+C< LANGUAGE: FORTRAN		PROGRAMMER: E.SINGH -- SAIC
+C
+C< PURPOSE: SCALES THE FIRST RECORD OF EITHER THE S-9 OR S-10
+C
+C< INPUT PARAMETERS: 
+C<	/DATA/ - REC1
+C<	/DATA2/ - SREC1
+C<	/SCALE/ - SCALE1,NSCAL1
+C<	/CONSTS/ - FILVAL
+C
+C< OUTPUT PARAMETERS:
+C<	SREC1 - CONTAINS THE SCALED DATA OF RECORD ONE
+C     
+C*************************************************************
+C     
+	INTEGER HEADER(15),REC1(1860),REC2(50000)
+	REAL SREC1(1860),SREC2(50000),FILVAL
+	INTEGER SCALE1(67),SCALE2(38),IANSW
+C
+	COMMON /DATA/ HEADER,REC1,REC2
+	COMMON /DATA2/ SREC1,SREC2
+	COMMON /SCALE/ SCALE1,SCALE2,NSCAL1,NSCAL2
+	COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD,
+     +                  NREC1,FILVAL,NHR,NREP,LWORD,IRTYP,
+     +                  IPRNT,INST
+C
+	CALL SETLOC(0,1860,SREC1)
+C
+C<	*** CHECKING TO SEE IF VALUE IS EQUAL TO FILL VALUE
+C
+	IF((REC1(1).EQ.FILVAL).OR.(REC1(2).EQ.FILVAL)) THEN
+	  SREC1(1) = FLOAT(REC1(1))
+	  SREC1(2) = FLOAT(REC1(2))
+	ELSE
+	  SREC1(1) = FLOAT(REC1(1))/FLOAT(SCALE1(1))
+	  SREC1(2) = FLOAT(REC1(2))/FLOAT(SCALE1(2))
+	ENDIF
+C
+        IF(IANSW .EQ. 1) THEN
+          DO 15 I = 3,6
+	    IF(FLOAT(REC1(I)).EQ.FILVAL) THEN
+	      SREC1(I)= FLOAT(REC1(I))
+	    ELSE
+	      SREC1(I) = FLOAT(REC1(I))/FLOAT(SCALE1(3))
+	    ENDIF
+ 15       CONTINUE
+C
+C<    *** MONTHLY(DAY) FOR S-9 STARTS HERE
+C
+          J = 4
+          DO 16 I = 7,34
+            IF(I .EQ. 21) J = 4
+	    IF(FLOAT(REC1(I)).EQ.FILVAL) THEN
+	      SREC1(I)= FLOAT(REC1(I))
+	    ELSE
+	      SREC1(I) = FLOAT(REC1(I))/FLOAT(SCALE1(J))
+	    ENDIF
+            J = J + 1
+ 16       CONTINUE
+C
+C<    *** MONTHLY(HOUR) FOR S-9 BEGINS FROM HERE
+C
+          J = 18
+          DO 17 I = 35,62
+            IF(I .EQ. 49) J = 18
+	    IF(FLOAT(REC1(I)).EQ.FILVAL) THEN
+	      SREC1(I)= FLOAT(REC1(I))
+	    ELSE
+	      SREC1(I) = FLOAT(REC1(I))/FLOAT(SCALE1(J))
+	    ENDIF
+            J = J + 1
+ 17       CONTINUE            
+C
+C<    *** DAILY FOR S-9 STARTS FROM HERE
+C
+          L = 62
+          DO 19 K = 1,775,25
+            J = 32
+            DO 18 I = 1,25
+              IF(I .EQ. 15) J = 33
+              IF(FLOAT(REC1(I+L)).EQ.FILVAL) THEN
+                SREC1(I+L)= FLOAT(REC1(I+L))
+	      ELSE
+	        SREC1(I+L) = FLOAT(REC1(I+L))/FLOAT(SCALE1(J))
+	      ENDIF
+              J = J + 1
+ 18         CONTINUE
+            L = L + 25
+ 19       CONTINUE
+C
+C<    *** MONTHLY(HOURLY) STARTS FROM HERE
+C
+          L = 837
+          DO 21 K = 1,1008,42
+            J = 46
+            DO 20 I = 1,42
+C 09-27-95 Changed the counter to correct the scale factors so that
+C they will be applied to the correct values.
+C             IF(I .EQ. 21) J = 46
+              IF(I .EQ. 22) J = 46
+              IF(FLOAT(REC1(I+L)).EQ.FILVAL) THEN
+                SREC1(I+L)= FLOAT(REC1(I+L))
+              ELSE
+	        SREC1(I+L) = FLOAT(REC1(I+L))/FLOAT(SCALE1(J))
+	      ENDIF
+              J = J + 1
+ 20         CONTINUE                
+            L = L + 42
+ 21       CONTINUE
+          SREC1(1846) = FLOAT(REC1(1846))/FLOAT(SCALE1(67))
+C
+C     S-10 STARTS FROM HERE
+C
+        ELSE
+          DO 22 I = 3,11
+            IF(FLOAT(REC1(I)).EQ.FILVAL) THEN
+              SREC1(I)= FLOAT(REC1(I))
+            ELSE
+              SREC1(I) = FLOAT(REC1(I))/FLOAT(SCALE1(3))
+            ENDIF
+ 22       CONTINUE
+          J = 4
+          DO 23 I = 12,39
+            IF(FLOAT(REC1(I)) .EQ. FILVAL) THEN
+	      SREC1(I) = FLOAT(REC1(I))
+            ELSE
+	      SREC1(I) = FLOAT(REC1(I))/FLOAT(SCALE1(J))
+            ENDIF
+            J = J + 1
+23        CONTINUE
+C     
+C<     	***L IS THE RECORD ONE INDEX/COUNTER
+C
+          L = 39
+C     
+C<     	*** 434 = 14*31 ( 31 sets of 14 for daily )
+C
+          DO 25 K = 1,434,14
+            J = 32
+            DO 24 I = 1,14
+              IF(FLOAT(REC1(I+L)).EQ.FILVAL) then
+                SREC1(I+L) = FLOAT(REC1(I+L))
+              ELSE
+                SREC1(I+L) = FLOAT(REC1(I+L))/FLOAT(SCALE1(J))
+              ENDIF
+              J = J + 1
+ 24         CONTINUE
+            L = L + 14
+ 25       CONTINUE
+C
+          L = 473
+          DO 27 K = 1,504,21
+            J = 46
+            DO 26 I = 1,21
+              IF(FLOAT(REC1(I+L)).EQ.FILVAL) THEN
+                SREC1(I+L) = FLOAT(REC1(I+L))
+              ELSE
+                SREC1(I+L) = FLOAT(REC1(I+L))/FLOAT(SCALE1(J))
+              ENDIF
+              J = J + 1
+ 26         CONTINUE
+            L = L + 21
+ 27       CONTINUE
+C
+          DO 28 I = 978,981
+            IF(REC1(I) .EQ.FILVAL) THEN
+              SREC1(I) = FLOAT(REC1(I))
+            ELSE
+	      SREC1(I) = FLOAT(REC1(I))/FLOAT(SCALE1(67))
+            ENDIF
+28 	  CONTINUE
+        ENDIF
+C
+	RETURN
+	END
+C
+C
+	SUBROUTINE SCALETWO(ISIZE,IANSW)
+C     
+C***********************************************************
+C 
+C< NAME: SCALETWO
+C< LANGUAGE: FORTRAN
+C    
+C< PURPOSE: SCALES THE SECOND RECORD AND PUTS IT IN SREC2
+C     
+C< INPUT PARAMETERS:
+C<	/DATA/ - REC2
+C<	/DATA2/ - SREC2
+C<	/CONSTS/ - FILVAL
+C<	/SCALE/ - SCALE2,NSCAL2
+C<	ISIZE - LENGTH OF RECORD TWO
+C
+C***********************************************************
+C     
+	INTEGER HEADER(15),REC1(1860),REC2(50000)
+	REAL SREC1(1860),SREC2(50000)
+	INTEGER SCALE1(67),SCALE2(38)
+	INTEGER ISIZE,IANSW
+C
+       	COMMON /DATA/ HEADER,REC1,REC2
+	COMMON /DATA2/ SREC1,SREC2
+       	COMMON /CONSTS/ IPCODE,NMODS,IRES,MONTH,IYEAR,ISATCD,
+     +                  NREC1,FILVAL,NHR,NREP,LWORD,IRTYP,
+     +                  IPRNT,INST
+       	COMMON /SCALE/ SCALE1,SCALE2,NSCAL1,NSCAL2
+
+C     
+C<     	*** INITIALIZE SCALED RECORD TWO ARRAY
+C
+	CALL SETLOC(0,50000,SREC2)
+C     
+C<	*** CHECK FOR FILL VALUE -- SCALE OTHERWISE
+C
+ 	DO 80 L = 1,ISIZE,NREP
+	  DO 20 I = 0,3
+	    IF(REC2(I+L) .EQ. FILVAL) THEN
+	      SREC2(I+L) = FLOAT(REC2(I+L))
+	    ELSE
+	      SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(I+1))
+	    ENDIF
+20	  CONTINUE
+          IF(IANSW .EQ. 1) THEN
+            DO 25 I = 4,7
+	      IF(REC2(I+L) .EQ. FILVAL) THEN
+                SREC2(I+L) = FLOAT(REC2(I+L))
+	      ELSE
+	        SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(5))
+	      ENDIF
+ 25         CONTINUE
+            DO 30 I = 8,11
+              IF(REC2(I+L) .EQ. FILVAL) THEN
+	        SREC2(I+L) = FLOAT(REC2(I+L))
+	      ELSE
+                SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(6))
+	      ENDIF
+ 30         CONTINUE
+            J = 7
+	    DO 40 I = 12,31
+	      IF(REC2(I+L) .EQ. FILVAL) THEN
+	        SREC2(I+L) = FLOAT(REC2(I+L))
+	      ELSE
+	        SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(J))
+	      ENDIF
+              J = J + 1
+40	    CONTINUE
+            GO TO 80
+          ELSE
+            DO 50 I = 4,12
+	      IF(REC2(I+L) .EQ. FILVAL) THEN
+	        SREC2(I+L) = FLOAT(REC2(I+L))
+	      ELSE
+	        SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(5))
+	      ENDIF
+50	    CONTINUE
+            DO 60 I = 13,21
+	      IF(REC2(I+L) .EQ. FILVAL) THEN
+	        SREC2(I+L) = FLOAT(REC2(I+L))
+  	      ELSE
+                SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(6))
+	      ENDIF
+60 	    CONTINUE
+	    J = 7
+	    DO 70 I = 22,37
+	      IF(REC2(I+L) .EQ. FILVAL) THEN
+	        SREC2(I+L) = FLOAT(REC2(I+L))
+	      ELSE
+	        SREC2(I+L) = FLOAT(REC2(I+L))/FLOAT(SCALE2(J))
+	      ENDIF
+              J = J + 1
+70	    CONTINUE
+          ENDIF
+80 	CONTINUE
+C
+	RETURN
+        END
+c------------------------------------sccsidkeywordsstart----------------
+c     *** This file is under configuration control
+c     *** sccs keywords--do not modify these values!!!
+c     @(#)sesprd.f    93.1    94/04/20
+c------------------------------------sccsidkeywordsend------------------
+      SUBROUTINE SESPRD 
+     1  (IN,IOUT,INBITS,ITBITS,INWRDS,ITWRDS) 
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C 
+C   NAME - SESPRD                           MODULE  - G.E.8.6.5 
+C   LANGUAGE - FTN V                        TYPE - SUBROUTINE 
+C   VERSION - 3.0        DATE - 10/26/82    PROGRAMMER - C. E. HOWERTON 
+c-----------------------------------------------------------------------
+c   Version - ???        Date - 10/08/92    Programmer - Scott R. Quier (SAIC)
+c-----------------------------------------------------------------------
+C 
+C   PURPOSE -  TAKE BIT STRING DATA FROM THE INPUT ARRAY (IN),
+C              DO SIGN EXTEND FOR UNPACK OPERATIONS,
+C              AND PLACE IT IN THE OUTPUT ARRAY (IOUT). 
+C 
+C   INPUT PARAMETERS -
+C         IN     := INPUT ARRAY FROM WHICH DATA ARE REMOVED.
+C         INBITS := BIT LENGTH OF DATA IN THE INPUT ARRAY.
+C                   (ON PACK OPERATION, INBITS = 60)
+C         ITBITS := BIT LENGTH OF DATA IN THE OUTPUT ARRAY. 
+C                   (ON UNPACK OPERATION, ITBITS = 60)
+C         INWRDS := NUMBER OF 60-BIT WORDS IN THE INPUT ARRAY.
+C                   DIMENSION OF THE OUTPUT ARRAY MUST BE AT
+C                   LEAST ((ITBITS * INWRDS) / INBITS)
+C 
+C   OUTPUT PARAMETERS - 
+C          IOUT   := ARRAY TO WHICH DATA RE MOVED.
+C          ITWRDS := NUMBER OF 60-BIT WORDS USED FROM INPUT ARRAY.
+C 
+C   KEY LOCAL PARAMETERS -
+C        LBIT := LOCATION OF SIGN BIT 
+C        N    := LOOP CONTROL 
+C 
+C   ROUTINES CALLED - 
+C        SUBROUTINE SPREAD (ERBE G.E.8.6.4) 
+C 
+C   EXIT STATES - NORMAL RETURN 
+C 
+C---RESTRICTIONS -  ASSUMES 60-BIT WORDS. 
+c                   Really assumes 32-bit words, due to the machine
+c                   word size.
+C 
+C 
+C 
+C 
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C 
+C                      *** BEGIN SESPRD *** 
+C 
+C*****
+c---  PARAMETER ( IANAL = 0 ) 
+      integer shift
+C 
+C$    IF ( IANAL .EQ. 1 ) THEN
+c---     COMMON /UTLCNT/ NCALLS(60) 
+C$    ENDIF 
+C*****
+c
+c **** Declare the interface parmeters
+c
+      integer in(*)
+      integer iout(*)
+      integer inbits
+      integer itbits
+      integer inwrds
+      integer itwrds
+
+c
+c **** Declare the local variables
+c
+      integer lbit
+      integer i
+      integer n
+
+C$    IF ( IANAL .EQ. 1 ) THEN
+c---     NCALLS( 35 ) = NCALLS( 35 ) + 1
+C$    ENDIF 
+C 
+C 
+C     *** USE SUBROUTINE SPREAD TO DO BIT MANIPULATION
+C 
+      CALL SPREAD (IN,IOUT,INBITS,ITBITS,INWRDS,ITWRDS) 
+C 
+C     *** CHECK FOR UNPACK OPERATION
+C 
+c---  IF (ITBITS .EQ. 60) THEN
+      if (itbits .eq. 32) then
+C         *** UNPACK OPERATION
+C         *** DO SIGN EXTEND
+C 
+c---      LBIT = 60 - INBITS
+          LBIT = 32 - INBITS
+          N = (ITBITS * INWRDS) / INBITS
+          DO 100 I = 1,N
+               IOUT(I) = SHIFT(SHIFT(IOUT(I),LBIT),-(LBIT)) 
+  100     CONTINUE
+      ENDIF 
+      RETURN
+      END 
+c------------------------------------sccsidkeywordsstart----------------
+c     *** This file is under configuration control
+c     *** sccs keywords--do not modify these values!!!
+c     @(#)spread.f    93.1    94/04/20
+c------------------------------------sccsidkeywordsend------------------
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+c         IDENT  SPREAD 
+c         ENTRY  SPREAD 
+c SPREAD    DATA   0
+c 
+c NAME - SPREAD                            MODULE - G.E.8.6.4 
+c LANGUAGE - COMPASS                      TYPE - SUBROUTINE 
+c VERSION - 3.0        DATE - 05/27/82     PROGRAMMER - 
+c                                          SAMUEL A. MCPHERSON
+c                                          ACD/CMB/COS
+c---------------------------------------------------------------------
+c Version - ???        Date - 9 Oct 92          Programmer - Scott R. Quier (SAIC)
+c---------------------------------------------------------------------
+c
+c Version -++++        Date - 10/05/92     Programmer - Scott R. Quier, SAIC
+c 
+Cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c PURPOSE:     THIS FORTRAN (FTN) CALLABLE SUBROUTINE WAS 
+c              WRITTEN FOR NASA, LANGLEY RESEARCH CENTER
+c              HAMPTON, VIRGINIA
+c COMMENTS: 
+c        THIS ROUTINE WILL TAKE DATA FROM THE INPUT ARRAY(B1) AND 
+c        RE-FORMAT THE DATA INTO THE OUT ARRAY (B2).
+c 
+c        B1 = FWA OF INPUT ARRAY
+c        B2 = FWA OF OUT ARRAY
+c        B3= NUMBER OF BITS/ITEM IN INPUT ARRAY 
+c        B4 = NUMBER OF BITS/ITEM IN OUT ARRAY
+c        B5 = NUMBER OF WORDS IN INPUT ARRAY (B1) 
+c        B6 = NUMBER OF WORDS PLACED IN OUTPUT ARRAY(B2)
+c 
+c        CALL SPREAD(IN,IOUT,BITSIN,BITSOUT,INWORDS,OUTWORDS) 
+c 
+c        IF BITSOUT > BITSIN, DATA MOVED INTO THE OUT ARRAY WILL BE 
+c        RIGHT JUSTIFIED WITH ZERO FILL TO THE LEFT.
+c 
+c        ON EACH CALL TO SPREAD, EITHER BITSIN OR BITSOUT MUST BE SET 
+c        TO 60. IF BITSOUT IS SET TO 60, A UNPACK OPERATION IS PERFORMED. 
+c        IF BITSIN IS SET TO 60, A PACK OPERATION IS PERFORMED. 
+c 
+c        B6(OUTWORDS)   ON RETURN WILL CONTAIN THE NUMBER OF OUT WORDS
+c 
+c 
+c        B2 MUST BE DIMENSIONED BY (60/B3*NWORDS) 
+c 
+c         SX7    A0 
+c         SA7    SAVEA0 
+c         SA3    A1 
+c         SB1    X3 
+c         SA3    A3+1 
+c         SB2    X3 
+c         SA3    A3+1 
+c         SB3    X3 
+c         SA3    A3+1 
+c         SB4    X3 
+c         SA3    A3+1 
+c         SB5    X3 
+c         SA3    A3+1 
+c         SB6    X3 
+c         SA5    B6 
+c         SX6    A5 
+c         SA6    SAVADD 
+c         SA1    B1-1              IN ARRAY - 1 
+c         SA2    B2-1              OUT ARRAY - 1
+c         SX6    A2 
+c         SA6    SAVOUT 
+c         SA3    B3 
+c         SB3    X3                NUMBER OF BITS IN IN 
+c         SA4    B4 
+c         SB4    X4                NUMBER OF BITS IN OUT
+c         SA5    B5                NUMBER OF WORDS
+c         SB5    X5 
+c         MX3    1
+c         SB1    B3-1 
+c         AX3    B1,X3             IN MASK
+c         SB2    60 
+c         MX7    0
+c          GE      B3,B4,PACKIT 
+cNEXT      SA1    A1+1 
+c         SB5    B5-1 
+c         NG     B5,EXIT
+c         SB1    60 
+cPACK      GE     B2,B4,CONT 
+c         SA2    A2+1 
+c         SA7    A2 
+c         SB2    60 
+c         MX7    0                 ZERO OUT WORD
+c          LT     B1,B3,CONTX 
+cCONT      BX6    X1*X3
+c         SB6    B4-B3
+c         LX7    B6,X7
+c         BX7    X7+X6
+c         LX7    B3,X7
+c         LX1    B3,X1
+c         SB1    B1-B3             REMAINING IN BITS
+c         SB2    B2-B4             REMAINING OUT
+c         GE     B1,B3,PACK 
+c         ZR     B1,NEXT
+c         GE     B2,B4,CONTX
+c         SA2    A2+1 
+c         SA7    A2 
+c         SB2    60 
+c         MX7    0
+cCONTX     MX0    1
+c         SB6    B1-1 
+c         AX0    B6,X0
+c         BX6    X1*X0             PICK UP REMAINING IN WORD
+c         LX6    B3,X6
+c         SA1    A1+1 
+c         SB5    B5-1 
+c         NG     B5,EXIT1 
+c         SB6    B3-B1
+c         MX0    1
+c         SB7    B6-1 
+c         AX0    B7,X0             PICK UP FIRST OF NEXT WORD 
+c         BX5    X1*X0
+c         SB1    B3-B1
+c         LX5    B1,X5
+c         BX6    X5+X6
+c         LX7    B4,X7
+c         BX7    X7+X6
+c         LX1    B6,X1
+c         SB1    B6 
+c         SB6    60 
+c         SB1    B6-B1
+c         SB2    B2-B4
+c         EQ     PACK 
+cPACKIT     MX3    1 
+c          SB1    B4-1
+c          AX3    B1,X3 
+c          LX3    B4               MASK FOR IN
+c          SB2    60
+cLOOP1      SA1    A1+1
+c          SB5    B5-1             DECREMENT # OF IN WORDS
+c          NG     B5,ENDIT
+c          BX6    X1*X3            MASK OUT DATA
+c          SB2    B2-B4            # BITS REMAINING IN OUT
+c          NG     B2,LOOP2
+c          LX7    B4
+c          BX7    X7+X6            ADD MASKED DATA
+c          EQ     LOOP1 
+cLOOP2      SB2    B2+B4            # BITS IN UPPER PART OF WORD 
+c          EQ     B2,B0,STORE1
+c          LX7    B2,X7 
+c          MX4    1 
+c          SB1    B4-B2            # BITS IN LOWER PART OF DATA 
+c          SB6    B1-1
+c          AX4    B6,X4 
+c          LX4    B1
+c          BX5    X4*X6            SAVE LOWER PART OF DATA
+c          AX6    B1,X6            SHIFT OUT LOWER PART OF DATA 
+c          BX7    X7+X6            ADD UPPER PART TO STORE
+c          BX6    X5
+c          SB7    60
+c          SB2    B7-B1 
+c          EQ     STORE 
+cSTORE1     SB7     60 
+c          SB2    B7-B4 
+cSTORE      SA2    A2+1
+c          SA7    A2
+c          BX7    X6
+c          EQ     LOOP1 
+cENDIT      SB5    60
+c          LX7    B2
+c          EQ     EXIT
+cEXIT1      BX7    X6
+cEXIT      SA2    A2+1 
+c         SA7    A2 
+c         SX1    A2                STORE RETURN NWORDS
+c         SA3    SAVOUT 
+c         IX6    X1-X3
+c         SA5    SAVADD 
+c         SA4    X5 
+c         SA6    A4 
+c         SA5    SAVEA0 
+c         SA0    X5 
+c         EQ     SPREAD 
+cSAVEA0    DATA   0
+cSAVADD    DATA   0
+cSAVOUT    DATA   0
+cABORT     SA2    =3LABT 
+c         BX6    X2 
+c         SA6    1
+c         END 
+c-----------------------------------------------------------
+c  This routine will take data from the input array (isrc) and
+c  call appropriate NCAR routines (gbytes, sbytes) to re-format
+c  the data into the output array (idest).
+c
+c Input Parameters:
+c
+c  isrc    :  The input bit stream 
+c  inbts   :  Length, in bits, of the input data words 
+c  iotbts  :  Length, in bits, of the output data words
+c  numpck  :  Number of 32-bit words in the input buffer 
+c             to be packed/unpacked
+c
+c Output Parameters:
+c  idest   :  The output bit stream 
+c  numdon  :  Number of 32-bit words actually stuffed 
+c             into the output buffer
+c-----------------------------------------------------------
+c  Subroutines Called:
+c    gbytes : NCAR "C" routine to handle data bit wise manipulation
+c             for the data unpacking operation.
+c    sbytes : NCAR "C' routine to handle data bit wise manipulation
+c             for the data packing operation
+c-----------------------------------------------------------
+c Exit States:
+c  idest   :  Holds the results of the unpack/pack operation
+c  numdon  :  The number of 32-bit words packed/unpacked.  On
+c             error, this will hold a zero (0) as an error flag.
+c-----------------------------------------------------------
+c Restrictions:
+c 
+c  -  For pack operation, we can only handle (2 ** 27) - 1
+c     data elements at a time.  
+c  -  For pack, numpck must be less than (2 ** 28) - 1.  
+c     This is driven by the way in which we calculate the 
+c     number of bytes to be processed.
+c-----------------------------------------------------------
+
+      subroutine spread
+     i                 (isrc, 
+     o                  idest,
+     i                  inbts, iotbts, numpck,
+     o                  numdon)
+      integer isrc*4
+      dimension isrc(*)
+      integer idest*4
+      dimension idest(*)
+      integer inbts*4
+      integer iotbts*4
+      integer numpck*4
+      integer numdon*4
+      integer mxupck
+      integer mxpack
+
+
+c
+c  *** For pack operations, we can only handle mxupck data
+c  *** elements.  ((2 ** 27) - 1).
+c  *** For pack operation, we can only handle mxpack data 
+c  *** elements.  ((2 ** 28) - 1).
+c  *** These constants are placed here for ease of changing the 
+c  *** code if the machine word size ever changes.
+c
+      mxupck = ((2 ** 27) - 1)
+      mxpack = ((2 ** 28) - 1)
+
+c
+c ***  We should do all our error checking right here.  It 
+c ***  sure will make the reading of the code that much easier
+c ***  and shorten the time it takes to determine if there 
+c ***  is a problem with the incoming data.
+c ***  By the numbers...
+c ***  -  Make sure we have something to do
+c ***  -  Make sure both word sizes are in bounds
+c ***  -  For pack operation, we can only handle (2 ** 27) - 1
+c ***     data elements at a time.  For pack, numpck must be
+c ***     less than (2 ** 28) - 1.  This is driven by the 
+c ***     way in which we calculate the number of bytes
+c ***     to be processed.
+c ***  -  Ensure we will be doing either an unpack or a pack
+c ***     operation.
+c
+      if(numpck .gt. 0 .and.
+     1   inbts  .gt. 0 .and. inbts .lt. 33 .and.
+     2   iotbts .gt. 0 .and. iotbts .lt. 33. and.
+     3   ((iotbts .eq. 32 .and. numpck .lt. 134217727) .or.
+     4   (inbts .eq. 32 .and. numpck .lt. 268435455))) then
+
+c
+
+	 numdon = (numpck * iotbts) / inbts
+c
+c ***     Determine if we are doing an unpack or a pack.
+c
+	 if(iotbts .eq. 32) then
+
+c
+c ***        We are doing an unpack
+c
+	    call gbytes(isrc, idest, 0, inbts, 0, numdon)
+	 else
+
+c
+c ***        There is potential for problem here.  The data
+c ***        going into the destination words must be of
+c ***        small enough size to fit.  Else, the user will
+c ***        be very disappointed.
+c
+
+	    call sbytes(idest, isrc, 0, iotbts, 0, numpck)
+	 end if
+      else
+c
+c ***     For some reason, we had errors in the input parameters.
+c ***     I guess the using application will have to figure out
+c ***     what went wrong.
+c
+	 numdon = 0
+      end if
+      return
+      end
+c------------------------------------sccsidkeywordsstart----------------
+c     *** This file is under configuration control
+c     *** sccs keywords--do not modify these values!!!
+c     @(#)shift.f    93.1    94/04/20
+c------------------------------------sccsidkeywordsend------------------
+      integer function shift(
+     i                       idata, ifactor)
+
+c**********************************************************************
+c   Name - shift                         Module -
+c   Language - FORTRAN                   Type - function
+c   Version - ??      Date - 13 Oct 92   Programmer - S.R. Quier (SAIC)
+c  
+c   Purpose -
+c    SHIFT(a1,a2) is a specific function that returns a shifted result.
+c    The argument a1 is the data to be shifted.  Argument a2 is the 
+c    number of binary positions a1 will be shifted and the direction
+c    of the shift.  If a2 is greater than zero, the shift will be left
+c    circular.  If a2 is less than zero, the shift will be right with
+c    sign extension and end drop off.  If a2 is zero, no shift will
+c    be accomplished.
+c  
+c   Key Local Parameters -
+c     integer icount  : The number of binary positions to shift idata
+c     integer ibit31  : The value of most-significant bit
+c     integer loop    : Just a loop counter
+c
+c  
+c   Subroutines Called -
+c    iabs()
+c    min0()
+c    bit()
+c    setbit()
+c    lshift()
+c    rshift()
+c  
+c   Exit States -
+c
+c   Restrictions -
+c    ifactor must be non-zero, in the range of -32 -> 32.  If not,
+c    then the operation will either be ignored (if ifactor .eq. 0) or
+c    ifactor will be adjusted to either 32 or -32 (depending on sign
+c    of incoming ifactor).
+c  
+c**********************************************************************
+      integer idata
+      integer ifactor
+c     integer ishift
+
+      integer icount
+      logical ibit31
+      logical bit
+      integer loop
+
+c
+c **** Need to load the value
+c
+      shift = idata
+c
+c **** Make sure the user wants us to do something
+c
+      if(ifactor .ne. 0) then
+c
+c **** Adjust magnitude of shift
+c
+	  ifactor = isign(min0(iabs(ifactor),32), ifactor)
+c
+c **** Get the number of bit to shift the data
+c
+	  icount = iabs(ifactor)
+c
+c **** Determine direction of shift
+c
+	  if(ifactor .gt. 0) then
+c
+c **** Do the left circular shift
+c
+	      do 100 loop = 1, icount
+c
+c **** Save most significant bit
+c
+		  ibit31 = bit(31, shift)
+c
+c **** Do the shift
+c
+		  shift = lshift(shift, 1)
+c
+c **** Perform the end-carry of most-significant bit
+c **** to the least significant bit position.
+c
+		  call setbit(0, shift, ibit31)
+100           continue
+	  else
+c
+c **** For the right arithmatic shift, with sign extension
+c **** and end drop off, we do not need to work black magic,
+c **** the Sun FORTRAN does it for us.
+c
+	      shift = rshift(idata, icount)
+	  end if
+      end if
+      return
+      end
+
+
+c------------------------------------sccsidkeywordsstart----------------
+c     *** This file is under configuration control
+c     *** sccs keywords--do not modify these values!!!
+c     @(#)setloc.f    93.1    94/04/20
+c------------------------------------sccsidkeywordsend------------------
+      SUBROUTINE SETLOC 
+     I  (IVALUE, ISIZE, 
+     O    IARRAY) 
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C 
+C   NAME - SETLOC                           MODULE  - G.E.8.6.12
+C   LANGUAGE - FTN V                        TYPE - SUBROUTINE 
+C   VERSION - 3.0        DATE - 11/17/82    PROGRAMMER - ED HOWERTON
+c---------------------------------------------------------------------
+c Version - ???        Date - 9 Oct 92          Programmer - Scott R. Quier (SAIC)
+c---------------------------------------------------------------------
+C 
+C   PURPOSE - TO SET THE ELEMENTS OF AN ARRAY TO A SPECIFIED VALUE
+C 
+C   INPUT PARAMETERS -
+C       IVALUE := VALUE TO WHICH ARRAY ELEMENTS ARE TO BE SET.
+C       ISIZE  := SIZE OF THE ARRAY. NOTE THAT FOR MULTI-DIMENSIONED
+C                 ARRAYS, ISIZE IS THE PRODUCT OF THE DIMENSIONS. 
+C 
+C   OUTPUT PARAMETERS - 
+C       IARRAY := ARRAY TO BE SET.
+C 
+C   KEY LOCAL PARAMETERS -
+C 
+C   EXIT STATES - NORMAL RETURN 
+C 
+C   RESTRICTIONS - (SEE COMMENT BELOW) -IMPLEMENTATION OF THIS
+C                   ROUTINE ON A SYSTEM WHERE PARAMETER TYPE
+C                   VERIFICATION IS ACCOMPLISHED WILL RESTRICT
+C                   THE USEAGE OF THIS ROUTINE TO HANDLE
+C                   INTEGER ARRAYS ONLY.
+C 
+C   COMMENTS - SETLOC MAY BE CALLED TO SET AN INTEGER VALUE IN AN 
+C              INTEGER ARRAY OR, AS A CONSEQUENCE OF CDC LAXITY IN
+C              PARAMETER TYPE VERIFICATION, SETLOC MAY ALSO BE USED 
+C              TO SET A REAL VALUE IN A REAL ARRAY. 
+C 
+C 
+C 
+C 
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C 
+C                         ***** BODY OF SETLOC *****
+C 
+C*****
+c---  PARAMETER ( IANAL = 0 ) 
+C 
+C$    IF ( IANAL .EQ. 1 ) THEN
+c---     COMMON /UTLCNT/ NCALLS(60) 
+C$    ENDIF 
+C*****
+C 
+c
+c **** Declare the interface parameters
+c
+      integer ivalue
+      integer isize
+      integer iarray(*)
+
+c
+c **** Declare the local variables.
+c
+      integer i
+C 
+C$    IF ( IANAL .EQ. 1 ) THEN
+c---     NCALLS( 34 ) = NCALLS( 34 ) + 1
+C$    ENDIF 
+C 
+      DO 100 I = 1,ISIZE
+          IARRAY(I) = IVALUE
+  100 CONTINUE
+      RETURN
+      END 

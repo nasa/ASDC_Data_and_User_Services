@@ -1,0 +1,95 @@
+#!/bin/csh -f
+#------------------------------------------------------------------------------
+# Please uncomment the correct compilation call that best fits your system.
+#
+#!DESCRIPTION:  This script compiles the C code necessary to read the
+#               following MAPS HDF data files.
+#               MAPS_OSTA3_CO5X5_HDF
+#               MAPS_SRL1_CO5X5_HDF
+#               MAPS_SRL2_CO5X5_HDF
+#               Paths to the HDF 'include' and 'lib' directories must 
+#               be defined. This sample script uses environment variables 
+#               to make these definitions.
+#
+# The C compiler and compiler flags specifications depend on the
+#  computer and operating system and, for SGIs, on the object code
+#  word size of the installed HDF libraries.  Examples are given for 
+#  systems on which the code has been tested.  Additional compile 
+#  information is available from 
+#    - the NCSA HDF web site at
+#
+#         http://hdf.ncsa.uiuc.edu/training/compile/
+#
+#    - the README file in your top level HDF directory, or 
+#    - in the directory release_notes/compile.txt in your 
+#      HDF installation directory path.
+#  
+# HDF Library Version 4.1r2 is required.  
+#  
+# Below are the generic statements needed to compile this example software:
+#
+#COMPILER FLAGS -s -o read_maps_co5x5 maps_co5x5_read.c -L$HDFLIB -lmfhdf -ldf -lz
+#
+#  where appropriate values are substituted for COMPILER and FLAGS.
+#  The values for tested operating systems are:
+#
+#	computer and
+#       operating system	COMPILER	FLAGS
+#       -----------------------------------------------------
+#	SGI (IRIX 6.2 & 6.4)	cc		-32/-n32/-64*
+#	HP (HP-UX 10.10)	c89		none
+#	Sun (Solaris 2.5)	cc		-Xc
+#	Sun (Solaris 2.5)	gcc		none
+#       Dec Alpha V4.0A         gcc             none
+#
+#  * The flag setting for the SGI machine is determined by the HDF library
+#    object code installed on your system.  One source for this information
+#    is to look at the sample C compilation statements in the README file 
+#    in your top level HDF directory.  More information about the different
+#    object forms is available from the cc man page on SGI systems:
+#	man cc
+#    For compiling this code, use the -32 option in your compilation
+#    call.  These data files were not created on an SGI.
+#
+#
+# On your Sun Solaris system, the following command was used to build the 
+# sample software:
+gcc -o read_maps_co5x5 maps_co5x5_read.c -I/usr/local/hdf/include \
+    -L/usr/local/hdf/lib -lmfhdf -ldf -ljpeg -lz -L/usr/lib
+#
+# NOTE:  You will have to modify the paths for the HDF libraries to the
+#        correct location on your system.  You will need to obtain the GNU
+#        C compiler.
+#
+#
+# On your SGI Irix 6.2 system, the following command was used to build 
+# the sample software:
+#
+#cc -ansi -n32 -mips3 -O -s -o read_maps_co5x5 maps_co5x5_read.c  \
+#       -I/usr/people2/paula/HDF/4.1r2_irix6.2/include \
+#       -L/usr/people2/paula/HDF/4.1r2_irix6.2/lib -ldf -lz
+#
+# NOTE:  You will have to modify the paths for the HDF libraries to the
+#        correct location on your system. Also, when you compile the code, 
+#        you will get some warning messages stating that all of the 
+#        libraries expressed in the compilation call when not used.  Just 
+#        disregard those warning messages. You will still get the executable.
+#
+#
+# On your Dec Alpha V4.0A system, the following command was used to build the 
+# sample software:
+#
+#cc -o read_maps_co5x5 maps_co5x5_read.c -I/usr/local/HDF4.1r1/include -L/usr/local/HDF4.1r1/lib -lmfhdf -ldf -ljpeg -lz -L/usr/lib 
+#
+# NOTE:  You will have to modify the paths for the HDF libraries to the
+#        correct location on your system.
+#
+#
+# On your HP system, the following command was used to build the sample
+# software:
+#
+#gcc -o read_maps_co5x5 maps_co5x5_read.c -I/usr/local/HDF4.1r1/include -L/usr/local/HDF4.1r1/lib -lmfhdf -ldf -ljpeg -lz -L/usr/lib
+#
+# NOTE:  You will have to modify the paths for the HDF libraries to the
+#        correct location on your system.  You will need to obtain the GNU
+#        C compiler.

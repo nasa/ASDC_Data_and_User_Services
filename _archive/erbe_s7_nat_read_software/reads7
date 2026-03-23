@@ -1,0 +1,98 @@
+#!/bin/csh
+#
+#
+#*************************************************************
+#
+# This script file, readprod, provides options to create listings
+# of records from an existing S-7 file. The ascii output will be written 
+# to file s7dump.'S7 file name'.
+#
+# Required files:
+#     
+#	s7.exe - S7 read program
+#       'S7 file' - binary file containing S7 data
+#
+#  Shell Script Variables:
+#
+#  fname        - name of S-7 data file
+#  dy		- day of month of data (1-31) or 0 for all days
+#  ibeg		- initial dump range
+#  iend		- final dump range
+#
+#
+#*************************************************************
+#
+  echo ""
+  echo -n "Enter file name for S-7 => "
+  set fname = $<
+  set dprod = 'S-7'
+   echo -n "Enter day of month (or 0 for entire month) =>"
+   set dy = $<
+   if ($dy < 0 || $dy > 31) then
+      goto day1
+   endif
+# 
+  #
+  #  Enter Data about ERBE dump request
+  #
+  echo ""
+  echo "Enter dump range:"
+  echo ""
+  echo -n "Initial =>"
+  set ibeg = $<
+  echo ""
+  echo -n "Final =>"
+  set iend = $<
+  echo ""
+#  #
+#  # Display requested values and prompt for job continuation
+#  #echo      
+  echo ""
+  echo "************************************************************"
+  echo ""
+  echo $dprod "Dump Request:"
+  echo ""
+  echo $dprod "file name is :  "$fname
+  echo ""
+     echo ""
+     if ( $dy == 0 ) then
+      echo " Day : All" 
+     else  
+      echo " Day : " $dy
+     endif
+  endif
+  echo ""
+  echo " Dump range: "
+  echo ""
+  echo " Initial :  "$ibeg
+  echo ""
+  echo " Final   :  "$iend
+  echo
+  echo "************************************************************"
+  echo ""
+###############
+repeat:
+#
+# If continuation not selected then exit shell script
+#
+echo ""
+echo  " Do you wish to continue with execution "
+echo -n " of this job?(enter y/n)=>" 
+set ans4 = $<
+if ($ans4 == "y")then
+  goto write
+else
+  if($ans4 == "n")then
+    exit
+  else
+    goto repeat
+  endif
+endif
+write:
+#
+#
+  ./s7.exe $fname $ibeg $iend $dy
+#
+#
+ex:
+exit
