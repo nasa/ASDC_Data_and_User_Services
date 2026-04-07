@@ -14,6 +14,8 @@ author: "Atmospheric Science Data Center (ASDC)"
 
 #### - [Use <strong>harmony-py</strong> - to subset and visualize TEMPO data](../TEMPO/how_to_examine_TEMPO_data_using_harmony-py.ipynb)
 
+#### - [Download TEMPO data as <strong>CSV</strong> files](../TEMPO/how_to_download_TEMPO_data_as_CSV.ipynb)
+
 #### - [Use <strong>virtual datasets</strong> in the cloud via `earthaccess` - to work with TEMPO Level-3 data [external]](https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/)
 
 ## Tutorials
