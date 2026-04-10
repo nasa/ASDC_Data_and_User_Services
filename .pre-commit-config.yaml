@@ -63,7 +63,7 @@ repos:
         entry: python .git-hooks/check-notebook-headers.py
         language: system
         files: '\.ipynb$' # Optional: Regex to specify file types to check
-        exclude: ".*\/additional_drafts\/.*"
+        exclude: "(^|/)(additional_drafts|_archive)/" # Exclude additional_drafts and _archive directories
 
   - repo: local
     hooks:
@@ -72,4 +72,4 @@ repos:
         entry: python .git-hooks/check-notebook-imports.py
         language: system
         types: [jupyter]
-        pass_filenames: false
+        exclude: "(^|/)(additional_drafts|_archive)/" # Exclude additional_drafts and _archive directories
