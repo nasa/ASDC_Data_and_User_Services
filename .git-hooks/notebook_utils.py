@@ -134,12 +134,18 @@ class HookResult:
         """Return True if any errors were found."""
         return len(self.errors) > 0
 
-    def print_summary(self, verbose: bool = False):
+    def print_summary(self, verbose: bool = False, warn_only: bool = False):
         """Print a summary of the results."""
         print("=" * 70)
 
         if self.errors:
-            print(f"\n❌ Found {len(self.errors)} error(s) in {self.checked_count} file(s)")
+            if warn_only:
+                print(
+                    f"\n⚠️  Found {len(self.errors)} issue(s) in {self.checked_count}"
+                    f" file(s) (warn-only mode, not blocking)"
+                )
+            else:
+                print(f"\n❌ Found {len(self.errors)} error(s) in {self.checked_count} file(s)")
             for error in self.errors:
                 print(f"\n  {error['file']}")
                 print(f"    {error['message']}")
@@ -155,8 +161,14 @@ class HookResult:
         if not self.errors and not self.warnings:
             print(f"✅ All {self.checked_count} file(s) passed")
 
-    def exit_code(self) -> int:
-        """Return appropriate exit code (1 for errors, 0 for success)."""
+    def exit_code(self, warn_only: bool = False) -> int:
+        """Return appropriate exit code.
+
+        Args:
+            warn_only: If True, always return 0 (issues are advisory).
+        """
+        if warn_only:
+            return 0
         return 1 if self.has_errors() else 0
 
 
@@ -207,6 +219,14 @@ def create_base_parser(description: str) -> argparse.ArgumentParser:
     )
     output_group.add_argument(
         "--quiet", "-q", action="store_true", help="Suppress all output except errors"
+    )
+
+    # Behavior arguments
+    behavior_group = parser.add_argument_group("Behavior")
+    behavior_group.add_argument(
+        "--warn-only",
+        action="store_true",
+        help="Report issues as warnings instead of errors (always exits 0)",
     )
 
     # Positional: filenames passed by pre-commit (or manually)
