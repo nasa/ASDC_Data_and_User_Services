@@ -209,6 +209,14 @@ def create_base_parser(description: str) -> argparse.ArgumentParser:
         "--quiet", "-q", action="store_true", help="Suppress all output except errors"
     )
 
+    # Positional: filenames passed by pre-commit (or manually)
+    parser.add_argument(
+        "files",
+        nargs="*",
+        default=[],
+        help="Notebook files to check (passed automatically by pre-commit)",
+    )
+
     return parser
 
 
@@ -221,7 +229,9 @@ def get_notebooks_from_args(args: argparse.Namespace) -> tuple[List[Path], str]:
     Returns:
         Tuple of (list of notebook paths, mode description string)
     """
-    # Check if 'files' argument exists and is populated
+    # Priority: explicit files (from pre-commit or CLI) > --all-notebooks > staged files.
+    # When pre-commit passes filenames, they arrive as positional args and take precedence
+    # over --all-notebooks, which is intended for standalone manual runs.
     if hasattr(args, "files") and args.files:
         notebooks = [Path(f) for f in args.files if f.endswith(".ipynb")]
         mode = "specified"
