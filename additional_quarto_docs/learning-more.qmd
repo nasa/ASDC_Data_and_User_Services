@@ -1,7 +1,7 @@
 ---
 title: "Learning more"
 date: last-modified
-citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/contributing.html
+citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/learning-more.html
 ---
 
 For additional information on NASA's Earth Observation data, please check out these additional resources: 

@@ -1,5 +1,5 @@
 ---
-title: "POWER Prediction Of Worldwide Energy Resources) Project resources"
+title: "POWER (Prediction Of Worldwide Energy Resources) Project resources"
 date: last-modified
 author: "Atmospheric Science Data Center (ASDC)"
 ---

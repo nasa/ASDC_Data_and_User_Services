@@ -2,7 +2,7 @@
 title: "Contributing Guide"
 subtitle: "Recommendations based on previous notebook reviews and revisions."
 date: last-modified
-citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/learning-more.html
+citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/contributing.html
 ---
 
 *This contributing guide is a draft, and still under active, open development.*
