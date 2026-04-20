@@ -5,24 +5,55 @@ date: last-modified
 citation_url: https://nasa.github.io/ASDC_Data_and_User_Services/contributing.html
 ---
 
-*This contributing guide is a draft, and still under active, open development.*
+*This contributing guide is under active development.*
 
-### Style Guidelines
+## Style guidelines
 
 The following are recommended and/or enforced via the CI/CD workflow:
 
-- **Python Version**: This project requires Python 3.10 or higher. All code and notebooks should be compatible with Python 3.10+.
+- **Python version** — Python 3.10 or higher. All code and notebooks should be compatible with Python 3.10+.
 - Use `ruff` for linting and formatting.
 - Wherever possible and appropriate, move inline comments into notebook Markdown cells.
 - Wherever possible and appropriate, replace static references to local files with code that will programmatically pull data files when running a notebook.
 
-### Content Guidelines
+## Content guidelines
 
 Ensure each notebook contains, at a minimum:
 
-- A quarto header with an auto-generated "last published" date included
+- A Quarto header with an auto-generated "last published" date included
 - A Markdown header section with:
   - A **Summary** or **Overview** block
   - A **Prerequisites** block
   - A **Notebook Author/Affiliation** block
-- Numbered sections that use Markdown hash symbols (#) for headings 
+- Numbered sections that use Markdown hash symbols (`#`) for headings
+
+## Data files
+
+Notebooks should fetch data programmatically at runtime (e.g., via
+`earthaccess` or `harmony-py`) rather than committing data files to the
+repository. Large files such as `.nc`, `.hdf`, and `.h5` are not tracked
+by git and should stay that way.
+
+## Environment files
+
+This repo has two environment definitions. They serve different purposes:
+
+| File | Managed by | Purpose |
+|------|------------|----------|
+| `pyproject.toml` / `uv.lock` | `uv` | **Local development.** All packages needed to run every notebook. Use `uv sync` to install. |
+| `environment.yml` | conda (CI only) | **Site builds.** Minimal Jupyter kernel so Quarto can render pre-executed notebooks. You should not need this locally. |
+
+Quarto is configured with `freeze: true`, which means it never re-executes
+notebook code during a build. It converts the already-rendered `.ipynb` outputs
+straight to HTML. This keeps CI fast and avoids the need for data access
+credentials in the build environment.
+
+## Pre-commit hooks
+
+The pre-commit configuration runs on every commit:
+
+- **gitleaks** — secret detection
+- **ruff** — Python linting and formatting
+- **markdown-link-check** — broken link detection
+- **check-notebook-headers** — validates required sections (summary, prerequisites, author)
+- **check-notebook-imports** — cross-references imports against `pyproject.toml` (warn-only)
