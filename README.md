@@ -25,7 +25,7 @@ pre-commit install   # enable local quality checks on commit
 quarto preview       # live-preview the site at localhost
 ```
 
-See the [Contributing Guide](https://nasa.github.io/ASDC_Data_and_User_Services/contributing.html)
+See the [Contributing Guide](https://nasa.github.io/ASDC_Data_and_User_Services/additional_quarto_docs/contributing.html)
 for notebook style guidelines, content requirements, pre-commit hooks, and data
 file policy.
 
