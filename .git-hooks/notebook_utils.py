@@ -261,6 +261,7 @@ def get_notebooks_from_args(args: argparse.Namespace) -> tuple[List[Path], str]:
 
         if args.exclude_archived:
             exclude_patterns.append("archived")
+            exclude_patterns.append("_archive")
 
         if args.exclude_additional_drafts:
             exclude_patterns.append("additional_drafts")
