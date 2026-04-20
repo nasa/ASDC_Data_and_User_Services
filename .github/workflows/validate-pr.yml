@@ -18,13 +18,11 @@ jobs:
         with:
           enable-cache: true
 
-      - run: uv sync --frozen
-
       - name: Ruff lint
-        run: uv run ruff check .
+        run: uvx ruff check .
 
       - name: Ruff format check
-        run: uv run ruff format --check .
+        run: uvx ruff format --check .
 
   notebooks:
     name: Validate notebook structure
