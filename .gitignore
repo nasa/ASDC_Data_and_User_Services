@@ -139,3 +139,14 @@ dmypy.json
 .DS_Store
 
 index_files/*
+
+# Data or notebook files at the top-level in the repository
+*.nc
+*.h5
+*.hdf
+*.csv
+*.json
+*.txt
+*.zip
+*.tar.gz
+*.ipynb
