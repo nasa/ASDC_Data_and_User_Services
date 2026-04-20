@@ -2,7 +2,7 @@
 
 How-to guides, tutorials, and scripts for working with data from missions
 archived and distributed by NASA's
-[Atmospheric Science Data Center (ASDC)](https://asdc.larc.nasa.gov/).
+[Atmospheric Science Data Center (ASDC)](https://www.earthdata.nasa.gov/centers/asdc-daac).
 The site covers CALIPSO, CERES, DSCOVR, MAIA, MISR, MOPITT, POWER, PREFIRE,
 SAGE III-ISS, STAQS, TEMPO, and TOLNet.
 
