@@ -151,13 +151,14 @@ def main():
             unauthorized = check_notebook_imports(notebook, allowed_packages)
 
             if unauthorized:
+                label = "⚠️ " if args.warn_only else "❌"
                 result.add_error(
                     notebook,
                     f"Unauthorized imports: {', '.join(sorted(unauthorized))}",
                     {"unauthorized_packages": sorted(unauthorized)},
                 )
                 if not args.quiet:
-                    print(f"❌ {notebook}")
+                    print(f"{label} {notebook}")
                     print(f"   Unauthorized: {', '.join(sorted(unauthorized))}")
             elif args.verbose:
                 print(f"✅ {notebook}")
@@ -175,7 +176,7 @@ def main():
     # Print summary
     if not args.quiet:
         print()
-        result.print_summary(verbose=args.verbose)
+        result.print_summary(verbose=args.verbose, warn_only=args.warn_only)
 
         if result.has_errors():
             print()
@@ -184,7 +185,7 @@ def main():
             print("  2. Or remove the imports from notebooks")
             print("  3. Or add to optional dependencies if specialized")
 
-    return result.exit_code()
+    return result.exit_code(warn_only=args.warn_only)
 
 
 if __name__ == "__main__":

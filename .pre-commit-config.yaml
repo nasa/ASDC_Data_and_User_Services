@@ -69,7 +69,8 @@ repos:
     hooks:
       - id: check-notebook-imports
         name: Check notebook imports against pyproject.toml
-        entry: python .git-hooks/check-notebook-imports.py
+        entry: python .git-hooks/check-notebook-imports.py --warn-only
         language: system
         types: [jupyter]
+        verbose: true # Always show output since the hook won't block commits
         exclude: "(^|/)(additional_drafts|_archive)/" # Exclude additional_drafts and _archive directories

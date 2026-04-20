@@ -88,11 +88,6 @@ def main():
     # Create parser with common arguments
     parser = create_base_parser(description="Check notebook structure for required header content")
 
-    # Add script-specific arguments
-    parser.add_argument(
-        "files", nargs="*", help="Specific files to check (overrides --all-notebooks)"
-    )
-
     args = parser.parse_args()
 
     # Get notebooks to check using common logic
