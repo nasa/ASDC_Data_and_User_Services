@@ -74,6 +74,8 @@ website:
               href: DSCOVR/how_to_compare_spatially_TEMPO_with_DSCOVR_uvai.ipynb
             - text: Compare TEMPO, DSCOVR, and AERONET aerosol data
               href: DSCOVR/how_to_compare_TEMPO_with_DSCOVR_and_AERONET_uvai.ipynb
+            - text: Visualize UV Aerosol Index from EPIC
+              href: DSCOVR/how_to_visualize_DSCOVR-UVAI.ipynb
         - section: "<strong>MAIA</strong> (Multi-Angle Imager for Aerosols)"
           href: MAIA/index.qmd
           contents:
