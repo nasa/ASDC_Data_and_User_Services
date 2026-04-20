@@ -150,3 +150,14 @@ index_files/*
 *.zip
 *.tar.gz
 *.ipynb
+
+# Data and binary files in subdirectories (already blocked at top-level)
+**/*.nc
+**/*.h5
+**/*.hdf
+**/*.zip
+**/*.tar.gz
+**/*.gif
+
+# Keep small reference images but block large ones by convention
+# (rely on PR review for image files)
