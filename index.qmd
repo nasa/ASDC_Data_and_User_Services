@@ -1,31 +1,22 @@
 ---
-title: "ASDC Data and User Services Tutorials and Resources"
-subtitle: "With mission-specific guidance"
+title: "ASDC Data and User Services"
+subtitle: "Tutorials and resources with mission-specific guidance"
 date: last-modified
 author: "Atmospheric Science Data Center (ASDC)"
 ---
 
 ## Welcome {#welcome}
 
-**Welcome to the Data and User Services repository for the
-NASA Atmospheric Science Data Center ([ASDC](https://asdc.larc.nasa.gov/))!**
+How-to guides (goal-oriented tasks), tutorials (learning-oriented walkthroughs),
+and scripts for working with data from missions
+archived and distributed by NASA's
+[Atmospheric Science Data Center (ASDC)](https://www.earthdata.nasa.gov/centers/asdc-daac).
 
-This GitHub page serves as a comprehensive resource for end users
-seeking guidance and instructions on
-working with data from select missions that are archived and distributed by
-the ASDC Distributed Active Archive Center (DAAC).
-Its aim is to enhance the knowledge and proficiency of data users,
-enabling more effective usage of the valuable resources made available by ASDC.
-Through this transfer of expertise from ASDC to users, we hope to
-foster a collaborative environment that drives innovation and progress in space-related endeavors.
+Browse the sidebar for mission-specific guidance covering
+CALIPSO, CERES, DSCOVR, MAIA, MISR, MOPITT, POWER, PREFIRE,
+SAGE III-ISS, STAQS, TEMPO, and TOLNet.
+Examples cover working with NASA Earthdata on your local machine as well as
+in the cloud.
 
-**In the left sidebar...**
-
-You will find how-to guides (for goal-oriented tasks), tutorials (for learning), and scripts 
-for select missions and a variety of use cases. 
-Examples are provided for working with NASA Earthdata both on your local machine as well as in the cloud.
-The cloud-based guides exemplify the advantages of working with NASA Earthdata in the cloud and
-aim to provide a starting point for exploring what your own workflows could look like in the cloud.
-
-
-*This site is under active, open development. Stay tuned for more and ever-evolving content!* 
+*This site is under active, open development. Stay tuned for more and
+ever-evolving content!*
