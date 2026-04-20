@@ -19,7 +19,7 @@ website:
     left: "Atmospheric Science Data Center"
     
   sidebar:
-    logo: "https://www.earthdata.nasa.gov/themes/custom/project/hds_earthdata/nasa-earthdata-logo.png"
+    logo: "_images/asdc-logo.png"
     pinned: true
     align: center
     tools: 
