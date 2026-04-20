@@ -72,6 +72,7 @@ python .git-hooks/check-unused-dependencies.py --include-optional
 
 # Exclude archived notebooks
 python .git-hooks/check-unused-dependencies.py --exclude-archived
+```
 
 ## Common Options
 

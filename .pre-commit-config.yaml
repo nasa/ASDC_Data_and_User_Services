@@ -1,7 +1,7 @@
 ci:
   autoupdate_schedule: "monthly" # Like dependabot
   autoupdate_commit_msg: "chore: update pre-commit hooks"
-  autoupdate_branch: "develop"
+  autoupdate_branch: "main"
   autofix_prs: false # Comment "pre-commit.ci autofix" on a PR to trigger
 
 default_language_version:

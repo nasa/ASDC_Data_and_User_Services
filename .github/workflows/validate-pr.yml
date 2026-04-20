@@ -1,0 +1,71 @@
+name: "Validate Pull Request"
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint & format check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Ruff lint
+        run: uvx ruff check .
+
+      - name: Ruff format check
+        run: uvx ruff format --check .
+
+  notebooks:
+    name: Validate notebook structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - run: uv sync --frozen
+
+      - name: Check notebook headers
+        run: >
+          uv run python .git-hooks/check-notebook-headers.py
+          --all-notebooks --exclude-archived --exclude-additional-drafts
+
+      - name: Check notebook imports (advisory)
+        run: >
+          uv run python .git-hooks/check-notebook-imports.py
+          --all-notebooks --exclude-archived --exclude-additional-drafts --warn-only
+
+  render:
+    name: Quarto render (no deploy)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: quarto-env
+          environment-file: environment.yml
+
+      - name: Render site
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Upload rendered site
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: _site/
+          retention-days: 5
