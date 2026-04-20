@@ -7,6 +7,7 @@ See .git-hooks/README.md for details and usage examples.
 
 import ast
 import sys
+import warnings
 
 try:
     import tomllib  # Python 3.11+
@@ -27,8 +28,21 @@ from notebook_utils import (
 )
 
 
+# Packages that are intentionally allowed but cannot or should not be declared
+# in pyproject.toml (local helper modules, platform-specific, proprietary, etc.)
+ALLOWLIST = {
+    # Local helper modules shipped alongside notebooks
+    "local_sageiii_plot",
+    "tolnet_v01",
+    # Proprietary / platform-specific (cannot be pip-installed)
+    "arcpy",
+    # Installed via !pip in notebook cells rather than as a project dependency
+    "gnss_lib_py",
+}
+
+
 def load_allowed_packages() -> Set[str]:
-    """Load package names from pyproject.toml."""
+    """Load package names from pyproject.toml plus the static allowlist."""
     pyproject_path = Path("pyproject.toml")
 
     if not pyproject_path.exists():
@@ -58,6 +72,9 @@ def load_allowed_packages() -> Set[str]:
     # Standard library (already lowercase, but be explicit)
     packages.update(get_stdlib_modules())
 
+    # Static allowlist for packages that can't be declared as dependencies
+    packages.update(ALLOWLIST)
+
     return packages
 
 
@@ -85,7 +102,10 @@ def extract_imports_from_code(code: str) -> Set[str]:
     imports = set()
 
     try:
-        tree = ast.parse(code)
+        # Suppress SyntaxWarnings from invalid escape sequences in notebook code
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", SyntaxWarning)
+            tree = ast.parse(code)
         for node in ast.walk(tree):
             if isinstance(node, ast.Import):
                 for alias in node.names:
