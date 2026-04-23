@@ -19,7 +19,8 @@ website:
     left: "Atmospheric Science Data Center"
     
   sidebar:
-    logo: "_images/asdc-logo.png"
+    logo: "https://www.earthdata.nasa.gov/s3fs-public/2024-06/Earthdata-graphic-identifier-stacked-NASA-blue.png"
+    title: "ASDC Data and User Services"
     pinned: true
     align: center
     tools: 
