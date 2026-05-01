@@ -30,7 +30,7 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - uses: conda-incubator/setup-miniconda@v3
+      - uses: conda-incubator/setup-miniconda@v4
         with:
           activate-environment: quarto-env
           environment-file: environment.yml
@@ -39,7 +39,7 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
 
   # Deploy to GH Pages
   deploy:
