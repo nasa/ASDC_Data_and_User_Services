@@ -1,0 +1,39 @@
+import earthaccess
+
+# Authenticate Earthdata Access
+auth = earthaccess.login(persist=True)
+
+# Define the collection name and version
+short_name = "g3bssp"  # Modify if necessary based on the dataset's short_name
+version = "6"
+
+# Temporal range
+date_start = "2025-07-09T00:00:00"
+date_end = "2025-07-15T23:59:59"
+
+# Broad bounding box (entire globe for debugging)
+min_lat = -90.0
+max_lat = 90.0
+min_lon = -180.0
+max_lon = 180.0
+
+# Search for granules in the dataset
+bbox_results = earthaccess.search_data(
+    short_name=short_name,
+    version=version,
+    temporal=(date_start, date_end),
+    bounding_box=(min_lon, min_lat, max_lon, max_lat),
+)
+
+# Check and download granules
+if len(bbox_results) == 0:
+    print("No granules found.")
+    print(f"Short name: {short_name}, Version: {version}")
+    print(f"Temporal range: {date_start} to {date_end}")
+    print(f"Bounding box: {min_lon}, {min_lat}, {max_lon}, {max_lat}")
+else:
+    print(f"Number of granules found: {len(bbox_results)}")
+    
+    # Download the found granules within a specified range (example: first 5 granules)
+    files = earthaccess.download(bbox_results[:5], local_path=".")
+    print(f"Downloaded files: {files}")
