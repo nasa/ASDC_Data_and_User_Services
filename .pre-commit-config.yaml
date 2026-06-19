@@ -3,6 +3,10 @@ ci:
   autoupdate_commit_msg: "chore: update pre-commit hooks"
   autoupdate_branch: "main"
   autofix_prs: false # Comment "pre-commit.ci autofix" on a PR to trigger
+  # markdown-link-check needs network access to validate URLs, but pre-commit.ci
+  # runs hooks without internet, so every external link fails (Status: 0).
+  # It still runs locally on commit. See PR #83.
+  skip: [markdown-link-check]
 
 default_language_version:
   python: python3.10
