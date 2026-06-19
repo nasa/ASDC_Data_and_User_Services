@@ -3,18 +3,22 @@ ci:
   autoupdate_commit_msg: "chore: update pre-commit hooks"
   autoupdate_branch: "main"
   autofix_prs: false # Comment "pre-commit.ci autofix" on a PR to trigger
+  # markdown-link-check needs network access to validate URLs, but pre-commit.ci
+  # runs hooks without internet, so every external link fails (Status: 0).
+  # It still runs locally on commit. See PR #83.
+  skip: [markdown-link-check]
 
 default_language_version:
   python: python3.10
 
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.25.1
+    rev: v8.30.0
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       # Validate format
       - id: check-yaml
@@ -44,13 +48,13 @@ repos:
         exclude_types: ["jupyter", "text"]
 
   - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.13.7
+    rev: v3.14.2
     hooks:
       - id: markdown-link-check
         args: [ -q ]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.8
+    rev: v0.15.15
     hooks:
       - id: ruff
         args: ["--fix", "--exit-non-zero-on-fix"]
