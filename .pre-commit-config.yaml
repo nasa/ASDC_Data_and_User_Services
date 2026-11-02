@@ -55,7 +55,7 @@ repos:
         args: [ -q ]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.15
+    rev: v0.16.10
     hooks:
       - id: ruff
         args: ["--fix", "--exit-non-zero-on-fix"]
