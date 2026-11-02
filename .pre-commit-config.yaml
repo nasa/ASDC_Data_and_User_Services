@@ -8,8 +8,9 @@ ci:
   # It still runs locally on commit. See PR #83.
   skip: [markdown-link-check]
 
+# Use the available python3 rather than pinning a minor version
 default_language_version:
-  python: python3.10
+  python: python3
 
 repos:
   - repo: https://github.com/gitleaks/gitleaks

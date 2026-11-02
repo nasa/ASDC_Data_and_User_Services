@@ -18,11 +18,12 @@ jobs:
         with:
           enable-cache: true
 
+      # Keep this version aligned with ruff-pre-commit in .pre-commit-config.yaml.
       - name: Ruff lint
-        run: uvx ruff check .
+        run: uvx ruff@0.15.15 check .
 
       - name: Ruff format check
-        run: uvx ruff format --check .
+        run: uvx ruff@0.15.15 format --check .
 
   notebooks:
     name: Validate notebook structure
