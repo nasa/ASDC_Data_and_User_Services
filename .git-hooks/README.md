@@ -168,6 +168,7 @@ specialized = ["specialized-package>=1.0.0"]
 ```python
 from notebook_utils import create_base_parser, get_notebooks_from_args, HookResult
 
+
 def main():
     parser = create_base_parser("What this checks")
     args = parser.parse_args()
