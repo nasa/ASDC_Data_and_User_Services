@@ -12,7 +12,7 @@ jobs:
     name: Lint & format check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: astral-sh/setup-uv@v7
         with:
@@ -29,7 +29,7 @@ jobs:
     name: Validate notebook structure
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       # Pin Python so uv doesn't fall back to the runner's system interpreter;
       # pyhdf has no wheels for newer versions and fails to build without HDF4 headers.
@@ -54,7 +54,7 @@ jobs:
     name: Quarto render (no deploy)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
