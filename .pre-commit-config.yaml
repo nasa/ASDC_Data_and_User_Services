@@ -49,13 +49,13 @@ repos:
         exclude_types: ["jupyter", "text"]
 
   - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.14.2
+    rev: v3.15.0
     hooks:
       - id: markdown-link-check
         args: [ -q ]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.10
+    rev: v0.17.3
     hooks:
       - id: ruff
         args: ["--fix", "--exit-non-zero-on-fix"]
