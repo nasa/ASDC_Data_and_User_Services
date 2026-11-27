@@ -1,7 +1,5 @@
 /.quarto/
-.html
 _site/*
-.idea/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -132,16 +130,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/notebooks/temp_check.ipynb
-/api_diagram.dio
 
 # Mac Finder
 .DS_Store
 
 index_files/*
 
-# Data files (these patterns match at every depth)
+# Data files (these patterns match at every depth).
+# *.json and *.txt also hide config files such as requirements.txt;
+# use `git add -f` for one that belongs in the repo.
 *.nc
+*.nc4
 *.h5
 *.hdf
 *.csv
@@ -150,16 +149,12 @@ index_files/*
 *.zip
 *.tar.gz
 
+# Output written by TEMPO/how_to_download_TEMPO_data_as_CSV.ipynb
+TEMPO-CSV-output/
+
 # Scratch notebooks at the top level only; notebooks in mission folders are not ignored
 /*.ipynb
 
-# Data and binary files in subdirectories (already blocked at top-level)
-**/*.nc
-**/*.h5
-**/*.hdf
-**/*.zip
-**/*.tar.gz
-**/*.gif
-
-# Keep small reference images but block large ones by convention
-# (rely on PR review for image files)
+# Animated GIFs are usually large; use `git add -f` for a small one.
+# Other images (png, jpg) are not ignored; rely on PR review for their size.
+*.gif
