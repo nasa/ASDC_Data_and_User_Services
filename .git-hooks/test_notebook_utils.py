@@ -14,10 +14,14 @@ def test_extract_package_name():
 
 
 def test_get_import_aliases():
-    """Test import alias mapping."""
+    """Test import alias mapping.
+
+    Import names are compared lowercased, and the package name itself is
+    always included as a possible import.
+    """
     assert "sklearn" in get_import_aliases("scikit-learn")
-    assert "PIL" in get_import_aliases("pillow")
-    assert len(get_import_aliases("pandas")) == 0  # No aliases
+    assert "pil" in get_import_aliases("pillow")
+    assert get_import_aliases("pandas") == {"pandas"}  # No aliases
 
 
 if __name__ == "__main__":
