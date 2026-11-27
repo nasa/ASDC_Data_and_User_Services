@@ -6,8 +6,9 @@ Automated validation for Jupyter notebooks to ensure consistency and catch error
 
 ```bash
 # Install and enable
-uv sync --extra dev
-pre-commit install
+uv sync              # install Python dependencies
+pre-commit install   # pre-commit is not a project dependency; install it
+                     # separately first (e.g. `uv tool install pre-commit`)
 
 # Hooks now run automatically on commit
 git add notebooks/my-notebook.ipynb
