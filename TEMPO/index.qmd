@@ -18,6 +18,10 @@ author: "Atmospheric Science Data Center (ASDC)"
 
 #### - [Use <strong>virtual datasets</strong> in the cloud via `earthaccess` - to work with TEMPO Level-3 data [external]](https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/)
 
+#### - [Use <strong>virtual Zarr (Icechunk) stores</strong> with `xarray` - to work with TEMPO Level-3 data (experimental, requires AWS us-west-2) [external]](https://tempo.virtualzarr.cloud/examples/quickstart-asdc/)
+
+#### - [Use <strong>OPeNDAP</strong> with `pydap` - to subset near-real-time TEMPO NO<sub>2</sub> Level-2 data [external]](https://www.opendap.org/access-near-real-time-air-quality-data-from-nasas-tempo-mission/)
+
 ## Tutorials
 
 #### - [(ARSET and Science Team trainings) Working with TEMPO observations of the Madre wildfire, via `Harmony-py`](TEMPO_training_August2025.ipynb)
