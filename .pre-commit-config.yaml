@@ -11,6 +11,9 @@ ci:
 # Use the available python3 rather than pinning a minor version
 default_language_version:
   python: python3
+  # Without a system Node, pre-commit downloads "latest", which can resolve to
+  # a pre-release that nodeenv fails to parse. Pin the download to LTS.
+  node: lts
 
 repos:
   - repo: https://github.com/gitleaks/gitleaks
