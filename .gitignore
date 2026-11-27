@@ -140,7 +140,7 @@ dmypy.json
 
 index_files/*
 
-# Data or notebook files at the top-level in the repository
+# Data files (these patterns match at every depth)
 *.nc
 *.h5
 *.hdf
@@ -149,7 +149,9 @@ index_files/*
 *.txt
 *.zip
 *.tar.gz
-*.ipynb
+
+# Scratch notebooks at the top level only; notebooks in mission folders are not ignored
+/*.ipynb
 
 # Data and binary files in subdirectories (already blocked at top-level)
 **/*.nc
