@@ -13,6 +13,9 @@ website:
   site-url: "https://nasa.github.io/ASDC_Data_and_User_Services/" 
   repo-url: https://github.com/nasa/ASDC_Data_and_User_Services
   repo-actions: [source, issue]
+  # Pages marked `draft: true` (e.g., via additional_drafts/_metadata.yml) keep their URL
+  # and show a draft banner, but are left out of navigation, search, and the sitemap.
+  draft-mode: unlinked
   
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
