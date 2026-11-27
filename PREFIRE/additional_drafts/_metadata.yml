@@ -1,0 +1,4 @@
+# Notebooks in this directory are works in progress. Quarto renders them as drafts:
+# they are left out of the sidebar, site search, and sitemap (see `draft-mode` in
+# _quarto.yml). Move a notebook out of this directory when it is ready to publish.
+draft: true
