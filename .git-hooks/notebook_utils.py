@@ -218,7 +218,7 @@ def create_base_parser(description: str) -> argparse.ArgumentParser:
         help="Show detailed information including passing files",
     )
     output_group.add_argument(
-        "--quiet", "-q", action="store_true", help="Suppress all output except errors"
+        "--quiet", "-q", action="store_true", help="Suppress all output; rely on the exit status"
     )
 
     # Behavior arguments

@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 """Check notebook imports against pyproject.toml dependencies.
 
 Ensures all imported packages are declared in project dependencies.
