@@ -145,6 +145,10 @@ website:
               href: TEMPO/how_to_download_TEMPO_data_as_CSV.ipynb
             - text: Work with TEMPO Level-3 data as a virtual dataset in the cloud, using `earthaccess` [external]
               href: https://earthaccess.readthedocs.io/en/latest/tutorials/virtual_dataset_tutorial_with_TEMPO_Level3/
+            - text: Work with TEMPO Level-3 data as virtual Zarr (Icechunk) stores, using `xarray` (experimental, requires AWS us-west-2) [external]
+              href: https://tempo.virtualzarr.cloud/examples/quickstart-asdc/
+            - text: Subset near-real-time TEMPO NO₂ Level-2 data using OPeNDAP and `pydap` [external]
+              href: https://www.opendap.org/access-near-real-time-air-quality-data-from-nasas-tempo-mission/
           - section: "Tutorials"
             contents:
             - text: Working with TEMPO observations of the Madre wildfire, via `Harmony-py` (from TEMPO trainings)
